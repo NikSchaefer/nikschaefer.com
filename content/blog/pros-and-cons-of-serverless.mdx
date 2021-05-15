@@ -1,0 +1,95 @@
+---
+title: "Pros and Cons of Serverless"
+author: "Nik Schaefer"
+description: "Rundown of Going Serverless"
+datePub: "May 2020"
+dateEdit: "May 2020"
+---
+
+<img src="/blog/pros-and-cons-of-serverless.webp" alt="Server" />
+
+# What is Serverless
+
+For ages the frontend and backend of sites have been hosted on individual
+servers. Serverless allows you to execute application logic without visible
+processes, servers, virtual machines, or operation systems.
+
+Serverless allows developers to focus purely on the code and let the
+Iaas(Infrastructure as a service) handle the deployment and execution in
+production. This has numerous benefits of which we will go over in this post.
+
+# The Hype Behind Serverless
+
+The Serverless market is expected to reach around 18.04 billion globally This
+incites massive growth in this market is expected by many, but what is
+Serverless? What has millions of developers switching to Serverless?
+
+# How It Works
+
+The most popular Serverless service is Amazon Web Service's AWS Lambda works by
+using functions. Functions are the core of Serverless. You can upload your code
+and then set a trigger that can set off and run that code. This has been done
+before so what makes Serverless so great? Serverless is pure compute power. This
+makes it infinitely easier to scale as you don't have to manage containers and
+kubernetes clusters along with many other major benefits.
+
+The primary use cases of Serverless is web deployment and ML but has benefits
+everywhere. You can set a function to run when a URL request is triggered.
+
+# The Pros of Serverless
+
+The main pros for Serverless are
+
+-   Lower Costs
+-   Infinitely easier to scale
+-   Better uptime
+-   Easier to deploy
+-   Faster Development
+-   Faster Respond time
+-   More Flexibility
+-   More Efficient
+
+Serverless removes developers working on managing servers in the cloud using
+services like docker and kubernetes. Since the code is no longer on servers you
+can scale infinitely easier and faster. No more times when a developer will be
+called in the night with the message "The server is down" and be forced to run
+back into and identify the problem in the night. With Serverless you have
+virtually no infrastructure to maintain, just watch the requests and watch it
+scale infinitely. Serverless also has 0 costs when its not running and is
+cheaper when its just compute power. For each request the cloud spins up a new
+service running the code on request.
+
+# The Cons of Serverless
+
+The primary cons of Serverless architecture.
+
+-   Vendor Lock In
+-   Debugging
+-   Local Testing
+-   Migration
+-   Legacy Code and Infrastructure
+
+Serverless functions are triggered by actions that will often require a
+development solution inside the written code. This makes it harder to switch
+between services and lock you into the service you have chosen. This can make
+things difficult when you have better options for services in the long run.
+
+Debugging in production is often difficult in a Serverless architecture. Not
+having terminal access and having is spin up a new function on every trigger
+makes it hard to track these processes. Testing locally can also be more
+difficult when your code is configured to trigger on functions.
+
+Legacy code is still common and running legacy code on cloud functions not
+adapted to the service is extremely difficult. Most services and projects were
+built to run programs on servers and so Serverless architecture has been adapted
+to fit with servers on its best. Serverless functions cannot correctly return
+status properly codes over http as http was built in mind with servers and
+programming in general adapted those standards. Migration to Serverless can be
+difficult.
+
+# Summary
+
+Serverless architecture has massive potential and I look forward to the
+Serverless future. While Serverless solves many major problems it brings up some
+problems of its own. Serverless can be adapted to meet many needs but you should
+still consider servers and how you would benefit.

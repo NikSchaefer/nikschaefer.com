@@ -1,0 +1,74 @@
+---
+title: "Golang Optimal File Structure"
+author: "Nik Schaefer"
+description: "Breakdown of popular golang file structures"
+datePub: "May 2020"
+dateEdit: "May 2020"
+---
+
+<img src="/blog/golang-optimal-file-structure.webp" alt="Code on laptop" />
+
+All Golang Imports are relative to the $GOPATH/src. Designing a well built file
+structure is key to long-term codebase maintainability and fast paced
+development. Since all imports aren't relative to their own position Golang file
+structures are different than normal JavaScript or python structures.
+
+In this example I will be using Go-Fiber of which I am a contributing member but
+this file structure should work with any framework.
+
+1. Structure by Package You can structure your files by each model in the
+   database. This allows to easily find a model's functions by looking at it. A
+   sample project in this layout would look like this.
+
+```
+pkg/
+    api/
+        auth/
+            auth.go
+    product/
+            product.go
+     router/
+         router.go
+cmd/
+    myapp/
+        main.go
+```
+
+This file structure has its use cases but there are better ways for general
+servers.
+
+2. Structure by Function
+
+    You can structure files by their use such as putting handler functions
+    together and middleware together. A file structure of this sort would look
+    similar to this.
+
+```
+database/
+    connect.go
+    database.go
+handlers/
+    product.go
+    auth.go
+middleware/
+    authenticated.go
+    json.go
+    security.go
+models/
+    user.go
+    product.go
+router/
+    router.go
+main.go
+```
+
+This file structure groups by the functional components of each file. It allows
+for ease of use and access. This is the structure I would recommend for most
+projects and is what I'm using in my go-fiber project.
+
+# Summary
+
+File structures in go are different because of the absolute $GOPATH/src imports.
+Holding a solid file structure is important in Golang and key to a cleaner
+codebase. Structuring by function and then by package if a project is large
+enough is my recommended structure.

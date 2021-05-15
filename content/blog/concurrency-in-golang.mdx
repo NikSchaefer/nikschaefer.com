@@ -1,0 +1,76 @@
+---
+title: "Concurrency in Golang"
+author: "Nik Schaefer"
+description: "Concurrent Uses and How to in Golang"
+datePub: "May 2020"
+dateEdit: "May 2020"
+---
+
+<img src="/blog/concurrency-in-golang.webp" alt="Code on laptop" />
+
+# What is Concurrency?
+
+Concurrency is when code is running in parallel or alongside a parent program
+using another CPU core. Concurrency allows to break up a program to be executed
+out-of-order at the same time.
+
+# What is Concurrency used for?
+
+Concurrency is used such as separating an API call to the server this allows for
+the server to still accept requests and handle multiple at the same time.
+Concurrency can also be used for simultaneous processes to run at the same time
+or splitting up CPU intensive work.
+
+# Concurrency in Golang
+
+## Goroutines
+
+A goroutine is a concurrent process in Golang running separate to the main
+thread. Lets start with a simple concurrent program.
+
+```
+package main
+
+import (
+ "fmt"
+ "time"
+)
+
+func main() {
+ count("task 1")
+ count("task 2")
+}
+
+func count(thing string) {
+ for i := 1; i <= 5; i++ {
+        fmt.Println(thing)
+        time.Sleep(time.Second * 2)
+    }
+}
+```
+
+In this program we have 2 tasks both running in the main function. They both
+will print their text every two seconds 5 times. But in this program there is no
+concurrency so the first task will execute first then the second. If we make the
+first task a goroutine it will run in parallel. We add the "go" in front of the
+function to run it concurrently.
+
+Golang handles the process of interacting with the CPU to run it separately
+which gives us the easy job.
+
+```
+func main() {
+ go count("task 1")
+ count("task 2")
+}
+```
+
+The two tasks now run in parallel and the program exits when they are finished.
+If we were to run both functions concurrently they would exit immediately
+because the main thread finished.
+
+# Conclusion
+
+Concurrency is great and has many uses but keep in mind just adding hundreds of
+go routines isn't going to make your program run faster as it is ultimately
+determined by the CPU.

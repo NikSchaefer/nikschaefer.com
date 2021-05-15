@@ -1,0 +1,80 @@
+---
+title: "5 database paradigms and their use cases"
+author: "Nik Schaefer"
+description: "5 database paradigms and what they are used for"
+datePub: "May 2020"
+dateEdit: "May 2020"
+---
+
+<img
+	src="/blog/5-database-paradigms-and-their-use-cases.webp"
+	alt="Code on laptop"
+/>
+
+The database paradigms I will be covering in this blog are
+
+1. Relational
+2. Key-Value
+3. Wide-Column
+4. Document
+5. Graph
+
+# What are database paradigms?
+
+storing data for applications and businesses is stored in databases. These are 6
+of the most popular database types and their use cases.
+
+1. Relational Databases Data is the modern world is highly relational and
+   connected. Relational databases make that easier with connecting models. It
+   typically contains rows and columns similar in a SQL formats but it will
+   contain relations by storing primary keys as values. It is easily queried
+   although with the data being highly relational write time is longer. Popular
+   database examples of this type are PostgreSQL(my personal favorite), MySQL,
+   Microsoft SQL Server, Oracle Database. This type of database is useful for
+   general use and things like accounts, users, transactions, and the general
+   data storage.
+
+2. Key-Value Databases Key-Value databases excel in things such as speed. They
+   store data quite like the name, in a giant key-value storage. The most
+   popular key-value database, redis, is typically used for things like session
+   storage. Its quite read and write time allows for it to have faster response
+   time but since key-value databases are often meant for less secure data. Data
+   that would have little impact when something goes wrong because Redis is
+   stored in memory instead of hard drive. This is for faster performance.
+   Popular examples of this database are Amazon DynamoDB, Redis, Oracle NoSQL
+   DB. This type of database is most often used in parallel with relational
+   databases. The key-value database will store things like sessions, cookies,
+   jwt tokens, logging while the relational database will store the important
+   things such as accounts, transactions, products.
+
+3. Wide-Column Wide column databases takes key values and provides column
+   connected values. This means the key will often have many values associated
+   with it. This makes it easier and somewhat relational. Wide-Column is also
+   schema-less and does not support JOINS. The query language for this database,
+   cql(similar to sql), provides a standardized way to query data. Popular
+   databases for this are HBASE and Cassandra. Wide-Column is best suited for
+   high-write low-read operations and provides a decentralized way of data
+   storage. This makes it easy to scale horizontally or vertically.
+
+4. Document Document databases are another popular way of storing general
+   purpose data. It is often structured as a giant JSON object. It is first in
+   documents, then in collections, and then indexes. Document does not support
+   JOINS and is schema-less allowing freedom. It does not have a query language
+   is can only be somewhat relational in its data. The trade off for document
+   databases is that it allows fast read time and high write time as updating
+   data as the data is more complex. Popular database examples in this type are
+   MongoDB, DocumentDB, Firebase. Document databases fail when data is highly
+   relational such as users that have friends, that have followers, that have
+   posts, that have likes etc.
+
+5. Graph Graph databases is organized as nodes and relationships between them
+   with edges. The most popular Graph Database is DGraph. Unlike relational
+   databases accounts would be directly linked to likes on a post rather than
+   the middleman relation of the post. This allows for faster queries but a
+   slower write time.
+
+# Summary
+
+My personal favorite database is still PostgreSQL which is still the most
+popular to this day although with new technologies emerging we are bound to see
+better options that will reinvent the way we store data.

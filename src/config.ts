@@ -41,8 +41,48 @@ type BlogLink = {
 	image: string;
 	min: number;
 };
-
 const BlogLinks: BlogLink[] = [
+	{
+		title: "Concurrency in Golang",
+		link: "/blog/concurrency-in-golang",
+		image: "/blog/concurrency-in-golang",
+		description: "Concurrent Uses and How to in Golang",
+		min: 3,
+		date: "May 2020",
+	},
+	{
+		title: "Dockerizing your Developer Workflow",
+		link: "/blog/dockerizing-your-developer-workflow",
+		image: "/blog/dockerizing-your-developer-workflow",
+		description: "How to Dockerize your workflow and why",
+		min: 3,
+		date: "May 2020",
+	},
+	{
+		title: "Golang Optimal File Structure",
+		link: "/blog/golang-optimal-file-structure",
+		image: "/blog/golang-optimal-file-structure",
+		description: "Breakdown of popular golang file structures",
+		min: 3,
+		date: "May 2020",
+	},
+	{
+		title: "5 database paradigms and their use cases",
+		link: "/blog/5-database-paradigms-and-their-use-cases",
+		image: "/blog/5-database-paradigms-and-their-use-cases.webp",
+		description: "5 database paradigms what they are used for",
+		min: 3,
+		date: "May 2020",
+	},
+	{
+		title: "Pros and Cons of Serverless",
+		link: "/blog/pros-and-cons-of-serverless",
+		image: "/blog/pros-and-cons-of-serverless.webp",
+		description: "Rundown of Going Serverless",
+		min: 3,
+		date: "May 2020",
+	},
+
 	{
 		title: "Why Developers love Golang",
 		link: "/blog/why-developers-love-golang",
