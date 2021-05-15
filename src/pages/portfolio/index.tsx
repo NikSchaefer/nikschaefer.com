@@ -1,8 +1,8 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
-import { FaDiscord } from "react-icons/fa";
-import styled from "styled-components";
 import Image from "next/image";
+import styled from "styled-components";
+
 import json from "../../../content/featured.json";
 
 const META: MetaType = {
@@ -17,7 +17,7 @@ const StyledCard = styled.div`
 	display: flex;
 	text-align: left;
 	flex-direction: column;
-	width: 250px;
+	width: 240px;
 	height: 300px;
 	border: solid rgba(0, 0, 0, 0.219) 1px;
 	margin: 10px;
