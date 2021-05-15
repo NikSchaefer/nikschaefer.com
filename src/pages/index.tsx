@@ -1,3 +1,4 @@
+import Meta, { MetaType } from "@components/meta";
 import styled from "styled-components";
 
 const Container = styled.main`
@@ -7,7 +8,18 @@ const Container = styled.main`
 	align-items: center;
 	min-height: 600px;
 `;
-// eslint-disable-next-line import/no-default-export
+const META: MetaType = {
+	title: "Nik Schaefer",
+	lang: "en-us",
+	description: "",
+	image: "/logo.png",
+	url: "https://nikschaefer.tech",
+};
+
 export default function Home(): JSX.Element {
-	return <Container />;
+	return (
+		<Container>
+			<Meta META={META} />
+		</Container>
+	);
 }
