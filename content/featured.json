@@ -3,6 +3,7 @@
 		"date": "17",
 		"title": "Developer Discords",
 		"cover": "discord.png",
+		"svg": "discord.svg",
 		"github": "https://github.com/NikSchaefer/dev-discords",
 		"external": "https://dev-discords.now.sh/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
@@ -12,6 +13,7 @@
 	},
 	{
 		"date": "20",
+		"svg": "datadog.svg",
 		"title": "InstaDog",
 		"cover": "instadog.png",
 		"github": "https://github.com/NikSchaefer/InstaDog",
@@ -22,6 +24,7 @@
 		"short": "Instagram clone but for Dogs!"
 	},
 	{
+		"svg": "student.svg",
 		"date": "1",
 		"title": "CS Resources",
 		"cover": "csresources.png",
@@ -33,6 +36,7 @@
 		"short": "Web App filled with Computer Science Resources for Students"
 	},
 	{
+		"svg": "github.svg",
 		"date": "15",
 		"title": "Octo Stats",
 		"cover": "Octo.png",

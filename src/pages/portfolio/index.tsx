@@ -2,7 +2,7 @@ import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { FaDiscord } from "react-icons/fa";
 import styled from "styled-components";
-
+import Image from "next/image";
 import json from "../../../content/featured.json";
 
 const META: MetaType = {
@@ -54,7 +54,8 @@ const Container = styled.section`
 	margin: auto;
 	flex: 1;
 `;
-export default function Activity(): JSX.Element {
+const size = 40;
+export default function Portfolio(): JSX.Element {
 	return (
 		<Layout>
 			<Meta META={META} />
@@ -63,7 +64,12 @@ export default function Activity(): JSX.Element {
 				{json.map((data) => (
 					<StyledCard key={data.github}>
 						<div className="image">
-							<FaDiscord size="70px" color="#5765f2" />
+							<Image
+								height={size}
+								width={size}
+								alt={data.title}
+								src={`/featured/${String(data.svg)}`}
+							/>
 						</div>
 						<div>
 							<h2>{data.title}</h2>
