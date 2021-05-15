@@ -8,7 +8,8 @@ import timeline from "../../content/timeline.json";
 const META: MetaType = {
 	title: "About | Nik Schaefer",
 	lang: "en-us",
-	description: "",
+	description:
+		"I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development. I am currently learning Golang and its many uses in my free time.",
 	image: "/logo.png",
 	url: "https://nikschaefer.tech/about",
 };
@@ -49,6 +50,7 @@ const Container = styled.div`
 	}
 	margin: 40px 0;
 `;
+
 export default function About(): JSX.Element {
 	return (
 		<Layout>
@@ -60,8 +62,8 @@ export default function About(): JSX.Element {
 					nikkschaefer@gmail.com
 				</a>
 			</Disclaimer>
-			<h2>Timeline</h2>
 			<Timeline>
+				<h2>Timeline</h2>
 				{timeline.map((data) => (
 					<Container key={data.title}>
 						<BiCodeAlt className="icon" size="30px" />
@@ -71,6 +73,9 @@ export default function About(): JSX.Element {
 					</Container>
 				))}
 			</Timeline>
+			<section>
+				<h2>My Technologies</h2>
+			</section>
 		</Layout>
 	);
 }

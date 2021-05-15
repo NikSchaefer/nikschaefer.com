@@ -1,5 +1,3 @@
-/* eslint-disable import/no-default-export */
-
 import Layout from "@components/layout";
 import { postFilePaths, POSTS_PATH } from "@lib/mdxUtils";
 import {

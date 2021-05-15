@@ -111,7 +111,7 @@ export default function Home(): JSX.Element {
 									src={`/featured/${String(data.svg)}`}
 								/>
 							</div>
-							<div className='text'>
+							<div className="text">
 								<h2>{data.title}</h2>
 								<p>{data.short}</p>
 							</div>
