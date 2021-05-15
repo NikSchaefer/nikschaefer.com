@@ -28,6 +28,7 @@ const Content = styled.section`
 		color: white;
 		border-radius: 5px;
 		padding: 0.3em 0.5em;
+		font-size: 18px;
 	}
 
 	h4 svg {

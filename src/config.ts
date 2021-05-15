@@ -43,18 +43,19 @@ type BlogLink = {
 };
 const BlogLinks: BlogLink[] = [
 	{
-		title: "Concurrency in Golang",
-		link: "/blog/concurrency-in-golang",
-		image: "/blog/concurrency-in-golang",
-		description: "Concurrent Uses and How to in Golang",
-		min: 3,
-		date: "May 2020",
-	},
-	{
 		title: "Dockerizing your Developer Workflow",
 		link: "/blog/dockerizing-your-developer-workflow",
 		image: "/blog/dockerizing-your-developer-workflow",
 		description: "How to Dockerize your workflow and why",
+		min: 3,
+		date: "May 2020",
+	},
+
+	{
+		title: "Concurrency in Golang",
+		link: "/blog/concurrency-in-golang",
+		image: "/blog/concurrency-in-golang",
+		description: "Concurrent Uses and How to in Golang",
 		min: 3,
 		date: "May 2020",
 	},
