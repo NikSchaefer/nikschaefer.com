@@ -81,7 +81,7 @@ export default function Home(): JSX.Element {
 					programmer student based in Minnesota, US
 				</p>
 				<SocialLinks>
-					<StyledButton>Get In Touch</StyledButton>
+					<StyledButton href='/about'>Get In Touch</StyledButton>
 					<StyledA
 						color="black"
 						href="https://github.com/NikSchaefer"
