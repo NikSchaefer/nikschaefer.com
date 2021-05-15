@@ -1,13 +1,6 @@
+import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
-import styled from "styled-components";
 
-const Container = styled.main`
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	min-height: 600px;
-`;
 const META: MetaType = {
 	title: "Nik Schaefer",
 	lang: "en-us",
@@ -18,8 +11,8 @@ const META: MetaType = {
 
 export default function Home(): JSX.Element {
 	return (
-		<Container>
+		<Layout>
 			<Meta META={META} />
-		</Container>
+		</Layout>
 	);
 }
