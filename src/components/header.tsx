@@ -1,37 +1,50 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import styled from "styled-components";
 
+import { HeaderLinks } from "../config";
+
 const Header = styled.header`
-	background-color: #1a202c;
 	padding: 5px 50px;
 	display: flex;
 	box-sizing: border-box;
-	border-top: 5px #5cfff1 solid;
+	border-bottom: 1px rgba(219, 219, 219, 0.671) solid;
 	justify-content: space-between;
 	align-items: center;
 `;
-const StyledLink = styled.a`
-	margin: 0 20px;
+const StyledNav = styled.nav`
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	a {
+		margin: 0 20px;
+		color: rgba(0, 0, 0, 0.637);
+		font-size: 16px;
+	}
+	.active,
+	a:hover {
+		color: black;
+	}
 `;
 // eslint-disable-next-line import/no-default-export
 export default function Main(): JSX.Element {
+	const router = useRouter();
 	return (
 		<Header>
-			<h2>NextJS Boilerplate</h2>
-			<div>
-				<StyledLink
-					href="https://github.com/NikSchaefer/nextjs-boilerplate"
-					aria-label="Github"
-				>
-					<FaGithub size="30px" />
-				</StyledLink>
-				<StyledLink
-					href="https://www.linkedin.com/in/nik-schaefer/"
-					aria-label="LinkedIn"
-				>
-					<FaLinkedin size="30px" />
-				</StyledLink>
-			</div>
+			<StyledNav>
+				{HeaderLinks.map((value) => (
+					<Link key={value.link} href={value.link}>
+						<a
+							className={
+								router.pathname === value.link ? "active" : ""
+							}
+						>
+							{value.title}
+						</a>
+					</Link>
+				))}
+			</StyledNav>
 		</Header>
 	);
 }
