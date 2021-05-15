@@ -1,9 +1,13 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
+import Image from "next/image";
 import Link from "next/link";
 import { GoMarkGithub } from "react-icons/go";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import styled from "styled-components";
+
+import json from "../../content/featured.json";
+import { Container as Box, StyledCard, size } from "./portfolio";
 
 const META: MetaType = {
 	title: "Nik Schaefer",
@@ -93,16 +97,34 @@ export default function Home(): JSX.Element {
 						<RiLinkedinBoxFill size="40px" color="#333333" />
 					</StyledA>
 				</SocialLinks>
-				<section>
-					<h2>Projects</h2>
-					<EndNote>
-						To see all of my projects, check out my{" "}
-						<Link href="/portfolio">
-							<a>portfolio</a>
-						</Link>
-					</EndNote>
-				</section>
 			</Container>
+			<section>
+				<h2>Projects</h2>
+				<Box>
+					{json.map((data) => (
+						<StyledCard key={data.github}>
+							<div className="image">
+								<Image
+									height={size}
+									width={size}
+									alt={data.title}
+									src={`/featured/${String(data.svg)}`}
+								/>
+							</div>
+							<div className='text'>
+								<h2>{data.title}</h2>
+								<p>{data.short}</p>
+							</div>
+						</StyledCard>
+					))}
+				</Box>
+				<EndNote>
+					To see all of my projects, check out my{" "}
+					<Link href="/portfolio">
+						<a>portfolio</a>
+					</Link>
+				</EndNote>
+			</section>
 		</Layout>
 	);
 }

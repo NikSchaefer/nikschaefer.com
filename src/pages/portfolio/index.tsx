@@ -13,15 +13,16 @@ const META: MetaType = {
 	url: "https://nikschaefer.tech/activity",
 };
 
-const StyledCard = styled.div`
+export const StyledCard = styled.div`
 	display: flex;
 	text-align: left;
 	flex-direction: column;
 	width: 240px;
-	height: 300px;
+	height: 310px;
 	border: solid rgba(0, 0, 0, 0.219) 1px;
 	margin: 10px;
-	div {
+	.text {
+		background-color: #fdfdfd;
 		height: 55%;
 		box-sizing: border-box;
 		padding: 10px;
@@ -31,10 +32,13 @@ const StyledCard = styled.div`
 		p {
 			font-family: "Mukta", sans-serif;
 			color: #313131;
+			margin: unset;
+			font-size: unset;
 		}
 	}
 
 	.image {
+		background-color: white;
 		height: 45%;
 		justify-content: center;
 		align-items: center;
@@ -46,15 +50,16 @@ const StyledCard = styled.div`
 		cursor: pointer;
 	}
 `;
-const Container = styled.section`
+export const Container = styled.section`
 	display: flex;
 	flex-wrap: wrap;
 	width: 90%;
-	max-width: 600px;
+	justify-content: center;
+	max-width: 1100px;
 	margin: auto;
 	flex: 1;
 `;
-const size = 40;
+export const size = 80;
 export default function Portfolio(): JSX.Element {
 	return (
 		<Layout>
@@ -71,7 +76,7 @@ export default function Portfolio(): JSX.Element {
 								src={`/featured/${String(data.svg)}`}
 							/>
 						</div>
-						<div>
+						<div className='text'>
 							<h2>{data.title}</h2>
 							<p>{data.short}</p>
 						</div>
