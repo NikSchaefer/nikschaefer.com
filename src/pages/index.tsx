@@ -1,5 +1,6 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
+import Link from "next/link";
 import { GoMarkGithub } from "react-icons/go";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import styled from "styled-components";
@@ -55,6 +56,16 @@ const StyledButton = styled.a`
 		background-color: #fafafa;
 	}
 `;
+const EndNote = styled.p`
+	font-size: 18px !important;
+	text-align: center;
+	a {
+		color: #008cff;
+		:hover {
+			text-decoration: underline;
+		}
+	}
+`;
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
@@ -84,7 +95,12 @@ export default function Home(): JSX.Element {
 				</SocialLinks>
 				<section>
 					<h2>Projects</h2>
-					
+					<EndNote>
+						To see all of my projects, check out my{" "}
+						<Link href="/portfolio">
+							<a>portfolio</a>
+						</Link>
+					</EndNote>
 				</section>
 			</Container>
 		</Layout>

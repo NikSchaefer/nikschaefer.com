@@ -7,7 +7,8 @@
 		"external": "https://dev-discords.now.sh/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
 		"showInProjects": true,
-		"content": "A web App for viewing a list of official programming and developer discord servers allows to search alphabetically or by search"
+		"content": "A web App for viewing a list of official programming and developer discord servers allows to search alphabetically or by search",
+		"short": "Web App for Viewing a list of offcial developer related discords"
 	},
 	{
 		"date": "20",
@@ -17,7 +18,8 @@
 		"external": "https://instadog.vercel.app/",
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
 		"showInProjects": true,
-		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. "
+		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. ",
+		"short": "Instagram clone but for Dogs!"
 	},
 	{
 		"date": "1",
@@ -27,7 +29,8 @@
 		"external": "https://csresources.herokuapp.com/",
 		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
 		"showInProjects": true,
-		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!"
+		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!",
+		"short": "Web App filled with Computer Science Resources for Students"
 	},
 	{
 		"date": "15",
@@ -37,6 +40,7 @@
 		"external": "https://octo-stats.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
 		"showInProjects": true,
-		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throught Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API"
+		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throught Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API",
+		"short": "Website to better visualize Github Stats"
 	}
 ]
