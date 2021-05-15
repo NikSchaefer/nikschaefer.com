@@ -1,0 +1,73 @@
+{
+	"name": "my-app",
+	"version": "0.1.0",
+	"author": "Nik Schaefer <nikkschaefer@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/NikSchaefer/"
+	},
+	"keywords": [
+		"NextJS"
+	],
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"clean": "npx prettier --write .",
+		"test": "jest"
+	},
+	"dependencies": {
+		"@babel/core": "^7.14.2",
+		"next": "10.2.0",
+		"react": "17.0.2",
+		"react-dom": "17.0.2",
+		"react-icons": "^4.2.0",
+		"styled-components": "^5.3.0",
+		"typescript": "^4.2.4"
+	},
+	"devDependencies": {
+		"@babel/preset-typescript": "^7.13.0",
+		"@types/babel__core": "^7.1.14",
+		"@types/jest": "^26.0.23",
+		"@types/node": "^15.0.3",
+		"@types/react": "^17.0.5",
+		"@types/styled-components": "^5.1.9",
+		"babel-plugin-styled-components": "^1.12.0",
+		"eslint": "^7.26.0",
+		"eslint-config-galex": "^2.15.4",
+		"jest": "^26.6.3",
+		"jest-watch-typeahead": "^0.6.3",
+		"prettier": "^2.3.0"
+	},
+	"jest": {
+		"collectCoverageFrom": [
+			"src/**/*.{js,jsx,ts,tsx}"
+		],
+		"setupFilesAfterEnv": [
+			"<rootDir>/scripts/jest/setupTests.js"
+		],
+		"transform": {
+			"^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
+			"^.+\\.css$": "<rootDir>/scripts/jest/cssTransform.js"
+		},
+		"transformIgnorePatterns": [
+			"/node_modules/",
+			"^.+\\.module\\.(css|sass|scss)$"
+		],
+		"moduleNameMapper": {
+			"^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy"
+		},
+		"modulePaths": [
+			"<rootDir>"
+		],
+		"coverageDirectory": "coverage",
+		"watchPlugins": [
+			"jest-watch-typeahead/filename",
+			"jest-watch-typeahead/testname"
+		],
+		"clearMocks": true,
+		"restoreMocks": true,
+		"resetMocks": true
+	}
+}
