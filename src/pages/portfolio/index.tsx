@@ -4,6 +4,7 @@ import Image from "next/image";
 import styled from "styled-components";
 
 import json from "../../../content/featured.json";
+import projects from "../../../content/projects.json";
 
 const META: MetaType = {
 	title: "Portoflio | Nik Schaefer",
@@ -60,6 +61,29 @@ export const Container = styled.section`
 	flex: 1;
 `;
 export const size = 80;
+
+const ProjectContainer = styled.div`
+	display: flex;
+	flex-flow: wrap row;
+	justify-content: center;
+	width: 90%;
+	max-width: 1100px;
+	margin: auto;
+	row-gap: 1rem;
+	column-gap: 1rem;
+`;
+const Project = styled.div`
+	width: 20%;
+	background-color: #fdfdfd;
+	text-align: left;
+	border: 1px solid #e5e7eb;
+	box-sizing: border-box;
+	padding: 10px;
+	:hover {
+		background-color: #f8f8f8;
+		cursor: pointer;
+	}
+`;
 export default function Portfolio(): JSX.Element {
 	return (
 		<Layout>
@@ -76,7 +100,7 @@ export default function Portfolio(): JSX.Element {
 								src={`/featured/${String(data.svg)}`}
 							/>
 						</div>
-						<div className='text'>
+						<div className="text">
 							<h2>{data.title}</h2>
 							<p>{data.short}</p>
 						</div>
@@ -86,7 +110,14 @@ export default function Portfolio(): JSX.Element {
 			<section>
 				<h2>All Projects</h2>
 				<div />
-				<div />
+				<ProjectContainer>
+					{projects.map((data) => (
+						<Project key={data.github}>
+							<h4>{data.title}</h4>
+							<p>{data.text}</p>
+						</Project>
+					))}
+				</ProjectContainer>
 			</section>
 		</Layout>
 	);

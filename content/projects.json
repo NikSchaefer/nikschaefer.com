@@ -36,10 +36,10 @@
 		]
 	},
 	{
-		"text": "Django Backend React Typescript frontend template configured to Easily Deploy onHeroku. Django Static is configured with whitenoise and is set up with djangorest framework",
+		"text": "Django Backend React Typescript frontend template configured to Easily Deploy on Heroku.",
 		"date": "2020-11-15",
 		"index": 3,
-		"title": "Django React Typescript Template",
+		"title": "Django React Typescript",
 		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"tech": ["Python", "Django", "React", "Typescript", "PostgresSQL"]
@@ -62,7 +62,7 @@
 		"tech": ["React", "Typescript", "HTML + CSS"]
 	},
 	{
-		"text": "The umbrella project is an App that Accesses the Open Weather API. It Takes yourcurrent location or location entered and will run in the background of yourdevice. It will send a notification if you need to take an umbrella",
+		"text": "The umbrella project is an App that Accesses the Open Weather API.",
 		"date": "2020-8",
 		"index": 7,
 		"title": "Umbrella App",
@@ -78,5 +78,53 @@
 		"github": "https://github.com/NikSchaefer/Web-Tools",
 		"external": "https://development-tools.vercel.app/",
 		"tech": ["Typescript", "React", "CRA"]
+	},
+	{
+		"date": "17",
+		"title": "Developer Discords",
+		"cover": "discord.png",
+		"svg": "discord.svg",
+		"github": "https://github.com/NikSchaefer/dev-discords",
+		"external": "https://dev-discords.now.sh/",
+		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
+		"showInProjects": true,
+		"content": "A web App for viewing a list of official programming and developer discord servers allows to search alphabetically or by search",
+		"text": "Web App for Viewing a list of official developer related discord Communities"
+	},
+	{
+		"date": "20",
+		"svg": "datadog.svg",
+		"title": "InstaDog",
+		"cover": "instadog.png",
+		"github": "https://github.com/NikSchaefer/InstaDog",
+		"external": "https://instadog.vercel.app/",
+		"tech": ["React", "Typescript", "HTML + CSS", "API"],
+		"showInProjects": true,
+		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. ",
+		"text": "Instagram clone but for Dogs!"
+	},
+	{
+		"svg": "student.svg",
+		"date": "1",
+		"title": "CS Resources",
+		"cover": "csresources.png",
+		"github": "https://github.com/NikSchaefer/csnotes",
+		"external": "https://csresources.herokuapp.com/",
+		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
+		"showInProjects": true,
+		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!",
+		"text": "Web App filled with Computer Science Resources for Students"
+	},
+	{
+		"svg": "github.svg",
+		"date": "15",
+		"title": "Octo Stats",
+		"cover": "Octo.png",
+		"github": "https://github.com/NikSchaefer/Octo-Stats",
+		"external": "https://octo-stats.vercel.app/",
+		"tech": ["React", "Typescript", "Rest API", "NextJS"],
+		"showInProjects": true,
+		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throught Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API",
+		"text": "Website to better visualize Github Stats"
 	}
 ]
