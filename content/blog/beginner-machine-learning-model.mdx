@@ -1,0 +1,134 @@
+---
+title: "A Guide to A Beginner Machine Learning Model"
+author: "Nik Schaefer"
+description:
+    "The model we will be constructing is one of the most basic models and we
+    will be using it to predict the y coordinate of a line"
+datePub: "Jan 2020"
+dateEdit: "Jan 2020"
+---
+
+## Prerequisites:
+
+-   Basic Understanding of Python
+
+## Make sure you have the following installed on your device
+
+-   Python (the programming language)
+-   Tensorflow
+-   Mathplotlib(optional)
+-   Numpy(optional)
+
+## What will our Model do?
+
+The model we will be constructing is one of the most basic models and we will be
+using it to predict the y coordinate of a line
+
+## First we will start with out imports
+
+```py
+import tensorflow as tf
+import numpy as np
+import matplotlib.pyplot as plt
+```
+
+## Next Lets define our data
+
+Our training Data - the data our model will train on
+
+```py
+x_points = np.array([3, 5, 7, 9])
+
+y_points = np.array([6, 10, 14, 18])
+```
+
+Our Test Data - this is the x axis we will be predicting
+
+```py
+test_x = np.array([2, 4, 7, 20])
+```
+
+## Building our Model
+
+First we have to define our model - for this blog we will be using a premade
+model for simplicity
+
+```py
+model = tf.keras.Sequential([
+    tf.keras.layers.Dense(units=1, input_shape=[1])
+])
+```
+
+## Compiling our Model
+
+Next we need to build our model
+
+Optimizer is build in so we don't need to worry about that
+
+learn more about loss
+
+<a href="https://developers.google.com/machine-learning/crash-course/descending-into-ml/training-andloss#:~:text=Loss%20is%20the%20penalty%20for,otherwise%2C%20the%20loss%20is%20greater">
+	here
+</a>
+
+```py
+model.compile(optimizer='sgd', loss='mean_squared_error')
+```
+
+## Training the Model
+
+We want to train out model on the training data so it can predict on the test
+data
+
+Epochs is how many times the model trains on our data. Typically this varies for
+the dataset but in this case we are using 100
+
+model.fit(x_points, y_points, epochs=100)
+
+Testing the Model
+
+We now have our model built now we need to test it
+
+This is predicting on the test X data we defined earlier
+
+```py
+test_y = model.predict(test_x)
+```
+
+Plotting Our Data
+
+Now that we have our predicted model we can plot our data using mathplotlib
+
+```py
+plt.plot(x_points, y_points, label='Train Data')
+plt.plot(test_x, test_y, label='Test Data')
+plt.legend()
+plt.show()
+```
+
+This Graph will Show
+
+<img src="/blog/ml.webp" alt="ML Graph" />
+
+```
+Train Data:
+x [3, 5, 7, 9]
+y [6, 10, 14, 18]
+
+Test Data
+x [2, 4, 7, 20]
+
+Model Predicted
+y [ 4.0757785, 8.044292, 13.997064, 39.792404 ]
+
+Actual
+y [4, 8, 14, 40]
+```
+
+It is important to note that machine learning does not typically have exact
+answers. It deals in probability and as you can see it is very close to the
+actual data
+
+Recommended Course to Learn More
+
+https://developers.google.com/machine-learning/crash-course

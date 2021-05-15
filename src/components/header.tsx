@@ -8,9 +8,9 @@ const Header = styled.header`
 	padding: 5px 50px;
 	display: flex;
 	box-sizing: border-box;
-	border-bottom: 1px rgba(219, 219, 219, 0.671) solid;
 	justify-content: space-between;
 	align-items: center;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.274);
 `;
 const StyledNav = styled.nav`
 	padding: 20px;
@@ -20,7 +20,8 @@ const StyledNav = styled.nav`
 	a {
 		margin: 0 20px;
 		color: rgba(0, 0, 0, 0.637);
-		font-size: 16px;
+		font-size: 18px;
+		font-family: "Mukta", sans-serif;
 	}
 	.active,
 	a:hover {

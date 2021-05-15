@@ -1,0 +1,172 @@
+---
+title: "Setting up a Django Rest API"
+author: "Nik Schaefer"
+description:
+    "Django is an open source python web framework. Django is foremost a backend
+    framework and works well to create a site. Quickly learn the basics of a
+    rest API in Django"
+datePub: "Jan 2020"
+dateEdit: "Jan 2020"
+---
+
+<img src="/blog/setting-up-django.jpg" alt="Code on Laptop" />
+
+## What is Django?
+
+Django is an open source python web framework. Django is foremost a backend
+framework and works well to create a site.
+
+## What is a rest API?
+
+Most websites use some sort of a rest API. If you are looking to integrate react
+or another framework with Django you would most likely use a rest framework.
+
+A rest framework displays data in a server on the web. typically in a JSON
+format. A frontend of a site will typically make an API call to the site and the
+server will send back the data.
+
+## Skip the setup
+
+I have created a Django API template that is configured for easy deployment with
+heroku. The template includes React with Typescript configuration with webpack.
+
+Find the template here then skip to Models Below
+https://github.com/NikSchaefer/Django-React-Typescript-Template
+
+## Setting up a Rest API
+
+You need to create an app in Django for the framework.
+
+install Django https://docs.djangoproject.com/en/3.1/topics/install/
+
+First create the project in terminal
+
+```
+django-admin startproject mysite
+```
+
+Then create the app
+
+```
+python manage.py startapp api
+```
+
+This creates another app in the project
+
+while we are in terminal lets install the rest framework
+
+```
+pip install rest_framework
+```
+
+To start your app
+
+```
+python manage.py runserver
+```
+
+in settings.py under installed apps add the api
+
+```py
+INSTALLED_APPS = [
+ ...
+ 'api',
+ 'rest_framework'
+]
+```
+
+in urls.py in the primary folder make sure to include api.urls like this
+
+```py
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('api/', include('api.urls')),
+]
+```
+
+## Models
+
+In the API folder in models.py create a model to fit your data you want to
+display.
+
+```py
+class Article(models.Model):
+    title = models.CharField(max_length=30, default='')
+    body = models.TextField(default='')
+    date = models.DateTimeField(auto_now_add=True)
+    author = models.CharField(max_length=30, default='')
+
+ def __str__(self):
+     return self.title
+```
+
+## Serializers
+
+In the rest framework in order to display the data you need to create a
+serializers for your models. This basically selects the fields of the model you
+want to display
+
+here we are selecting all the fields
+
+If there is no serializer file in your api folder create the file
+
+```py
+from rest_framework import serializers
+from .models import Article
+
+class ArticleSerializer(serializers.ModelSerializer):
+ class Meta:
+        model = Article
+        fields = '__all__'
+```
+
+This selects all the fields, we will import the serialzer in views.py
+
+## Views
+
+in views.py or where your views are
+
+this creates the render for the model
+
+```py
+from rest_framework import generics
+from .models import Article
+from .serializers import ArticleSerializer
+
+class ArticleView(generics.ListAPIView):
+    queryset = Article.objects.all()
+    serializer_class = ArticleSerializer
+```
+
+## URLs
+
+in the urls.py file you need to reference your views to display them
+
+```py
+
+from .views import ArticeView
+from django.urls import path
+
+urlpatterns = [
+    path("article", ArticeView),
+]
+```
+
+Now your API is complete, if you run the server you can find the article at
+
+```
+127.0.0.1:8000/api/article
+```
+
+if 127.0.0.1:8000 is the server port
+
+to return as JSON add a ?format=json to the api requeset
+
+```
+127.0.0.1:8000/api/article?format=json
+```
+
+Now add to your models and retrieve your data by calling to that server!

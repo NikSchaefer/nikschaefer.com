@@ -1,0 +1,46 @@
+[
+	{
+		"date": "4",
+		"title": "Web Developer",
+		"company": "NVC",
+		"location": "Remote",
+		"range": "December  - Current",
+		"url": "/#",
+		"content": ["My Current Freelance Position"]
+	},
+	{
+		"date": "3",
+		"title": "Web Developer",
+		"company": "Sparks VB Club",
+		"location": "Remote",
+		"range": "October  - December 2020",
+		"url": "https://sparksvolleyballclub.com/",
+		"content": [
+			"Worked Directly with a partner and client to develop a reactive website"
+		]
+	},
+	{
+		"date": "1",
+		"title": "Web Developer Intern",
+		"company": "The Esport Company",
+		"location": "Remote",
+		"range": "September - December 2020",
+		"url": "https://www.theesportcompany.com/",
+		"content": [
+			"Worked directly with CEO and mentor to build a Wordpress Website"
+		]
+	},
+	{
+		"date": "5",
+		"title": "Co-founder",
+		"company": "Webdefy",
+		"location": "Remote",
+		"range": "December 2020 - Present",
+		"url": "https://webdefy.tech/",
+		"content": [
+			"Development based on company freelancing.",
+			"Lead Developer, working to build websites for numerous clients",
+			"Working in NextJS, Django and more"
+		]
+	}
+]

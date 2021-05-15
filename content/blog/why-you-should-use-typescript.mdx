@@ -1,0 +1,91 @@
+---
+title: "Why you should migrate to typescript"
+author: "Nik Schaefer"
+description:
+    "Learn why you should use typescript going forward as well as learn some
+    typescript"
+datePub: "Jan 2020"
+dateEdit: "Jan 2020"
+---
+
+<img src="/blog/typescript.svg" alt="Typescript Logo" />
+
+## What is typescript?
+
+Typescript is a superset language of JavaScript which means typescript compiles
+into JavaScript and then executed.
+
+## What is JavaScript
+
+JavaScript is a programming language that runs in browsers along with html and
+CSS.
+
+## The Difference
+
+The key difference is that typescript has data types which can catch errors
+before they are run in JavaScript. JavaScript doesn't catch errors until runtime
+which can break your application or prevent the way it was designed to run.
+Typescript can catch these errors before they are complied.
+
+How typescript catches bugs JavaScript doesn't
+
+This is JavaScript code that has an error that is not caught until runtime.
+
+```ts
+const data = {
+	info: {
+		name: "",
+		date: "",
+	},
+};
+
+function getDate(response) {
+	return response.date;
+}
+
+const date = getDate(data);
+```
+
+Catch the Error? The date property is inside the info object not directly in
+data.
+
+JavaScript does not count this as an error because in JavaScript you can
+reference a property that does not exist. This error could crash you site.
+
+How Typescript catches the error
+
+```ts
+interface data {
+	info: {
+		name: string;
+		date: string;
+	};
+}
+
+const data: data = {
+	info: {
+		name: "",
+		date: "",
+	},
+};
+
+function getDate(response: data) {
+	return response.date;
+}
+
+const date = getDate(data);
+```
+
+By using typescript it is able to catch the error as the date property does not
+exist before it is run.
+
+Now that you know the error you can easily change getDate to
+
+```ts
+function getDate(response: data) {
+	return response.info.date;
+}
+```
+
+Typescript caught the error before it could be run. Typescript prevents errors
+and then complies into JavaScript to be run.

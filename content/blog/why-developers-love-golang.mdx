@@ -1,0 +1,115 @@
+---
+title: "Why Developers love Golang"
+author: "Nik Schaefer"
+description:
+    "Golang(Go) is a programming language developed by Google in 2009. Since then
+Golang has made its way up to the top 10 most loved programming languages."
+datePub: "March 2020"
+---
+
+<img src="/blog/codeonlaptop.jpg" alt="Code on Laptop" />
+
+Image by <a href="https://unsplash.com/photos/dMUt0X3f59Q"> AltumCode on
+Unsplash </a>
+
+# What is Golang?
+
+Golang(Go) is a programming language developed by Google in 2009. Since then
+Golang has made its way up to the top 10 most loved programming languages and
+the 2nd most paid programming language.
+
+When I first learned Go I didn't expect it to be a hit. I thought it was just a
+faster Java or an alternative to Node.js. Even then it had a robust community
+but here are the reasons I and so many other developers love Go.
+
+## Golang Environment
+
+The Golang environment is different than any other language. Its structured so
+that all Golang projects are in one folder. This folder is set as an environment
+variable as `$GOPATH`. The Golang environment is structured by 3 folders, bin,
+pkg, and src. The bin folder stores Golang Binary files such as the mux.exe
+router. It saves the builds and other scripts in here but its not something you
+need to touch. Pkg is where Golang stores the complier and other scripts it
+uses. In the final and main folder src, is where you put your projects. All
+packages downloaded and used are stored in src as well as where you can put your
+projects. All Imports in Golang are relative to `$GOPATH\src` which makes things
+very consistent and easy to change files to your need. Overall the Golang
+enviroment is something I much prefer over packages.json and or Pipfiles.
+
+## The Command Line
+
+Golang commands are made simple. Want to get a package? <br />
+`go get -u github.com/package/package` <br /> Want to run your code? <br />
+`go run ./file.go`<br /> Want to compile your code? <br />
+`go build ./file.go`<br /> Want to fetch the dependencies of a file <br />
+`go install ./file.go`<br />
+
+Overall the consistency and ease of use in the command line makes things easier
+and you can focus on other parts of the development process.
+
+## Modules and Tests
+
+The way Golang handles tests without any external libraries makes it very easy
+to create tests. Just end a file with \_test.go and then you can run go test to
+start the unit test. All modules in Golang are easy to access with the file
+structure and since Golang has no built in modular place you can use GitHub or
+anything other place you see fit to use Golang modules or packages.
+
+## Consistency in Golang
+
+Golang offers a clear and concise way to write code. It has a built in
+formatter, fmt, that keeps strict standards in go. Unlike languages like
+JavaScript or Python Golang usually has a simple way to do things and structure
+code. This leads to overall cleaner code bases and prevents junior developers
+from writing unclean code because in Golang you have to write clean code. The
+compiler will not compile if a variable is not used. Golang has no exceptions
+which requires you to write code in a safe and clean way.
+
+Golang is also typed which means you get better intellisense and catch errors
+before runtime. Golang doesn't support classes, operators, function overloading,
+optional parameters, or exceptions, requiring developers to write code in a
+clear and concise way. Golang isn't a functional language and it isn't an object
+oriented one either. It takes the best of both worlds and throws out the things
+that are bad to form an amazing language.
+
+## Concurrency and Speed
+
+Save the best for last. Golang was built for concurrency in mind. You don't have
+to import something to do this it is built in. You can just use go.
+
+```go
+go func() {
+    fmt.Println("This is a simultaneous process")
+}
+```
+
+This core concept allows developers to use things like channels and things you
+won't see in other languages to better utilize this concept. Recently this
+
+<a href="https://medium.com/smsjunk/handling-1-million-requests-per-minute-with-golang-f70ac505fcaa">
+	article
+</a> talks about how they were able to utilize 1 million requests per minute with
+Golang, more than any other language has seen with the exception of c++
+
+Now did I mention Golang is fast? Crazy fast. Golang framework gofiber ran a
+speed test against similar framework Express(JavaScript Framework) and Golang
+was able to consistently handle requests on average 2.0 ms while Express had an
+average of 354 latency. Golang was able to handle 6,162,556 requests while
+Express could only handle 367,069 requests. That's 17x more requests compared to
+the most in use node framework today. You can learn more about this experiment
+with gofiber <a href="https://docs.gofiber.io/extra/benchmarks">here</a>. Golang
+compile time is also crazy fast which is why developers will run tests on every
+compile because they don't take long at all.
+
+## Golang's built in Libraries
+
+Golang's built in library support is incredible and means you won't have to
+import excess modules like in Node. You can run a local server in just a few
+lines out of the box with net/http built in package. You are able to lookup a
+sites Nameservers, mx records, and CNAME with a built-in function. Typically
+when you build large projects you will only ever use one or two external
+packages which also dedicates to the speed and ease of use of Golang.
+
+Golang is a major language and an amazing skill to add to your skillset. Its
+ease of use and speed are unrivaled and I believe you should learn Golang as a
+language.

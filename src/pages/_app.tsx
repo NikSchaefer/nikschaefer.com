@@ -1,6 +1,4 @@
 import "@styles/global.css";
-import Footer from "@components/footer";
-import Header from "@components/header";
 import { pageview } from "@lib/gtag";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -26,11 +24,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Header />
-
 			<Component {...pageProps} />
-
-			<Footer />
 		</>
 	);
 }

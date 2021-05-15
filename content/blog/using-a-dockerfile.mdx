@@ -1,0 +1,67 @@
+---
+title: "Using A Dockerfile"
+author: "Nik Schaefer"
+description: "Quickly learn the basics of using a dockerfile"
+datePub: "Jan 2020"
+dateEdit: "Jan 2020"
+---
+
+<img src="/blog/docker.png" alt="docker logo" />
+
+## What is docker?
+
+Docker is an installable application that will ensure that every application
+runs the same on the environment. This is most commonly used on major cloud
+providers to host databases and backend APIs. Docker uses a mock virtual
+environment to ensure that every instance or container running will run the
+same.
+
+## Docker Images
+
+Docker Images are the build for your application. When you run the Image you get
+a container running which can be deactivated when you please. You can control a
+docker container's os along with using other popular Images. These things ensure
+to run the application the same and ensure the same functionality.
+
+## Using the Dockerfile
+
+Having a .Dockerfile tells the editor how to read your virtual environment.
+Using a base Image can set up a lot of the configuration for you. Using the FROM
+command sets the Image
+
+`FROM python:3.6` This example uses docker's official python image but you can
+run ubuntu or whatever else you please
+
+Next you want to set your work directory, where you want to install
+dependencies.
+
+`WORKDIR /` This will set the directory in the normal folder
+
+After that you want to install your dependencies
+
+`COPY Pipfile Pipfile.lock ${PROJECT_DIR}/`
+
+RUN pipenv install --system --deploy The Copy Command tells docker which files
+you want to use in the next command. In this case we want to use Pipfile and
+Pipfile.lock but you can also want packages.json depending on the project
+
+`ENV DEBUG=False`
+
+You can also set environment variables in docker using ENV to define the
+variable
+
+```
+COPY . .
+
+CMD ["python", "manage.py", "runserver"]
+```
+
+Finally we want to run our application so we first copy everything and run a CMD
+build command but instead of a shell format we used a string array. This is when
+we start up our own container which uses this command to run our application.
+
+Tip: You can use a .dockerignore file to prevent docker copying files you don't
+want copied
+
+You can also run multiple containers in the same container using docker-compose
+but that is another thing

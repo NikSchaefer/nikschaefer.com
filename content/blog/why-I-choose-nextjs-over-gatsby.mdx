@@ -1,0 +1,69 @@
+---
+title: "Why I choose NextJS over Gatsby for peronsal projects"
+author: "Nik Schaefer"
+description:
+    "Here is a quick breakdown of the differences between NextJS and Gatsby and
+    why I chose NextJS "
+datePub: "Jan 2020"
+dateEdit: "Jan 2020"
+---
+
+<img src="/blog/nextjs.jpg" alt="NextJS Logo" />
+
+## What is NextJS and Gatsby?
+
+NextJS and Gatsby are both React frameworks that support server-side-rendering
+and static-site-generation. Both have big community's and around 10k forks on
+GitHub.
+
+## Search Engine Optimization
+
+Search Engine Optimization or SEO is known as how well Google and other browsers
+will show your site on searches. Create-React-App uses Client Side Rendering and
+then browsers will not be able to see the vast majority of what your site is
+about and then does not give it great SEO.
+
+NextJS and Gatsby Solved this by introducing SSR or Server Side Rendering. This
+means once your code is uploaded the server will generate the static HTML
+templates and then serve those to the client. Once served the site will become
+fully reactive with client side rendering.
+
+## Community
+
+The Gatsby Community has over 2000 plugins with officially supported and
+recommended ones available at creation. This can increase productivity and
+decrease the speed it takes to build a site. An important note about Gatsby is
+that it uses GraphQL for Static files. This can be more confusing for beginners
+but is efficient.
+
+NextJS goes with a more officially supported plugins with official Image
+optimization, Meta, Analytics, and Authentication. NextJS also has a official
+hosting provider, Vercel which is intuitive and easy to use and has Built in
+Module CSS bundling.
+
+## Production
+
+Both frameworks have similar routing, both with fast refresh and little baseline
+configuration. They are both Open source and have large community support
+
+NextJS is used by major companies such as Netflix, Twitch, Starbucks, Uber, Hulu
+and GitHub. NextJS has a considerable amount of more jobs available compared to
+Gatsby and is typically used more widely.
+
+Gatsby is also used by major companies such as PayPal, Apollo, Spotify, IBM, and
+Figma even though it is less than NextJS. Gatsby also has its own cloud platform
+and its own CLI.
+
+In Production Gatsby sites do have a major problem. with server side rendering
+in sites that are massive in production such as 100k pages GraphQL queries take
+a considerable amount of time and the Gatsby build time will take hours. This is
+less of a problem with smaller sites but with sites with content frequently
+updating Gatsby does not shine. However NextJS does not suffer from this issue
+so it is the preferred framework among major companies.
+
+## Conclusion
+
+While Gatsby is great NextJS has an edge in the real world and is my preferred
+framework. As it is officially supported by Vercel and is highly used for major
+sites, it is the framework I would recommend for most sites. However there are
+still scenarios where Gatsby can perform better that NextJS.

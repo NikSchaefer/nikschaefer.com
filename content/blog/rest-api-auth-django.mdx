@@ -1,0 +1,100 @@
+---
+title: "Rest API Authentication and Authorization with Django"
+author: "Nik Schaefer"
+description: "learn to set up a quick user auth server with django"
+datePub: "Jan 2020"
+dateEdit: "Jan 2020"
+---
+
+<img src="/blog/django-rest-auth.jpg" alt="Code on Laptop" />
+
+## Prerequisites :
+
+understanding of python Basic understanding of django
+
+## What is a Rest API?
+
+As opposed to a graphQL api rest api have remained the preferred api method. On
+a basic understanding a rest api a website will send a request to a url for
+their server. The request will return the data needed.
+
+## Using auth services
+
+If you are in a rush to build a project using a auth service such as auth0 it
+can be more efficient but it is often expensive when you can just build your own
+auth.
+
+## setting up a rest api
+
+### POST Requests
+
+The primary way for websites to send data is through a post request. The website
+will send a json formatted data to a server url in which the server will handle
+and return a response accordingly.
+
+### Django's built in User Model
+
+Django comes with a built in user model that automatically encodes passwords and
+handles harder things for you. you can import this from
+
+```py
+from django.contrib.auth
+```
+
+### handling a post request with django
+
+to handle a request you need to create a view and attach a url.
+
+#### create user example
+
+```py
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate
+from rest_framework import status
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+def username_exists(username):
+ if User.objects.filter(username=username).exists():
+ return True
+
+ return False
+
+@api_view(['POST'])
+def createUserView(request):
+    print(request.user)
+    username = request.data["username"]
+    email= request.data["email"]
+    password = request.data["password"]
+
+    if username_exists(username):
+        return Response("User Exists")
+    if len(list(username)) < 6:
+        return Response("Requires Longer Username")
+    if len(list(password)) < 6:
+        return Response("Requires Longer Password")
+    user = User.objects.create_user(
+username=username, email=email, password=password)
+
+    created_user = user.get_username(user)
+    return Response(created_user, "account Created")
+```
+
+In urls.py
+
+```py
+from django.urls import path
+
+urlpatterns = [
+ path("create", createUserView),
+]
+```
+
+Now Sending a post request to api/create, this view is attached to will create a
+user in django if the username and password is longer than 6 characters and no
+one has that username
+
+From this post request example you can see how to handle a post request a then
+take action accordingly. from this you can look at django documentation on the
+functions to login, auth, delete and more.
+https://docs.djangoproject.com/en/3.1/ref/contrib/auth/
