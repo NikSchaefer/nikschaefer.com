@@ -23,7 +23,7 @@ export const StyledCard = styled.div`
 	border: solid rgba(0, 0, 0, 0.219) 1px;
 	margin: 10px;
 	.text {
-		background-color: #fdfdfd;
+		background-color: var(--secondary);
 		height: 55%;
 		box-sizing: border-box;
 		padding: 10px;
@@ -39,7 +39,7 @@ export const StyledCard = styled.div`
 	}
 
 	.image {
-		background-color: white;
+		background-color: var(--primary);
 		height: 45%;
 		justify-content: center;
 		align-items: center;
@@ -74,13 +74,13 @@ const ProjectContainer = styled.div`
 `;
 const Project = styled.div`
 	width: 20%;
-	background-color: #fdfdfd;
+	background-color: var(--secondary);
 	text-align: left;
 	border: 1px solid #e5e7eb;
 	box-sizing: border-box;
 	padding: 10px;
 	:hover {
-		background-color: #f8f8f8;
+		background-color: var(--grey);
 		cursor: pointer;
 	}
 `;

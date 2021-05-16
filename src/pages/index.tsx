@@ -54,10 +54,10 @@ const StyledA = styled.a`
 const StyledButton = styled.a`
 	font-size: 20px;
 	padding: 5px 10px;
-	border: #afaeae solid 1px;
+	border: var(--grey) solid 1px;
 	border-radius: 2px;
 	:hover {
-		background-color: #fafafa;
+		background-color: var(--secondary);
 	}
 `;
 const EndNote = styled.p`

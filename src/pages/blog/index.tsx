@@ -8,7 +8,7 @@ const StyledLi = styled.li`
 	margin: 50px 0;
 	a {
 		font-size: 24px;
-		color: #00a2ff;
+		color: var(--accent);
 	}
 	h3 {
 		margin: 0;
