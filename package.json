@@ -17,7 +17,7 @@
 		"clean": "npx prettier --write ."
 	},
 	"dependencies": {
-		"@babel/core": "^7.14.2",
+		"@babel/core": "^7.14.3",
 		"gray-matter": "^4.0.3",
 		"next": "10.2.0",
 		"next-mdx-remote": "^2.1.4",
