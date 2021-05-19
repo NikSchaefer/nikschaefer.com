@@ -121,6 +121,19 @@ const sortByOptions = ["All", "Web Dev", "Python"];
 export default function Portfolio(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
 	const [sortBy, setSortBy] = useState("All");
+	function query(keyword: string) {
+		if (keyword === "All") {
+			setProjectData(projects);
+			return;
+		}
+		const out = [];
+		for (const project of projects) {
+			if (keyword in project.tech) {
+				out.push(project);
+			}
+		}
+		setProjectData(out);
+	}
 	return (
 		<Layout>
 			<Meta META={META} />
@@ -152,6 +165,7 @@ export default function Portfolio(): JSX.Element {
 							key={value}
 							onClick={() => {
 								setSortBy(value);
+								query(value);
 							}}
 							type="button"
 							aria-label={`sort by ${value}`}
