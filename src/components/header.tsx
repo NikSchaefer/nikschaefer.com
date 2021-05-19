@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
+import { useRef } from "react";
 import styled from "styled-components";
-
+import { BiGitMerge } from "react-icons/bi";
 import { HeaderLinks } from "../config";
 
 const Header = styled.header`
@@ -29,9 +31,57 @@ const StyledNav = styled.nav`
 		color: #ffffff;
 	}
 `;
+const StyledMenuArrow = styled.button`
+	background-color: transparent;
+	outline: 0;
+	border: none;
+`;
+const Relative = styled.div`
+	position: relative;
+	.menu {
+		position: absolute;
+		left: 0;
+		transform: translateX(-50%);
+		display: none;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #383e42;
+		border-radius: 0.5rem;
+		width: 90vw;
+		max-width: 250px;
+		margin-top: 0.75rem;
+		box-sizing: border-box;
+		padding: 20px 10px;
+		text-align: left;
+		a {
+			margin: 5px 10px;
+			display: flex;
+			border-radius: 5px;
+			padding: 5px;
+			align-items: center;
+			svg {
+				margin: 10px;
+			}
+			:hover {
+				background-color: #474d52;
+			}
+		}
+	}
+	.flex {
+		display: flex;
+	}
+`;
+
 // eslint-disable-next-line import/no-default-export
 export default function Main(): JSX.Element {
 	const router = useRouter();
+	const ref = useRef<HTMLDivElement>(null);
+	function toggleMenu() {
+		if (ref.current === null) {
+			return;
+		}
+		ref.current.classList.toggle("flex");
+	}
 	return (
 		<Header>
 			<StyledNav>
@@ -46,6 +96,25 @@ export default function Main(): JSX.Element {
 						</a>
 					</Link>
 				))}
+				<Relative>
+					<StyledMenuArrow onClick={toggleMenu} type="button">
+						<RiArrowDownSLine color="white" size="25px" />
+					</StyledMenuArrow>
+					<div ref={ref} className="menu">
+						<Link href="/">
+							<a>
+								<RiScissorsLine size="20px" />
+								Snippets
+							</a>
+						</Link>
+						<Link href="/">
+							<a>
+								<BiGitMerge size="22px" />
+								Activity
+							</a>
+						</Link>
+					</div>
+				</Relative>
 			</StyledNav>
 		</Header>
 	);
