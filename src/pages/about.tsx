@@ -1,11 +1,9 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
-import { BiCodeAlt } from "react-icons/bi";
 import { BsCode } from "react-icons/bs";
 import styled from "styled-components";
 
 import jobs from "../../content/jobs.json";
-import timeline from "../../content/timeline.json";
 
 const META: MetaType = {
 	title: "About | Nik Schaefer",
@@ -16,7 +14,7 @@ const META: MetaType = {
 	url: "https://nikschaefer.tech/about",
 };
 const Disclaimer = styled.h3`
-	background-color: #f5f5f5;
+	background-color: #f7f7f7;
 	width: fit-content;
 	margin: auto;
 	padding: 10px;
@@ -28,29 +26,6 @@ const Disclaimer = styled.h3`
 			text-decoration: underline;
 		}
 	}
-`;
-const Timeline = styled.section`
-	width: 90%;
-	max-width: 500px;
-	margin: auto;
-`;
-const Container = styled.div`
-	text-align: left;
-	position: relative;
-	.icon {
-		position: absolute;
-		left: -40px;
-	}
-	.date {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	h4,
-	p {
-		margin: 5px;
-	}
-	margin: 40px 0;
 `;
 const JobContainer = styled.section`
 	display: flex;
@@ -116,19 +91,7 @@ export default function About(): JSX.Element {
 					nikkschaefer@gmail.com
 				</a>
 			</Disclaimer>
-			<Timeline>
-				<h2>Timeline</h2>
-				{timeline.map((data) => (
-					<Container key={data.title}>
-						<BiCodeAlt className="icon" size="30px" />
-						<h4>{data.title}</h4>
-						<p>{data.description}</p>
-						<h5 className="date">{data.date}</h5>
-					</Container>
-				))}
-			</Timeline>
 			<section>
-				<h2>My</h2>
 				<JobContainer>
 					{jobs
 						.sort((a, b) => {
@@ -164,3 +127,39 @@ export default function About(): JSX.Element {
 		</Layout>
 	);
 }
+/*
+const Timeline = styled.section`
+	width: 90%;
+	max-width: 500px;
+	margin: auto;
+`;
+const Container = styled.div`
+	text-align: left;
+	position: relative;
+	.icon {
+		position: absolute;
+		left: -40px;
+	}
+	.date {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	h4,
+	p {
+		margin: 5px;
+	}
+	margin: 40px 0;
+
+<Timeline>
+	<h2>Timeline</h2>
+	{timeline.map((data) => (
+		<Container key={data.title}>
+			<BiCodeAlt className="icon" size="30px" />
+			<h4>{data.title}</h4>
+			<p>{data.description}</p>
+			<h5 className="date">{data.date}</h5>
+		</Container>
+	))}
+</Timeline>
+*/
