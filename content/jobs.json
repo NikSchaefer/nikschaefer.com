@@ -6,8 +6,19 @@
 		"location": "Remote",
 		"range": "December - March",
 		"url": "https://nevadavolleyballcenter.com/",
-		"content": ["My Current Freelance Position"],
-		"tools": ["React", "Typescript"]
+		"content": [
+			"Development lead working with a team",
+			"Built and maintained an accessible website"
+		],
+		"tools": [
+			"Jest",
+			"React",
+			"Typescript",
+			"CI/CD(Vercel)",
+			"Git(Github)",
+			"CSS-in-JS",
+			"Styled-Components"
+		]
 	},
 	{
 		"date": 3,
@@ -17,9 +28,18 @@
 		"range": "October  - December 2020",
 		"url": "https://sparksvolleyballclub.com/",
 		"content": [
-			"Worked Directly with a partner and client to develop a reactive website"
+			"Worked Directly with a partner and client to develop a reactive website",
+			"Using Pair Programming and Code Review Processes"
 		],
-		"tools": ["React", "Typescript"]
+		"tools": [
+			"React",
+			"Typescript",
+			"Javascript(ES6+)",
+			"Git(Github)",
+			"CI/CD(Vercel)",
+			"npm",
+			"Styled-Components"
+		]
 	},
 	{
 		"date": 1,
@@ -29,9 +49,10 @@
 		"range": "September - December 2020",
 		"url": "https://www.theesportcompany.com/",
 		"content": [
-			"Worked directly with CEO and mentor to build a Wordpress Website"
+			"Worked directly with CEO and mentor to build a Wordpress Website",
+			"Redesigned and Developed a site with alongside designers"
 		],
-		"tools": ["React", "Typescript"]
+		"tools": ["Wordpress", "CSS", "SCSS", "Javascript"]
 	},
 	{
 		"date": 5,
@@ -45,6 +66,24 @@
 			"Lead Developer, working to build websites for numerous clients",
 			"Working in NextJS, Django and more"
 		],
-		"tools": ["React", "Typescript"]
+		"tools": [
+			"React",
+			"Typescript",
+			"Javascript",
+			"Golang",
+			"CI/CD(Vercel)",
+			"Git(Github)",
+			"Go-Fiber",
+			"Serverless/Lambda",
+			"CSS-in-JS",
+			"Styled-Components",
+			"CSS",
+			"HTML",
+			"npm",
+			"Docker",
+			"Next.js",
+			"Jest",
+			"Webpack"
+		]
 	}
 ]

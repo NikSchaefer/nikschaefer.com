@@ -67,6 +67,8 @@ const ToolsAndTechnologies = styled.ul`
 	display: flex;
 	flex-flow: row wrap;
 	align-items: center;
+	font-size: 14.5px;
+
 	h4 {
 		font-weight: 400;
 		flex-basis: 100%;
