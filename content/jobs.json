@@ -52,7 +52,14 @@
 			"Worked directly with CEO and mentor to build a Wordpress Website",
 			"Redesigned and Developed a site with alongside designers"
 		],
-		"tools": ["Wordpress", "CSS", "SCSS", "Javascript"]
+		"tools": [
+			"Wordpress",
+			"CSS",
+			"SCSS",
+			"Javascript",
+			"Accessibility",
+			"HTML"
+		]
 	},
 	{
 		"date": 5,
