@@ -12,7 +12,9 @@ import { Container as Box, StyledCard, size } from "./portfolio";
 const META: MetaType = {
 	title: "Nik Schaefer",
 	lang: "en-us",
-	description: "",
+	description: `I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US
+
+I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development. I am currently learning Golang and its many uses in my free time.`,
 	image: "/logo.png",
 	url: "https://nikschaefer.tech",
 };
