@@ -28,7 +28,7 @@ type Project = {
 	short: string;
 };
 
-export const StyledCard = styled.div`
+export const StyledCard = styled.a`
 	display: flex;
 	text-align: left;
 	flex-direction: column;
@@ -140,7 +140,10 @@ export default function Portfolio(): JSX.Element {
 			<h1>Portfolio</h1>
 			<Container>
 				{json.map((data) => (
-					<StyledCard key={data.github}>
+					<StyledCard
+						href={`/portfolio/${String(data.slug)}`}
+						key={data.github}
+					>
 						<div className="image">
 							<Image
 								height={size}

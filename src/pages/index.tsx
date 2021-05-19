@@ -102,7 +102,10 @@ export default function Home(): JSX.Element {
 				<h2>Projects</h2>
 				<Box>
 					{json.map((data) => (
-						<StyledCard key={data.github}>
+						<StyledCard
+							href={`/portfolio/${String(data.slug)}`}
+							key={data.github}
+						>
 							<div className="image">
 								<Image
 									height={size}
