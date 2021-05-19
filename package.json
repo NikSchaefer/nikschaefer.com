@@ -18,6 +18,7 @@
 	},
 	"dependencies": {
 		"@babel/core": "^7.14.3",
+		"axios": "^0.21.1",
 		"gray-matter": "^4.0.3",
 		"next": "10.2.0",
 		"next-mdx-remote": "^2.1.4",
