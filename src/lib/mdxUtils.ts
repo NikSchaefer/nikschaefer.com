@@ -19,3 +19,11 @@ export const portfolioFilePaths = fs
 	.readdirSync(PORT_PATH)
 	// Only include md(x) files
 	.filter((path) => /\.mdx?$/.test(path));
+
+export const SNIP_PATH = path.join(process.cwd(), "content/snippets");
+
+// postFilePaths is the list of all mdx files inside the POSTS_PATH directory
+export const snippetsFilePaths = fs
+	.readdirSync(SNIP_PATH)
+	// Only include md(x) files
+	.filter((path) => /\.mdx?$/.test(path));

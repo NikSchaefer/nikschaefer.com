@@ -1,0 +1,22 @@
+---
+title: "AWS Lambda build zip file"
+tag: "AWS Lambda"
+---
+
+Build a golang project into a zip file to be uploaded to lambda
+
+Generate Zip file for AWS Lambda
+
+Set ENV variables
+
+`$Env:GOOS = "linux"; $Env:GOARCH = "amd64"`
+
+Build for Linux
+
+`go build -o main`
+
+Zip file into main.zip
+
+`~\Go\Bin\build-lambda-zip.exe -output main.zip main`
+
+will generate a main.zip file to upload to lambada

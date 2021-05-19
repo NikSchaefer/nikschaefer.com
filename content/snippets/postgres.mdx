@@ -1,0 +1,13 @@
+---
+title: "PostgreSQL database in a docker container"
+tag: "Docker"
+---
+
+Start a postgreSQL alpine distribution in a docker container exposed on port
+5432
+
+`docker run --name database -d -p 5432:5432 -e POSTGRES_PASSWORD=password postgres:alpine`
+
+Connection string to the database
+
+`"host=localhost port=5432 user=postgres password=password dbname=postgres sslmode=disable"`

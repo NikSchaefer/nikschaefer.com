@@ -37,7 +37,6 @@ const StyledNav = styled.nav`
 `;
 const StyledMenuArrow = styled.button`
 	background-color: transparent;
-	outline: 0;
 	border: none;
 `;
 const Relative = styled.div`
