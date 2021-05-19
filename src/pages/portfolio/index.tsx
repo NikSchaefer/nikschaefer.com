@@ -11,7 +11,7 @@ const META: MetaType = {
 	lang: "en-us",
 	description: "",
 	image: "/logo.png",
-	url: "https://nikschaefer.tech/activity",
+	url: "https://nikschaefer.tech/portfolio",
 };
 
 export const StyledCard = styled.div`

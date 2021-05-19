@@ -11,6 +11,7 @@ const Header = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.274);
+	background-color: #24292d;
 `;
 const StyledNav = styled.nav`
 	padding: 20px;
@@ -19,13 +20,13 @@ const StyledNav = styled.nav`
 	margin: auto;
 	a {
 		margin: 0 20px;
-		color: rgba(0, 0, 0, 0.637);
+		color: rgba(233, 233, 233, 0.637);
 		font-size: 18px;
 		font-family: "Mukta", sans-serif;
 	}
 	.active,
 	a:hover {
-		color: black;
+		color: #ffffff;
 	}
 `;
 // eslint-disable-next-line import/no-default-export
