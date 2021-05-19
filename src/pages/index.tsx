@@ -54,7 +54,7 @@ const StyledA = styled.a`
 const StyledButton = styled.a`
 	font-size: 20px;
 	padding: 5px 10px;
-	border: var(--grey) solid 1px;
+	border: var(--border) solid 1px;
 	border-radius: 2px;
 	:hover {
 		background-color: var(--secondary);
