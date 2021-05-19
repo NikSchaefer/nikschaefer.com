@@ -39,6 +39,9 @@ const StyledNav = styled.nav`
 const StyledMenuArrow = styled.button`
 	background-color: transparent;
 	border: none;
+	:hover {
+		cursor: pointer;
+	}
 `;
 const Relative = styled.div`
 	position: relative;
