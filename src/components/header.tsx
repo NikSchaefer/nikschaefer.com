@@ -4,6 +4,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { BiGitMerge } from "react-icons/bi";
+import { GoRepoClone } from "react-icons/go";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
 import { useRef } from "react";
 import styled from "styled-components";
@@ -124,6 +125,16 @@ export default function Main(): JSX.Element {
 							>
 								<BiGitMerge size="22px" />
 								Activity
+							</a>
+						</Link>
+						<Link href="/repos">
+							<a
+								role="link"
+								aria-label="Nav Link"
+								onClick={toggleMenu}
+							>
+								<GoRepoClone size="22px" />
+								Repositories
 							</a>
 						</Link>
 					</div>
