@@ -3,10 +3,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useRef } from "react";
 import { BiGitMerge } from "react-icons/bi";
 import { GoRepoClone } from "react-icons/go";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
-import { useRef } from "react";
 import styled from "styled-components";
 
 import { HeaderLinks } from "../config";
@@ -103,7 +103,11 @@ export default function Main(): JSX.Element {
 					</Link>
 				))}
 				<Relative>
-					<StyledMenuArrow onClick={toggleMenu} type="button">
+					<StyledMenuArrow
+						aria-label="drop down"
+						onClick={toggleMenu}
+						type="button"
+					>
 						<RiArrowDownSLine color="white" size="25px" />
 					</StyledMenuArrow>
 					<div ref={ref} id="menu" className="menu">
