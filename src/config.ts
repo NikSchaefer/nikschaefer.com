@@ -43,6 +43,15 @@ type BlogLink = {
 };
 const BlogLinks: BlogLink[] = [
 	{
+		title: "What's new in Machine Learning",
+		link: "/blog/whats-new-in-machine-learning",
+		image: "/blog/mlops.webp",
+		description:
+			"attending Google's I/O Machine Learning talks and Keynotes",
+		min: 3,
+		date: "May 2020",
+	},
+	{
 		title: "Dockerizing your Developer Workflow",
 		link: "/blog/dockerizing-your-developer-workflow",
 		image: "/blog/dockerizing-your-developer-workflow",
