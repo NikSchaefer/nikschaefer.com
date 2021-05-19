@@ -117,7 +117,7 @@ export default function About(): JSX.Element {
 									))}
 								</ul>
 								<ToolsAndTechnologies>
-									<h4>Tools used/learnt:</h4>
+									<h4>Tools used/learned:</h4>
 									{data.tools.map((value) => (
 										<Tag key={value}>{value}</Tag>
 									))}
