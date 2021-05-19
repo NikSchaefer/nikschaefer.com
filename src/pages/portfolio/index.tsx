@@ -98,9 +98,29 @@ const Project = styled.div`
 		cursor: pointer;
 	}
 `;
+const StyledList = styled.ul`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	button {
+		margin: 10px 5px;
+		border: solid 2px var(--border);
+		padding: 5px 10px;
+		outline: 0;
+		background-color: transparent;
+		font-size: 16px;
+		:hover {
+			cursor: pointer;
+		}
+	}
+	.active {
+		border-color: #00a2ff;
+	}
+`;
+const sortByOptions = ["All", "Web Dev", "Python"];
 export default function Portfolio(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
-	const [sortBy, setSortBy] = useState("")
+	const [sortBy, setSortBy] = useState("All");
 	return (
 		<Layout>
 			<Meta META={META} />
@@ -125,9 +145,21 @@ export default function Portfolio(): JSX.Element {
 			</Container>
 			<section>
 				<h2>All Projects</h2>
-				<div>
-					
-				</div>
+				<StyledList>
+					{sortByOptions.map((value) => (
+						<button
+							className={value === sortBy ? "active" : ""}
+							key={value}
+							onClick={() => {
+								setSortBy(value);
+							}}
+							type="button"
+							aria-label={`sort by ${value}`}
+						>
+							{value}
+						</button>
+					))}
+				</StyledList>
 				<ProjectContainer>
 					{projectData.map((data) => (
 						<Project key={data.github}>
