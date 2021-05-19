@@ -1,6 +1,7 @@
 import Layout from "@components/layout";
 import { BlogLinks } from "config";
 import Link from "next/link";
+import { useState } from "react";
 import styled from "styled-components";
 
 const StyledLi = styled.li`
@@ -26,13 +27,44 @@ const StyledContainer = styled.ul`
 	max-width: 700px;
 	margin: auto;
 `;
-
+const StyledInput = styled.input`
+	border: solid 1px var(--border);
+	font-size: 18px;
+	padding: 10px 20px;
+	border-radius: 4px;
+	outline: 0;
+`;
 export default function Blog(): JSX.Element {
+	const [value, setValue] = useState("");
+	const [blogs, setBlogs] = useState(BlogLinks);
+	function query(keyword: string) {
+		const out = [];
+		const kw = keyword.trim().toLowerCase();
+		for (const blog of BlogLinks) {
+			if (
+				blog.description.toLowerCase().includes(kw) ||
+				blog.title.toLowerCase().includes(kw)
+			) {
+				out.push(blog);
+			}
+		}
+		setBlogs(out);
+	}
 	return (
 		<Layout>
 			<h1>Blog</h1>
+			<StyledInput
+				value={value}
+				onChange={(e) => {
+					setValue(e.target.value);
+					query(e.target.value);
+				}}
+				type="text"
+				aria-label="search bar"
+				placeholder="Search Blogs"
+			/>
 			<StyledContainer>
-				{BlogLinks.map((data) => (
+				{blogs.map((data) => (
 					<StyledLi key={data.link}>
 						<Link href={data.link}>
 							<a>{data.title}</a>

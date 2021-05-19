@@ -1,6 +1,7 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import Image from "next/image";
+import { useState } from "react";
 import styled from "styled-components";
 
 import json from "../../../content/featured.json";
@@ -12,6 +13,19 @@ const META: MetaType = {
 	description: "",
 	image: "/logo.png",
 	url: "https://nikschaefer.tech/portfolio",
+};
+
+type Project = {
+	date: string;
+	title: string;
+	cover: string;
+	svg: string;
+	github: string;
+	external: string;
+	tech: string[];
+	showInProjects: boolean;
+	content: string;
+	short: string;
 };
 
 export const StyledCard = styled.div`
@@ -85,6 +99,8 @@ const Project = styled.div`
 	}
 `;
 export default function Portfolio(): JSX.Element {
+	const [projectData, setProjectData] = useState(projects);
+	const [sortBy, setSortBy] = useState("")
 	return (
 		<Layout>
 			<Meta META={META} />
@@ -109,9 +125,11 @@ export default function Portfolio(): JSX.Element {
 			</Container>
 			<section>
 				<h2>All Projects</h2>
-				<div />
+				<div>
+					
+				</div>
 				<ProjectContainer>
-					{projects.map((data) => (
+					{projectData.map((data) => (
 						<Project key={data.github}>
 							<h4>{data.title}</h4>
 							<p>{data.text}</p>
