@@ -108,7 +108,10 @@ export default function Slug({
 									Website
 								</Btn>
 							)}
-							<Btn href={frontMatter.github} className="github-btn">
+							<Btn
+								href={frontMatter.github}
+								className="github-btn"
+							>
 								<SiGithub />
 								Github
 							</Btn>
