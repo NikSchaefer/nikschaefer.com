@@ -6,7 +6,6 @@ import { useEffect } from "react";
 
 import type { AppProps } from "next/app";
 
-// eslint-disable-next-line import/no-default-export
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	const router = useRouter();
 	useEffect(() => {
