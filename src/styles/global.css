@@ -24,3 +24,14 @@ a {
 ul {
 	list-style: none;
 }
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		margin-top: 1rem;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0.75rem;
+	}
+}

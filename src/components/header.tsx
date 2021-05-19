@@ -1,9 +1,13 @@
+/* eslint-disable jsx-a11y/interactive-supports-focus */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { BiGitMerge } from "react-icons/bi";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
 import { useRef } from "react";
 import styled from "styled-components";
-import { BiGitMerge } from "react-icons/bi";
+
 import { HeaderLinks } from "../config";
 
 const Header = styled.header`
@@ -53,6 +57,8 @@ const Relative = styled.div`
 		box-sizing: border-box;
 		padding: 20px 10px;
 		text-align: left;
+		animation: fadeIn 0.2s ease;
+		z-index: 50;
 		a {
 			margin: 5px 10px;
 			display: flex;
@@ -100,15 +106,23 @@ export default function Main(): JSX.Element {
 					<StyledMenuArrow onClick={toggleMenu} type="button">
 						<RiArrowDownSLine color="white" size="25px" />
 					</StyledMenuArrow>
-					<div ref={ref} className="menu">
-						<Link href="/">
-							<a>
+					<div ref={ref} id="menu" className="menu">
+						<Link href="/snippets">
+							<a
+								role="link"
+								aria-label="Nav Link"
+								onClick={toggleMenu}
+							>
 								<RiScissorsLine size="20px" />
 								Snippets
 							</a>
 						</Link>
-						<Link href="/">
-							<a>
+						<Link href="/activity">
+							<a
+								role="link"
+								aria-label="Nav Link"
+								onClick={toggleMenu}
+							>
 								<BiGitMerge size="22px" />
 								Activity
 							</a>

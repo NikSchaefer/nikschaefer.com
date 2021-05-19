@@ -27,10 +27,6 @@ const HeaderLinks: HeaderLink[] = [
 		link: "/portfolio",
 		title: "Portfolio",
 	},
-	{
-		link: "/activity",
-		title: "Activity",
-	},
 ];
 
 type BlogLink = {
