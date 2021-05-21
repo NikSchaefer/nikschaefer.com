@@ -86,7 +86,7 @@ const ProjectContainer = styled.div`
 	row-gap: 1rem;
 	column-gap: 1rem;
 `;
-const Project = styled.div`
+const Project = styled.a`
 	width: 20%;
 	background-color: var(--secondary);
 	text-align: left;
@@ -179,7 +179,10 @@ export default function Portfolio(): JSX.Element {
 				</StyledList>
 				<ProjectContainer>
 					{projectData.map((data) => (
-						<Project key={data.github}>
+						<Project
+							href={`/portfolio/${String(data.slug)}`}
+							key={data.github}
+						>
 							<h4>{data.title}</h4>
 							<p>{data.text}</p>
 						</Project>

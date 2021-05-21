@@ -6,7 +6,8 @@
 		"title": "Box Shadow Creator",
 		"github": "https://github.com/NikSchaefer/box-shadow-maker",
 		"external": "https://box-shadow.vercel.app/",
-		"tech": ["React", "HTML + CSS", "Javascript"]
+		"tech": ["React", "HTML + CSS", "Javascript"],
+		"slug": "box-shadow-creator"
 	},
 	{
 		"text": "Python Script run on Selenium with Chromium to add all discord friends of a Name",
@@ -15,7 +16,8 @@
 		"title": "Find discord Friends",
 		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
-		"tech": ["Python", "Selenium"]
+		"tech": ["Python", "Selenium"],
+		"slug": "find-discord-friends"
 	},
 	{
 		"text": "MIT NextJS Typescript Template with Prettier + Jest + Eslint + Google Analytics for Vercel with 100% on Lighthouse",
@@ -33,7 +35,8 @@
 			"ESLint",
 			"Jest",
 			"React Icons"
-		]
+		],
+		"slug": "nextjs-boilerplate"
 	},
 	{
 		"text": "Django Backend React Typescript frontend template configured to Easily Deploy on Heroku.",
@@ -42,7 +45,8 @@
 		"title": "Django React Typescript",
 		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
-		"tech": ["Python", "Django", "React", "Typescript", "PostgresSQL"]
+		"tech": ["Python", "Django", "React", "Typescript", "PostgresSQL"],
+		"slug": "django-backend"
 	},
 	{
 		"text": "Small Project to parse Fonts used from website CSS files by URL",
@@ -51,7 +55,8 @@
 		"title": "Get CSS fonts used",
 		"github": "https://github.com/NikSchaefer/Get-CSS-Fonts-Used/tree/master",
 		"external": "https://get-css-fonts.vercel.app/",
-		"tech": ["React", "Javascript", "Axios"]
+		"tech": ["React", "Javascript", "Axios"],
+		"slug": "get-css-fonts-used"
 	},
 	{
 		"text": "The First Iteration of my Personal Portfolio",
@@ -59,7 +64,8 @@
 		"index": 1,
 		"title": "Portfolio V1",
 		"github": "https://github.com/NikSchaefer/portfolio",
-		"tech": ["React", "Typescript", "HTML + CSS"]
+		"tech": ["React", "Typescript", "HTML + CSS"],
+		"slug": "portfolio-v1"
 	},
 	{
 		"text": "The umbrella project is an App that Accesses the Open Weather API.",
@@ -68,7 +74,8 @@
 		"title": "Umbrella App",
 		"github": "https://github.com/NikSchaefer/umbrella_website",
 		"external": "https://theumbrella.vercel.app/",
-		"tech": ["React Native", "ReactJS", "Javascript"]
+		"tech": ["React Native", "ReactJS", "Javascript"],
+		"slug": "umbrella-app"
 	},
 	{
 		"text": "A site containing direct comparisions between Databases, Frameworks, Tools andmore",
@@ -77,7 +84,8 @@
 		"title": "Web Tools",
 		"github": "https://github.com/NikSchaefer/Web-Tools",
 		"external": "https://development-tools.vercel.app/",
-		"tech": ["Typescript", "React", "CRA"]
+		"tech": ["Typescript", "React", "CRA"],
+		"slug": "web-tools"
 	},
 	{
 		"date": "17",
@@ -89,7 +97,8 @@
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
 		"showInProjects": true,
 		"content": "A web App for viewing a list of official programming and developer discord servers allows to search alphabetically or by search",
-		"text": "Web App for Viewing a list of official developer related discord Communities"
+		"text": "Web App for Viewing a list of official developer related discord Communities",
+		"slug": "dev-discords"
 	},
 	{
 		"date": "20",
@@ -101,7 +110,8 @@
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
 		"showInProjects": true,
 		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. ",
-		"text": "Instagram clone but for Dogs!"
+		"text": "Instagram clone but for Dogs!",
+		"slug": "instadog"
 	},
 	{
 		"svg": "student.svg",
@@ -113,7 +123,8 @@
 		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
 		"showInProjects": true,
 		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!",
-		"text": "Web App filled with Computer Science Resources for Students"
+		"text": "Web App filled with Computer Science Resources for Students",
+		"slug": "csresources"
 	},
 	{
 		"svg": "github.svg",
@@ -125,6 +136,7 @@
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
 		"showInProjects": true,
 		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throught Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API",
-		"text": "Website to better visualize Github Stats"
+		"text": "Website to better visualize Github Stats",
+		"slug": "octo-stats"
 	}
 ]
