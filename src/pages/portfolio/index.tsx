@@ -8,9 +8,9 @@ import json from "../../../content/featured.json";
 import projects from "../../../content/projects.json";
 
 const META: MetaType = {
-	title: "Portoflio | Nik Schaefer",
+	title: "Portfolio | Nik Schaefer",
 	lang: "en-us",
-	description: "",
+	description: " My Projects and things I've built",
 	image: "/logo.png",
 	url: "https://nikschaefer.tech/portfolio",
 };
@@ -117,7 +117,7 @@ const StyledList = styled.ul`
 		border-color: #00a2ff;
 	}
 `;
-const sortByOptions = ["All", "Web Dev", "Python"];
+const sortByOptions = ["All", "WebDev", "Python"];
 export default function Portfolio(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
 	const [sortBy, setSortBy] = useState("All");
@@ -128,7 +128,7 @@ export default function Portfolio(): JSX.Element {
 		}
 		const out = [];
 		for (const project of projects) {
-			if (keyword in project.tech) {
+			if (project.tech.includes(keyword)) {
 				out.push(project);
 			}
 		}
