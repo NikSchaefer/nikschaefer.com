@@ -1,9 +1,11 @@
+/* eslint-disable sonarjs/no-identical-functions */
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { BsCode } from "react-icons/bs";
 import styled from "styled-components";
 
 import jobs from "../../content/jobs.json";
+import studies from "../../content/studies.json";
 
 const META: MetaType = {
 	title: "About | Nik Schaefer",
@@ -82,6 +84,15 @@ const Tag = styled.li`
 	border-radius: 5px;
 	color: #0084ff;
 `;
+const Title = styled.h1`
+	text-align: left;
+	width: 90%;
+	margin: auto;
+	max-width: 900px;
+	font-weight: 600;
+	font-size: 1.875rem;
+	line-height: 2.25rem;
+`;
 export default function About(): JSX.Element {
 	return (
 		<Layout>
@@ -94,8 +105,43 @@ export default function About(): JSX.Element {
 				</a>
 			</Disclaimer>
 			<section>
+				<Title>Work</Title>
 				<JobContainer>
 					{jobs
+						.sort((a, b) => {
+							return b.date - a.date;
+						})
+						.map((data) => (
+							<Node key={data.date}>
+								<div className="top">
+									<span className="title">
+										<BsCode size="28px" />
+										{data.title}
+									</span>
+									<span>{data.range}</span>
+								</div>
+								<div className="link">
+									<a href={data.url}>{data.company}</a>
+								</div>
+								<ul>
+									{data.content.map((value) => (
+										<li key={value}>- {value}</li>
+									))}
+								</ul>
+								<ToolsAndTechnologies>
+									<h4>Tools used/learned:</h4>
+									{data.tools.map((value) => (
+										<Tag key={value}>{value}</Tag>
+									))}
+								</ToolsAndTechnologies>
+							</Node>
+						))}
+				</JobContainer>
+			</section>
+			<section>
+				<Title>Studies</Title>
+				<JobContainer>
+					{studies
 						.sort((a, b) => {
 							return b.date - a.date;
 						})
