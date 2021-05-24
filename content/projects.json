@@ -1,5 +1,45 @@
 [
 	{
+		"text": "My Personal Golang CLI for productivity and networking",
+		"date": "2021-3",
+		"index": 9,
+		"title": "My-CLI",
+		"github": "https://github.com/NikSchaefer/My-CLI",
+		"external": "",
+		"tech": [
+			"Golang"
+		],
+		"slug": "my-cli"
+	},
+	{
+		"text": "Second Iteration of my Personal Portfolio",
+		"date": "2021-3",
+		"index": 9,
+		"title": "Portfolio-V2",
+		"github": "https://github.com/NikSchaefer/Portfolio-V2",
+		"external": "https://nikschaefer.tech/",
+		"tech": [
+			"Typescript",
+			"NextJS",
+			"React",
+			"Styled Components",
+			"Jest",
+			"ESLint",
+			"Google Analytics"
+		],
+		"slug": "portfolio-v2"
+	},
+	{
+		"text": "Golang functions to connect and disconnect from networks",
+		"date": "2021-3",
+		"index": 9,
+		"title": "Golang Networking",
+		"github": "https://github.com/NikSchaefer/netsh",
+		"external": "",
+		"tech": ["Golang", "OS"],
+		"slug": "go-netsh"
+	},
+	{
 		"text": "Project based around creating an easily cusomizable box-shadow and to copy paste the css",
 		"date": "2020-9",
 		"index": 8,
@@ -30,7 +70,6 @@
 			"Typescript",
 			"NextJS",
 			"Styled Components",
-			"Lightweight",
 			"Google Analytics",
 			"ESLint",
 			"Jest",
