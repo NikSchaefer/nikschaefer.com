@@ -28,6 +28,11 @@ type Project = {
 	short: string;
 };
 
+type SortOf = {
+	name: string;
+	include: string[];
+};
+
 export const StyledCard = styled.a`
 	display: flex;
 	text-align: left;
@@ -117,18 +122,25 @@ const StyledList = styled.ul`
 		border-color: #00a2ff;
 	}
 `;
-const sortByOptions = ["All", "WebDev", "Python"];
+const sortByOptions: SortOf[] = [
+	{ name: "All", include: [] },
+	{
+		name: "Web Dev",
+		include: ["Javascript", "Typescript", "React", "Next.js"],
+	},
+	{ name: "Python", include: ["Python", "Tensorflow", "Pandas"] },
+];
 export default function Portfolio(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
 	const [sortBy, setSortBy] = useState("All");
-	function query(keyword: string) {
-		if (keyword === "All") {
+	function query(key: SortOf) {
+		if (key.name === "All") {
 			setProjectData(projects);
 			return;
 		}
 		const out = [];
 		for (const project of projects) {
-			if (project.tech.includes(keyword)) {
+			if (project.tech.some((r) => key.include.includes(r))) {
 				out.push(project);
 			}
 		}
@@ -164,16 +176,16 @@ export default function Portfolio(): JSX.Element {
 				<StyledList>
 					{sortByOptions.map((value) => (
 						<button
-							className={value === sortBy ? "active" : ""}
-							key={value}
+							className={value.name === sortBy ? "active" : ""}
+							key={value.name}
 							onClick={() => {
-								setSortBy(value);
+								setSortBy(value.name);
 								query(value);
 							}}
 							type="button"
-							aria-label={`sort by ${value}`}
+							aria-label={`sort by ${value.name}`}
 						>
-							{value}
+							{value.name}
 						</button>
 					))}
 				</StyledList>
