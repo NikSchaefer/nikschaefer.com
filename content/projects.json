@@ -1,14 +1,21 @@
 [
 	{
+		"date": "2021-5",
+		"title": "Dogs and Cats ML",
+		"github": "https://github.com/NikSchaefer/Dogs-vs-Cats-ML",
+		"external": "",
+		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
+		"slug": "dogs-vs-cats-ml",
+		"text": "ML model to distinguish images as dogs or cats"
+	},
+	{
 		"text": "My Personal Golang CLI for productivity and networking",
 		"date": "2021-3",
 		"index": 9,
 		"title": "My-CLI",
 		"github": "https://github.com/NikSchaefer/My-CLI",
 		"external": "",
-		"tech": [
-			"Golang"
-		],
+		"tech": ["Golang"],
 		"slug": "my-cli"
 	},
 	{

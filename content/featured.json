@@ -26,17 +26,17 @@
 		"short": "Instagram clone but for Dogs!"
 	},
 	{
-		"svg": "student.svg",
+		"svg": "machine-learning.svg",
 		"date": "1",
-		"title": "CS Resources",
+		"title": "Dogs and Cats ML",
 		"cover": "csresources.png",
-		"github": "https://github.com/NikSchaefer/csnotes",
-		"external": "https://csresources.herokuapp.com/",
-		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
+		"github": "https://github.com/NikSchaefer/Dogs-vs-Cats-ML",
+		"external": "",
+		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
 		"showInProjects": true,
-		"slug": "csresources",
-		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!",
-		"short": "Web App filled with Computer Science Resources for Students"
+		"slug": "dogs-vs-cats-ml",
+		"content": "Machine Learning model built to identify pictures between cats and dogs. Built with tensorflow and keras.",
+		"short": "ML model to distinguish images as dogs or cats"
 	},
 	{
 		"svg": "github.svg",
