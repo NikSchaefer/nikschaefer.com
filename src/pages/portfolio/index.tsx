@@ -124,6 +124,7 @@ const StyledList = styled.ul`
 `;
 const sortByOptions: SortOf[] = [
 	{ name: "All", include: [] },
+	{ name: "Machine Learning", include: ["Tensorflow", "tensorflow"] },
 	{
 		name: "Web Dev",
 		include: ["Javascript", "Typescript", "React", "Next.js"],

@@ -9,6 +9,25 @@
 		"text": "ML model to distinguish images as dogs or cats"
 	},
 	{
+		"date": "2021-5",
+		"title": "Vehicle Detection ML",
+		"github": "https://github.com/NikSchaefer/Vehicle-Detection-ML",
+		"external": "",
+		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
+		"slug": "vehicle-detection-ml",
+		"text": "Machine Learning model built to detect if an image has a vehicle"
+	},
+	{
+		"date": "2021-5",
+		"title": "Mnist Handwritten digits ML",
+		"github": "https://github.com/NikSchaefer/Mnist-Digits-ML",
+		"external": "",
+		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
+		"slug": "mnist-handwritten-digits-ml",
+		"text": "Machine Learning Model to classify handwritten digits based on the mnist dataset of handwritten digits"
+	},
+
+	{
 		"text": "My Personal Golang CLI for productivity and networking",
 		"date": "2021-3",
 		"index": 9,
