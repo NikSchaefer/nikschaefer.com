@@ -1,12 +1,13 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { snippetsFilePaths, SNIP_PATH } from "@lib/mdxUtils";
+import rehypePrism from "@mapbox/rehype-prism";
 import { Container, Content } from "@styles/blog.theme";
 import fs from "fs";
 import matter from "gray-matter";
-import hydrate from "next-mdx-remote/hydrate";
-import renderToString from "next-mdx-remote/render-to-string";
 import { GetStaticProps, GetStaticPaths } from "next";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import styled from "styled-components";
 
@@ -43,7 +44,6 @@ export default function Slug({
 	source,
 	frontMatter,
 }: receivingData): JSX.Element {
-	const content = hydrate(source);
 	const meta: MetaType = {
 		title: frontMatter.title,
 		description: frontMatter.title,
@@ -59,7 +59,9 @@ export default function Slug({
 					<StyledSection>
 						<h1>{frontMatter.title}</h1>
 					</StyledSection>
-					<article>{content}</article>
+					<article>
+						<MDXRemote {...source} />
+					</article>
 				</Content>
 			</Container>
 		</Layout>
@@ -71,8 +73,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const source = fs.readFileSync(postFilePath);
 
 	const { content, data } = matter(source);
-	const mdxSource = await renderToString(content, {
+	const mdxSource = await serialize(content, {
 		scope: data,
+		mdxOptions: {
+			rehypePlugins: [rehypePrism],
+		},
 	});
 	return {
 		props: {
