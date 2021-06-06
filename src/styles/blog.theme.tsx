@@ -1,7 +1,8 @@
+import { SyntaxCSS } from "@styles/syntax-highlighting";
 import styled from "styled-components";
 
 const Container = styled.main`
-	padding: 100px 0;
+	padding: 60px 0;
 	text-align: left;
 `;
 
@@ -9,26 +10,20 @@ const Content = styled.section`
 	width: 90%;
 	max-width: 700px;
 	margin: auto;
-	font-size: 21px;
-	letter-spacing: -0.003em;
-	line-height: 1.6;
+	font-size: 1.1rem;
+	line-height: 1.75;
 	font-style: normal;
-	word-break: break-word;
-	h1,
-	h2,
-	h3,
-	h4,
-	h5 {
-		font-weight: 600;
-		margin: 10px 0;
+	color: #2e3440;
+	font-family: "Roboto", sans-serif;
+	pre {
+		overflow-x: scroll;
 	}
-	pre,
-	code {
-		background-color: #283142;
-		color: white;
-		border-radius: 5px;
-		padding: 0.3em 0.5em;
-		font-size: 16px;
+	p code {
+		color: #3f3f46;
+		font-weight: 600;
+		background-color: #d8dee9;
+		padding: 4px 6px;
+		border-radius: 0.125rem;
 	}
 
 	h4 svg {
@@ -42,6 +37,16 @@ const Content = styled.section`
 	a {
 		color: #10c1fc;
 	}
+	h1 {
+		font-size: 2.5rem;
+	}
+	h2 {
+		font-size: 1.7rem;
+	}
+	h3 {
+		font-size: 1.3rem;
+	}
+	${SyntaxCSS}
 `;
 const StyledTitle = styled.h1`
 	font-size: 55px;

@@ -1,5 +1,6 @@
 import Layout from "@components/layout";
 import { postFilePaths, POSTS_PATH } from "@lib/mdxUtils";
+import rehypePrism from "@mapbox/rehype-prism";
 import {
 	Container,
 	Content,
@@ -8,9 +9,9 @@ import {
 } from "@styles/blog.theme";
 import fs from "fs";
 import matter from "gray-matter";
-import hydrate from "next-mdx-remote/hydrate";
-import renderToString from "next-mdx-remote/render-to-string";
 import { GetStaticProps, GetStaticPaths } from "next";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import Head from "next/head";
 import path from "path";
 import { BiTimeFive } from "react-icons/bi";
@@ -32,7 +33,6 @@ export default function Slug({
 	frontMatter,
 	wordCount,
 }: receivingData): JSX.Element {
-	const content = hydrate(source);
 	return (
 		<Layout>
 			<Container>
@@ -56,7 +56,9 @@ export default function Slug({
 							{Math.ceil(wordCount / 275)} Min Read
 						</h4>
 					</AuthorSection>
-					<article>{content}</article>
+					<article>
+						<MDXRemote {...source} />
+					</article>
 				</Content>
 			</Container>
 		</Layout>
@@ -68,8 +70,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const source = fs.readFileSync(postFilePath);
 
 	const { content, data } = matter(source);
-	const mdxSource = await renderToString(content, {
+	const mdxSource = await serialize(content, {
 		scope: data,
+		mdxOptions: {
+			rehypePlugins: [rehypePrism],
+		},
 	});
 	return {
 		props: {

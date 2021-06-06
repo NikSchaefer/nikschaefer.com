@@ -28,7 +28,7 @@ or splitting up CPU intensive work.
 A goroutine is a concurrent process in Golang running separate to the main
 thread. Lets start with a simple concurrent program.
 
-```
+```go
 package main
 
 import (
@@ -58,7 +58,7 @@ function to run it concurrently.
 Golang handles the process of interacting with the CPU to run it separately
 which gives us the easy job.
 
-```
+```go
 func main() {
  go count("task 1")
  count("task 2")

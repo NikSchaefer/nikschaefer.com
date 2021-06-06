@@ -2,12 +2,13 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { portfolioFilePaths, PORT_PATH } from "@lib/mdxUtils";
+import rehypePrism from "@mapbox/rehype-prism";
 import { Container, Content } from "@styles/blog.theme";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticProps, GetStaticPaths } from "next";
-import hydrate from "next-mdx-remote/hydrate";
-import renderToString from "next-mdx-remote/render-to-string";
+import { MDXRemote } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import { BiCodeAlt } from "react-icons/bi";
 import { SiGithub } from "react-icons/si";
@@ -19,7 +20,7 @@ const StyledSection = styled.section`
 	border-bottom: black 1px solid;
 	h1 {
 		font-size: 60px;
-		font-weight: 400;
+		margin: 10px;
 	}
 	.links {
 		display: flex;
@@ -37,7 +38,7 @@ const StyledSection = styled.section`
 const Btn = styled.a`
 	background-color: var(--primary);
 	padding: 10px 20px;
-	margin: 20px;
+	margin: 10px;
 	border-radius: 0.25rem;
 	display: flex;
 	align-items: center;
@@ -56,9 +57,6 @@ const UL = styled.ul`
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
-	h4 {
-		flex-basis: 100%;
-	}
 `;
 const Tag = styled.li`
 	background-color: #f2f8ff;
@@ -83,7 +81,6 @@ export default function Slug({
 	source,
 	frontMatter,
 }: receivingData): JSX.Element {
-	const content = hydrate(source);
 	const meta: MetaType = {
 		title: frontMatter.title,
 		description: frontMatter.description,
@@ -116,14 +113,16 @@ export default function Slug({
 								Github
 							</Btn>
 						</div>
+						<h4>MADE WITH</h4>
 						<UL>
-							<h4>MADE WITH</h4>
 							{frontMatter.tags.split(",").map((value) => (
 								<Tag key={value}>{value}</Tag>
 							))}
 						</UL>
 					</StyledSection>
-					<article>{content}</article>
+					<article>
+						<MDXRemote {...source} />
+					</article>
 				</Content>
 			</Container>
 		</Layout>
@@ -135,8 +134,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const source = fs.readFileSync(postFilePath);
 
 	const { content, data } = matter(source);
-	const mdxSource = await renderToString(content, {
+	const mdxSource = await serialize(content, {
 		scope: data,
+		mdxOptions: {
+			rehypePlugins: [rehypePrism],
+		},
 	});
 	return {
 		props: {

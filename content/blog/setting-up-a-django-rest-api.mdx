@@ -41,29 +41,21 @@ install Django https://docs.djangoproject.com/en/3.1/topics/install/
 
 First create the project in terminal
 
-```
-django-admin startproject mysite
-```
+`django-admin startproject mysite`
 
 Then create the app
 
-```
-python manage.py startapp api
-```
+`python manage.py startapp api`
 
 This creates another app in the project
 
 while we are in terminal lets install the rest framework
 
-```
-pip install rest_framework
-```
+`pip install rest_framework`
 
 To start your app
 
-```
-python manage.py runserver
-```
+`python manage.py runserver`
 
 in settings.py under installed apps add the api
 
@@ -157,16 +149,12 @@ urlpatterns = [
 
 Now your API is complete, if you run the server you can find the article at
 
-```
-127.0.0.1:8000/api/article
-```
+`127.0.0.1:8000/api/article`
 
 if 127.0.0.1:8000 is the server port
 
 to return as JSON add a ?format=json to the api requeset
 
-```
-127.0.0.1:8000/api/article?format=json
-```
+`127.0.0.1:8000/api/article?format=json`
 
 Now add to your models and retrieve your data by calling to that server!
