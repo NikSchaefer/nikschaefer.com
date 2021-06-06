@@ -113,16 +113,6 @@
 		"slug": "django-backend"
 	},
 	{
-		"text": "Small Project to parse Fonts used from website CSS files by URL",
-		"date": "2020-12-20",
-		"index": 5,
-		"title": "Get CSS fonts used",
-		"github": "https://github.com/NikSchaefer/Get-CSS-Fonts-Used/tree/master",
-		"external": "https://get-css-fonts.vercel.app/",
-		"tech": ["React", "Javascript", "Axios"],
-		"slug": "get-css-fonts-used"
-	},
-	{
 		"text": "The First Iteration of my Personal Portfolio",
 		"date": "2020-10",
 		"index": 1,
