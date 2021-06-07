@@ -119,6 +119,9 @@ const StyledList = styled.ul`
 		border-color: #00a2ff;
 	}
 `;
+const StyledSpan = styled.span`
+	font-size: 15px;
+`;
 const sortByOptions: SortOf[] = [
 	{ name: "All", include: [], content: projects },
 	{
@@ -184,12 +187,13 @@ export default function Portfolio(): JSX.Element {
 							onClick={() => {
 								setSortBy(value.name);
 								setProjectData(value.content);
-								console.log(value.content.length)
+								console.log(value.content.length);
 							}}
 							type="button"
 							aria-label={`sort by ${value.name}`}
 						>
-							{value.name}
+							{value.name}{" "}
+							<StyledSpan>{value.content.length}</StyledSpan>
 						</button>
 					))}
 				</StyledList>
