@@ -30,7 +30,6 @@
 	{
 		"text": "My Personal Golang CLI for productivity and networking",
 		"date": "2021-3",
-		"index": 9,
 		"title": "My-CLI",
 		"github": "https://github.com/NikSchaefer/My-CLI",
 		"external": "",
@@ -58,7 +57,6 @@
 	{
 		"text": "Golang functions to connect and disconnect from networks",
 		"date": "2021-3",
-		"index": 9,
 		"title": "Golang Networking",
 		"github": "https://github.com/NikSchaefer/netsh",
 		"external": "",
@@ -68,7 +66,6 @@
 	{
 		"text": "Project based around creating an easily cusomizable box-shadow and to copy paste the css",
 		"date": "2020-9",
-		"index": 8,
 		"title": "Box Shadow Creator",
 		"github": "https://github.com/NikSchaefer/box-shadow-maker",
 		"external": "https://box-shadow.vercel.app/",
@@ -87,7 +84,6 @@
 	{
 		"text": "MIT NextJS Typescript Template with Prettier + Jest + Eslint + Google Analytics for Vercel with 100% on Lighthouse",
 		"date": "2021-2-4",
-		"index": 2,
 		"title": "NextJS Boilerplate",
 		"github": "https://github.com/NikSchaefer/nextjs-boilerplate",
 		"external": "https://boilerplate.nikschaefer.tech/",
@@ -105,7 +101,6 @@
 	{
 		"text": "Django Backend React Typescript frontend template configured to Easily Deploy on Heroku.",
 		"date": "2020-11-15",
-		"index": 3,
 		"title": "Django React Typescript",
 		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
@@ -115,7 +110,6 @@
 	{
 		"text": "The First Iteration of my Personal Portfolio",
 		"date": "2020-10",
-		"index": 1,
 		"title": "Portfolio V1",
 		"github": "https://github.com/NikSchaefer/portfolio",
 		"tech": ["React", "Typescript", "HTML + CSS"],
@@ -124,7 +118,6 @@
 	{
 		"text": "The umbrella project is an App that Accesses the Open Weather API.",
 		"date": "2020-8",
-		"index": 7,
 		"title": "Umbrella App",
 		"github": "https://github.com/NikSchaefer/umbrella_website",
 		"external": "https://theumbrella.vercel.app/",
@@ -134,7 +127,6 @@
 	{
 		"text": "A site containing direct comparisions between Databases, Frameworks, Tools andmore",
 		"date": "2020-11-17",
-		"index": 4,
 		"title": "Web Tools",
 		"github": "https://github.com/NikSchaefer/Web-Tools",
 		"external": "https://development-tools.vercel.app/",
@@ -142,54 +134,42 @@
 		"slug": "web-tools"
 	},
 	{
-		"date": "17",
 		"title": "Developer Discords",
 		"cover": "discord.png",
 		"svg": "discord.svg",
 		"github": "https://github.com/NikSchaefer/dev-discords",
 		"external": "https://dev-discords.now.sh/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
-		"showInProjects": true,
 		"content": "A web App for viewing a list of official programming and developer discord servers allows to search alphabetically or by search",
 		"text": "Web App for Viewing a list of official developer related discord Communities",
 		"slug": "dev-discords"
 	},
 	{
-		"date": "20",
-		"svg": "datadog.svg",
 		"title": "InstaDog",
 		"cover": "instadog.png",
 		"github": "https://github.com/NikSchaefer/InstaDog",
 		"external": "https://instadog.vercel.app/",
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
-		"showInProjects": true,
 		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. ",
 		"text": "Instagram clone but for Dogs!",
 		"slug": "instadog"
 	},
 	{
-		"svg": "student.svg",
-		"date": "1",
 		"title": "CS Resources",
 		"cover": "csresources.png",
 		"github": "https://github.com/NikSchaefer/csnotes",
 		"external": "https://csresources.herokuapp.com/",
 		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
-		"showInProjects": true,
 		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!",
 		"text": "Web App filled with Computer Science Resources for Students",
 		"slug": "csresources"
 	},
 	{
-		"svg": "github.svg",
-		"date": "15",
 		"title": "Octo Stats",
 		"cover": "Octo.png",
 		"github": "https://github.com/NikSchaefer/Octo-Stats",
 		"external": "https://octo-stats.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
-		"showInProjects": true,
-		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throught Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API",
 		"text": "Website to better visualize Github Stats",
 		"slug": "octo-stats"
 	}

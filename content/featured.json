@@ -7,7 +7,6 @@
 		"github": "https://github.com/NikSchaefer/dev-discords",
 		"external": "https://dev-discords.now.sh/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
-		"showInProjects": true,
 		"slug": "dev-discords",
 		"content": "A web App for viewing a list of official programming and developer discord servers allows to search alphabetically or by search",
 		"short": "Web App for Viewing a list of official developer related discord Communities"
@@ -20,7 +19,6 @@
 		"github": "https://github.com/NikSchaefer/InstaDog",
 		"external": "https://instadog.vercel.app/",
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
-		"showInProjects": true,
 		"slug": "instadog",
 		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. ",
 		"short": "Instagram clone but for Dogs!"
@@ -33,7 +31,6 @@
 		"github": "https://github.com/NikSchaefer/Dogs-vs-Cats-ML",
 		"external": "",
 		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
-		"showInProjects": true,
 		"slug": "dogs-vs-cats-ml",
 		"content": "Machine Learning model built to identify pictures between cats and dogs. Built with tensorflow and keras.",
 		"short": "ML model to distinguish images as dogs or cats"
@@ -46,7 +43,6 @@
 		"github": "https://github.com/NikSchaefer/Octo-Stats",
 		"external": "https://octo-stats.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
-		"showInProjects": true,
 		"slug": "octo-stats",
 		"content": "A web App for viewing Github profile and repository stats with Chart Visualizations. Sort throught Repos by stars, forks, and size. View Recent events and commits Utilizing github Rest API",
 		"short": "Website to better visualize Github Stats"
