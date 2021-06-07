@@ -16,21 +16,18 @@ const META: MetaType = {
 };
 
 type Project = {
-	date: string;
 	title: string;
-	cover: string;
-	svg: string;
 	github: string;
-	external: string;
+	external?: string;
 	tech: string[];
-	showInProjects: boolean;
-	content: string;
-	short: string;
+	text: string;
+	slug: string;
 };
 
 type SortOf = {
 	name: string;
 	include: string[];
+	content: Project[];
 };
 
 export const StyledCard = styled.a`
@@ -123,30 +120,35 @@ const StyledList = styled.ul`
 	}
 `;
 const sortByOptions: SortOf[] = [
-	{ name: "All", include: [] },
-	{ name: "Machine Learning", include: ["Tensorflow", "tensorflow"] },
+	{ name: "All", include: [], content: projects },
+	{
+		name: "Machine Learning",
+		include: ["Tensorflow", "tensorflow"],
+		content: [],
+	},
 	{
 		name: "Web Dev",
 		include: ["Javascript", "Typescript", "React", "Next.js"],
+		content: [],
 	},
-	{ name: "Python", include: ["Python", "Tensorflow", "Pandas"] },
+	{
+		name: "Python",
+		include: ["Python", "Tensorflow", "Pandas"],
+		content: [],
+	},
 ];
+
+for (const option of sortByOptions) {
+	for (const project of projects) {
+		if (project.tech.some((r) => option.include.includes(r))) {
+			option.content.push(project);
+		}
+	}
+}
+
 export default function Portfolio(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
 	const [sortBy, setSortBy] = useState("All");
-	function query(key: SortOf) {
-		if (key.name === "All") {
-			setProjectData(projects);
-			return;
-		}
-		const out = [];
-		for (const project of projects) {
-			if (project.tech.some((r) => key.include.includes(r))) {
-				out.push(project);
-			}
-		}
-		setProjectData(out);
-	}
 	return (
 		<Layout>
 			<Meta META={META} />
@@ -181,7 +183,8 @@ export default function Portfolio(): JSX.Element {
 							key={value.name}
 							onClick={() => {
 								setSortBy(value.name);
-								query(value);
+								setProjectData(value.content);
+								console.log(value.content.length)
 							}}
 							type="button"
 							aria-label={`sort by ${value.name}`}

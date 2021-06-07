@@ -1,6 +1,5 @@
 [
 	{
-		"date": "2021-5",
 		"title": "Dogs and Cats ML",
 		"github": "https://github.com/NikSchaefer/Dogs-vs-Cats-ML",
 		"external": "",
@@ -9,7 +8,6 @@
 		"text": "ML model to distinguish images as dogs or cats"
 	},
 	{
-		"date": "2021-5",
 		"title": "Vehicle Detection ML",
 		"github": "https://github.com/NikSchaefer/Vehicle-Detection-ML",
 		"external": "",
@@ -18,7 +16,6 @@
 		"text": "Machine Learning model built to detect if an image has a vehicle"
 	},
 	{
-		"date": "2021-5",
 		"title": "Mnist Handwritten digits ML",
 		"github": "https://github.com/NikSchaefer/Mnist-Digits-ML",
 		"external": "",
@@ -29,7 +26,6 @@
 
 	{
 		"text": "My Personal Golang CLI for productivity and networking",
-		"date": "2021-3",
 		"title": "My-CLI",
 		"github": "https://github.com/NikSchaefer/My-CLI",
 		"external": "",
@@ -38,8 +34,6 @@
 	},
 	{
 		"text": "Second Iteration of my Personal Portfolio",
-		"date": "2021-3",
-		"index": 9,
 		"title": "Portfolio-V2",
 		"github": "https://github.com/NikSchaefer/Portfolio-V2",
 		"external": "https://nikschaefer.tech/",
@@ -56,7 +50,6 @@
 	},
 	{
 		"text": "Golang functions to connect and disconnect from networks",
-		"date": "2021-3",
 		"title": "Golang Networking",
 		"github": "https://github.com/NikSchaefer/netsh",
 		"external": "",
@@ -65,7 +58,6 @@
 	},
 	{
 		"text": "Project based around creating an easily cusomizable box-shadow and to copy paste the css",
-		"date": "2020-9",
 		"title": "Box Shadow Creator",
 		"github": "https://github.com/NikSchaefer/box-shadow-maker",
 		"external": "https://box-shadow.vercel.app/",
@@ -74,7 +66,6 @@
 	},
 	{
 		"text": "Python Script run on Selenium with Chromium to add all discord friends of a Name",
-		"date": "2020-11-4",
 		"title": "Find discord Friends",
 		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"external": "",
@@ -83,7 +74,6 @@
 	},
 	{
 		"text": "MIT NextJS Typescript Template with Prettier + Jest + Eslint + Google Analytics for Vercel with 100% on Lighthouse",
-		"date": "2021-2-4",
 		"title": "NextJS Boilerplate",
 		"github": "https://github.com/NikSchaefer/nextjs-boilerplate",
 		"external": "https://boilerplate.nikschaefer.tech/",
@@ -100,7 +90,6 @@
 	},
 	{
 		"text": "Django Backend React Typescript frontend template configured to Easily Deploy on Heroku.",
-		"date": "2020-11-15",
 		"title": "Django React Typescript",
 		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
@@ -109,7 +98,6 @@
 	},
 	{
 		"text": "The First Iteration of my Personal Portfolio",
-		"date": "2020-10",
 		"title": "Portfolio V1",
 		"github": "https://github.com/NikSchaefer/portfolio",
 		"tech": ["React", "Typescript", "HTML + CSS"],
@@ -117,7 +105,6 @@
 	},
 	{
 		"text": "The umbrella project is an App that Accesses the Open Weather API.",
-		"date": "2020-8",
 		"title": "Umbrella App",
 		"github": "https://github.com/NikSchaefer/umbrella_website",
 		"external": "https://theumbrella.vercel.app/",
@@ -126,7 +113,6 @@
 	},
 	{
 		"text": "A site containing direct comparisions between Databases, Frameworks, Tools andmore",
-		"date": "2020-11-17",
 		"title": "Web Tools",
 		"github": "https://github.com/NikSchaefer/Web-Tools",
 		"external": "https://development-tools.vercel.app/",
@@ -135,38 +121,30 @@
 	},
 	{
 		"title": "Developer Discords",
-		"cover": "discord.png",
-		"svg": "discord.svg",
 		"github": "https://github.com/NikSchaefer/dev-discords",
 		"external": "https://dev-discords.now.sh/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
-		"content": "A web App for viewing a list of official programming and developer discord servers allows to search alphabetically or by search",
 		"text": "Web App for Viewing a list of official developer related discord Communities",
 		"slug": "dev-discords"
 	},
 	{
 		"title": "InstaDog",
-		"cover": "instadog.png",
 		"github": "https://github.com/NikSchaefer/InstaDog",
 		"external": "https://instadog.vercel.app/",
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
-		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. ",
 		"text": "Instagram clone but for Dogs!",
 		"slug": "instadog"
 	},
 	{
 		"title": "CS Resources",
-		"cover": "csresources.png",
 		"github": "https://github.com/NikSchaefer/csnotes",
 		"external": "https://csresources.herokuapp.com/",
 		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
-		"content": "Contains direct comparisions of Frameworks and Providers to build your projects, A curated list of over 600 free Apis, Reccomended Developer Tools, Datasets of computer science topics, flashcards, Scientific Calculator, Dictionary and more!",
 		"text": "Web App filled with Computer Science Resources for Students",
 		"slug": "csresources"
 	},
 	{
 		"title": "Octo Stats",
-		"cover": "Octo.png",
 		"github": "https://github.com/NikSchaefer/Octo-Stats",
 		"external": "https://octo-stats.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
