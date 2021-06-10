@@ -105,40 +105,6 @@ export default function About(): JSX.Element {
 				</a>
 			</Disclaimer>
 			<section>
-				<Title>Work</Title>
-				<JobContainer>
-					{jobs
-						.sort((a, b) => {
-							return b.date - a.date;
-						})
-						.map((data) => (
-							<Node key={data.date}>
-								<div className="top">
-									<span className="title">
-										<BsCode size="28px" />
-										{data.title}
-									</span>
-									<span>{data.range}</span>
-								</div>
-								<div className="link">
-									<a href={data.url}>{data.company}</a>
-								</div>
-								<ul>
-									{data.content.map((value) => (
-										<li key={value}>- {value}</li>
-									))}
-								</ul>
-								<ToolsAndTechnologies>
-									<h4>Tools used/learned:</h4>
-									{data.tools.map((value) => (
-										<Tag key={value}>{value}</Tag>
-									))}
-								</ToolsAndTechnologies>
-							</Node>
-						))}
-				</JobContainer>
-			</section>
-			<section>
 				<Title>Studies</Title>
 				<JobContainer>
 					{studies
@@ -172,42 +138,40 @@ export default function About(): JSX.Element {
 						))}
 				</JobContainer>
 			</section>
+			<section>
+				<Title>Work</Title>
+				<JobContainer>
+					{jobs
+						.sort((a, b) => {
+							return b.date - a.date;
+						})
+						.map((data) => (
+							<Node key={data.date}>
+								<div className="top">
+									<span className="title">
+										<BsCode size="28px" />
+										{data.title}
+									</span>
+									<span>{data.range}</span>
+								</div>
+								<div className="link">
+									<a href={data.url}>{data.company}</a>
+								</div>
+								<ul>
+									{data.content.map((value) => (
+										<li key={value}>- {value}</li>
+									))}
+								</ul>
+								<ToolsAndTechnologies>
+									<h4>Tools used/learned:</h4>
+									{data.tools.map((value) => (
+										<Tag key={value}>{value}</Tag>
+									))}
+								</ToolsAndTechnologies>
+							</Node>
+						))}
+				</JobContainer>
+			</section>
 		</Layout>
 	);
 }
-/*
-const Timeline = styled.section`
-	width: 90%;
-	max-width: 500px;
-	margin: auto;
-`;
-const Container = styled.div`
-	text-align: left;
-	position: relative;
-	.icon {
-		position: absolute;
-		left: -40px;
-	}
-	.date {
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-	h4,
-	p {
-		margin: 5px;
-	}
-	margin: 40px 0;
-
-<Timeline>
-	<h2>Timeline</h2>
-	{timeline.map((data) => (
-		<Container key={data.title}>
-			<BiCodeAlt className="icon" size="30px" />
-			<h4>{data.title}</h4>
-			<p>{data.description}</p>
-			<h5 className="date">{data.date}</h5>
-		</Container>
-	))}
-</Timeline>
-*/
