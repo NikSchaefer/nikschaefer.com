@@ -17,7 +17,7 @@
 		"clean": "npx prettier --write ."
 	},
 	"dependencies": {
-		"@babel/core": "^7.14.3",
+		"@babel/core": "^7.14.5",
 		"@mapbox/rehype-prism": "^0.6.0",
 		"axios": "^0.21.1",
 		"gray-matter": "^4.0.3",
