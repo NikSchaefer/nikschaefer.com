@@ -35,7 +35,7 @@ export const StyledCard = styled.a`
 	text-align: left;
 	flex-direction: column;
 	width: 240px;
-	height: 310px;
+	height: 380px;
 	border: solid rgba(0, 0, 0, 0.219) 1px;
 	margin: 10px;
 	.text {
@@ -187,7 +187,6 @@ export default function Portfolio(): JSX.Element {
 							onClick={() => {
 								setSortBy(value.name);
 								setProjectData(value.content);
-								console.log(value.content.length);
 							}}
 							type="button"
 							aria-label={`sort by ${value.name}`}
