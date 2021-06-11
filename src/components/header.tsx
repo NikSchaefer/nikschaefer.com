@@ -4,8 +4,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useRef } from "react";
-import { BiGitMerge } from "react-icons/bi";
-import { GoRepoClone } from "react-icons/go";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
 import styled from "styled-components";
 
