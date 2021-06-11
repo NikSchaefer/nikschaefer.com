@@ -127,10 +127,41 @@ const StyledLinkDiv = styled.div`
 `;
 const StyledList = styled.ul`
 	list-style: unset;
+	font-size: 20px;
 	li {
+		::marker {
+			unicode-bidi: isolate;
+		}
 		a {
 			color: var(--accent);
+			:hover {
+				text-decoration: underline;
+			}
 		}
+	}
+`;
+const FootLinks = styled(Section)`
+	span {
+		text-align: center;
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	a {
+		color: var(--accent);
+		:hover {
+			text-decoration: underline;
+		}
+	}
+	hr {
+		opacity: 0.6;
+		border: 0;
+		border-color: #cbd5e0;
+		border-style: solid;
+		border-bottom-width: 1px;
+		width: 100%;
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 	}
 `;
 export default function Home(): JSX.Element {
@@ -186,12 +217,12 @@ export default function Home(): JSX.Element {
 							<Link href="/">
 								<a>{value.title}</a>
 							</Link>{" "}
-							- {value.short}.
+							- {value.short}
 						</li>
 					))}
 				</StyledList>
 				<StyledLinkDiv>
-					<Link href="/blog" passHref>
+					<Link href="/portfolio" passHref>
 						<AllArtices>All Projects</AllArtices>
 					</Link>
 				</StyledLinkDiv>
@@ -215,12 +246,20 @@ export default function Home(): JSX.Element {
 					</Link>
 				</StyledLinkDiv>
 			</Section>
-			<EndNote>
-				To see all of my projects, check out my{" "}
-				<Link href="/portfolio">
-					<a>portfolio</a>
-				</Link>
-			</EndNote>
+			<FootLinks>
+				<hr aria-orientation="horizontal" />
+				<span>
+					Learn more about me
+					<br />
+					<Link href="/about">
+						<a>Work</a>
+					</Link>{" "}
+					|{" "}
+					<Link href="/portfolio">
+						<a>Portfolio</a>
+					</Link>
+				</span>
+			</FootLinks>
 		</Layout>
 	);
 }
