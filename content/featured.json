@@ -32,8 +32,16 @@
 		"external": "",
 		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
 		"slug": "dogs-vs-cats-ml",
-		"content": "Machine Learning model built to identify pictures between cats and dogs. Built with tensorflow and keras.",
-		"short": "ML model to distinguish images as dogs or cats"
+		"short": "Machine Learning Image Classification of Cats and Dogs using Tensorflow and Neural Networks."
+	},
+	{
+		"date": "4",
+		"title": "Vehicle Detection ML",
+		"github": "https://github.com/NikSchaefer/Vehicle-Detection-ML",
+		"external": "",
+		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
+		"slug": "vehicle-detection-ml",
+		"short": "Machine Learning Image Classifier to determine if an image contains a vehicle."
 	},
 	{
 		"svg": "github.svg",
