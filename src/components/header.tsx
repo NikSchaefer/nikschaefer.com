@@ -124,26 +124,6 @@ export default function Main(): JSX.Element {
 								Snippets
 							</a>
 						</Link>
-						<Link href="/activity">
-							<a
-								role="link"
-								aria-label="Nav Link"
-								onClick={toggleMenu}
-							>
-								<BiGitMerge size="22px" />
-								Activity
-							</a>
-						</Link>
-						<Link href="/repos">
-							<a
-								role="link"
-								aria-label="Nav Link"
-								onClick={toggleMenu}
-							>
-								<GoRepoClone size="22px" />
-								Repositories
-							</a>
-						</Link>
 					</div>
 				</Relative>
 			</StyledNav>
