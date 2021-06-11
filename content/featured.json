@@ -12,18 +12,6 @@
 		"short": "Web App for Viewing a list of official developer related discord Communities"
 	},
 	{
-		"date": "20",
-		"svg": "datadog.svg",
-		"title": "InstaDog",
-		"cover": "instadog.png",
-		"github": "https://github.com/NikSchaefer/InstaDog",
-		"external": "https://instadog.vercel.app/",
-		"tech": ["React", "Typescript", "HTML + CSS", "API"],
-		"slug": "instadog",
-		"content": "Instagram Clone but for Dogs! Like your posts and share them with url. Instadog utlizes a random dog Api for Images and videos while text is randomly generated. ",
-		"short": "Instagram clone but for Dogs!"
-	},
-	{
 		"svg": "machine-learning.svg",
 		"date": "1",
 		"title": "Dogs and Cats ML",
@@ -36,6 +24,7 @@
 	},
 	{
 		"date": "4",
+		"svg": "datadog.svg",
 		"title": "Vehicle Detection ML",
 		"github": "https://github.com/NikSchaefer/Vehicle-Detection-ML",
 		"external": "",
