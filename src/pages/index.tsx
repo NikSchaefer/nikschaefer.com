@@ -103,16 +103,6 @@ const StyledButton = styled.a`
 		background-color: var(--secondary);
 	}
 `;
-const EndNote = styled.p`
-	font-size: 18px !important;
-	text-align: center;
-	a {
-		color: #008cff;
-		:hover {
-			text-decoration: underline;
-		}
-	}
-`;
 const AllArtices = styled.a`
 	text-align: center;
 	margin: auto;
