@@ -8,5 +8,10 @@
 		"title": "AWS Lambda build zip file",
 		"tag": "AWS Lambda",
 		"link": "aws-lambda"
+	},
+	{
+		"title": "Matplotlib First 25 images",
+		"tag": "Matplotlib",
+		"link": "plt-show"
 	}
 ]
