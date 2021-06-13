@@ -1,5 +1,13 @@
 [
 	{
+		"title": "Neural Style Transfer",
+		"github": "https://github.com/NikSchaefer/neural-style-transfer",
+		"external": "",
+		"tech": ["Tensorflow", "Python", "Numpy"],
+		"slug": "neural-style-transfer",
+		"text": "Implementation of Neural Style Transfer using a GAN"
+	},
+	{
 		"title": "Dogs and Cats ML",
 		"github": "https://github.com/NikSchaefer/Dogs-vs-Cats-ML",
 		"external": "",
