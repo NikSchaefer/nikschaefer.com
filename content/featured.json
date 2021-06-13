@@ -1,5 +1,15 @@
 [
 	{
+		"svg": "github.svg",
+		"date": "15",
+		"title": "Neural Style Transfer",
+		"github": "https://github.com/NikSchaefer/neural-style-transfer",
+		"external": "",
+		"tech": ["Tensorflow", "Python", "Numpy"],
+		"slug": "neural-style-transfer",
+		"short": "Machine Learning Implementation of Neural Style Transfer using a GAN"
+	},
+	{
 		"date": "17",
 		"title": "Developer Discords",
 		"cover": "discord.png",
@@ -31,15 +41,5 @@
 		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
 		"slug": "vehicle-detection-ml",
 		"short": "Machine Learning Image Classifier to determine if an image contains a vehicle."
-	},
-	{
-		"svg": "github.svg",
-		"date": "15",
-		"title": "Neural Style Transfer",
-		"github": "https://github.com/NikSchaefer/neural-style-transfer",
-		"external": "",
-		"tech": ["Tensorflow", "Python", "Numpy"],
-		"slug": "neural-style-transfer",
-		"short": "Machine Learning Implementation of Neural Style Transfer using a GAN"
 	}
 ]
