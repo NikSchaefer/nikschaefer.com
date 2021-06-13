@@ -19,6 +19,9 @@ const Header = styled.header`
 	background-color: #24292d;
 `;
 const StyledNav = styled.nav`
+	@media (max-width: 800px) {
+		display: none;
+	}
 	padding: 20px;
 	display: flex;
 	justify-content: center;
@@ -79,15 +82,25 @@ const Relative = styled.div`
 	}
 `;
 
+const MobileMenu = styled(StyledNav)`
+	@media (max-width: 800px) {
+		display: flex;
+	}
+	display: none;
+`;
+
 // eslint-disable-next-line import/no-default-export
 export default function Main(): JSX.Element {
 	const router = useRouter();
 	const ref = useRef<HTMLDivElement>(null);
+	const ref2 = useRef<HTMLDivElement>(null);
 	function toggleMenu() {
-		if (ref.current === null) {
-			return;
+		if (ref.current !== null) {
+			ref.current.classList.toggle("flex");
 		}
-		ref.current.classList.toggle("flex");
+		if (ref2.current !== null) {
+			ref2.current.classList.toggle("flex");
+		}
 	}
 	return (
 		<Header>
@@ -125,6 +138,42 @@ export default function Main(): JSX.Element {
 					</div>
 				</Relative>
 			</StyledNav>
+			<MobileMenu>
+				<Link href="/">
+					<a>Home</a>
+				</Link>
+				<Relative>
+					<StyledMenuArrow
+						aria-label="drop down"
+						onClick={toggleMenu}
+						type="button"
+					>
+						<RiArrowDownSLine color="white" size="25px" />
+					</StyledMenuArrow>
+					<div ref={ref2} id="menu" className="menu">
+						{HeaderLinks.map((value) => (
+							<Link href={value.link} key={value.link}>
+								<a
+									role="link"
+									aria-label="Nav Link"
+									onClick={toggleMenu}
+								>
+									{value.title}
+								</a>
+							</Link>
+						))}
+						<Link href="/snippets">
+							<a
+								role="link"
+								aria-label="Nav Link"
+								onClick={toggleMenu}
+							>
+								Snippets
+							</a>
+						</Link>
+					</div>
+				</Relative>
+			</MobileMenu>
 		</Header>
 	);
 }
