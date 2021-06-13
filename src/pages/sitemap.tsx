@@ -36,10 +36,6 @@ const otherPages: Link[] = [
 		name: "Code Snippets",
 	},
 	{
-		link: "/activity",
-		name: "Recent Github Activity",
-	},
-	{
 		link: "/repos",
 		name: "Repositories",
 	},

@@ -64,6 +64,23 @@ const Node = styled.div`
 			}
 		}
 	}
+	@media (max-width: 800px) {
+		padding: 10px;
+		.top {
+			flex-direction: column;
+			margin: 20px 0;
+		}
+		ul {
+			margin: 0;
+			padding: 0;
+			li {
+				margin: 10px 0;
+			}
+		}
+		.link {
+			margin: 20px 10px;
+		}
+	}
 `;
 const ToolsAndTechnologies = styled.ul`
 	display: flex;

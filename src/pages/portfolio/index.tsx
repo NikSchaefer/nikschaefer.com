@@ -90,6 +90,7 @@ const ProjectContainer = styled.div`
 `;
 const Project = styled.a`
 	width: 20%;
+	min-width: 300px;
 	background-color: var(--secondary);
 	text-align: left;
 	border: 1px solid #e5e7eb;
@@ -104,6 +105,7 @@ const StyledList = styled.ul`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 	button {
 		margin: 10px 5px;
 		border: solid 2px var(--border);
