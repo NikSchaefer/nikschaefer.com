@@ -204,7 +204,7 @@ export default function Home(): JSX.Element {
 				<StyledList>
 					{json.map((value) => (
 						<li key={value.date}>
-							<Link href="/">
+							<Link href={value.slug}>
 								<a>{value.title}</a>
 							</Link>{" "}
 							- {value.short}
