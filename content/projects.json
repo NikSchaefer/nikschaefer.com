@@ -8,6 +8,14 @@
 		"text": "Implementation of Neural Style Transfer using a GAN"
 	},
 	{
+		"title": "CIFAR10 ML",
+		"github": "https://github.com/NikSchaefer/CIFAR10-ML",
+		"external": "",
+		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
+		"slug": "CIFAR10-ml",
+		"text": "ML Image Classification for the CIFAR10 dataset"
+	},
+	{
 		"title": "Dogs and Cats ML",
 		"github": "https://github.com/NikSchaefer/Dogs-vs-Cats-ML",
 		"external": "",
