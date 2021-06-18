@@ -3,6 +3,7 @@ import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { BsCode } from "react-icons/bs";
 import styled from "styled-components";
+import { FiCopy } from "react-icons/fi";
 
 import jobs from "../../content/jobs.json";
 import studies from "../../content/studies.json";
@@ -15,17 +16,19 @@ const META: MetaType = {
 	image: "/logo.png",
 	url: "https://nikschaefer.tech/about",
 };
-const Disclaimer = styled.h3`
-	background-color: #f7f7f7;
-	width: fit-content;
-	margin: auto;
-	padding: 10px;
-	font-weight: 400;
-	font-size: 20px;
+const Disclaimer = styled.div`
+	border-left: 4px solid;
+	background: #fcfeff;
+	padding: 1rem;
+	margin: 30px 0;
+	color: #2d3748;
+	border-color: #a0aec0;
 	a {
-		color: #006eff;
+		position: relative;
+		color: var(--accent);
+		text-decoration: underline;
 		:hover {
-			text-decoration: underline;
+			text-decoration: none;
 		}
 	}
 `;
@@ -100,6 +103,9 @@ const Tag = styled.li`
 	padding: 5px 10px;
 	border-radius: 5px;
 	color: #0084ff;
+	:hover {
+		background-color: #e4effc;
+	}
 `;
 const Title = styled.h1`
 	text-align: left;
@@ -110,18 +116,46 @@ const Title = styled.h1`
 	font-size: 1.875rem;
 	line-height: 2.25rem;
 `;
+const Information = styled.section`
+	margin: 20px auto;
+	max-width: 900px;
+	text-align: left;
+	width: 90%;
+	font-size: 1.1rem;
+	line-height: 1.75;
+	font-style: normal;
+	p {
+		color: #2e3440;
+		font-family: "Roboto", sans-serif;
+	}
+	h1 {
+		font-weight: 600;
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+	}
+`;
 export default function About(): JSX.Element {
 	return (
 		<Layout>
 			<Meta META={META} />
-			<h1>About</h1>
-			<Disclaimer>
-				For more information, contact me at{" "}
-				<a href="mailto:nikkschaefer@gmail.com">
-					nikkschaefer@gmail.com
-				</a>
-			</Disclaimer>
-			<section>
+			<Information>
+				<h1>About Me</h1>
+				<p>
+					I'm Nik, self-taught full-stack developer and hobbyist
+					programmer student based in Minnesota, US I've been enjoying
+					programming since I first began. I love supporting open
+					source and making my own projects. I have taken on various
+					roles between design, research and development.
+				</p>
+
+				<Disclaimer>
+					For more information, contact me at{" "}
+					<a href="mailto:nikkschaefer@gmail.com">
+						nikkschaefer@gmail.com
+					</a>
+				</Disclaimer>
+			</Information>
+			<section id="studies">
 				<Title>Studies</Title>
 				<JobContainer>
 					{studies
@@ -155,7 +189,7 @@ export default function About(): JSX.Element {
 						))}
 				</JobContainer>
 			</section>
-			<section>
+			<section id="work">
 				<Title>Work</Title>
 				<JobContainer>
 					{jobs
@@ -163,7 +197,7 @@ export default function About(): JSX.Element {
 							return b.date - a.date;
 						})
 						.map((data) => (
-							<Node key={data.date}>
+							<Node key={data.company}>
 								<div className="top">
 									<span className="title">
 										<BsCode size="28px" />

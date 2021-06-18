@@ -9,41 +9,6 @@ import styled from "styled-components";
 
 import { HeaderLinks } from "../config";
 
-const Header = styled.header`
-	padding: 5px 50px;
-	display: flex;
-	box-sizing: border-box;
-	justify-content: space-between;
-	align-items: center;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.274);
-	background-color: #24292d;
-`;
-const StyledNav = styled.nav`
-	@media (max-width: 800px) {
-		display: none;
-	}
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	margin: auto;
-	a {
-		margin: 0 20px;
-		color: rgba(233, 233, 233, 0.637);
-		font-size: 18px;
-		font-family: "Mukta", sans-serif;
-	}
-	.active,
-	a:hover {
-		color: #ffffff;
-	}
-`;
-const StyledMenuArrow = styled.button`
-	background-color: transparent;
-	border: none;
-	:hover {
-		cursor: pointer;
-	}
-`;
 const Relative = styled.div`
 	position: relative;
 	.menu {
@@ -81,18 +46,51 @@ const Relative = styled.div`
 		display: flex;
 	}
 `;
-
+const Header = styled.header`
+	padding: 5px 50px;
+	display: flex;
+	box-sizing: border-box;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.274);
+	background-color: #24292d;
+`;
+const StyledNav = styled.nav`
+	@media (max-width: 800px) {
+		display: none;
+	}
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+	a {
+		margin: 0 20px;
+		color: rgba(233, 233, 233, 0.637);
+		font-size: 18px;
+		font-family: "Mukta", sans-serif;
+	}
+	.active,
+	a:hover {
+		color: #ffffff;
+	}
+`;
 const MobileMenu = styled(StyledNav)`
 	@media (max-width: 800px) {
 		display: flex;
 	}
 	display: none;
 `;
+
+const StyledMenuArrow = styled.button`
+	background-color: transparent;
+	border: none;
+	:hover {
+		cursor: pointer;
+	}
+`;
+
 function useOutsideAlerter(ref: React.RefObject<HTMLDivElement>) {
 	useEffect(() => {
-		/**
-		 * Alert if clicked on outside of element
-		 */
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		function handleClickOutside(event: any) {
 			if (ref.current && !ref.current.contains(event.target)) {
@@ -100,10 +98,8 @@ function useOutsideAlerter(ref: React.RefObject<HTMLDivElement>) {
 			}
 		}
 
-		// Bind the event listener
 		document.addEventListener("mousedown", handleClickOutside);
 		return () => {
-			// Unbind the event listener on clean up
 			document.removeEventListener("mousedown", handleClickOutside);
 		};
 	}, [ref]);
