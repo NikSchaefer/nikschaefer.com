@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
 import styled from "styled-components";
 
@@ -88,12 +88,33 @@ const MobileMenu = styled(StyledNav)`
 	}
 	display: none;
 `;
+function useOutsideAlerter(ref: React.RefObject<HTMLDivElement>) {
+	useEffect(() => {
+		/**
+		 * Alert if clicked on outside of element
+		 */
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		function handleClickOutside(event: any) {
+			if (ref.current && !ref.current.contains(event.target)) {
+				ref.current.classList.remove("flex");
+			}
+		}
 
+		// Bind the event listener
+		document.addEventListener("mousedown", handleClickOutside);
+		return () => {
+			// Unbind the event listener on clean up
+			document.removeEventListener("mousedown", handleClickOutside);
+		};
+	}, [ref]);
+}
 // eslint-disable-next-line import/no-default-export
 export default function Main(): JSX.Element {
 	const router = useRouter();
 	const ref = useRef<HTMLDivElement>(null);
 	const ref2 = useRef<HTMLDivElement>(null);
+	useOutsideAlerter(ref);
+	useOutsideAlerter(ref2);
 	function toggleMenu() {
 		if (ref.current !== null) {
 			ref.current.classList.toggle("flex");

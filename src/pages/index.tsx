@@ -57,6 +57,9 @@ const Container = styled(Section)`
 	h1 {
 		font-size: 60px;
 		margin-bottom: 5px;
+		@media (max-width: 800px) {
+			font-size: 40px;
+		}
 	}
 	p {
 		margin: 0;
