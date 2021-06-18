@@ -3,7 +3,6 @@ import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { BsCode } from "react-icons/bs";
 import styled from "styled-components";
-import { FiCopy } from "react-icons/fi";
 
 import jobs from "../../content/jobs.json";
 import studies from "../../content/studies.json";
