@@ -1,14 +1,12 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { BlogLinks } from "config";
-// import Image from "next/image";
 import Link from "next/link";
 import { GoMarkGithub } from "react-icons/go";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import styled from "styled-components";
 
 import json from "../../content/featured.json";
-// import { Container as Box, StyledCard, size } from "./portfolio";
 
 const META: MetaType = {
 	title: "Nik Schaefer",

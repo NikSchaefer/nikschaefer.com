@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-identical-functions */
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { BsCode } from "react-icons/bs";
@@ -123,10 +122,6 @@ const Information = styled.section`
 	font-size: 1.1rem;
 	line-height: 1.75;
 	font-style: normal;
-	p {
-		color: #2e3440;
-		font-family: "Roboto", sans-serif;
-	}
 	h1 {
 		font-weight: 600;
 		font-size: 1.875rem;
