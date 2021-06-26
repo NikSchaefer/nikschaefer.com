@@ -82,6 +82,9 @@ const Node = styled.div`
 			margin: 20px 10px;
 		}
 	}
+	h3 {
+		font-weight: 400;
+	}
 `;
 const ToolsAndTechnologies = styled.ul`
 	display: flex;
@@ -89,10 +92,6 @@ const ToolsAndTechnologies = styled.ul`
 	align-items: center;
 	font-size: 14.5px;
 
-	h4 {
-		font-weight: 400;
-		flex-basis: 100%;
-	}
 `;
 const Tag = styled.li`
 	background-color: #f2f8ff;
@@ -165,16 +164,13 @@ export default function About(): JSX.Element {
 									</span>
 									<span>{data.range}</span>
 								</div>
-								<div className="link">
-									<a href={data.url}>{data.company}</a>
-								</div>
 								<ul>
 									{data.content.map((value) => (
 										<li key={value}>- {value}</li>
 									))}
 								</ul>
+								<h3>Tools used/learned:</h3>
 								<ToolsAndTechnologies>
-									<h4>Tools used/learned:</h4>
 									{data.tools.map((value) => (
 										<Tag key={value}>{value}</Tag>
 									))}
@@ -207,8 +203,8 @@ export default function About(): JSX.Element {
 										<li key={value}>- {value}</li>
 									))}
 								</ul>
+								<h3>Tools used/learned:</h3>
 								<ToolsAndTechnologies>
-									<h4>Tools used/learned:</h4>
 									{data.tools.map((value) => (
 										<Tag key={value}>{value}</Tag>
 									))}
