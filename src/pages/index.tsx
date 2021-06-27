@@ -3,8 +3,8 @@ import Meta, { MetaType } from "@components/meta";
 import { BlogLinks } from "config";
 import Link from "next/link";
 import { GoMarkGithub } from "react-icons/go";
-import { RiLinkedinBoxFill } from "react-icons/ri";
 import { HiOutlineMail } from "react-icons/hi";
+import { RiLinkedinBoxFill } from "react-icons/ri";
 import styled from "styled-components";
 
 import json from "../../content/featured.json";
