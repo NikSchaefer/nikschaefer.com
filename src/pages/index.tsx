@@ -4,6 +4,7 @@ import { BlogLinks } from "config";
 import Link from "next/link";
 import { GoMarkGithub } from "react-icons/go";
 import { RiLinkedinBoxFill } from "react-icons/ri";
+import { HiOutlineMail } from "react-icons/hi";
 import styled from "styled-components";
 
 import json from "../../content/featured.json";
@@ -89,19 +90,16 @@ const SocialLinks = styled.div`
 	}
 `;
 const StyledA = styled.a`
-	:hover {
-		svg {
-			fill: ${(props) => props.color};
-		}
-	}
-`;
-const StyledButton = styled.a`
-	font-size: 20px;
+	display: flex;
+	align-items: center;
+	background-color: #fdfdfd;
+	border-radius: 6px;
 	padding: 5px 10px;
-	border: var(--border) solid 1px;
-	border-radius: 2px;
+	svg {
+		padding-right: 10px;
+	}
 	:hover {
-		background-color: var(--secondary);
+		background-color: #f1f1f1;
 	}
 `;
 const AllArtices = styled.a`
@@ -155,6 +153,8 @@ const FootLinks = styled(Section)`
 		margin-bottom: 2rem;
 	}
 `;
+const sizeOfSVG = "20px";
+const colorOfSVG = "var(--accent)";
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
@@ -175,20 +175,31 @@ export default function Home(): JSX.Element {
 					while your here.
 				</p>
 				<SocialLinks>
-					<StyledButton href="/about">Get In Touch</StyledButton>
 					<StyledA
-						color="black"
+						target="_blank"
 						href="https://github.com/NikSchaefer"
 						aria-label="Github"
 					>
-						<GoMarkGithub size="35px" color="#333333" />
+						<GoMarkGithub size={sizeOfSVG} color={colorOfSVG} />
+						Github
 					</StyledA>
 					<StyledA
-						color="#0a65c3"
+						target="_blank"
 						href="https://www.linkedin.com/in/nikschaefer/"
 						aria-label="LinkedIn"
 					>
-						<RiLinkedinBoxFill size="40px" color="#333333" />
+						<RiLinkedinBoxFill
+							size={sizeOfSVG}
+							color={colorOfSVG}
+						/>
+						LinkedIn
+					</StyledA>
+					<StyledA
+						href="mailto:nikkschaefer@gmail.com"
+						aria-label="LinkedIn"
+					>
+						<HiOutlineMail size={sizeOfSVG} color={colorOfSVG} />
+						Email
 					</StyledA>
 				</SocialLinks>
 			</Container>
