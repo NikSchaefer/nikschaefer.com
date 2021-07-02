@@ -73,14 +73,6 @@
 		"slug": "go-netsh"
 	},
 	{
-		"text": "Project based around creating an easily cusomizable box-shadow and to copy paste the css",
-		"title": "Box Shadow Creator",
-		"github": "https://github.com/NikSchaefer/box-shadow-maker",
-		"external": "https://box-shadow.vercel.app/",
-		"tech": ["React", "HTML + CSS", "Javascript"],
-		"slug": "box-shadow-creator"
-	},
-	{
 		"text": "Python Script run on Selenium with Chromium to add all discord friends of a Name",
 		"title": "Find discord Friends",
 		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
