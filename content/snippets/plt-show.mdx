@@ -16,7 +16,7 @@ for i in range(25):
     plt.yticks([])
     plt.grid(False)
     plt.imshow(train_images[i])
-    # The CIFAR labels happen to be arrays, 
+    # The CIFAR labels happen to be arrays,
     # which is why you need the extra index
     plt.xlabel(class_names[train_labels[i][0]])
 plt.show()

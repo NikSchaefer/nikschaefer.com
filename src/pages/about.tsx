@@ -94,9 +94,8 @@ const Tag = styled.li`
 	}
 `;
 const Title = styled.h1`
-	text-align: left;
 	width: 90%;
-	margin: auto;
+	margin: 40px auto;
 	max-width: 900px;
 	font-weight: 600;
 	font-size: 1.875rem;
@@ -116,8 +115,8 @@ const Information = styled.section`
 	}
 `;
 const SocialDiv = styled(SocialLinks)`
-	justify-content:center;
-`
+	justify-content: center;
+`;
 export default function About(): JSX.Element {
 	return (
 		<Layout>
