@@ -78,7 +78,7 @@ const Heading2 = styled.h2`
 	margin: 0;
 `;
 
-const SocialLinks = styled.div`
+export const SocialLinks = styled.div`
 	margin: 20px 0;
 	display: flex;
 	align-items: center;
@@ -89,7 +89,7 @@ const SocialLinks = styled.div`
 		}
 	}
 `;
-const StyledA = styled.a`
+export const StyledA = styled.a`
 	display: flex;
 	align-items: center;
 	background-color: #fdfdfd;
@@ -153,8 +153,8 @@ const FootLinks = styled(Section)`
 		margin-bottom: 2rem;
 	}
 `;
-const sizeOfSVG = "20px";
-const colorOfSVG = "var(--accent)";
+export const sizeOfSVG = "20px";
+export const colorOfSVG = "var(--accent)";
 export default function Home(): JSX.Element {
 	return (
 		<Layout>

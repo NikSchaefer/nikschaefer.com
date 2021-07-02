@@ -1,10 +1,15 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { BsCode } from "react-icons/bs";
+import { GoMarkGithub } from "react-icons/go";
+import { HiOutlineMail } from "react-icons/hi";
+import { RiLinkedinBoxFill } from "react-icons/ri";
 import styled from "styled-components";
 
 import jobs from "../../content/jobs.json";
 import studies from "../../content/studies.json";
+
+import { StyledA, SocialLinks, sizeOfSVG, colorOfSVG } from ".";
 
 const META: MetaType = {
 	title: "About | Nik Schaefer",
@@ -14,22 +19,6 @@ const META: MetaType = {
 	image: "/logo.png",
 	url: "https://nikschaefer.tech/about",
 };
-const Disclaimer = styled.div`
-	border-left: 4px solid;
-	background: #fcfeff;
-	padding: 1rem;
-	margin: 30px 0;
-	color: #2d3748;
-	border-color: #a0aec0;
-	a {
-		position: relative;
-		color: var(--accent);
-		text-decoration: underline;
-		:hover {
-			text-decoration: none;
-		}
-	}
-`;
 const JobContainer = styled.section`
 	display: flex;
 	flex-direction: column;
@@ -84,6 +73,7 @@ const Node = styled.div`
 	}
 	h3 {
 		font-weight: 400;
+		font-size: 16px;
 	}
 `;
 const ToolsAndTechnologies = styled.ul`
@@ -91,7 +81,6 @@ const ToolsAndTechnologies = styled.ul`
 	flex-flow: row wrap;
 	align-items: center;
 	font-size: 14.5px;
-
 `;
 const Tag = styled.li`
 	background-color: #f2f8ff;
@@ -114,9 +103,8 @@ const Title = styled.h1`
 	line-height: 2.25rem;
 `;
 const Information = styled.section`
-	margin: 20px auto;
+	margin: 30px auto;
 	max-width: 900px;
-	text-align: left;
 	width: 90%;
 	font-size: 1.1rem;
 	line-height: 1.75;
@@ -127,6 +115,9 @@ const Information = styled.section`
 		line-height: 2.25rem;
 	}
 `;
+const SocialDiv = styled(SocialLinks)`
+	justify-content:center;
+`
 export default function About(): JSX.Element {
 	return (
 		<Layout>
@@ -140,13 +131,34 @@ export default function About(): JSX.Element {
 					source and making my own projects. I have taken on various
 					roles between design, research and development.
 				</p>
-
-				<Disclaimer>
-					For more information, contact me at{" "}
-					<a href="mailto:nikkschaefer@gmail.com">
-						nikkschaefer@gmail.com
-					</a>
-				</Disclaimer>
+				<SocialDiv>
+					<StyledA
+						target="_blank"
+						href="https://github.com/NikSchaefer"
+						aria-label="Github"
+					>
+						<GoMarkGithub size={sizeOfSVG} color={colorOfSVG} />
+						Github
+					</StyledA>
+					<StyledA
+						target="_blank"
+						href="https://www.linkedin.com/in/nikschaefer/"
+						aria-label="LinkedIn"
+					>
+						<RiLinkedinBoxFill
+							size={sizeOfSVG}
+							color={colorOfSVG}
+						/>
+						LinkedIn
+					</StyledA>
+					<StyledA
+						href="mailto:nikkschaefer@gmail.com"
+						aria-label="LinkedIn"
+					>
+						<HiOutlineMail size={sizeOfSVG} color={colorOfSVG} />
+						Email
+					</StyledA>
+				</SocialDiv>
 			</Information>
 			<section id="studies">
 				<Title>Studies</Title>
