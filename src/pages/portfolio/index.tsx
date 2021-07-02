@@ -97,9 +97,16 @@ const Project = styled.a`
 	box-sizing: border-box;
 	padding: 10px;
 	position: relative;
+	border-radius: 10px;
 	:hover {
 		background-color: var(--grey);
 		cursor: pointer;
+		a {
+			transform: rotate(20deg);
+		}
+	}
+	h4 {
+		font-weight: 500;
 	}
 	a {
 		position: absolute;
@@ -108,7 +115,7 @@ const Project = styled.a`
 		padding: 5px;
 		transition: transform 0.3s ease;
 		:hover {
-			transform: rotate(45deg);
+			transform: rotate(40deg);
 		}
 	}
 	i {
