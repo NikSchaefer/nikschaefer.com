@@ -73,14 +73,6 @@
 		"slug": "go-netsh"
 	},
 	{
-		"text": "Python Script run on Selenium with Chromium to add all discord friends of a Name",
-		"title": "Find discord Friends",
-		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
-		"external": "",
-		"tech": ["Python"],
-		"slug": "find-discord-friends"
-	},
-	{
 		"text": "MIT NextJS Typescript Template with Prettier + Jest + Eslint + Google Analytics for Vercel with 100% on Lighthouse",
 		"title": "NextJS Boilerplate",
 		"github": "https://github.com/NikSchaefer/nextjs-boilerplate",

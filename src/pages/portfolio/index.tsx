@@ -2,6 +2,7 @@ import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import Image from "next/image";
 import { useState } from "react";
+import { FiGithub } from "react-icons/fi";
 import styled from "styled-components";
 
 import json from "../../../content/featured.json";
@@ -92,13 +93,51 @@ const Project = styled.a`
 	width: 20%;
 	min-width: 300px;
 	background-color: var(--secondary);
-	text-align: left;
 	border: 1px solid #e5e7eb;
 	box-sizing: border-box;
 	padding: 10px;
+	position: relative;
 	:hover {
 		background-color: var(--grey);
 		cursor: pointer;
+	}
+	a {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+		padding: 5px;
+		transition: transform 0.3s ease;
+		:hover {
+			transform: rotate(45deg);
+		}
+	}
+	i {
+		height: 12px;
+		width: 12px;
+		display: inline-block;
+		background-color: #ff5f57;
+		border-radius: 50%;
+		position: absolute;
+		top: 6px;
+		left: 10px;
+		::before,
+		::after {
+			content: " ";
+			top: 0;
+			position: absolute;
+			height: 12px;
+			width: 12px;
+			border-radius: 50%;
+			display: block;
+		}
+		:before {
+			left: 16px;
+			background-color: #ffbd2e;
+		}
+		::after {
+			left: 32px;
+			background-color: #28ca41;
+		}
 	}
 `;
 const StyledList = styled.ul`
@@ -204,8 +243,12 @@ export default function Portfolio(): JSX.Element {
 							href={`/portfolio/${String(data.slug)}`}
 							key={data.github}
 						>
+							<a href={data.github}>
+								<FiGithub size="20px" />
+							</a>
 							<h4>{data.title}</h4>
 							<p>{data.text}</p>
+							<i />
 						</Project>
 					))}
 				</ProjectContainer>
