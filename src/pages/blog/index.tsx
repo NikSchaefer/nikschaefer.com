@@ -2,30 +2,20 @@ import Layout from "@components/layout";
 import { BlogLinks } from "config";
 import Link from "next/link";
 import { useState } from "react";
+import { BsBookmark } from "react-icons/bs";
 import styled from "styled-components";
 
-const StyledLi = styled.li`
-	text-align: left;
-	margin: 50px 0;
-	a {
-		font-size: 24px;
-		color: var(--accent);
-	}
-	h3 {
-		margin: 0;
-		color: rgba(0, 0, 0, 0.774);
-		font-weight: 400;
-	}
-	h2 {
-		margin: 10px 0;
-		font-weight: 400;
-		font-size: 20px;
-	}
-`;
+import { StyledLi, Bookmark, Tags } from '..';
+
 const StyledContainer = styled.ul`
 	width: 90%;
+	margin: 40px auto;
 	max-width: 700px;
-	margin: auto;
+	text-align: left;
+	font-size: 1.1rem;
+	line-height: 1.75;
+	font-style: normal;
+	font-family: "Roboto", sans-serif;
 `;
 const StyledInput = styled.input`
 	border: solid 1px var(--border);
@@ -67,10 +57,24 @@ export default function Blog(): JSX.Element {
 				{blogs.map((data) => (
 					<StyledLi key={data.link}>
 						<Link href={data.link}>
-							<a>{data.title}</a>
+							<a>
+								<h1>{data.title}</h1>
+								<div>
+									<h3>
+										{data.date} • {data.min} min
+									</h3>
+									<Tags>
+										{data.type.map((string) => (
+											<span key={string}>{string}</span>
+										))}
+									</Tags>
+								</div>
+								<h2>{data.description}</h2>
+								<Bookmark>
+									<BsBookmark size="25px" />
+								</Bookmark>
+							</a>
 						</Link>
-						<h3>{data.date}</h3>
-						<h2>{data.description}</h2>
 					</StyledLi>
 				))}
 			</StyledContainer>

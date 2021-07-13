@@ -36,6 +36,7 @@ type BlogLink = {
 	description: string;
 	image: string;
 	min: number;
+	type: string[]
 };
 const BlogLinks: BlogLink[] = [
 	{
@@ -46,6 +47,7 @@ const BlogLinks: BlogLink[] = [
 			"attending Google's I/O Machine Learning talks and Keynotes",
 		min: 3,
 		date: "May 2020",
+		type: ["Machine Learning", "ML Ops"],
 	},
 	{
 		title: "Dockerizing your Developer Workflow",
@@ -54,6 +56,7 @@ const BlogLinks: BlogLink[] = [
 		description: "How to Dockerize your workflow and why",
 		min: 3,
 		date: "May 2020",
+		type: ["Docker", "Tooling"],
 	},
 
 	{
@@ -63,6 +66,7 @@ const BlogLinks: BlogLink[] = [
 		description: "Concurrent Uses and How to in Golang",
 		min: 3,
 		date: "May 2020",
+		type: ["Concurrency", "Golang"],
 	},
 	{
 		title: "Golang Optimal File Structure",
@@ -71,6 +75,7 @@ const BlogLinks: BlogLink[] = [
 		description: "Breakdown of popular golang file structures",
 		min: 3,
 		date: "May 2020",
+		type: ["Golang"],
 	},
 	{
 		title: "5 database paradigms and their use cases",
@@ -79,6 +84,7 @@ const BlogLinks: BlogLink[] = [
 		description: "5 database paradigms what they are used for",
 		min: 3,
 		date: "May 2020",
+		type: ["Database"],
 	},
 	{
 		title: "Pros and Cons of Serverless",
@@ -87,6 +93,7 @@ const BlogLinks: BlogLink[] = [
 		description: "Rundown of Going Serverless",
 		min: 3,
 		date: "May 2020",
+		type: ["Serverless"],
 	},
 
 	{
@@ -97,6 +104,7 @@ const BlogLinks: BlogLink[] = [
 			"Golang(Go) is a programming language developed by Google in 2009.",
 		min: 3,
 		date: "March 2020",
+		type: ["Golang"],
 	},
 	{
 		title: "Why I use Django, and you should too",
@@ -106,6 +114,7 @@ const BlogLinks: BlogLink[] = [
 			"A quick look at the benefits and reasons why so many developers use Django",
 		min: 2,
 		date: "Feb 2020",
+		type: ["Django", "Python"],
 	},
 	{
 		title: "How to Use a .Dockerfile",
@@ -114,6 +123,7 @@ const BlogLinks: BlogLink[] = [
 		min: 2,
 		description: "Quickly learn the basics of using a dockerfile",
 		date: "Jan 2020",
+		type: ["Docker"],
 	},
 	{
 		title: "A Beginner's First Machine Learning Model",
@@ -123,6 +133,7 @@ const BlogLinks: BlogLink[] = [
 		description:
 			"learn the basics of a machine learning model in tensorflow",
 		date: "Jan 2020",
+		type: ["Machine Learning"],
 	},
 	{
 		title: "Rest API Authentication in Django",
@@ -131,6 +142,7 @@ const BlogLinks: BlogLink[] = [
 		min: 2,
 		date: "Jan 2020",
 		description: "learn to set up a quick user auth server with django",
+		type: ["Django", "Python"],
 	},
 	{
 		title: "Why I use NextJS over Gatsby for Personal Projects",
@@ -140,6 +152,7 @@ const BlogLinks: BlogLink[] = [
 		description:
 			"Here is a quick breakdown of the differences between NextJS and Gatsby andwhy I chose NextJS",
 		date: "Jan 2020",
+		type: ["NextJS", "GatsbyJS"],
 	},
 	{
 		title: "The Basics of Webpack",
@@ -148,6 +161,7 @@ const BlogLinks: BlogLink[] = [
 		min: 2,
 		description: "Quickly set up and use webpack for production in 2 min",
 		date: "Jan 2020",
+		type: ["Webpack"],
 	},
 	{
 		title: "Why you should migrate to Typescript",
@@ -157,6 +171,7 @@ const BlogLinks: BlogLink[] = [
 		description:
 			"Learn why you should use typescript going forward as well as learn some typescript",
 		date: "Jan 2020",
+		type: ["Typescript"],
 	},
 ];
 

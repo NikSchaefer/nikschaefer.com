@@ -2,6 +2,7 @@ import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { BlogLinks } from "config";
 import Link from "next/link";
+import { BsBookmark } from "react-icons/bs";
 import { GoMarkGithub } from "react-icons/go";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLinkedinBoxFill } from "react-icons/ri";
@@ -21,19 +22,55 @@ I've been enjoying programming since I first began. I love supporting open sourc
 const StyledLi = styled.li`
 	text-align: left;
 	margin: 10px 0;
-	a {
+	border: solid 1px rgb(203, 213, 224);
+	border-radius: 0.375rem;
+	transition: all 0.15s ease-out 0s;
+	padding: 1rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+	margin-bottom: 2rem;
+	position: relative;
+
+	h1 {
 		font-size: 24px;
-		color: var(--accent);
-	}
-	h3 {
 		margin: 0;
-		color: rgba(0, 0, 0, 0.774);
-		font-weight: 400;
 	}
 	h2 {
 		margin: 10px 0;
 		font-weight: 400;
 		font-size: 20px;
+	}
+	div {
+		display: flex;
+		h3 {
+			margin: 0;
+			color: rgba(0, 0, 0, 0.308);
+			font-weight: 400;
+			font-size: 0.875rem;
+			color: #718096;
+		}
+	}
+`;
+const Tags = styled.div`
+	display: flex;
+	margin: 0 10px;
+	span {
+		font-size: 0.75rem;
+		padding: 0 0.5rem;
+		border-radius: 0.375rem;
+		background: #ddf2ff;
+		color: #002451;
+		margin: 2px;
+		font-weight: 500;
+	}
+`;
+const Bookmark = styled.div`
+	position: absolute;
+	right: 10px;
+	top: -10px;
+	svg {
+		background-color: white;
+		fill: #000000a9;
 	}
 `;
 const StyledContainer = styled.ul`
@@ -235,10 +272,26 @@ export default function Home(): JSX.Element {
 					{BlogLinks.slice(0, 3).map((data) => (
 						<StyledLi key={data.link}>
 							<Link href={data.link}>
-								<a>{data.title}</a>
+								<a>
+									<h1>{data.title}</h1>
+									<div>
+										<h3>
+											{data.date} • {data.min} min
+										</h3>
+										<Tags>
+											{data.type.map((string) => (
+												<span key={string}>
+													{string}
+												</span>
+											))}
+										</Tags>
+									</div>
+									<h2>{data.description}</h2>
+									<Bookmark>
+										<BsBookmark size="25px" />
+									</Bookmark>
+								</a>
 							</Link>
-							<h3>{data.date}</h3>
-							<h2>{data.description}</h2>
 						</StyledLi>
 					))}
 				</StyledContainer>
@@ -265,29 +318,5 @@ export default function Home(): JSX.Element {
 		</Layout>
 	);
 }
-/* 
-<Section>
-	<Heading2>Projects</Heading2>
-	<Box>
-		{json.map((data) => (
-			<StyledCard
-				href={`/portfolio/${String(data.slug)}`}
-				key={data.github}
-			>
-				<div className="image">
-					<Image
-						height={size}
-						width={size}
-						alt={data.title}
-						src={`/featured/${String(data.svg)}`}
-					/>
-				</div>
-				<div className="text">
-					<h2>{data.title}</h2>
-					<p>{data.short}</p>
-				</div>
-			</StyledCard>
-		))}
-	</Box>
-</Section> 
-*/
+
+export { StyledLi, Tags, Bookmark };
