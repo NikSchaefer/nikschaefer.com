@@ -49,7 +49,7 @@ export const StyledCard = styled.a`
 		}
 		p {
 			font-family: "Mukta", sans-serif;
-			color: #313131;
+			color: var(--about-text);
 			margin: unset;
 			font-size: unset;
 		}
@@ -159,6 +159,7 @@ const StyledList = styled.ul`
 		outline: 0;
 		background-color: transparent;
 		font-size: 16px;
+		color: var(--text);
 		:hover {
 			cursor: pointer;
 		}

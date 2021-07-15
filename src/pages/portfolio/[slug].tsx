@@ -17,7 +17,6 @@ import styled from "styled-components";
 const StyledSection = styled.section`
 	text-align: center;
 	font-family: "Mukta", sans-serif;
-	border-bottom: black 1px solid;
 	h1 {
 		font-size: 60px;
 		margin: 10px;

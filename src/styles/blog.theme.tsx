@@ -13,7 +13,7 @@ const Content = styled.section`
 	font-size: 1.1rem;
 	line-height: 1.75;
 	font-style: normal;
-	color: #2e3440;
+	color: var(--blog-text);
 	font-family: "Roboto", sans-serif;
 	pre {
 		overflow-x: scroll;

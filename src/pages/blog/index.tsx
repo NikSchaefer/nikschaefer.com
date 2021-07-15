@@ -5,7 +5,7 @@ import { useState } from "react";
 import { BsBookmark } from "react-icons/bs";
 import styled from "styled-components";
 
-import { StyledLi, Bookmark, Tags } from '..';
+import { StyledLi, Bookmark, Tags } from "..";
 
 const StyledContainer = styled.ul`
 	width: 90%;
@@ -19,10 +19,12 @@ const StyledContainer = styled.ul`
 `;
 const StyledInput = styled.input`
 	border: solid 1px var(--border);
+	background-color: transparent;
 	font-size: 18px;
 	padding: 10px 20px;
 	border-radius: 4px;
 	outline: 0;
+	color: var(--text);
 `;
 export default function Blog(): JSX.Element {
 	const [value, setValue] = useState("");

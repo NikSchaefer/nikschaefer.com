@@ -3,7 +3,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { BiSun, BiMoon } from "react-icons/bi";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
 import styled from "styled-components";
 
@@ -18,7 +19,8 @@ const Relative = styled.div`
 		display: none;
 		flex-direction: column;
 		justify-content: center;
-		background-color: #383e42;
+		background-color: var(--header);
+		border: #ffffff30 1px solid;
 		border-radius: 0.5rem;
 		width: 90vw;
 		max-width: 250px;
@@ -53,7 +55,9 @@ const Header = styled.header`
 	justify-content: space-between;
 	align-items: center;
 	box-shadow: 0 0 3px rgba(0, 0, 0, 0.274);
-	background-color: #24292d;
+	background-color: var(--header);
+	border-bottom: #ffffff30 1px solid;
+	position: relative;
 `;
 const StyledNav = styled.nav`
 	@media (max-width: 800px) {
@@ -89,6 +93,19 @@ const StyledMenuArrow = styled.button`
 	}
 `;
 
+const StyledDarkModeBtn = styled.button`
+	position: absolute;
+	right: 10px;
+	background-color: transparent;
+	border: none;
+	outline: 0;
+	cursor: pointer;
+	padding: 7px;
+	border-radius: 10px;
+	:hover {
+		background-color: #2d3338;
+	}
+`;
 function useOutsideAlerter(ref: React.RefObject<HTMLDivElement>) {
 	useEffect(() => {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -109,8 +126,14 @@ export default function Main(): JSX.Element {
 	const router = useRouter();
 	const ref = useRef<HTMLDivElement>(null);
 	const ref2 = useRef<HTMLDivElement>(null);
+	const [isDarkMode, setIsDarkMode] = useState(false);
 	useOutsideAlerter(ref);
 	useOutsideAlerter(ref2);
+	function toggleDarkMode() {
+		document.body.classList.toggle("darkmode");
+		setIsDarkMode(!isDarkMode);
+	}
+
 	function toggleMenu() {
 		if (ref.current !== null) {
 			ref.current.classList.toggle("flex");
@@ -121,6 +144,13 @@ export default function Main(): JSX.Element {
 	}
 	return (
 		<Header>
+			<StyledDarkModeBtn onClick={toggleDarkMode}>
+				{isDarkMode ? (
+					<BiSun color="yellow" size="25px" />
+				) : (
+					<BiMoon color="white" size="25px" />
+				)}
+			</StyledDarkModeBtn>
 			<StyledNav>
 				{HeaderLinks.map((value) => (
 					<Link key={value.link} href={value.link}>

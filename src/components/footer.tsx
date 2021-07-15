@@ -5,7 +5,7 @@ import { SiGithub } from "react-icons/si";
 import styled from "styled-components";
 
 const Footer = styled.footer`
-	margin: 20px 0;
+	padding: 20px 0;
 `;
 const Container = styled.div`
 	display: flex;

@@ -34,7 +34,7 @@ const Node = styled.div`
 	.content {
 		margin: 0px;
 		padding: 0;
-		color: #586069;
+		color: var(--about-text);
 		font-size: 14px;
 	}
 	.top {
@@ -80,7 +80,7 @@ const ToolsAndTechnologies = styled.ul`
 	padding: 0;
 `;
 const Tag = styled.li`
-	background-color: #f1f8ff;
+	background-color: var(--tag-background);
 	width: fit-content;
 	margin: 4px 6px;
 	padding: 5px 10px;

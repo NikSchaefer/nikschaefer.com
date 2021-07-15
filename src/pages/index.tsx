@@ -74,8 +74,8 @@ const Bookmark = styled.div`
 	right: 10px;
 	top: -10px;
 	svg {
-		background-color: white;
-		fill: #000000a9;
+		background-color: var(--primary);
+		fill: var(--text);
 	}
 `;
 const StyledContainer = styled.ul`
@@ -127,14 +127,14 @@ export const SocialLinks = styled.div`
 export const StyledA = styled.a`
 	display: flex;
 	align-items: center;
-	background-color: #fdfdfd;
+	background-color: var(--secondary);
 	border-radius: 6px;
 	padding: 5px 10px;
 	svg {
 		padding-right: 10px;
 	}
 	:hover {
-		background-color: #f1f1f1;
+		background-color: var(--primary);
 	}
 `;
 const AllArtices = styled(StyledLink)`
