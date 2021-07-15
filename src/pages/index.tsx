@@ -37,14 +37,14 @@ const StyledLi = styled.li`
 		font-size: 24px;
 		margin: 0;
 	}
-	h2 {
+	h3 {
 		margin: 10px 0;
 		font-weight: 400;
 		font-size: 20px;
 	}
 	div {
 		display: flex;
-		h3 {
+		h2 {
 			margin: 0;
 			color: rgba(0, 0, 0, 0.308);
 			font-weight: 400;
@@ -193,6 +193,7 @@ export default function Home(): JSX.Element {
 					<StyledA
 						target="_blank"
 						href="https://github.com/NikSchaefer"
+						rel="noreferrer"
 						aria-label="Github"
 					>
 						<GoMarkGithub size={sizeOfSVG} color={colorOfSVG} />
@@ -200,6 +201,7 @@ export default function Home(): JSX.Element {
 					</StyledA>
 					<StyledA
 						target="_blank"
+						rel="noreferrer"
 						href="https://www.linkedin.com/in/nikschaefer/"
 						aria-label="LinkedIn"
 					>
@@ -253,9 +255,9 @@ export default function Home(): JSX.Element {
 								<a>
 									<h1>{data.title}</h1>
 									<div>
-										<h3>
+										<h2>
 											{data.date} • {data.min} min
-										</h3>
+										</h2>
 										<Tags>
 											{data.type.map((string) => (
 												<span key={string}>
@@ -264,7 +266,7 @@ export default function Home(): JSX.Element {
 											))}
 										</Tags>
 									</div>
-									<h2>{data.description}</h2>
+									<h3>{data.description}</h3>
 									<Bookmark>
 										<BsBookmark size="25px" />
 									</Bookmark>
