@@ -87,7 +87,7 @@ const Tag = styled.li`
 	border-radius: 5px;
 	color: #0069e0;
 	:hover {
-		background-color: #e4effc;
+		background-color: var(--tag-hover);
 	}
 `;
 const Title = styled.h1`

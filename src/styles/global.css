@@ -9,6 +9,7 @@
 	--about-text: #586069;
 	--tag-background: #f1f8ff;
 	--blog-text: #2e3440;
+	--tag-hover: #e4effc;
 }
 
 .darkmode {
@@ -22,6 +23,7 @@
 	--about-text: #d1d1d1;
 	--tag-background: var(--secondary);
 	--blog-text: rgb(231, 231, 231);
+	--tag-hover: #21263d;
 }
 
 html,
