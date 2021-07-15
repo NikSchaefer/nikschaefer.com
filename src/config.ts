@@ -47,7 +47,7 @@ const BlogLinks: BlogLink[] = [
 			"attending Google's I/O Machine Learning talks and Keynotes",
 		min: 3,
 		date: "May 2020",
-		type: ["Machine Learning", "ML Ops"],
+		type: ["Machine Learning"],
 	},
 	{
 		title: "Dockerizing your Developer Workflow",

@@ -1,15 +1,13 @@
+import { data, StyledMedia } from "@components/footer";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
+import StyledLink from "@styles/underline";
+import { AiFillStar } from "react-icons/ai";
 import { BsCode } from "react-icons/bs";
-import { GoMarkGithub } from "react-icons/go";
-import { HiOutlineMail } from "react-icons/hi";
-import { RiLinkedinBoxFill } from "react-icons/ri";
 import styled from "styled-components";
 
 import jobs from "../../content/jobs.json";
 import studies from "../../content/studies.json";
-
-import { StyledA, SocialLinks, sizeOfSVG, colorOfSVG } from ".";
 
 const META: MetaType = {
 	title: "About | Nik Schaefer",
@@ -32,27 +30,29 @@ const Node = styled.div`
 	margin: 20px auto;
 	border: 1px solid var(--border);
 	box-sizing: border-box;
-	padding: 20px;
+	padding: 20px 20px;
+	.content {
+		margin: 0px;
+		padding: 0;
+		color: #586069;
+		font-size: 14px;
+	}
 	.top {
 		display: flex;
 		justify-content: space-between;
 		.title {
-			font-size: 20px;
+			font-size: 18px;
+			font-weight: 500;
 			display: flex;
 			align-items: center;
+			flex-flow: row wrap;
 			svg {
-				margin: 0 10px;
+				margin-right: 10px;
 			}
 		}
 	}
 	.link {
-		margin: 10px 40px;
-		a {
-			color: #0077ff;
-			:hover {
-				text-decoration: underline;
-			}
-		}
+		margin: 10px 0;
 	}
 	@media (max-width: 800px) {
 		padding: 10px;
@@ -60,20 +60,15 @@ const Node = styled.div`
 			flex-direction: column;
 			margin: 20px 0;
 		}
-		ul {
-			margin: 0;
-			padding: 0;
-			li {
-				margin: 10px 0;
-			}
-		}
-		.link {
-			margin: 20px 10px;
-		}
 	}
 	h3 {
 		font-weight: 400;
 		font-size: 16px;
+		display: flex;
+		align-items: center;
+		svg {
+			margin-right: 8px;
+		}
 	}
 `;
 const ToolsAndTechnologies = styled.ul`
@@ -81,14 +76,16 @@ const ToolsAndTechnologies = styled.ul`
 	flex-flow: row wrap;
 	align-items: center;
 	font-size: 14.5px;
+	margin: 0;
+	padding: 0;
 `;
 const Tag = styled.li`
-	background-color: #f2f8ff;
+	background-color: #f1f8ff;
 	width: fit-content;
-	margin: 4px 10px;
+	margin: 4px 6px;
 	padding: 5px 10px;
 	border-radius: 5px;
-	color: #0084ff;
+	color: #0069e0;
 	:hover {
 		background-color: #e4effc;
 	}
@@ -114,7 +111,8 @@ const Information = styled.section`
 		line-height: 2.25rem;
 	}
 `;
-const SocialDiv = styled(SocialLinks)`
+const SocialDiv = styled.div`
+	display: flex;
 	justify-content: center;
 `;
 export default function About(): JSX.Element {
@@ -124,39 +122,18 @@ export default function About(): JSX.Element {
 			<Information>
 				<h1>About Me</h1>
 				<p>
-					I'm Nik, self-taught full-stack developer and hobbyist
+					👋, I'm Nik, self-taught full-stack developer and hobbyist
 					programmer student based in Minnesota, US I've been enjoying
 					programming since I first began. I love supporting open
 					source and making my own projects. I have taken on various
 					roles between design, research and development.
 				</p>
 				<SocialDiv>
-					<StyledA
-						target="_blank"
-						href="https://github.com/NikSchaefer"
-						aria-label="Github"
-					>
-						<GoMarkGithub size={sizeOfSVG} color={colorOfSVG} />
-						Github
-					</StyledA>
-					<StyledA
-						target="_blank"
-						href="https://www.linkedin.com/in/nikschaefer/"
-						aria-label="LinkedIn"
-					>
-						<RiLinkedinBoxFill
-							size={sizeOfSVG}
-							color={colorOfSVG}
-						/>
-						LinkedIn
-					</StyledA>
-					<StyledA
-						href="mailto:nikkschaefer@gmail.com"
-						aria-label="LinkedIn"
-					>
-						<HiOutlineMail size={sizeOfSVG} color={colorOfSVG} />
-						Email
-					</StyledA>
+					{data.map((values) => (
+						<StyledMedia key={values.label} href={values.link}>
+							{values.img()}
+						</StyledMedia>
+					))}
 				</SocialDiv>
 			</Information>
 			<section id="studies">
@@ -175,7 +152,11 @@ export default function About(): JSX.Element {
 									</span>
 									<span>{data.range}</span>
 								</div>
-								<ul>
+								<h3>
+									<AiFillStar size="20px" />{" "}
+									{data.content.length} Achievements
+								</h3>
+								<ul className="content">
 									{data.content.map((value) => (
 										<li key={value}>- {value}</li>
 									))}
@@ -207,9 +188,15 @@ export default function About(): JSX.Element {
 									<span>{data.range}</span>
 								</div>
 								<div className="link">
-									<a href={data.url}>{data.company}</a>
+									<StyledLink href={data.url}>
+										{data.company}
+									</StyledLink>
 								</div>
-								<ul>
+								<h3>
+									<AiFillStar size="20px" />{" "}
+									{data.content.length} Achievements
+								</h3>
+								<ul className="content">
 									{data.content.map((value) => (
 										<li key={value}>- {value}</li>
 									))}

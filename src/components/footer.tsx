@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { SiGithub } from "react-icons/si";
@@ -9,13 +10,13 @@ const Footer = styled.footer`
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
-	a {
-		margin: 10px;
-		padding: 13px;
-		:hover {
-			background-color: rgba(54, 54, 54, 0.027);
-			border-radius: 100px;
-		}
+`;
+const StyledMedia = styled.a`
+	margin: 10px;
+	padding: 13px;
+	:hover {
+		background-color: rgba(54, 54, 54, 0.027);
+		border-radius: 100px;
 	}
 `;
 const size = "25px";
@@ -57,14 +58,19 @@ export default function Main(): JSX.Element {
 		<Footer>
 			<Container>
 				{data.map((values) => (
-					<a key={values.label} href={values.link}>
+					<StyledMedia key={values.label} href={values.link}>
 						{values.img()}
-					</a>
+					</StyledMedia>
 				))}
 			</Container>
 			<Copyright>
-				© 2021, Nik Schaefer • <a href="/sitemap">sitemap</a>
+				© 2021, Nik Schaefer •{" "}
+				<Link href="/sitemap">
+					<a>sitemap</a>
+				</Link>
 			</Copyright>
 		</Footer>
 	);
 }
+
+export { data, StyledMedia };

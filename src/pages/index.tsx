@@ -1,5 +1,6 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
+import StyledLink from "@styles/underline";
 import { BlogLinks } from "config";
 import Link from "next/link";
 import { BsBookmark } from "react-icons/bs";
@@ -24,12 +25,13 @@ const StyledLi = styled.li`
 	margin: 10px 0;
 	border: solid 1px rgb(203, 213, 224);
 	border-radius: 0.375rem;
-	transition: all 0.15s ease-out 0s;
+	transition: top 0.15s ease-out 0s;
 	padding: 1rem;
 	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 	margin-bottom: 2rem;
 	position: relative;
+	top: 0;
 
 	h1 {
 		font-size: 24px;
@@ -49,6 +51,9 @@ const StyledLi = styled.li`
 			font-size: 0.875rem;
 			color: #718096;
 		}
+	}
+	:hover {
+		top: -5px;
 	}
 `;
 const Tags = styled.div`
@@ -101,13 +106,6 @@ const Container = styled(Section)`
 		margin: 0;
 		font-size: 20px;
 	}
-	.href-link {
-		color: var(--accent);
-		text-decoration: underline;
-		:hover {
-			text-decoration: none;
-		}
-	}
 `;
 
 const Heading2 = styled.h2`
@@ -139,13 +137,9 @@ export const StyledA = styled.a`
 		background-color: #f1f1f1;
 	}
 `;
-const AllArtices = styled.a`
+const AllArtices = styled(StyledLink)`
 	text-align: center;
 	margin: auto;
-	color: var(--accent);
-	:hover {
-		text-decoration: underline;
-	}
 `;
 const StyledLinkDiv = styled.div`
 	display: flex;
@@ -154,17 +148,6 @@ const StyledLinkDiv = styled.div`
 const StyledList = styled.ul`
 	list-style: unset;
 	font-size: 20px;
-	li {
-		::marker {
-			unicode-bidi: isolate;
-		}
-		a {
-			color: var(--accent);
-			:hover {
-				text-decoration: underline;
-			}
-		}
-	}
 `;
 const FootLinks = styled(Section)`
 	span {
@@ -173,12 +156,7 @@ const FootLinks = styled(Section)`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	a {
-		color: var(--accent);
-		:hover {
-			text-decoration: underline;
-		}
-	}
+
 	hr {
 		opacity: 0.6;
 		border: 0;
@@ -202,12 +180,12 @@ export default function Home(): JSX.Element {
 					I'm a full stack developer, machine learning student, and
 					open source enthusiast. You've found my personal slice of
 					the internet.{" "}
-					<Link href="/about">
-						<a className="href-link">Learn more about me</a>
+					<Link href="/about" passHref>
+						<StyledLink>Learn more about me</StyledLink>
 					</Link>{" "}
 					or{" "}
-					<Link href="mailto:nikkschaefer@gmail.com">
-						<a className="href-link">get in touch</a>
+					<Link href="mailto:nikkschaefer@gmail.com" passHref>
+						<StyledLink>get in touch</StyledLink>
 					</Link>{" "}
 					while your here.
 				</p>
@@ -253,8 +231,8 @@ export default function Home(): JSX.Element {
 				<StyledList>
 					{json.map((value) => (
 						<li key={value.date}>
-							<Link href={`/portfolio/${value.slug}`}>
-								<a>{value.title}</a>
+							<Link href={`/portfolio/${value.slug}`} passHref>
+								<StyledLink>{value.title}</StyledLink>
 							</Link>{" "}
 							- {value.short}
 						</li>
@@ -306,12 +284,12 @@ export default function Home(): JSX.Element {
 				<span>
 					Learn more about me
 					<br />
-					<Link href="/about">
-						<a>Work</a>
+					<Link href="/about" passHref>
+						<StyledLink>Work</StyledLink>
 					</Link>{" "}
 					|{" "}
-					<Link href="/portfolio">
-						<a>Portfolio</a>
+					<Link href="/portfolio" passHref>
+						<StyledLink>Portfolio</StyledLink>
 					</Link>
 				</span>
 			</FootLinks>

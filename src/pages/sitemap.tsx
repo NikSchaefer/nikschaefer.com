@@ -2,10 +2,13 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { Container, Content } from "@styles/blog.theme";
+import StyledLink from "@styles/underline";
+import Link from "next/link";
 import styled from "styled-components";
 
 const List = styled.ul`
 	list-style: unset;
+	font-size: 20px;
 `;
 type Link = {
 	link: string;
@@ -60,7 +63,9 @@ export default function Sitemap(): JSX.Element {
 						<List>
 							{mainContent.map((value) => (
 								<li key={value.link}>
-									<a href={value.link}>{value.name}</a>
+									<Link href={value.link} passHref>
+										<StyledLink>{value.name}</StyledLink>
+									</Link>
 								</li>
 							))}
 						</List>
@@ -71,7 +76,9 @@ export default function Sitemap(): JSX.Element {
 						<List>
 							{otherPages.map((value) => (
 								<li key={value.link}>
-									<a href={value.link}>{value.name}</a>
+									<Link href={value.link} passHref>
+										<StyledLink>{value.name}</StyledLink>
+									</Link>
 								</li>
 							))}
 						</List>
