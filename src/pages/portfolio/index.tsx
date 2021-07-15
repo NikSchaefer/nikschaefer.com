@@ -93,7 +93,6 @@ const Project = styled.a`
 	width: 20%;
 	min-width: 300px;
 	background-color: var(--secondary);
-	border: 1px solid #e5e7eb;
 	box-sizing: border-box;
 	padding: 10px;
 	position: relative;
