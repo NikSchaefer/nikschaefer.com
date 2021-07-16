@@ -14,23 +14,11 @@ import styled from "styled-components";
 const StyledSection = styled.section`
 	text-align: center;
 	font-family: "Mukta", sans-serif;
-	border-bottom: black 1px solid;
 	h1 {
-		font-size: 60px;
+		font-size: 20px;
 		font-weight: 400;
 	}
-	.links {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		.github-btn {
-			background-color: black;
-			color: white !important;
-			:hover {
-				background-color: #292929;
-			}
-		}
-	}
+	
 `;
 type receivingData = {
 	source: never;
