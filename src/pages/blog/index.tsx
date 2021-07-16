@@ -62,16 +62,16 @@ export default function Blog(): JSX.Element {
 							<a>
 								<h1>{data.title}</h1>
 								<div>
-									<h3>
+									<h2>
 										{data.date} • {data.min} min
-									</h3>
+									</h2>
 									<Tags>
 										{data.type.map((string) => (
 											<span key={string}>{string}</span>
 										))}
 									</Tags>
 								</div>
-								<h2>{data.description}</h2>
+								<h3>{data.description}</h3>
 								<Bookmark>
 									<BsBookmark size="25px" />
 								</Bookmark>
