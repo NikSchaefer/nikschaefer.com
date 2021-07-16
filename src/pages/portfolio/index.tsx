@@ -1,6 +1,7 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import styled from "styled-components";
@@ -206,23 +207,26 @@ export default function Portfolio(): JSX.Element {
 			<h1>Portfolio</h1>
 			<Container>
 				{json.map((data) => (
-					<StyledCard
+					<Link
 						href={`/portfolio/${String(data.slug)}`}
 						key={data.github}
+						passHref
 					>
-						<div className="image">
-							<Image
-								height={size}
-								width={size}
-								alt={data.title}
-								src={`/featured/${String(data.svg)}`}
-							/>
-						</div>
-						<div className="text">
-							<h2>{data.title}</h2>
-							<p>{data.short}</p>
-						</div>
-					</StyledCard>
+						<StyledCard>
+							<div className="image">
+								<Image
+									height={size}
+									width={size}
+									alt={data.title}
+									src={`/featured/${String(data.svg)}`}
+								/>
+							</div>
+							<div className="text">
+								<h2>{data.title}</h2>
+								<p>{data.short}</p>
+							</div>
+						</StyledCard>
+					</Link>
 				))}
 			</Container>
 			<section>
@@ -246,17 +250,20 @@ export default function Portfolio(): JSX.Element {
 				</StyledList>
 				<ProjectContainer>
 					{projectData.map((data) => (
-						<Project
+						<Link
 							href={`/portfolio/${String(data.slug)}`}
 							key={data.github}
+							passHref
 						>
-							<a href={data.github}>
-								<FiGithub size="20px" />
-							</a>
-							<h4>{data.title}</h4>
-							<p>{data.text}</p>
-							<i />
-						</Project>
+							<Project>
+								<a href={data.github}>
+									<FiGithub size="20px" />
+								</a>
+								<h4>{data.title}</h4>
+								<p>{data.text}</p>
+								<i />
+							</Project>
+						</Link>
 					))}
 				</ProjectContainer>
 			</section>
