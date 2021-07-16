@@ -58,12 +58,12 @@ const UL = styled.ul`
 	align-items: center;
 `;
 const Tag = styled.li`
-	background-color: #f2f8ff;
+	background-color: var(--tag-background);
 	width: fit-content;
 	margin: 5px 10px;
 	padding: 5px 10px;
 	border-radius: 5px;
-	color: #0084ff;
+	color: rgb(0, 105, 224);
 `;
 type receivingData = {
 	source: never;

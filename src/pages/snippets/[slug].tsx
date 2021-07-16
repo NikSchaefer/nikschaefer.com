@@ -15,7 +15,7 @@ const StyledSection = styled.section`
 	text-align: center;
 	font-family: "Mukta", sans-serif;
 	h1 {
-		font-size: 20px;
+		font-size: 50px;
 		font-weight: 400;
 	}
 	
