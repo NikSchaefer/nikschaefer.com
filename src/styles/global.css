@@ -10,6 +10,7 @@
 	--tag-background: #f1f8ff;
 	--blog-text: #2e3440;
 	--tag-hover: #e4effc;
+	--scrollbar: rgb(175, 175, 175);
 }
 
 .darkmode {
@@ -24,6 +25,26 @@
 	--tag-background: var(--secondary);
 	--blog-text: rgb(231, 231, 231);
 	--tag-hover: #21263d;
+	--scrollbar:#414f75;
+	/* width */
+}
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: var(--secondary);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
 
 html,

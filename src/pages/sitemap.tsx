@@ -42,6 +42,10 @@ const otherPages: Link[] = [
 		link: "/repos",
 		name: "Repositories",
 	},
+	{
+		link: "/stats",
+		name: "Github Stats"
+	}
 ];
 
 export default function Sitemap(): JSX.Element {
