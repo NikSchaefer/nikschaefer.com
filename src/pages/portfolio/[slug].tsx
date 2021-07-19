@@ -35,7 +35,7 @@ const StyledSection = styled.section`
 	}
 `;
 const Btn = styled.a`
-	background-color: var(--primary);
+	background-color: whitesmoke;
 	padding: 10px 20px;
 	margin: 10px;
 	border-radius: 0.25rem;
@@ -47,7 +47,7 @@ const Btn = styled.a`
 		margin: 0 5px;
 	}
 	:hover {
-		background-color: var(--secondary);
+		background-color: white;
 		cursor: pointer;
 	}
 `;
