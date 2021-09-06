@@ -1,7 +1,7 @@
 import { StyledLi, Bookmark, Tags } from "@components/blog-posts";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
-import { Heading, SubHeading } from "@styles/headings.theme";
+import { Heading, Paragraph, SubHeading } from "@styles/headings.theme";
 import { Section } from "@styles/section.theme";
 import StyledLink from "@styles/underline";
 import { popularBlogs } from "config";
@@ -156,14 +156,14 @@ export default function Home(): JSX.Element {
 			</Container>
 			<Section>
 				<SubHeading>Projects</SubHeading>
-				<p>
+				<Paragraph>
 					I usually work with the web platform but love to dabble in
 					machine learning and its wonders.
 					<br />
 					<br />
 					Here are some of my favorite personal projects I've worked
 					on:
-				</p>
+				</Paragraph>
 				<StyledList>
 					{json.map((value) => (
 						<li key={value.date}>
