@@ -1,5 +1,8 @@
+import { StyledLi, Bookmark, Tags } from "@components/blog-posts";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
+import { Heading, SubHeading } from "@styles/headings.theme";
+import { Section } from "@styles/section.theme";
 import StyledLink from "@styles/underline";
 import { BlogLinks } from "config";
 import Link from "next/link";
@@ -20,103 +23,17 @@ I've been enjoying programming since I first began. I love supporting open sourc
 	image: "/logo.png",
 	url: "https://nikschaefer.tech",
 };
-const StyledLi = styled.li`
-	text-align: left;
-	margin: 10px 0;
-	border: solid 1px rgb(203, 213, 224);
-	border-radius: 0.375rem;
-	transition: top 0.15s ease-out 0s;
-	padding: 1rem;
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-		rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-	margin-bottom: 2rem;
-	position: relative;
-	top: 0;
-
-	h1 {
-		font-size: 24px;
-		margin: 0;
-	}
-	h3 {
-		margin: 10px 0;
-		font-weight: 400;
-		font-size: 20px;
-	}
-	div {
-		display: flex;
-		h2 {
-			margin: 0;
-			color: rgba(0, 0, 0, 0.308);
-			font-weight: 400;
-			font-size: 0.875rem;
-			color: #718096;
-		}
-	}
-	:hover {
-		top: -5px;
-	}
-`;
-const Tags = styled.div`
-	display: flex;
-	margin: 0 10px;
-	span {
-		font-size: 0.75rem;
-		padding: 0 0.5rem;
-		border-radius: 0.375rem;
-		background: #ddf2ff;
-		color: #002451;
-		margin: 2px;
-		font-weight: 500;
-	}
-`;
-const Bookmark = styled.div`
-	position: absolute;
-	right: 10px;
-	top: -10px;
-	svg {
-		background-color: var(--primary);
-		fill: var(--text);
-	}
-`;
 const StyledContainer = styled.ul`
 	margin: 0;
 	width: 100%;
 	padding: 0;
 `;
-const Section = styled.section`
-	width: 90%;
-	margin: 40px auto;
-	max-width: 800px;
-	text-align: left;
-	font-size: 1.1rem;
-	line-height: 1.75;
-	font-style: normal;
-	font-family: "Roboto", sans-serif;
-`;
 const Container = styled(Section)`
 	font-family: "Mukta", sans-serif;
-	h1 {
-		font-size: 60px;
-		margin-bottom: 5px;
-		@media (max-width: 800px) {
-			font-size: 40px;
-		}
-	}
 	p {
 		margin: 0;
 		font-size: 20px;
 	}
-`;
-
-const Heading2 = styled.h2`
-	font-family: inherit;
-	margin: 0;
-	margin-bottom: 1rem;
-	font-weight: 700;
-	letter-spacing: -0.025em;
-	color: rgb(0, 0, 0);
-	font-size: 2.25rem;
-	line-height: 2.5rem;
 `;
 
 export const SocialLinks = styled.div`
@@ -192,7 +109,7 @@ export default function Home(): JSX.Element {
 		<Layout>
 			<Meta META={META} />
 			<Container>
-				<h1>Hi, I'm Nik Schaefer</h1>
+				<Heading>Hi, I'm Nik Schaefer</Heading>
 				<AboutMe>
 					I'm a full stack developer, machine learning student, and
 					open source enthusiast. You've found my personal slice of
@@ -238,7 +155,7 @@ export default function Home(): JSX.Element {
 				</SocialLinks>
 			</Container>
 			<Section>
-				<Heading2>Projects</Heading2>
+				<SubHeading>Projects</SubHeading>
 				<p>
 					I usually work with the web platform but love to dabble in
 					machine learning and its wonders.
@@ -264,7 +181,7 @@ export default function Home(): JSX.Element {
 				</StyledLinkDiv>
 			</Section>
 			<Section>
-				<Heading2>Featured Articles</Heading2>
+				<SubHeading>Featured Articles</SubHeading>
 				<StyledContainer>
 					{BlogLinks.slice(0, 3).map((data) => (
 						<StyledLi key={data.link}>
