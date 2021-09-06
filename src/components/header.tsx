@@ -106,6 +106,20 @@ const StyledDarkModeBtn = styled.button`
 		background-color: #2d3338;
 	}
 `;
+
+const HackClubFlag = styled.img`
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+	width: 170px;
+	z-index: 999;
+	@media (max-width: 700px) {
+		width: 100px;
+		top: 10px;
+	}
+`;
+
 function useOutsideAlerter(ref: React.RefObject<HTMLDivElement>) {
 	useEffect(() => {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -150,15 +164,7 @@ export default function Main(): JSX.Element {
 	return (
 		<Header>
 			<a href="https://hackclub.com/">
-				<img
-					style={{
-						position: "absolute",
-						top: 0,
-						left: 0,
-						border: 0,
-						width: "170px",
-						zIndex: 999,
-					}}
+				<HackClubFlag
 					src="https://assets.hackclub.com/flag-orpheus-left.svg"
 					alt="Hack Club"
 				/>
