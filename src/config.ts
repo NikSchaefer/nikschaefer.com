@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 // google analytics measurement id
 const GA_TRACKING_ID = "U-XXXXXX";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
@@ -29,7 +30,7 @@ const HeaderLinks: HeaderLink[] = [
 	},
 ];
 
-type BlogLink = {
+type Blog = {
 	link: string;
 	title: string;
 	date?: string;
@@ -38,7 +39,40 @@ type BlogLink = {
 	min: number;
 	type: string[];
 };
-const BlogLinks: BlogLink[] = [
+
+const popularBlogs: Blog[] = [
+	{
+		title: "What's new in Machine Learning",
+		link: "/blog/whats-new-in-machine-learning",
+		image: "/blog/mlops.webp",
+		description:
+			"attending Google's I/O Machine Learning talks and Keynotes",
+		min: 3,
+		date: "May 2020",
+		type: ["Machine Learning"],
+	},
+	{
+		title: "5 database paradigms and their use cases",
+		link: "/blog/5-database-paradigms-and-their-use-cases",
+		image: "/blog/5-database-paradigms-and-their-use-cases.webp",
+		description: "5 database paradigms what they are used for",
+		min: 3,
+		date: "May 2020",
+		type: ["Database"],
+	},
+	{
+		title: "Why I use NextJS over Gatsby for Personal Projects",
+		link: "/blog/why-I-choose-nextjs-over-gatsby",
+		image: "/blog/nextjs.jpg",
+		min: 2,
+		description:
+			"Here is a quick breakdown of the differences between NextJS and Gatsby andwhy I chose NextJS",
+		date: "Jan 2020",
+		type: ["NextJS", "GatsbyJS"],
+	},
+];
+
+const allBlogs: Blog[] = [
 	{
 		title: "What's new in Machine Learning",
 		link: "/blog/whats-new-in-machine-learning",
@@ -175,4 +209,5 @@ const BlogLinks: BlogLink[] = [
 	},
 ];
 
-export { HeaderLinks, BlogLinks };
+export { HeaderLinks, allBlogs, popularBlogs };
+export type { Blog };

@@ -4,7 +4,7 @@ import Meta, { MetaType } from "@components/meta";
 import { Heading, SubHeading } from "@styles/headings.theme";
 import { Section } from "@styles/section.theme";
 import StyledLink from "@styles/underline";
-import { BlogLinks } from "config";
+import { popularBlogs } from "config";
 import Link from "next/link";
 import { BsBookmark } from "react-icons/bs";
 import { GoMarkGithub } from "react-icons/go";
@@ -183,7 +183,7 @@ export default function Home(): JSX.Element {
 			<Section>
 				<SubHeading>Featured Articles</SubHeading>
 				<StyledContainer>
-					{BlogLinks.slice(0, 3).map((data) => (
+					{popularBlogs.slice(0, 3).map((data) => (
 						<StyledLi key={data.link}>
 							<Link href={data.link}>
 								<a>

@@ -2,12 +2,11 @@ import { StyledLi, Bookmark, Tags } from "@components/blog-posts";
 import Layout from "@components/layout";
 import { Heading, SubHeading } from "@styles/headings.theme";
 import { Section } from "@styles/section.theme";
-import { BlogLinks } from "config";
+import { allBlogs, popularBlogs, Blog } from "config";
 import Link from "next/link";
 import { useState } from "react";
 import { BsBookmark } from "react-icons/bs";
 import styled from "styled-components";
-
 
 const StyledContainer = styled.ul`
 	margin: 40px auto;
@@ -29,13 +28,43 @@ const ContentLayer = styled(Section)`
 	max-width: 42rem;
 `;
 
-export default function Blog(): JSX.Element {
+function MapOfBlogs(props: { blogs: Blog[] }): JSX.Element {
+	return (
+		<>
+			{props.blogs.map((data) => (
+				<StyledLi key={data.link}>
+					<Link href={data.link}>
+						<a>
+							<h1>{data.title}</h1>
+							<div>
+								<h2>
+									{data.date} • {data.min} min
+								</h2>
+								<Tags>
+									{data.type.map((string) => (
+										<span key={string}>{string}</span>
+									))}
+								</Tags>
+							</div>
+							<h3>{data.description}</h3>
+							<Bookmark>
+								<BsBookmark size="25px" />
+							</Bookmark>
+						</a>
+					</Link>
+				</StyledLi>
+			))}
+		</>
+	);
+}
+
+export default function BlogIndex(): JSX.Element {
 	const [value, setValue] = useState("");
-	const [blogs, setBlogs] = useState(BlogLinks);
+	const [blogs, setBlogs] = useState(allBlogs);
 	function query(keyword: string) {
 		const out = [];
 		const kw = keyword.trim().toLowerCase();
-		for (const blog of BlogLinks) {
+		for (const blog of allBlogs) {
 			if (
 				blog.description.toLowerCase().includes(kw) ||
 				blog.title.toLowerCase().includes(kw)
@@ -60,35 +89,18 @@ export default function Blog(): JSX.Element {
 					placeholder="Search Blogs"
 				/>
 			</ContentLayer>
-
-			<ContentLayer>
+			<ContentLayer
+				style={{ display: `${value === "" ? "block" : "none"}` }}
+			>
 				<SubHeading>Most Popular</SubHeading>
 				<StyledContainer>
-					{blogs.map((data) => (
-						<StyledLi key={data.link}>
-							<Link href={data.link}>
-								<a>
-									<h1>{data.title}</h1>
-									<div>
-										<h2>
-											{data.date} • {data.min} min
-										</h2>
-										<Tags>
-											{data.type.map((string) => (
-												<span key={string}>
-													{string}
-												</span>
-											))}
-										</Tags>
-									</div>
-									<h3>{data.description}</h3>
-									<Bookmark>
-										<BsBookmark size="25px" />
-									</Bookmark>
-								</a>
-							</Link>
-						</StyledLi>
-					))}
+					<MapOfBlogs blogs={popularBlogs} />
+				</StyledContainer>
+			</ContentLayer>
+			<ContentLayer>
+				<SubHeading>All Posts</SubHeading>
+				<StyledContainer>
+					<MapOfBlogs blogs={blogs} />
 				</StyledContainer>
 			</ContentLayer>
 		</Layout>
