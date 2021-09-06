@@ -133,7 +133,7 @@ const HackClubFlag = styled.img`
 		top: 10px;
 	}
 	:hover {
-		animation: ${WaveFlag} 1.5s linear infinite alternate;
+		animation: ${WaveFlag} 1.25s linear infinite alternate;
 	}
 `;
 

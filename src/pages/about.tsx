@@ -1,4 +1,3 @@
-import { data, StyledMedia } from "@components/footer";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import StyledLink from "@styles/underline";
@@ -111,10 +110,6 @@ const Information = styled.section`
 		line-height: 2.25rem;
 	}
 `;
-const SocialDiv = styled.div`
-	display: flex;
-	justify-content: center;
-`;
 export default function About(): JSX.Element {
 	return (
 		<Layout>
@@ -128,13 +123,6 @@ export default function About(): JSX.Element {
 					source and making my own projects. I have taken on various
 					roles between design, research and development.
 				</p>
-				<SocialDiv>
-					{data.map((values) => (
-						<StyledMedia key={values.label} href={values.link}>
-							{values.img()}
-						</StyledMedia>
-					))}
-				</SocialDiv>
 			</Information>
 			<section id="studies">
 				<Title>Studies</Title>

@@ -1,76 +1,118 @@
 import Link from "next/link";
-import { FaLinkedinIn } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
-import { SiGithub } from "react-icons/si";
 import styled from "styled-components";
+
+type FooterLinks = {
+	title: string;
+	link: string;
+};
+
+const Col1: FooterLinks[] = [
+	{
+		title: "Home",
+		link: "/",
+	},
+	{
+		title: "About",
+		link: "/about",
+	},
+	{
+		title: "Portfolio",
+		link: "/portfolio",
+	},
+];
+
+const Col2: FooterLinks[] = [
+	{
+		title: "GitHub",
+		link: "https://github.com/NikSchaefer",
+	},
+	{
+		title: "LinkedIn",
+		link: "https://www.linkedin.com/in/nikschaefer/",
+	},
+	{
+		title: "Email",
+		link: "mailto:nikkschaefer@gmail.com",
+	},
+];
+
+const Col3: FooterLinks[] = [
+	{
+		title: "Blog",
+		link: "/blog",
+	},
+	{
+		title: "Snippets",
+		link: "/snippets",
+	},
+	{
+		title: "Sitemap",
+		link: "/sitemap",
+	},
+];
 
 const Footer = styled.footer`
 	padding: 20px 0;
 `;
 const Container = styled.div`
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+	width: 90%;
+	max-width: 600px;
+	margin: auto;
+	padding-bottom: 20px;
 `;
-const StyledMedia = styled.a`
-	margin: 10px;
-	padding: 13px;
-	:hover {
-		background-color: rgba(54, 54, 54, 0.027);
-		border-radius: 100px;
-	}
-`;
-const size = "25px";
-const data: DataType[] = [
-	{
-		link: "https://github.com/NikSchaefer",
-		label: "Github",
-		img: () => <SiGithub size={size} aria-label="Github" />,
-	},
-	{
-		link: "https://www.linkedin.com/in/nikschaefer/",
-		label: "LinkedIn",
-		img: () => <FaLinkedinIn size={size} aria-label="LinkedIn" />,
-	},
-	{
-		link: "mailto:nikkschaefer@gmail.com",
-		label: "Email",
-		img: () => <HiOutlineMail size={size} aria-label="Email" />,
-	},
-];
+
 const Copyright = styled.span`
-	font-size: 14px;
-	color: #474747;
+	font-size: 12px;
+	margin-top: 5px;
+	color: #00000088;
+`;
+
+function Column(props: { data: FooterLinks[] }) {
+	return (
+		<>
+			{props.data.map((data) => (
+				<Link key={data.title} href={data.link}>
+					<a>{data.title}</a>
+				</Link>
+			))}
+		</>
+	);
+}
+
+const ColumnStyle = styled.div`
+	display: flex;
+	flex-direction: column;
+	text-align: left;
 	a {
+		color: rgba(103, 109, 122, 0.884);
+		margin: 5px 0;
+		font-size: 1.2rem;
+		font-weight: 400;
+		font-family: "Mukta", sans-serif;
 		:hover {
-			text-decoration: underline;
+			color: rgb(61, 66, 75);
 		}
 	}
 `;
-type DataType = {
-	// eslint-disable-next-line @typescript-eslint/ban-types
-	img: Function;
-	link: string;
-	label: string;
-};
+
 // eslint-disable-next-line import/no-default-export
 export default function Main(): JSX.Element {
 	return (
 		<Footer>
 			<Container>
-				{data.map((values) => (
-					<StyledMedia key={values.label} href={values.link}>
-						{values.img()}
-					</StyledMedia>
-				))}
+				<ColumnStyle>
+					<Column data={Col1} />
+				</ColumnStyle>
+				<ColumnStyle>
+					<Column data={Col2} />
+				</ColumnStyle>
+				<ColumnStyle>
+					<Column data={Col3} />
+				</ColumnStyle>
 			</Container>
-			<Copyright>
-				© 2021, Nik Schaefer •{" "}
-				<Link href="/sitemap">
-					<a>sitemap</a>
-				</Link>
-			</Copyright>
+			<Copyright>© 2021 Nik Schaefer </Copyright>
 		</Footer>
 	);
 }
-
-export { data, StyledMedia };

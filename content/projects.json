@@ -155,7 +155,7 @@
 		"github": "https://github.com/NikSchaefer/Octo-Stats",
 		"external": "https://octo-stats.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
-		"text": "Website to better visualize Github Stats",
+		"text": "Website to better visualize GitHub Stats",
 		"slug": "octo-stats"
 	}
 ]
