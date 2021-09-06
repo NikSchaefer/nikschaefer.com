@@ -184,7 +184,7 @@ const allBlogs: Blog[] = [
 		image: "/blog/nextjs.jpg",
 		min: 2,
 		description:
-			"Here is a quick breakdown of the differences between NextJS and Gatsby andwhy I chose NextJS",
+			"Here is a quick breakdown of the differences between NextJS and Gatsby and why I chose NextJS",
 		date: "Jan 2020",
 		type: ["NextJS", "GatsbyJS"],
 	},
