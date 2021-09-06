@@ -19,6 +19,13 @@ const SubHeading = styled.h2`
 	line-height: 2.5rem;
 `;
 
-const Paragraph = styled.p``;
+const Paragraph = styled.p`
+	margin: 0;
+	max-width: 70ch;
+	font-size: 1.1rem;
+	font-weight: inherit;
+	line-height: 1.75;
+	color: rgb(75, 85, 99);
+`;
 
 export { Heading, SubHeading, Paragraph };

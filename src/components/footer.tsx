@@ -86,13 +86,13 @@ const ColumnStyle = styled.div`
 	flex-direction: column;
 	text-align: left;
 	a {
-		color: rgba(103, 109, 122, 0.884);
+		color: rgb(79, 82, 88);
 		margin: 5px 0;
 		font-size: 1.2rem;
 		font-weight: 400;
 		font-family: "Mukta", sans-serif;
 		:hover {
-			color: rgb(61, 66, 75);
+			color: rgb(43, 45, 49);
 		}
 	}
 `;

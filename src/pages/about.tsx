@@ -1,5 +1,7 @@
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
+import { Heading, SubHeading, Paragraph } from "@styles/headings.theme";
+import { Section } from "@styles/section.theme";
 import StyledLink from "@styles/underline";
 import { AiFillStar } from "react-icons/ai";
 import { BsCode } from "react-icons/bs";
@@ -89,43 +91,22 @@ const Tag = styled.li`
 		background-color: var(--tag-hover);
 	}
 `;
-const Title = styled.h1`
-	width: 90%;
-	margin: 40px auto;
-	max-width: 900px;
-	font-weight: 600;
-	font-size: 1.875rem;
-	line-height: 2.25rem;
-`;
-const Information = styled.section`
-	margin: 30px auto;
-	max-width: 900px;
-	width: 90%;
-	font-size: 1.1rem;
-	line-height: 1.75;
-	font-style: normal;
-	h1 {
-		font-weight: 600;
-		font-size: 1.875rem;
-		line-height: 2.25rem;
-	}
-`;
 export default function About(): JSX.Element {
 	return (
 		<Layout>
 			<Meta META={META} />
-			<Information>
-				<h1>About Me</h1>
-				<p>
+			<Section>
+				<Heading>About Me</Heading>
+				<Paragraph>
 					👋, I'm Nik, self-taught full-stack developer and hobbyist
 					programmer student based in Minnesota, US I've been enjoying
 					programming since I first began. I love supporting open
 					source and making my own projects. I have taken on various
 					roles between design, research and development.
-				</p>
-			</Information>
-			<section id="studies">
-				<Title>Studies</Title>
+				</Paragraph>
+			</Section>
+			<Section id="studies">
+				<SubHeading>Studies</SubHeading>
 				<JobContainer>
 					{studies
 						.sort((a, b) => {
@@ -158,9 +139,9 @@ export default function About(): JSX.Element {
 							</Node>
 						))}
 				</JobContainer>
-			</section>
-			<section id="work">
-				<Title>Work</Title>
+			</Section>
+			<Section id="work">
+				<SubHeading>Work</SubHeading>
 				<JobContainer>
 					{jobs
 						.sort((a, b) => {
@@ -198,7 +179,7 @@ export default function About(): JSX.Element {
 							</Node>
 						))}
 				</JobContainer>
-			</section>
+			</Section>
 		</Layout>
 	);
 }
