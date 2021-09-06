@@ -188,6 +188,11 @@ const sortByOptions: SortOf[] = [
 		include: ["Python", "Tensorflow", "Pandas"],
 		content: [],
 	},
+	{
+		name: "Golang",
+		include: ["Go", "Golang", "go", "golang"],
+		content: [],
+	},
 ];
 
 for (const option of sortByOptions) {
