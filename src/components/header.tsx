@@ -127,12 +127,13 @@ const HackClubFlag = styled.img`
 	border: 0;
 	width: 170px;
 	z-index: 999;
+	transform-origin: 0% 0%;
 	@media (max-width: 700px) {
 		width: 100px;
 		top: 10px;
 	}
 	:hover {
-		animation: ${WaveFlag} 1s linear infinite alternate;
+		animation: ${WaveFlag} 1.5s linear infinite alternate;
 	}
 `;
 
