@@ -142,8 +142,27 @@ export default function Main(): JSX.Element {
 			ref2.current.classList.toggle("flex");
 		}
 	}
+	useEffect(() => {
+		if (document.body.classList.contains("darkmode")) {
+			setIsDarkMode(true);
+		}
+	}, []);
 	return (
 		<Header>
+			<a href="https://hackclub.com/">
+				<img
+					style={{
+						position: "absolute",
+						top: 0,
+						left: 0,
+						border: 0,
+						width: "170px",
+						zIndex: 999,
+					}}
+					src="https://assets.hackclub.com/flag-orpheus-left.svg"
+					alt="Hack Club"
+				/>
+			</a>
 			<StyledDarkModeBtn
 				aria-label="Toggle Dark Mode"
 				onClick={toggleDarkMode}
