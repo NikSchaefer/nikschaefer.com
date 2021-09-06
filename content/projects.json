@@ -39,13 +39,20 @@
 		"slug": "mnist-handwritten-digits-ml",
 		"text": "Machine Learning Model to classify handwritten digits based on the mnist dataset of handwritten digits"
 	},
-
+	{
+		"title": "Go-Fiber Boilerplate",
+		"github": "https://github.com/NikSchaefer/go-fiber",
+		"external": "",
+		"tech": ["Golang", "Fiber"],
+		"slug": "go-fiber",
+		"text": "Golang Rest API built with GORM, Go-Fiber, and a PostgresSQL database. Running in a docker container with Hot Reload."
+	},
 	{
 		"text": "My Personal Golang CLI for productivity and networking",
 		"title": "My-CLI",
 		"github": "https://github.com/NikSchaefer/My-CLI",
 		"external": "",
-		"tech": ["Golang"],
+		"tech": ["Golang", "netsh"],
 		"slug": "my-cli"
 	},
 	{

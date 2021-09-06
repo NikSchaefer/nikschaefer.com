@@ -1,10 +1,9 @@
-import "@styles/global.css";
 import { pageview } from "@lib/gtag";
+import GlobalStyle from "@styles/global.theme";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	const router = useRouter();
@@ -19,10 +18,10 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	}, [router.events]);
 	return (
 		<>
+			<GlobalStyle />
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
 			<Component {...pageProps} />
 		</>
 	);

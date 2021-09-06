@@ -54,10 +54,9 @@ export const SyntaxCSS = css`
 	}
 
 	/* Inline code */
-	:not(pre) > code[class*="language-"] {
-		padding: 0.2em;
-		padding-top: 1px;
-		padding-bottom: 1px;
+	code:not([class*="language-"]) {
+		padding: 0.4em;
+		border-radius: 0.2px;
 		background: #f8f8f8;
 		border: 1px solid #dddddd;
 	}
