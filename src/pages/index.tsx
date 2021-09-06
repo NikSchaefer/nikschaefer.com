@@ -109,8 +109,14 @@ const Container = styled(Section)`
 `;
 
 const Heading2 = styled.h2`
-	font-size: 40px;
+	font-family: inherit;
 	margin: 0;
+	margin-bottom: 1rem;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	color: rgb(0, 0, 0);
+	font-size: 2.25rem;
+	line-height: 2.5rem;
 `;
 
 export const SocialLinks = styled.div`
@@ -148,6 +154,9 @@ const StyledLinkDiv = styled.div`
 const StyledList = styled.ul`
 	list-style: unset;
 	font-size: 20px;
+	@media (max-width: 600px) {
+		padding-left: 20px;
+	}
 `;
 const FootLinks = styled(Section)`
 	span {
@@ -168,6 +177,14 @@ const FootLinks = styled(Section)`
 		margin-bottom: 2rem;
 	}
 `;
+const AboutMe = styled.h2`
+	margin: 0;
+	max-width: 70ch;
+	font-size: 1.1rem;
+	font-weight: inherit;
+	line-height: 1.75;
+	color: rgb(75, 85, 99);
+`;
 export const sizeOfSVG = "20px";
 export const colorOfSVG = "var(--accent)";
 export default function Home(): JSX.Element {
@@ -176,7 +193,7 @@ export default function Home(): JSX.Element {
 			<Meta META={META} />
 			<Container>
 				<h1>Hi, I'm Nik Schaefer</h1>
-				<p>
+				<AboutMe>
 					I'm a full stack developer, machine learning student, and
 					open source enthusiast. You've found my personal slice of
 					the internet.{" "}
@@ -188,7 +205,7 @@ export default function Home(): JSX.Element {
 						<StyledLink>get in touch</StyledLink>
 					</Link>{" "}
 					while your here.
-				</p>
+				</AboutMe>
 				<SocialLinks>
 					<StyledA
 						target="_blank"
