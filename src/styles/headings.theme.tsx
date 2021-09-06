@@ -25,7 +25,7 @@ const Paragraph = styled.p`
 	font-size: 1.1rem;
 	font-weight: inherit;
 	line-height: 1.75;
-	color: rgb(75, 85, 99);
+	color: var(--paragraph);
 `;
 
 export { Heading, SubHeading, Paragraph };

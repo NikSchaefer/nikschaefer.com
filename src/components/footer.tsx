@@ -66,7 +66,7 @@ const Container = styled.div`
 const Copyright = styled.span`
 	font-size: 12px;
 	margin-top: 5px;
-	color: #00000088;
+	color: var(--blog-text);
 `;
 
 function Column(props: { data: FooterLinks[] }) {
@@ -86,13 +86,13 @@ const ColumnStyle = styled.div`
 	flex-direction: column;
 	text-align: left;
 	a {
-		color: rgb(79, 82, 88);
+		color: var(--footer);
 		margin: 5px 0;
 		font-size: 1.2rem;
 		font-weight: 400;
 		font-family: "Mukta", sans-serif;
 		:hover {
-			color: rgb(43, 45, 49);
+			color: var(--footer-hover);
 		}
 	}
 `;

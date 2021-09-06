@@ -14,6 +14,9 @@ const Global = createGlobalStyle`
 		--blog-text: #2e3440;
 		--tag-hover: #e4effc;
 		--scrollbar: rgb(175, 175, 175);
+		--footer: rgb(79, 82, 88);
+		--footer-hover: rgb(21, 21, 22);
+		--paragraph: rgb(75, 85, 99);
 	}
 
 	.darkmode {
@@ -29,7 +32,9 @@ const Global = createGlobalStyle`
 		--blog-text: rgb(231, 231, 231);
 		--tag-hover: #21263d;
 		--scrollbar: #414f75;
-		/* width */
+		--footer: rgb(193, 200, 212);
+		--footer-hover: rgb(241, 241, 241);
+		--paragraph: rgb(156,163,175);
 	}
 	::-webkit-scrollbar {
 		width: 8px;

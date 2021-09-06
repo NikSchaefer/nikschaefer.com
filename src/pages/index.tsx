@@ -100,7 +100,7 @@ const AboutMe = styled.h2`
 	font-size: 1.1rem;
 	font-weight: inherit;
 	line-height: 1.75;
-	color: rgb(75, 85, 99);
+	color: var(--paragraph);
 `;
 export const sizeOfSVG = "20px";
 export const colorOfSVG = "var(--accent)";
