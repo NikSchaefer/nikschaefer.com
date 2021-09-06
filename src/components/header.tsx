@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 import { HeaderLinks } from "../config";
 
@@ -107,6 +107,19 @@ const StyledDarkModeBtn = styled.button`
 	}
 `;
 
+const WaveFlag = keyframes`
+	0% {
+		transform: rotate(0deg)
+	}
+	50% {
+		transform: rotate(-5deg)
+
+	}
+	100% {
+		transform: rotate(0deg)
+	}
+`;
+
 const HackClubFlag = styled.img`
 	position: absolute;
 	top: 0;
@@ -117,6 +130,9 @@ const HackClubFlag = styled.img`
 	@media (max-width: 700px) {
 		width: 100px;
 		top: 10px;
+	}
+	:hover {
+		animation: ${WaveFlag} 1s linear infinite alternate;
 	}
 `;
 
