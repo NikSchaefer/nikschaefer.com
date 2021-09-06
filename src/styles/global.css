@@ -25,7 +25,7 @@
 	--tag-background: var(--secondary);
 	--blog-text: rgb(231, 231, 231);
 	--tag-hover: #21263d;
-	--scrollbar:#414f75;
+	--scrollbar: #414f75;
 	/* width */
 }
 ::-webkit-scrollbar {

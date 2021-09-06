@@ -36,7 +36,7 @@ type BlogLink = {
 	description: string;
 	image: string;
 	min: number;
-	type: string[]
+	type: string[];
 };
 const BlogLinks: BlogLink[] = [
 	{

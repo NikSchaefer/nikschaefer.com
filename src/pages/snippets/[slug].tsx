@@ -18,7 +18,6 @@ const StyledSection = styled.section`
 		font-size: 50px;
 		font-weight: 400;
 	}
-	
 `;
 type receivingData = {
 	source: never;

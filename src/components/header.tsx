@@ -144,7 +144,10 @@ export default function Main(): JSX.Element {
 	}
 	return (
 		<Header>
-			<StyledDarkModeBtn aria-label="Toggle Dark Mode" onClick={toggleDarkMode}>
+			<StyledDarkModeBtn
+				aria-label="Toggle Dark Mode"
+				onClick={toggleDarkMode}
+			>
 				{isDarkMode ? (
 					<BiSun color="yellow" size="25px" />
 				) : (

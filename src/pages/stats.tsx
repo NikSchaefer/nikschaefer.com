@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Iframe = styled.iframe`
 	height: calc(100vh - 180px);
 	width: calc(100vw - 10px);
-    margin:auto;
+	margin: auto;
 	box-sizing: border-box;
 `;
 export default function Stats(): JSX.Element {

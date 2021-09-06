@@ -47,7 +47,11 @@ export default function Snippets(): JSX.Element {
 			<p>Small bits of code that I use</p>
 			<Container>
 				{json.map((value) => (
-					<Link href={`/snippets/${value.link}`} key={value.link} passHref>
+					<Link
+						href={`/snippets/${value.link}`}
+						key={value.link}
+						passHref
+					>
 						<StyledLink>
 							<span className="tag">{value.tag}</span>
 							<span>{value.title}</span>
