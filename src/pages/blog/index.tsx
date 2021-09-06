@@ -20,7 +20,7 @@ const StyledInput = styled.input`
 	border-radius: 4px;
 	outline: 0;
 	width: 100%;
-	color: var(--text);
+	color: var(--paragraph);
 `;
 
 const ContentLayer = styled(Section)`

@@ -47,6 +47,7 @@ const Node = styled.div`
 			display: flex;
 			align-items: center;
 			flex-flow: row wrap;
+			color: var(--title);
 			svg {
 				margin-right: 10px;
 			}

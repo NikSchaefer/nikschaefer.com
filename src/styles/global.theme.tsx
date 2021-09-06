@@ -7,7 +7,7 @@ const Global = createGlobalStyle`
 		--grey: #eeeeee;
 		--accent: #00a2ff;
 		--border: #dddddd;
-		--text: black;
+		--title: black;
 		--header: #24292d;
 		--about-text: #586069;
 		--tag-background: #f1f8ff;
@@ -25,7 +25,7 @@ const Global = createGlobalStyle`
 		--grey: #1e2633;
 		--accent: #00a2ff;
 		--border: #4d5562;
-		--text: white;
+		--title: white;
 		--header: var(--primary);
 		--about-text: #d1d1d1;
 		--tag-background: var(--secondary);
@@ -63,7 +63,7 @@ const Global = createGlobalStyle`
 			Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 		text-align: center;
 		background-color: var(--primary);
-		color: var(--text);
+		color: var(--paragraph);
 		min-height: 100vh;
 	}
 

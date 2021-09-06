@@ -159,7 +159,7 @@ const StyledList = styled.ul`
 		outline: 0;
 		background-color: transparent;
 		font-size: 16px;
-		color: var(--text);
+		color: var(--paragraph);
 		:hover {
 			cursor: pointer;
 		}

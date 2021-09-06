@@ -16,6 +16,7 @@ const StyledLi = styled.li`
 	h1 {
 		font-size: 24px;
 		margin: 0;
+		color: var(--title);
 	}
 	h3 {
 		margin: 10px 0;
@@ -55,7 +56,7 @@ const Bookmark = styled.div`
 	top: -10px;
 	svg {
 		background-color: var(--primary);
-		fill: var(--text);
+		fill: var(--title);
 	}
 `;
 
