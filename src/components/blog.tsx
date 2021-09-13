@@ -6,7 +6,7 @@ import { Blog } from "../config";
 
 function Article(props: { Blog: Blog }): JSX.Element {
 	return (
-		<div className="relative top-0 px-8 py-4 mx-auto my-10 bg-white rounded-lg shadow-md hover:top-10 dark:bg-gray-800 ">
+		<div className="px-8 py-4 mx-auto my-10 bg-white rounded-lg shadow-md dark:bg-gray-800 ">
 			<div className="flex items-center justify-between">
 				<span className="text-sm font-light text-gray-600 dark:text-gray-400">
 					{props.Blog.date}

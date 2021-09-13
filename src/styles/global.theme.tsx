@@ -86,6 +86,26 @@ const Global = createGlobalStyle`
 			margin-top: 0.75rem;
 		}
 	}
+
+	@keyframes PopupAnimation {
+		0% {
+			transform: translateY(0px) translateX(-50%)
+		}
+		10% {
+			transform: translateY(180px) translateX(-50%)
+		}
+		90% {
+			transform: translateY(180px)translateX(-50%)
+		}
+		100% {
+			transform: translateY(0px)	translateX(-50%)
+		}
+	}
+
+	.popinout {
+		animation: PopupAnimation 5s;
+	}
+	
 `;
 
 // eslint-disable-next-line import/no-default-export
