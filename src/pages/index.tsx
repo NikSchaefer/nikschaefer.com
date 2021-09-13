@@ -1,10 +1,8 @@
 import { Article } from "@components/blog";
-import { StyledLi, Bookmark, Tags } from "@components/blog-posts";
-import { H1, H2 } from "@components/design";
+import { H1, H2, Hr } from "@components/design";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { Section } from "@styles/section.theme";
-import StyledLink from "@styles/underline";
 import { popularBlogs } from "config";
 import Link from "next/link";
 import { GoMarkGithub } from "react-icons/go";
@@ -26,7 +24,6 @@ I've been enjoying programming since I first began. I love supporting open sourc
 const Container = styled(Section)`
 	font-family: "Mukta", sans-serif;
 `;
-
 export const SocialLinks = styled.div`
 	margin: 20px 0;
 	display: flex;
@@ -51,38 +48,12 @@ export const StyledA = styled.a`
 		background-color: var(--primary);
 	}
 `;
-const AllArtices = styled(StyledLink)`
-	text-align: center;
-	margin: auto;
-`;
-const StyledLinkDiv = styled.div`
-	display: flex;
-	justify-content: center;
-`;
+
 const StyledList = styled.ul`
 	list-style: unset;
 	font-size: 20px;
 	@media (max-width: 600px) {
 		padding-left: 20px;
-	}
-`;
-const FootLinks = styled(Section)`
-	span {
-		text-align: center;
-	}
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-
-	hr {
-		opacity: 0.6;
-		border: 0;
-		border-color: #cbd5e0;
-		border-style: solid;
-		border-bottom-width: 1px;
-		width: 100%;
-		margin-top: 2rem;
-		margin-bottom: 2rem;
 	}
 `;
 export const sizeOfSVG = "30px";
@@ -98,11 +69,11 @@ export default function Home(): JSX.Element {
 					open source enthusiast. You've found my personal slice of
 					the internet.{" "}
 					<Link href="/about" passHref>
-						<StyledLink>Learn more about me</StyledLink>
+						<a className="slide">Learn more about me</a>
 					</Link>{" "}
 					or{" "}
 					<Link href="mailto:nikkschaefer@gmail.com" passHref>
-						<StyledLink>get in touch</StyledLink>
+						<a className="slide">get in touch</a>
 					</Link>{" "}
 					while your here.
 				</p>
@@ -151,17 +122,17 @@ export default function Home(): JSX.Element {
 					{json.map((value) => (
 						<li key={value.date}>
 							<Link href={`/portfolio/${value.slug}`} passHref>
-								<StyledLink>{value.title}</StyledLink>
+								<a className="slide">{value.title}</a>
 							</Link>{" "}
 							- {value.short}
 						</li>
 					))}
 				</StyledList>
-				<StyledLinkDiv>
+				<div className='flex justify-center'>
 					<Link href="/portfolio" passHref>
-						<AllArtices>All Projects</AllArtices>
+						<a className="slide">All Projects</a>
 					</Link>
-				</StyledLinkDiv>
+				</div>
 			</Section>
 			<Section>
 				<H2 class="text-black">Featured Articles</H2>
@@ -170,28 +141,27 @@ export default function Home(): JSX.Element {
 						<Article key={data.title} Blog={data} />
 					))}
 				</ul>
-				<StyledLinkDiv>
+				<div className='flex justify-center'>
 					<Link href="/blog" passHref>
-						<AllArtices>All Articles</AllArtices>
+						<a className="slide">All Articles</a>
 					</Link>
-				</StyledLinkDiv>
+				</div>
 			</Section>
-			<FootLinks>
-				<hr aria-orientation="horizontal" />
-				<span>
+			<section className="flex-col justify-center font-sans">
+				<Hr aria-orientation="horizontal" />
+				<span className="text-center">
 					Learn more about me
 					<br />
 					<Link href="/about" passHref>
-						<StyledLink>Work</StyledLink>
+						<a className="slide">Work</a>
 					</Link>{" "}
 					|{" "}
 					<Link href="/portfolio" passHref>
-						<StyledLink>Portfolio</StyledLink>
+						<a className="slide">Portfolio</a>
 					</Link>
 				</span>
-			</FootLinks>
+			</section>
 		</Layout>
 	);
 }
 
-export { StyledLi, Tags, Bookmark };

@@ -120,6 +120,6 @@ export {
 	Hr,
 	Blockquote,
 	ListDisc,
-    ListNumbered,
-    InlineCode
+	ListNumbered,
+	InlineCode,
 };
