@@ -50,7 +50,7 @@ export default function DesignSystem(): JSX.Element {
 						))}
 					</ul>
 				</section>
-				<hr className="py-5" />
+				<hr className="my-7" />
 				<section className="flex-col space-y-6">
 					<h2 className="text-4xl font-bold">Typography</h2>
 					<h1 className="text-6xl font-bold">H1 heading</h1>
@@ -115,9 +115,54 @@ export default function DesignSystem(): JSX.Element {
 						nunc non blandit. Nulla at volutpat diam ut venenatis
 						tellus in metus vulputate.
 					</p>
-					<blockquote className="border-l-4 border-solid my-4">
+					<blockquote className="relative text-lg border-l-4 border-gray-300 pl-8 pr-6 py-2 italic my-4 max-w-lg">
 						<p>Blockquote</p>
+						<span className="text-gray-300 font-serif text-4xl absolute top-0 right-2">
+							"
+						</span>
 					</blockquote>
+					<blockquote className="relative text-lg border-l-4 border-gray-300 pl-8 pr-6 py-2 italic my-4 max-w-lg">
+						<p>
+							Multiline Block quote
+							<br /> <br />
+							With a line break
+						</p>
+						<span className="text-gray-300 font-serif text-4xl absolute top-0 right-2">
+							"
+						</span>
+					</blockquote>
+				</section>
+				<hr className="my-7" />
+				<section id="lists">
+					<h2 className="text-4xl font-bold my-6">Lists</h2>
+					<ul className="list-disc list-inside my-5">
+						<li>one</li>
+						<li>one</li>
+						<li>one</li>
+					</ul>
+					<ol className="list-decimal list-inside my-5">
+						<li>one</li>
+						<li>one</li>
+						<li>one</li>
+					</ol>
+					<p>Nested lists:</p>
+					<ul className="list-disc list-inside my-5">
+						<li className="ml-4">
+							one
+							<ul className="list-disc list-inside">
+								<li className="ml-4">
+									two
+									<ul className="list-disc list-inside">
+										<li className="ml-4">tree</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section id="Code Blocks">
+                    <h2 className="text-4xl font-bold my-6">Code Blocks</h2>
+                    <code>inline code</code>
 				</section>
 			</div>
 		</Layout>
