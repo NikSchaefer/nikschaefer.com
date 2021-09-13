@@ -1,4 +1,22 @@
+import {
+	H1,
+	H2,
+	H3,
+	H4,
+	H5,
+	H6,
+	Hr,
+	Italic,
+	ItalicBold,
+	Bold,
+	Strikethrough,
+	Blockquote,
+	ListDisc,
+	ListNumbered,
+	InlineCode,
+} from "@components/design";
 import Layout from "@components/layout";
+import clsx from "clsx";
 
 type Link = {
 	name: string;
@@ -31,12 +49,15 @@ const Links: Link[] = [
 export default function DesignSystem(): JSX.Element {
 	return (
 		<Layout>
-			<div className="py-20 text-left m-auto w-11/12 max-w-3xl text-black">
+			<div
+				className={clsx(
+					"py-20 text-left m-auto",
+					"w-11/12 max-w-3xl text-black"
+				)}
+			>
 				<section>
-					<h1 className="text-5xl font-bold mb-10">
-						My Design System
-					</h1>
-					<p className="text-base">Built with TailwindCSS and MDX</p>
+					<H1 class="pb-10">My Design System</H1>
+					<p>Built with TailwindCSS and MDX</p>
 					<ul className="my-5 list-disc">
 						{Links.map(({ name, link }) => (
 							<li className="my-1" key={name}>
@@ -50,20 +71,20 @@ export default function DesignSystem(): JSX.Element {
 						))}
 					</ul>
 				</section>
-				<hr className="my-7" />
+				<Hr />
 				<section className="flex-col space-y-6">
-					<h2 className="text-4xl font-bold">Typography</h2>
-					<h1 className="text-6xl font-bold">H1 heading</h1>
-					<h2 className="text-4xl font-bold">H2 heading</h2>
-					<h3 className="text-2xl font-bold">H3 heading</h3>
-					<h4 className="text-xl font-bold">H4 heading</h4>
-					<h5 className="text-lg font-bold">H5 heading</h5>
-					<h6 className="text-base font-bold">H6 heading</h6>
+					<H2>Typography</H2>
+					<H1>H1 heading</H1>
+					<H2>H2 heading</H2>
+					<H3>H3 heading</H3>
+					<H4>H4 heading</H4>
+					<H5>H5 heading</H5>
+					<H6>H6 heading</H6>
 					<p>Paragraph of text</p>
-					<p className="italic">italic text</p>
-					<p className="font-semibold">bold text</p>
-					<p className="italic font-semibold">bold italic</p>
-					<p className="line-through">strikethrough</p>
+					<Italic>italic text</Italic>
+					<Bold>bold text</Bold>
+					<ItalicBold>bold italic</ItalicBold>
+					<Strikethrough>strikethrough</Strikethrough>
 
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -115,38 +136,28 @@ export default function DesignSystem(): JSX.Element {
 						nunc non blandit. Nulla at volutpat diam ut venenatis
 						tellus in metus vulputate.
 					</p>
-					<blockquote className="relative text-lg border-l-4 border-gray-300 pl-8 pr-6 py-2 italic my-4 max-w-lg">
-						<p>Blockquote</p>
-						<span className="text-gray-300 font-serif text-4xl absolute top-0 right-2">
-							"
-						</span>
-					</blockquote>
-					<blockquote className="relative text-lg border-l-4 border-gray-300 pl-8 pr-6 py-2 italic my-4 max-w-lg">
-						<p>
-							Multiline Block quote
-							<br /> <br />
-							With a line break
-						</p>
-						<span className="text-gray-300 font-serif text-4xl absolute top-0 right-2">
-							"
-						</span>
-					</blockquote>
+					<Blockquote>Blockquote</Blockquote>
+					<Blockquote>
+						Multiline Block quote
+						<br /> <br />
+						With a line break
+					</Blockquote>
 				</section>
-				<hr className="my-7" />
+				<Hr />
 				<section id="lists">
-					<h2 className="text-4xl font-bold my-6">Lists</h2>
-					<ul className="list-disc list-inside my-5">
+					<H2>Lists</H2>
+					<ListDisc>
 						<li>one</li>
 						<li>one</li>
 						<li>one</li>
-					</ul>
-					<ol className="list-decimal list-inside my-5">
+					</ListDisc>
+					<ListNumbered>
 						<li>one</li>
 						<li>one</li>
 						<li>one</li>
-					</ol>
+					</ListNumbered>
 					<p>Nested lists:</p>
-					<ul className="list-disc list-inside my-5">
+					<ListDisc>
 						<li className="ml-4">
 							one
 							<ul className="list-disc list-inside">
@@ -158,11 +169,11 @@ export default function DesignSystem(): JSX.Element {
 								</li>
 							</ul>
 						</li>
-					</ul>
+					</ListDisc>
 				</section>
 				<section id="Code Blocks">
-                    <h2 className="text-4xl font-bold my-6">Code Blocks</h2>
-                    <code>inline code</code>
+					<H2>Code Blocks</H2>
+					<InlineCode>inline code</InlineCode>
 				</section>
 			</div>
 		</Layout>

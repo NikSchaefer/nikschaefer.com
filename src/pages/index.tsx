@@ -1,12 +1,12 @@
+import { Article } from "@components/blog";
 import { StyledLi, Bookmark, Tags } from "@components/blog-posts";
+import { H1, H2 } from "@components/design";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
-import { Heading, Paragraph, SubHeading } from "@styles/headings.theme";
 import { Section } from "@styles/section.theme";
 import StyledLink from "@styles/underline";
 import { popularBlogs } from "config";
 import Link from "next/link";
-import { BsBookmark } from "react-icons/bs";
 import { GoMarkGithub } from "react-icons/go";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLinkedinBoxFill } from "react-icons/ri";
@@ -23,17 +23,8 @@ I've been enjoying programming since I first began. I love supporting open sourc
 	image: "/logo.png",
 	url: "https://nikschaefer.tech",
 };
-const StyledContainer = styled.ul`
-	margin: 0;
-	width: 100%;
-	padding: 0;
-`;
 const Container = styled(Section)`
 	font-family: "Mukta", sans-serif;
-	p {
-		margin: 0;
-		font-size: 20px;
-	}
 `;
 
 export const SocialLinks = styled.div`
@@ -94,23 +85,15 @@ const FootLinks = styled(Section)`
 		margin-bottom: 2rem;
 	}
 `;
-const AboutMe = styled.h2`
-	margin: 0;
-	max-width: 70ch;
-	font-size: 1.1rem;
-	font-weight: inherit;
-	line-height: 1.75;
-	color: var(--paragraph);
-`;
-export const sizeOfSVG = "20px";
+export const sizeOfSVG = "30px";
 export const colorOfSVG = "var(--accent)";
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
 			<Meta META={META} />
 			<Container>
-				<Heading>Hi, I'm Nik Schaefer</Heading>
-				<AboutMe>
+				<H1 class="text-black mb-8 mt-20">Hi, I'm Nik Schaefer</H1>
+				<p className="text-lg">
 					I'm a full stack developer, machine learning student, and
 					open source enthusiast. You've found my personal slice of
 					the internet.{" "}
@@ -122,7 +105,7 @@ export default function Home(): JSX.Element {
 						<StyledLink>get in touch</StyledLink>
 					</Link>{" "}
 					while your here.
-				</AboutMe>
+				</p>
 				<SocialLinks>
 					<StyledA
 						target="_blank"
@@ -155,15 +138,15 @@ export default function Home(): JSX.Element {
 				</SocialLinks>
 			</Container>
 			<Section>
-				<SubHeading>Projects</SubHeading>
-				<Paragraph>
+				<H2 class="text-black">Projects</H2>
+				<p>
 					I usually work with the web platform but love to dabble in
 					machine learning and its wonders.
 					<br />
 					<br />
 					Here are some of my favorite personal projects I've worked
 					on:
-				</Paragraph>
+				</p>
 				<StyledList>
 					{json.map((value) => (
 						<li key={value.date}>
@@ -181,34 +164,12 @@ export default function Home(): JSX.Element {
 				</StyledLinkDiv>
 			</Section>
 			<Section>
-				<SubHeading>Featured Articles</SubHeading>
-				<StyledContainer>
+				<H2 class="text-black">Featured Articles</H2>
+				<ul>
 					{popularBlogs.slice(0, 3).map((data) => (
-						<StyledLi key={data.link}>
-							<Link href={data.link}>
-								<a>
-									<h1>{data.title}</h1>
-									<div>
-										<h2>
-											{data.date} • {data.min} min
-										</h2>
-										<Tags>
-											{data.type.map((string) => (
-												<span key={string}>
-													{string}
-												</span>
-											))}
-										</Tags>
-									</div>
-									<h3>{data.description}</h3>
-									<Bookmark>
-										<BsBookmark size="25px" />
-									</Bookmark>
-								</a>
-							</Link>
-						</StyledLi>
+						<Article key={data.title} Blog={data} />
 					))}
-				</StyledContainer>
+				</ul>
 				<StyledLinkDiv>
 					<Link href="/blog" passHref>
 						<AllArtices>All Articles</AllArtices>
