@@ -4,12 +4,7 @@ import Meta, { MetaType } from "@components/meta";
 import { Container, Content } from "@styles/blog.theme";
 import StyledLink from "@styles/underline";
 import Link from "next/link";
-import styled from "styled-components";
 
-const List = styled.ul`
-	list-style: unset;
-	font-size: 20px;
-`;
 type Link = {
 	link: string;
 	name: string;
@@ -64,7 +59,7 @@ export default function Sitemap(): JSX.Element {
 					<article>
 						<h1>Site Map</h1>
 						<h2>Main Content</h2>
-						<List>
+						<ul className="list-disc list-inside">
 							{mainContent.map((value) => (
 								<li key={value.link}>
 									<Link href={value.link} passHref>
@@ -72,12 +67,12 @@ export default function Sitemap(): JSX.Element {
 									</Link>
 								</li>
 							))}
-						</List>
+						</ul>
 						<span>
 							other pages not worthy of featuring on the main
 							index page
 						</span>
-						<List>
+						<ul className="list-disc list-inside">
 							{otherPages.map((value) => (
 								<li key={value.link}>
 									<Link href={value.link} passHref>
@@ -85,7 +80,7 @@ export default function Sitemap(): JSX.Element {
 									</Link>
 								</li>
 							))}
-						</List>
+						</ul>
 					</article>
 				</Content>
 			</Container>

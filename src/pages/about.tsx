@@ -18,13 +18,6 @@ const META: MetaType = {
 	image: "/logo.png",
 	url: "https://nikschaefer.tech/about",
 };
-const JobContainer = styled.section`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-align: left;
-`;
 const Node = styled.div`
 	width: 90%;
 	max-width: 900px;
@@ -73,14 +66,6 @@ const Node = styled.div`
 		}
 	}
 `;
-const ToolsAndTechnologies = styled.ul`
-	display: flex;
-	flex-flow: row wrap;
-	align-items: center;
-	font-size: 14.5px;
-	margin: 0;
-	padding: 0;
-`;
 const Tag = styled.li`
 	background-color: var(--tag-background);
 	width: fit-content;
@@ -108,7 +93,7 @@ export default function About(): JSX.Element {
 			</Section>
 			<Section id="studies">
 				<SubHeading>Studies</SubHeading>
-				<JobContainer>
+				<div className="flex-col items-center justify-center">
 					{studies
 						.sort((a, b) => {
 							return b.date - a.date;
@@ -132,18 +117,18 @@ export default function About(): JSX.Element {
 									))}
 								</ul>
 								<h3>Tools used/learned:</h3>
-								<ToolsAndTechnologies>
+								<ul className='flex flex-wrap text-sm'>
 									{data.tools.map((value) => (
 										<Tag key={value}>{value}</Tag>
 									))}
-								</ToolsAndTechnologies>
+								</ul>
 							</Node>
 						))}
-				</JobContainer>
+				</div>
 			</Section>
 			<Section id="work">
 				<SubHeading>Work</SubHeading>
-				<JobContainer>
+				<div className="flex-col items-center justify-center">
 					{jobs
 						.sort((a, b) => {
 							return b.date - a.date;
@@ -172,14 +157,14 @@ export default function About(): JSX.Element {
 									))}
 								</ul>
 								<h3>Tools used/learned:</h3>
-								<ToolsAndTechnologies>
+								<ul className='flex flex-wrap text-sm'>
 									{data.tools.map((value) => (
 										<Tag key={value}>{value}</Tag>
 									))}
-								</ToolsAndTechnologies>
+								</ul>
 							</Node>
 						))}
-				</JobContainer>
+				</div>
 			</Section>
 		</Layout>
 	);

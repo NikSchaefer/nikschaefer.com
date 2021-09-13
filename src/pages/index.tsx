@@ -24,17 +24,6 @@ I've been enjoying programming since I first began. I love supporting open sourc
 const Container = styled(Section)`
 	font-family: "Mukta", sans-serif;
 `;
-export const SocialLinks = styled.div`
-	margin: 20px 0;
-	display: flex;
-	align-items: center;
-	a {
-		margin: 10px;
-		:hover {
-			cursor: pointer;
-		}
-	}
-`;
 export const StyledA = styled.a`
 	display: flex;
 	align-items: center;
@@ -77,7 +66,7 @@ export default function Home(): JSX.Element {
 					</Link>{" "}
 					while your here.
 				</p>
-				<SocialLinks>
+				<div className='flex my-6 space-x-3'>
 					<StyledA
 						target="_blank"
 						href="https://github.com/NikSchaefer"
@@ -101,12 +90,12 @@ export default function Home(): JSX.Element {
 					</StyledA>
 					<StyledA
 						href="mailto:nikkschaefer@gmail.com"
-						aria-label="LinkedIn"
+						aria-label="Email"
 					>
 						<HiOutlineMail size={sizeOfSVG} color={colorOfSVG} />
 						Email
 					</StyledA>
-				</SocialLinks>
+				</div>
 			</Container>
 			<Section>
 				<H2 class="text-black">Projects</H2>
@@ -128,7 +117,7 @@ export default function Home(): JSX.Element {
 						</li>
 					))}
 				</StyledList>
-				<div className='flex justify-center'>
+				<div className="flex justify-center">
 					<Link href="/portfolio" passHref>
 						<a className="slide">All Projects</a>
 					</Link>
@@ -141,14 +130,14 @@ export default function Home(): JSX.Element {
 						<Article key={data.title} Blog={data} />
 					))}
 				</ul>
-				<div className='flex justify-center'>
+				<div className="flex justify-center">
 					<Link href="/blog" passHref>
 						<a className="slide">All Articles</a>
 					</Link>
 				</div>
 			</Section>
+			<Hr aria-orientation="horizontal" />
 			<section className="flex-col justify-center font-sans">
-				<Hr aria-orientation="horizontal" />
 				<span className="text-center">
 					Learn more about me
 					<br />
