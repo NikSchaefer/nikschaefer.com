@@ -1,5 +1,5 @@
 import { Article } from "@components/blog";
-import { H1, H2, Hr } from "@components/design";
+import { H1, H2 } from "@components/design";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { Section } from "@styles/section.theme";
@@ -38,13 +38,6 @@ export const StyledA = styled.a`
 	}
 `;
 
-const StyledList = styled.ul`
-	list-style: unset;
-	font-size: 20px;
-	@media (max-width: 600px) {
-		padding-left: 20px;
-	}
-`;
 export const sizeOfSVG = "30px";
 export const colorOfSVG = "var(--accent)";
 export default function Home(): JSX.Element {
@@ -107,7 +100,7 @@ export default function Home(): JSX.Element {
 					Here are some of my favorite personal projects I've worked
 					on:
 				</p>
-				<StyledList>
+				<ul className="text-lg list-disc sm:pl-5">
 					{json.map((value) => (
 						<li key={value.date}>
 							<Link href={`/portfolio/${value.slug}`} passHref>
@@ -116,7 +109,7 @@ export default function Home(): JSX.Element {
 							- {value.short}
 						</li>
 					))}
-				</StyledList>
+				</ul>
 				<div className="flex justify-center">
 					<Link href="/portfolio" passHref>
 						<a className="slide">All Projects</a>

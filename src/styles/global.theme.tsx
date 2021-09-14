@@ -131,6 +131,13 @@ const Global = createGlobalStyle`
 			width: 100%;
 		}	text-align: center;
 	}
+
+	.iframe {
+		height: calc(100vh - 180px);
+		width: calc(100vw - 10px);
+		margin: auto;
+		box-sizing: border-box;
+	}
 `;
 
 // eslint-disable-next-line import/no-default-export

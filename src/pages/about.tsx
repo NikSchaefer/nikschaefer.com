@@ -32,7 +32,7 @@ function Node(props: {
 	const { data } = props;
 	return (
 		<div className="box-border w-full max-w-4xl p-6 my-5 border md:p-4">
-			<div className="flex justify-between sm:flex-col sm:my-2">
+			<div className="flex flex-row justify-between xs:flex-col sm:my-2">
 				<span className="flex flex-wrap items-center text-lg font-medium">
 					<BsCode className="mr-2" size="28px" />
 					{data.title}
