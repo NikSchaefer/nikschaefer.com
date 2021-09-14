@@ -1,8 +1,7 @@
 import { Article } from "@components/blog";
-import { H1, H2 } from "@components/design";
+import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
-import { Section } from "@styles/section.theme";
 import { popularBlogs } from "config";
 import Link from "next/link";
 import { GoMarkGithub } from "react-icons/go";
@@ -21,9 +20,6 @@ I've been enjoying programming since I first began. I love supporting open sourc
 	image: "/logo.png",
 	url: "https://nikschaefer.tech",
 };
-const Container = styled(Section)`
-	font-family: "Mukta", sans-serif;
-`;
 export const StyledA = styled.a`
 	display: flex;
 	align-items: center;
@@ -44,7 +40,7 @@ export default function Home(): JSX.Element {
 	return (
 		<Layout>
 			<Meta META={META} />
-			<Container>
+			<Section>
 				<H1 class="text-black mb-8 mt-20">Hi, I'm Nik Schaefer</H1>
 				<p className="text-lg">
 					I'm a full stack developer, machine learning student, and
@@ -89,7 +85,7 @@ export default function Home(): JSX.Element {
 						Email
 					</StyledA>
 				</div>
-			</Container>
+			</Section>
 			<Section>
 				<H2 class="text-black">Projects</H2>
 				<p>

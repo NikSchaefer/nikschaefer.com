@@ -1,8 +1,8 @@
 /* eslint-disable sonarjs/no-identical-functions */
+import { Section } from "@components/design";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
-import { Container, Content } from "@styles/blog.theme";
-import StyledLink from "@styles/underline";
+import { Content } from "@styles/blog.theme";
 import Link from "next/link";
 
 type Link = {
@@ -53,7 +53,7 @@ export default function Sitemap(): JSX.Element {
 	};
 	return (
 		<Layout>
-			<Container>
+			<Section>
 				<Content>
 					<Meta META={meta} />
 					<article>
@@ -63,7 +63,7 @@ export default function Sitemap(): JSX.Element {
 							{mainContent.map((value) => (
 								<li key={value.link}>
 									<Link href={value.link} passHref>
-										<StyledLink>{value.name}</StyledLink>
+										<a className="slide">{value.name}</a>
 									</Link>
 								</li>
 							))}
@@ -76,14 +76,14 @@ export default function Sitemap(): JSX.Element {
 							{otherPages.map((value) => (
 								<li key={value.link}>
 									<Link href={value.link} passHref>
-										<StyledLink>{value.name}</StyledLink>
+										<a className="slide">{value.name}</a>
 									</Link>
 								</li>
 							))}
 						</ul>
 					</article>
 				</Content>
-			</Container>
+			</Section>
 		</Layout>
 	);
 }

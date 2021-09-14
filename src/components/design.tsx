@@ -105,6 +105,21 @@ function InlineCode(props: {
 	const className = clsx(props.class);
 	return <code className={className}>{props.children}</code>;
 }
+function Section(props: {
+	children: React.ReactNode;
+	class?: string;
+	id?: string;
+}): JSX.Element {
+	const className = clsx(
+		"w-11/12 max-w-3xl mx-auto my-10 text-left text-base leading-7 font-",
+		props.class
+	);
+	return (
+		<section id={props.id} className={className}>
+			{props.children}
+		</section>
+	);
+}
 
 export {
 	H1,
@@ -122,4 +137,5 @@ export {
 	ListDisc,
 	ListNumbered,
 	InlineCode,
+	Section,
 };

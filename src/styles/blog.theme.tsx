@@ -1,11 +1,6 @@
 import { SyntaxCSS } from "@styles/syntax-highlighting";
 import styled from "styled-components";
 
-const Container = styled.main`
-	padding: 60px 0;
-	text-align: left;
-`;
-
 const Content = styled.section`
 	width: 90%;
 	max-width: 700px;
@@ -53,25 +48,5 @@ const Content = styled.section`
 	}
 	${SyntaxCSS}
 `;
-const StyledTitle = styled.h1`
-	font-size: 55px;
-	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-`;
 
-const AuthorSection = styled.div`
-	margin-bottom: 100px;
-	padding-bottom: 20px;
-	border-bottom: 1px var(--green) solid;
-	h4 {
-		margin: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	h2 {
-		font-size: 28px;
-		font-weight: 400;
-	}
-`;
-
-export { Container, Content, StyledTitle, AuthorSection };
+export { Content };

@@ -1,8 +1,6 @@
-import { H1, H2 } from "@components/design";
+import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
-import { Section } from "@styles/section.theme";
-import StyledLink from "@styles/underline";
 import clsx from "clsx";
 import { AiFillStar } from "react-icons/ai";
 import { BsCode } from "react-icons/bs";
@@ -40,7 +38,9 @@ function Node(props: {
 				<span>{data.range}</span>
 			</div>
 			<div className="my-2">
-				<StyledLink href={data.url}>{data.company}</StyledLink>
+				<a className="slide" href={data.url}>
+					{data.company}
+				</a>
 			</div>
 			<h3 className="flex items-center">
 				<AiFillStar className="mr-2" size="20px" />{" "}
