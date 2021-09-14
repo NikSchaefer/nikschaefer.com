@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FiGithub } from "react-icons/fi";
 import styled from "styled-components";
+import Card from '@components/card'
 
 import json from "../../../content/featured.json";
 import projects from "../../../content/projects.json";
@@ -74,7 +75,7 @@ export const Container = styled.section`
 	flex-wrap: wrap;
 	width: 90%;
 	justify-content: center;
-	max-width: 1100px;
+	max-width: 1300px;
 	margin: auto;
 	flex: 1;
 `;
@@ -255,20 +256,7 @@ export default function Portfolio(): JSX.Element {
 				</StyledList>
 				<ProjectContainer>
 					{projectData.map((data) => (
-						<Link
-							href={`/portfolio/${String(data.slug)}`}
-							key={data.github}
-							passHref
-						>
-							<Project>
-								<a href={data.github}>
-									<FiGithub size="20px" />
-								</a>
-								<h4>{data.title}</h4>
-								<p>{data.text}</p>
-								<i />
-							</Project>
-						</Link>
+						<Card key={data.github} />
 					))}
 				</ProjectContainer>
 			</section>

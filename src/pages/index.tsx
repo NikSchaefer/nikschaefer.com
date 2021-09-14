@@ -66,7 +66,7 @@ export default function Home(): JSX.Element {
 					</Link>{" "}
 					while your here.
 				</p>
-				<div className='flex my-6 space-x-3'>
+				<div className="flex my-6 space-x-3">
 					<StyledA
 						target="_blank"
 						href="https://github.com/NikSchaefer"
@@ -153,4 +153,3 @@ export default function Home(): JSX.Element {
 		</Layout>
 	);
 }
-
