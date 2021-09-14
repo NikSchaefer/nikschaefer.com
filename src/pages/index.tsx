@@ -136,20 +136,6 @@ export default function Home(): JSX.Element {
 					</Link>
 				</div>
 			</Section>
-			<Hr aria-orientation="horizontal" />
-			<section className="flex-col justify-center font-sans">
-				<span className="text-center">
-					Learn more about me
-					<br />
-					<Link href="/about" passHref>
-						<a className="slide">Work</a>
-					</Link>{" "}
-					|{" "}
-					<Link href="/portfolio" passHref>
-						<a className="slide">Portfolio</a>
-					</Link>
-				</span>
-			</section>
 		</Layout>
 	);
 }
