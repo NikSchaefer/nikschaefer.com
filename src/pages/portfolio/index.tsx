@@ -255,7 +255,7 @@ export default function Portfolio(): JSX.Element {
 				</StyledList>
 				<ProjectContainer>
 					{projectData.map((data) => (
-						<Card key={data.github} />
+						<Card project={data} key={data.github} />
 					))}
 				</ProjectContainer>
 			</section>

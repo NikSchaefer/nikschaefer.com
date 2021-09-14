@@ -1,22 +1,20 @@
 type Project = {
-    course: string,
-    tag: string,
-    
-}
+	course: string;
+	tag: string;
+};
 
 // eslint-disable-next-line import/no-default-export
-export default function Card(): JSX.Element {
+export default function Card(props: { project: Project }): JSX.Element {
 	return (
 		<div className="w-full max-w-sm px-4 py-3 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
 			<div className="flex items-center justify-between">
 				<span className="text-sm font-light text-gray-800 dark:text-gray-400">
-					Courses and MOOCs
+					{props.project.course}
 				</span>
 				<span className="px-3 py-1 text-xs text-indigo-800 uppercase bg-indigo-200 rounded-full dark:bg-indigo-300 dark:text-indigo-900">
 					psychology
 				</span>
 			</div>
-
 			<div>
 				<h1 className="mt-2 text-lg font-semibold text-gray-800 dark:text-white">
 					AP® Psychology - Course 5: Health and Behavior
