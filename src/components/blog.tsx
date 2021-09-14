@@ -18,7 +18,7 @@ function Article(props: { Blog: Blog }): JSX.Element {
 
 			<div className="mt-2">
 				<Link href={props.Blog.link}>
-					<a className="text-2xl font-bold text-gray-700 dark:text-white hover:text-gray-600 dark:hover:text-gray-200 hover:underline">
+					<a className="text-2xl font-bold slide">
 						{props.Blog.title}
 					</a>
 				</Link>

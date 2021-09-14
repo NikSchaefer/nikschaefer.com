@@ -1,11 +1,10 @@
+import Card from '@components/card'
 import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { FiGithub } from "react-icons/fi";
 import styled from "styled-components";
-import Card from '@components/card'
 
 import json from "../../../content/featured.json";
 import projects from "../../../content/projects.json";

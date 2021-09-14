@@ -1,3 +1,4 @@
+import { H1 } from "@components/design";
 import Layout from "@components/layout";
 import Link from "next/link";
 import styled from "styled-components";
@@ -43,7 +44,7 @@ const Container = styled.div`
 export default function Snippets(): JSX.Element {
 	return (
 		<Layout>
-			<h1>Snippets</h1>
+			<H1 class="text-black my-10">Snippets</H1>
 			<p>Small bits of code that I use</p>
 			<Container>
 				{json.map((value) => (
