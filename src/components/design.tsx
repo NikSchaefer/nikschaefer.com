@@ -109,13 +109,15 @@ function Section(props: {
 	children: React.ReactNode;
 	class?: string;
 	id?: string;
+	// eslint-disable-next-line @typescript-eslint/ban-types
+	style?: object;
 }): JSX.Element {
 	const className = clsx(
 		"w-11/12 max-w-3xl mx-auto my-10 text-left text-base leading-7 font-",
 		props.class
 	);
 	return (
-		<section id={props.id} className={className}>
+		<section style={props.style} id={props.id} className={className}>
 			{props.children}
 		</section>
 	);

@@ -4,10 +4,10 @@ import Layout from "@components/layout";
 import Meta, { MetaType } from "@components/meta";
 import { popularBlogs } from "config";
 import Link from "next/link";
+import React from "react";
 import { GoMarkGithub } from "react-icons/go";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLinkedinBoxFill } from "react-icons/ri";
-import styled from "styled-components";
 
 import json from "../../content/featured.json";
 
@@ -20,19 +20,26 @@ I've been enjoying programming since I first began. I love supporting open sourc
 	image: "/logo.png",
 	url: "https://nikschaefer.tech",
 };
-export const StyledA = styled.a`
-	display: flex;
-	align-items: center;
-	background-color: var(--secondary);
-	border-radius: 6px;
-	padding: 5px 10px;
-	svg {
-		padding-right: 10px;
-	}
-	:hover {
-		background-color: var(--primary);
-	}
-`;
+
+function StyledSocial(props: {
+	children: React.ReactNode;
+	target?: string;
+	href: string;
+	rel?: string;
+	ariaLabel?: string;
+}) {
+	return (
+		<a
+			className="flex items-center px-2 py-1 rounded-md bg-gray-50 hover:bg-gray-100"
+			target={props.target}
+			href={props.href}
+			rel={props.rel}
+			aria-label={props.ariaLabel}
+		>
+			{props.children}
+		</a>
+	);
+}
 
 export const sizeOfSVG = "30px";
 export const colorOfSVG = "var(--accent)";
@@ -56,34 +63,43 @@ export default function Home(): JSX.Element {
 					while your here.
 				</p>
 				<div className="flex my-6 space-x-3">
-					<StyledA
+					<StyledSocial
 						target="_blank"
 						href="https://github.com/NikSchaefer"
 						rel="noreferrer"
-						aria-label="Github"
+						ariaLabel="Github"
 					>
-						<GoMarkGithub size={sizeOfSVG} color={colorOfSVG} />
+						<GoMarkGithub
+							className="pr-2"
+							size={sizeOfSVG}
+							color={colorOfSVG}
+						/>
 						Github
-					</StyledA>
-					<StyledA
+					</StyledSocial>
+					<StyledSocial
 						target="_blank"
 						rel="noreferrer"
 						href="https://www.linkedin.com/in/nikschaefer/"
 						aria-label="LinkedIn"
 					>
 						<RiLinkedinBoxFill
+							className="pr-2"
 							size={sizeOfSVG}
 							color={colorOfSVG}
 						/>
 						LinkedIn
-					</StyledA>
-					<StyledA
+					</StyledSocial>
+					<StyledSocial
 						href="mailto:nikkschaefer@gmail.com"
-						aria-label="Email"
+						ariaLabel="Email"
 					>
-						<HiOutlineMail size={sizeOfSVG} color={colorOfSVG} />
+						<HiOutlineMail
+							className="pr-2"
+							size={sizeOfSVG}
+							color={colorOfSVG}
+						/>
 						Email
-					</StyledA>
+					</StyledSocial>
 				</div>
 			</Section>
 			<Section>

@@ -1,8 +1,8 @@
-import { H1 } from "@components/design";
+import { H1, Section } from "@components/design";
 import Layout from "@components/layout";
 import { snippetsFilePaths, SNIP_PATH } from "@lib/mdxUtils";
 import rehypePrism from "@mapbox/rehype-prism";
-import { Container, Content } from "@styles/blog.theme";
+import { Content } from "@styles/blog.theme";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticProps, GetStaticPaths } from "next";
@@ -24,14 +24,14 @@ export default function Slug({
 }: receivingData): JSX.Element {
 	return (
 		<Layout>
-			<Container>
+			<Section>
 				<Content>
 					<H1 class="my-10">{frontMatter.title}</H1>
 					<article>
 						<MDXRemote {...source} />
 					</article>
 				</Content>
-			</Container>
+			</Section>
 		</Layout>
 	);
 }

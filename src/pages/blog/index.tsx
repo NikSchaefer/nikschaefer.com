@@ -1,17 +1,10 @@
 import { Article } from "@components/blog";
-import { H1, H2 } from "@components/design";
+import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
 import { Popup } from "@components/popup";
-import { Section } from "@styles/section.theme";
 import clsx from "clsx";
 import { allBlogs, popularBlogs } from "config";
 import { useState } from "react";
-import styled from "styled-components";
-
-const ContentLayer = styled(Section)`
-	margin: 4rem auto;
-	max-width: 42rem;
-`;
 
 export default function BlogIndex(): JSX.Element {
 	const [value, setValue] = useState("");
@@ -31,7 +24,7 @@ export default function BlogIndex(): JSX.Element {
 	}
 	return (
 		<Layout>
-			<ContentLayer>
+			<Section class="my-16 max-w-2xl">
 				<H1 class="text-black mb-4">Blog</H1>
 				<Popup />
 				<div className="relative">
@@ -71,8 +64,9 @@ export default function BlogIndex(): JSX.Element {
 						go
 					</button>
 				</div>
-			</ContentLayer>
-			<ContentLayer
+			</Section>
+			<Section
+				class="my-16 max-w-2xl"
 				style={{ display: `${value === "" ? "block" : "none"}` }}
 			>
 				<H2 class="text-black">Most Popular</H2>
@@ -81,15 +75,15 @@ export default function BlogIndex(): JSX.Element {
 						<Article key={data.link} Blog={data} />
 					))}
 				</ul>
-			</ContentLayer>
-			<ContentLayer>
+			</Section>
+			<Section class="my-16 max-w-2xl">
 				<H2 class="text-black">All Posts</H2>
 				<ul>
 					{blogs.map((data) => (
 						<Article key={data.link} Blog={data} />
 					))}
 				</ul>
-			</ContentLayer>
+			</Section>
 		</Layout>
 	);
 }

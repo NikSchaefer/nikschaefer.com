@@ -35,18 +35,12 @@ const StyledLink = styled.a`
 		cursor: pointer;
 	}
 `;
-const Container = styled.div`
-	display: flex;
-	flex-flow: wrap row;
-	justify-content: center;
-	align-items: center;
-`;
 export default function Snippets(): JSX.Element {
 	return (
 		<Layout>
 			<H1 class="text-black my-10">Snippets</H1>
 			<p>Small bits of code that I use</p>
-			<Container>
+			<div className="flex flex-row items-center justify-center">
 				{json.map((value) => (
 					<Link
 						href={`/snippets/${value.link}`}
@@ -59,7 +53,7 @@ export default function Snippets(): JSX.Element {
 						</StyledLink>
 					</Link>
 				))}
-			</Container>
+			</div>
 		</Layout>
 	);
 }
