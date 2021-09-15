@@ -138,6 +138,38 @@ const Global = createGlobalStyle`
 		margin: auto;
 		box-sizing: border-box;
 	}
+
+	.hackclub {
+		position: absolute;
+	top: 0;
+	left: 0;
+	border: 0;
+	width: 170px;
+	z-index: 999;
+	transform-origin: 0% 0%;
+	@media (max-width: 700px) {
+		width: 100px;
+		top: 10px;
+	}
+	:hover {
+		animation: WaveFlag 1.25s linear infinite alternate;
+	}
+	}
+	@keyframes WaveFlag {
+		0% {
+		transform: rotate(0deg)
+		}
+		50% {
+			transform: rotate(-5deg)
+
+		}
+		100% {
+			transform: rotate(0deg)
+		}
+	}
+	.active {
+		color: #ffffff;
+	}
 `;
 
 // eslint-disable-next-line import/no-default-export

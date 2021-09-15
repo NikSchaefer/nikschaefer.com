@@ -1,12 +1,13 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import clsx from "clsx";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import { HeaderLinks } from "../config";
 
@@ -59,81 +60,12 @@ const Header = styled.header`
 	border-bottom: #ffffff30 1px solid;
 	position: relative;
 `;
-const StyledNav = styled.nav`
-	@media (max-width: 800px) {
-		display: none;
-	}
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	margin: auto;
-	a {
-		margin: 0 20px;
-		color: rgba(233, 233, 233, 0.637);
-		font-size: 18px;
-		font-family: "Mukta", sans-serif;
-	}
-	.active,
-	a:hover {
-		color: #ffffff;
-	}
-`;
-const MobileMenu = styled(StyledNav)`
-	@media (max-width: 800px) {
-		display: flex;
-	}
-	display: none;
-`;
 
 const StyledMenuArrow = styled.button`
 	background-color: transparent;
 	border: none;
 	:hover {
 		cursor: pointer;
-	}
-`;
-
-const StyledDarkModeBtn = styled.button`
-	position: absolute;
-	right: 10px;
-	background-color: transparent;
-	border: none;
-	outline: 0;
-	cursor: pointer;
-	padding: 7px;
-	border-radius: 10px;
-	:hover {
-		background-color: #2d3338;
-	}
-`;
-
-const WaveFlag = keyframes`
-	0% {
-		transform: rotate(0deg)
-	}
-	50% {
-		transform: rotate(-5deg)
-
-	}
-	100% {
-		transform: rotate(0deg)
-	}
-`;
-
-const HackClubFlag = styled.img`
-	position: absolute;
-	top: 0;
-	left: 0;
-	border: 0;
-	width: 170px;
-	z-index: 999;
-	transform-origin: 0% 0%;
-	@media (max-width: 700px) {
-		width: 100px;
-		top: 10px;
-	}
-	:hover {
-		animation: ${WaveFlag} 1.25s linear infinite alternate;
 	}
 `;
 
@@ -181,12 +113,19 @@ export default function Main(): JSX.Element {
 	return (
 		<Header>
 			<a href="https://hackclub.com/">
-				<HackClubFlag
+				<img
+					className="hackclub"
 					src="https://assets.hackclub.com/flag-orpheus-left.svg"
 					alt="Hack Club"
 				/>
 			</a>
-			<StyledDarkModeBtn
+			<button
+				type="button"
+				className={clsx(
+					"absolute right-3 p-2",
+					"rounded-xl hover:bg-gray-600",
+					"hover:bg-opacity-50"
+				)}
 				aria-label="Toggle Dark Mode"
 				onClick={toggleDarkMode}
 			>
@@ -195,14 +134,16 @@ export default function Main(): JSX.Element {
 				) : (
 					<BiMoon color="white" size="25px" />
 				)}
-			</StyledDarkModeBtn>
-			<StyledNav>
+			</button>
+			<nav className={clsx("p-5 flex justify-center m-auto sm:hidden")}>
 				{HeaderLinks.map((value) => (
 					<Link key={value.link} href={value.link}>
 						<a
-							className={
-								router.pathname === value.link ? "active" : ""
-							}
+							className={clsx(
+								router.pathname === value.link ? "active" : "",
+								"my-0 mx-5 text-lg font-sans",
+								"text-gray-400 hover:text-white"
+							)}
 						>
 							{value.title}
 						</a>
@@ -229,8 +170,8 @@ export default function Main(): JSX.Element {
 						</Link>
 					</div>
 				</Relative>
-			</StyledNav>
-			<MobileMenu>
+			</nav>
+			<nav className="hidden sm:flex">
 				<Link href="/">
 					<a>Home</a>
 				</Link>
@@ -265,7 +206,7 @@ export default function Main(): JSX.Element {
 						</Link>
 					</div>
 				</Relative>
-			</MobileMenu>
+			</nav>
 		</Header>
 	);
 }
