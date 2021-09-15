@@ -74,7 +74,7 @@ export default function About(): JSX.Element {
 		<Layout>
 			<Meta META={META} />
 			<Section>
-				<H1 class="text-black">About Me</H1>
+				<H1 class="text-black my-10">About Me</H1>
 				<p>
 					👋, I'm Nik, self-taught full-stack developer and hobbyist
 					programmer student based in Minnesota, US I've been enjoying
