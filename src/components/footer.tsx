@@ -58,7 +58,7 @@ const Col3: FooterLinks[] = [
 // eslint-disable-next-line import/no-default-export
 export default function Main(): JSX.Element {
 	return (
-		<footer className="py-5 pt-4 pb-8 bg-white dark:bg-gray-800 xl:pt-8">
+		<footer className="py-5 pt-4 pb-8 bg-white dark:bg-shark xl:pt-8">
 			<Hr aria-orientation="horizontal" />
 			<div className="max-w-screen-lg px-4 mx-auto text-gray-400 xl:max-w-screen-xl sm:px-6 md:px-8 dark:text-gray-300">
 				<ul className="flex flex-wrap justify-center pb-8 text-lg font-light text-center">

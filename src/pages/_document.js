@@ -61,7 +61,7 @@ export default class MyDocument extends Document {
 						}}
 					/>
 				</Head>
-				<body>
+				<body className="bg-white dark:bg-shark">
 					<Main />
 					<NextScript />
 				</body>

@@ -7,74 +7,30 @@ import { useRouter } from "next/router";
 import React, { useEffect, useRef, useState } from "react";
 import { BiSun, BiMoon } from "react-icons/bi";
 import { RiArrowDownSLine, RiScissorsLine } from "react-icons/ri";
-import styled from "styled-components";
 
 import { HeaderLinks } from "../config";
 
-const Relative = styled.div`
-	position: relative;
-	.menu {
-		position: absolute;
-		left: 0;
-		transform: translateX(-50%);
-		display: none;
-		flex-direction: column;
-		justify-content: center;
-		background-color: var(--header);
-		border: #ffffff30 1px solid;
-		border-radius: 0.5rem;
-		width: 90vw;
-		max-width: 250px;
-		margin-top: 0.75rem;
-		box-sizing: border-box;
-		padding: 20px 10px;
-		text-align: left;
-		animation: fadeIn 0.2s ease;
-		z-index: 50;
-		a {
-			margin: 5px 10px;
-			display: flex;
-			border-radius: 5px;
-			padding: 5px;
-			align-items: center;
-			svg {
-				margin: 10px;
-			}
-			:hover {
-				background-color: #474d52;
-			}
-		}
-	}
-	.flex {
-		display: flex;
-	}
-`;
-const Header = styled.header`
-	padding: 5px 50px;
-	display: flex;
-	box-sizing: border-box;
-	justify-content: space-between;
-	align-items: center;
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.274);
-	background-color: var(--header);
-	border-bottom: #ffffff30 1px solid;
-	position: relative;
-`;
+const menuClassName = clsx(
+	"absolute left-0 hidden transform",
+	"-translate-x-1/2 flex-col justify-center",
+	"border border-white border-opacity-20",
+	"rounded-lg max-w-[300px]",
+	"mt-3 box-border py-5 px-5 text-left",
+	"z-50 bg-coal dark:bg-shark fadeIn"
+);
 
-const StyledMenuArrow = styled.button`
-	background-color: transparent;
-	border: none;
-	:hover {
-		cursor: pointer;
-	}
-`;
+const menuAClassName = clsx(
+	"my-1 mx-2 flex rounded items-center px-1",
+	"hover:bg-coal-400 px-5 dark:hover:bg-shark-400",
+	"text-lg"
+);
 
 function useOutsideAlerter(ref: React.RefObject<HTMLDivElement>) {
 	useEffect(() => {
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		function handleClickOutside(event: any) {
 			if (ref.current && !ref.current.contains(event.target)) {
-				ref.current.classList.remove("flex");
+				ref.current.classList.remove("appear");
 			}
 		}
 
@@ -93,25 +49,32 @@ export default function Main(): JSX.Element {
 	useOutsideAlerter(ref);
 	useOutsideAlerter(ref2);
 	function toggleDarkMode() {
-		document.body.classList.toggle("darkmode");
+		document.querySelector("html")?.classList.toggle("dark");
 		setIsDarkMode(!isDarkMode);
 	}
 
 	function toggleMenu() {
 		if (ref.current !== null) {
-			ref.current.classList.toggle("flex");
+			ref.current.classList.toggle("appear");
 		}
 		if (ref2.current !== null) {
-			ref2.current.classList.toggle("flex");
+			ref2.current.classList.toggle("appear");
 		}
 	}
 	useEffect(() => {
-		if (document.body.classList.contains("darkmode")) {
+		if (document.querySelector("html")?.classList.contains("dark")) {
 			setIsDarkMode(true);
 		}
 	}, []);
 	return (
-		<Header>
+		<header
+			className={clsx(
+				"flex box-border justify-between",
+				"items-center relative py-1 px-12",
+				"shadow-md bg-coal dark:bg-shark",
+				"border-b border-white border-opacity-20"
+			)}
+		>
 			<a href="https://hackclub.com/">
 				<img
 					className="hackclub"
@@ -135,7 +98,7 @@ export default function Main(): JSX.Element {
 					<BiMoon color="white" size="25px" />
 				)}
 			</button>
-			<nav className={clsx("p-5 flex justify-center m-auto sm:hidden")}>
+			<nav className={clsx("p-5 hidden justify-center m-auto sm:flex")}>
 				{HeaderLinks.map((value) => (
 					<Link key={value.link} href={value.link}>
 						<a
@@ -149,44 +112,46 @@ export default function Main(): JSX.Element {
 						</a>
 					</Link>
 				))}
-				<Relative>
-					<StyledMenuArrow
+				<div className="relative">
+					<button
 						aria-label="drop down"
 						onClick={toggleMenu}
 						type="button"
 					>
 						<RiArrowDownSLine color="white" size="25px" />
-					</StyledMenuArrow>
-					<div ref={ref} id="menu" className="menu">
+					</button>
+					<div ref={ref} id="menu" className={menuClassName}>
 						<Link href="/snippets">
 							<a
+								className={menuAClassName}
 								role="link"
 								aria-label="Nav Link"
 								onClick={toggleMenu}
 							>
-								<RiScissorsLine size="20px" />
+								<RiScissorsLine className="m-2" size="20px" />
 								Snippets
 							</a>
 						</Link>
 					</div>
-				</Relative>
+				</div>
 			</nav>
-			<nav className="hidden sm:flex">
+			<nav className="flex p-5 justify-center m-auto sm:hidden">
 				<Link href="/">
-					<a>Home</a>
+					<a className="text-lg text-gray-300 font-sans">Home</a>
 				</Link>
-				<Relative>
-					<StyledMenuArrow
+				<div className="relative">
+					<button
 						aria-label="drop down"
 						onClick={toggleMenu}
 						type="button"
 					>
 						<RiArrowDownSLine color="white" size="25px" />
-					</StyledMenuArrow>
-					<div ref={ref2} id="menu" className="menu">
+					</button>
+					<div ref={ref2} id="menu" className={menuClassName}>
 						{HeaderLinks.map((value) => (
 							<Link href={value.link} key={value.link}>
 								<a
+									className={menuAClassName}
 									role="link"
 									aria-label="Nav Link"
 									onClick={toggleMenu}
@@ -197,6 +162,7 @@ export default function Main(): JSX.Element {
 						))}
 						<Link href="/snippets">
 							<a
+								className={menuAClassName}
 								role="link"
 								aria-label="Nav Link"
 								onClick={toggleMenu}
@@ -205,8 +171,8 @@ export default function Main(): JSX.Element {
 							</a>
 						</Link>
 					</div>
-				</Relative>
+				</div>
 			</nav>
-		</Header>
+		</header>
 	);
 }
