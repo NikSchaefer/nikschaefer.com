@@ -25,7 +25,7 @@ export default function BlogIndex(): JSX.Element {
 	return (
 		<Layout>
 			<Section class="my-16 max-w-2xl">
-				<H1 class="text-black mb-4">Blog</H1>
+				<H1 class="mb-4">Blog</H1>
 				<Popup />
 				<div className="relative">
 					<input
@@ -69,7 +69,7 @@ export default function BlogIndex(): JSX.Element {
 				class="my-16 max-w-2xl"
 				style={{ display: `${value === "" ? "block" : "none"}` }}
 			>
-				<H2 class="text-black">Most Popular</H2>
+				<H2>Most Popular</H2>
 				<ul className="m-auto my-10">
 					{popularBlogs.map((data) => (
 						<Article key={data.link} Blog={data} />
@@ -77,7 +77,7 @@ export default function BlogIndex(): JSX.Element {
 				</ul>
 			</Section>
 			<Section class="my-16 max-w-2xl">
-				<H2 class="text-black">All Posts</H2>
+				<H2>All Posts</H2>
 				<ul>
 					{blogs.map((data) => (
 						<Article key={data.link} Blog={data} />

@@ -2,7 +2,6 @@
 import Layout from "@components/layout";
 import { portfolioFilePaths, PORT_PATH } from "@lib/mdxUtils";
 import rehypePrism from "@mapbox/rehype-prism";
-import { Content } from "@styles/blog.theme";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticProps, GetStaticPaths } from "next";
@@ -47,9 +46,9 @@ export default function Slug({
 						</a>
 					</p>
 				</div>
-				<Content className="text-left text-black dark:text-coolGray-100">
+				<section className="blog text-left text-black dark:text-coolGray-100">
 					<MDXRemote {...source} />
-				</Content>
+				</section>
 				<div className="pt-12 border-t dark:border-coolGray-700">
 					<div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
 						<div className="flex flex-col">

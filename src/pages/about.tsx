@@ -74,7 +74,7 @@ export default function About(): JSX.Element {
 		<Layout>
 			<Meta META={META} />
 			<Section>
-				<H1 class="text-black my-10">About Me</H1>
+				<H1 class="mb-10 mt-10">About Me</H1>
 				<p>
 					👋, I'm Nik, self-taught full-stack developer and hobbyist
 					programmer student based in Minnesota, US I've been enjoying
@@ -84,7 +84,7 @@ export default function About(): JSX.Element {
 				</p>
 			</Section>
 			<Section id="studies">
-				<H2 class="text-black">Studies</H2>
+				<H2>Studies</H2>
 				<div className="flex-col items-center justify-center">
 					{studies
 						.sort((a, b) => {

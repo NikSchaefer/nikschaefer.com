@@ -48,7 +48,7 @@ export default function Home(): JSX.Element {
 		<Layout>
 			<Meta META={META} />
 			<Section>
-				<H1 class="text-black mb-8 mt-20">Hi, I'm Nik Schaefer</H1>
+				<H1 class="mb-8 mt-20">Hi, I'm Nik Schaefer</H1>
 				<p className="text-lg">
 					I'm a full stack developer, machine learning student, and
 					open source enthusiast. You've found my personal slice of
@@ -103,7 +103,7 @@ export default function Home(): JSX.Element {
 				</div>
 			</Section>
 			<Section>
-				<H2 class="text-black">Projects</H2>
+				<H2>Projects</H2>
 				<p>
 					I usually work with the web platform but love to dabble in
 					machine learning and its wonders.
@@ -129,7 +129,7 @@ export default function Home(): JSX.Element {
 				</div>
 			</Section>
 			<Section>
-				<H2 class="text-black">Featured Articles</H2>
+				<H2>Featured Articles</H2>
 				<ul>
 					{popularBlogs.slice(0, 3).map((data) => (
 						<Article key={data.title} Blog={data} />
