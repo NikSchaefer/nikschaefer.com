@@ -1,8 +1,8 @@
 import Card from "@components/card";
 import { H1, Section } from "@components/design";
 import Layout from "@components/layout";
+import clsx from "clsx";
 import { useState } from "react";
-import styled from "styled-components";
 
 import projects from "../../../content/projects.json";
 
@@ -21,37 +21,6 @@ type SortOf = {
 	content: Project[];
 };
 
-const ProjectContainer = styled.div`
-	display: flex;
-	flex-flow: wrap row;
-	justify-content: center;
-	width: 95%;
-	max-width: 1200px;
-	margin: auto;
-	row-gap: 1rem;
-	column-gap: 1rem;
-`;
-const StyledList = styled.ul`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	button {
-		margin: 10px 5px;
-		border: solid 2px var(--border);
-		padding: 5px 10px;
-		outline: 0;
-		background-color: transparent;
-		font-size: 16px;
-		color: var(--paragraph);
-		:hover {
-			cursor: pointer;
-		}
-	}
-	.active {
-		border-color: #00a2ff;
-	}
-`;
 const sortByOptions: SortOf[] = [
 	{ name: "All", include: [], content: projects },
 	{
@@ -92,10 +61,13 @@ export default function Portfolio(): JSX.Element {
 			<Section class="text-center">
 				<H1>Portfolio</H1>
 				<p>Online collection of my major projects</p>
-				<StyledList>
+				<ul className="flex justify-center items-center flex-wrap">
 					{sortByOptions.map((value) => (
 						<button
-							className={value.name === sortBy ? "active" : ""}
+							className={clsx(
+								value.name === sortBy ? "focused" : "",
+								"my-2 mx-1 border-2 py-1 px-2 text-base"
+							)}
 							key={value.name}
 							onClick={() => {
 								setSortBy(value.name);
@@ -107,14 +79,19 @@ export default function Portfolio(): JSX.Element {
 							{value.name} <span>{value.content.length}</span>
 						</button>
 					))}
-				</StyledList>
+				</ul>
 			</Section>
 			<section>
-				<ProjectContainer>
+				<div
+					className={clsx(
+						"flex flex-wrap justify-center",
+						"max-w-[1200px] m-auto w-[95%] gap-4"
+					)}
+				>
 					{projectData.map((data) => (
 						<Card project={data} key={data.github} />
 					))}
-				</ProjectContainer>
+				</div>
 			</section>
 		</Layout>
 	);

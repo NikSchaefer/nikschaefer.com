@@ -70,12 +70,12 @@ export default function Main(): JSX.Element {
 		<header
 			className={clsx(
 				"flex box-border justify-between",
-				"items-center relative py-1 px-12",
+				"items-center py-1 px-12",
 				"shadow-md bg-coal dark:bg-shark",
 				"border-b border-white border-opacity-20"
 			)}
 		>
-			<a href="https://hackclub.com/">
+			<a className="max-w-[170px]" href="https://hackclub.com/">
 				<img
 					className="hackclub"
 					src="https://assets.hackclub.com/flag-orpheus-left.svg"

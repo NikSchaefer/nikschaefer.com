@@ -148,7 +148,6 @@ ul {
 	position: absolute;
 	top: 0;
 	left: 0;
-	border: 0;
 	width: 170px;
 	z-index: 999;
 	transform-origin: 0% 0%;
@@ -158,6 +157,7 @@ ul {
 	}
 }
 .hackclub:hover {
+	cursor: pointer;
 	animation: WaveFlag 1.25s linear infinite alternate;
 }
 @keyframes WaveFlag {
@@ -352,3 +352,7 @@ code:not([class*="language-"]) {
 }
 
 /* END BLOG CSS */
+
+.focused {
+	border-color: #00a2ff;
+}
