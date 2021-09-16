@@ -1,7 +1,6 @@
 import { Article } from "@components/blog";
 import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
-import Meta, { MetaType } from "@components/meta";
 import { popularBlogs } from "config";
 import Link from "next/link";
 import React from "react";
@@ -11,15 +10,6 @@ import { RiLinkedinBoxFill } from "react-icons/ri";
 
 import json from "../../content/featured.json";
 
-const META: MetaType = {
-	title: "Nik Schaefer",
-	lang: "en-us",
-	description: `I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US
-
-I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development. I am currently learning Golang and its many uses in my free time.`,
-	image: "/logo.png",
-	url: "https://nikschaefer.tech",
-};
 
 function StyledSocial(props: {
 	children: React.ReactNode;
@@ -46,7 +36,6 @@ export const colorOfSVG = "var(--accent)";
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
-			<Meta META={META} />
 			<Section>
 				<H1 class="mb-8 mt-20">Hi, I'm Nik Schaefer</H1>
 				<p className="text-lg">

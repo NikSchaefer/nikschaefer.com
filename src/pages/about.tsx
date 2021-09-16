@@ -1,21 +1,11 @@
 import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
-import Meta, { MetaType } from "@components/meta";
 import clsx from "clsx";
 import { AiFillStar } from "react-icons/ai";
 import { BsCode } from "react-icons/bs";
 
 import jobs from "../../content/jobs.json";
 import studies from "../../content/studies.json";
-
-const META: MetaType = {
-	title: "About | Nik Schaefer",
-	lang: "en-us",
-	description:
-		"I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development. I am currently learning Golang and its many uses in my free time.",
-	image: "/logo.png",
-	url: "https://nikschaefer.tech/about",
-};
 
 function Node(props: {
 	data: {
@@ -72,7 +62,6 @@ function Node(props: {
 export default function About(): JSX.Element {
 	return (
 		<Layout>
-			<Meta META={META} />
 			<Section>
 				<H1 class="mb-10 mt-10">About Me</H1>
 				<p>

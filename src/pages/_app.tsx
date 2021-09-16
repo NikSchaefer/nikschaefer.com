@@ -1,4 +1,5 @@
 import { pageview } from "@lib/gtag";
+import { DefaultSeo } from "next-seo";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -19,6 +20,17 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	}, [router.events]);
 	return (
 		<>
+			<DefaultSeo
+				title="Nik Schaefer Portfolio"
+				description="I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development."
+				titleTemplate="Nik Schaefer | %s"
+				openGraph={{
+					type: "website",
+					locale: "en",
+					url: "nikschaefer.tech",
+					site_name: "Nik Schaefer Portfolio",
+				}}
+			/>
 			<Head>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>

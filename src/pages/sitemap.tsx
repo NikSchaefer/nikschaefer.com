@@ -1,7 +1,6 @@
 /* eslint-disable sonarjs/no-identical-functions */
 import { Section } from "@components/design";
 import Layout from "@components/layout";
-import Meta, { MetaType } from "@components/meta";
 import Link from "next/link";
 
 type Link = {
@@ -43,17 +42,9 @@ const otherPages: Link[] = [
 ];
 
 export default function Sitemap(): JSX.Element {
-	const meta: MetaType = {
-		title: "Sitemap | Nik Schaefer",
-		description: "Sitemap of all pages",
-		lang: "en-us",
-		image: "/logo.png",
-		url: "nikschaefer.tech/sitemap",
-	};
 	return (
 		<Layout>
 			<Section class="blog">
-				<Meta META={meta} />
 				<article>
 					<h1>Site Map</h1>
 					<h2>Main Content</h2>
