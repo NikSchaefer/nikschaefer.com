@@ -61,7 +61,7 @@ export default function Portfolio(): JSX.Element {
 			<Section class="text-center">
 				<H1>Portfolio</H1>
 				<p>Online collection of my major projects</p>
-				<ul className="flex justify-center items-center flex-wrap">
+				<ul className="flex justify-center items-center flex-wrap dark:text-white">
 					{sortByOptions.map((value) => (
 						<button
 							className={clsx(

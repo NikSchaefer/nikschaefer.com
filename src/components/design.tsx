@@ -131,7 +131,7 @@ function Section(props: {
 	style?: object;
 }): JSX.Element {
 	const className = clsx(
-		"w-11/12 max-w-3xl mx-auto my-10 text-left text-base leading-7 font-",
+		"w-11/12 max-w-3xl mx-auto my-10 text-left text-base leading-7",
 		props.class
 	);
 	return (

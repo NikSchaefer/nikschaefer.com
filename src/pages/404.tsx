@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function FourOhFour(): JSX.Element {
 	return (
 		<Layout>
-			<section className="py-60 flex items-center h-full p-16 dark:bg-coolGray-900 dark:text-coolGray-100">
+			<section className="py-60 flex items-center h-full p-16 dark:text-white">
 				<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
 					<div className="max-w-md text-center">
 						<h2 className="mb-8 font-extrabold text-9xl dark:text-coolGray-600">
@@ -18,7 +18,7 @@ export default function FourOhFour(): JSX.Element {
 							on our homepage.
 						</p>
 						<Link href="/">
-							<a className="px-8 py-3 font-semibold rounded dark:bg-violet-400 dark:text-coolGray-900">
+							<a className="px-8 py-3 font-semibold rounded dark:bg-purple-400">
 								Back to homepage
 							</a>
 						</Link>

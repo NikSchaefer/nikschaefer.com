@@ -1,7 +1,7 @@
 function Popup(): JSX.Element {
 	return (
-		<div className="absolute flex w-full max-w-sm mx-auto overflow-hidden transform -translate-x-1/2 bg-white rounded-lg shadow-md -top-20 popup dark:bg-gray-800 left-1/2">
-			<div className="flex items-center justify-center w-12 bg-red-500">
+		<div className="z-50 absolute flex w-full max-w-sm mx-auto overflow-hidden transform -translate-x-1/2 bg-white rounded-lg shadow-md -top-20 popup dark:bg-gray-800 left-1/2">
+			<div className="flex items-center justify-center w-12 bg-blue-500">
 				<svg
 					className="w-6 h-6 text-white fill-current"
 					viewBox="0 0 40 40"
@@ -13,8 +13,8 @@ function Popup(): JSX.Element {
 
 			<div className="px-4 py-2 -mx-3">
 				<div className="mx-3">
-					<span className="font-semibold text-red-500 dark:text-red-400">
-						Error
+					<span className="font-semibold text-blue-500 dark:text-blue-400">
+						Not Found
 					</span>
 					<p className="text-sm text-gray-600 dark:text-gray-200">
 						No blogs found
