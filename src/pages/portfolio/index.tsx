@@ -1,4 +1,4 @@
-import Card from "@components/card";
+import { Card, sortByOptions } from "@components/card";
 import { H1, Section } from "@components/design";
 import Layout from "@components/layout";
 import clsx from "clsx";
@@ -6,46 +6,10 @@ import { useState } from "react";
 
 import projects from "../../../content/projects.json";
 
-type Project = {
-	title: string;
-	github: string;
-	external?: string;
-	tech: string[];
-	text: string;
-	slug: string;
-};
+const sortOptions = sortByOptions;
+sortOptions[0].content = projects;
 
-type SortOf = {
-	name: string;
-	include: string[];
-	content: Project[];
-};
-
-const sortByOptions: SortOf[] = [
-	{ name: "All", include: [], content: projects },
-	{
-		name: "Machine Learning",
-		include: ["Tensorflow", "tensorflow"],
-		content: [],
-	},
-	{
-		name: "Web Dev",
-		include: ["Javascript", "Typescript", "React", "Next.js"],
-		content: [],
-	},
-	{
-		name: "Python",
-		include: ["Python", "Tensorflow", "Pandas"],
-		content: [],
-	},
-	{
-		name: "Golang",
-		include: ["Go", "Golang", "go", "golang"],
-		content: [],
-	},
-];
-
-for (const option of sortByOptions) {
+for (const option of sortOptions) {
 	for (const project of projects) {
 		if (project.tech.some((r) => option.include.includes(r))) {
 			option.content.push(project);
@@ -71,6 +35,8 @@ export default function Portfolio(): JSX.Element {
 							key={value.name}
 							onClick={() => {
 								setSortBy(value.name);
+								// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+								// @ts-ignore
 								setProjectData(value.content);
 							}}
 							type="button"

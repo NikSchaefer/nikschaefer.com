@@ -4,33 +4,40 @@ type Project = {
 	title: string;
 	github: string;
 	external?: string;
+	content?: string;
 	tech: string[];
 	slug: string;
 	text?: string;
 };
-type SortOf = {
+type SortOption = {
 	name: string;
 	include: string[];
+	content: Project[];
 };
-const sortByOptions: SortOf[] = [
+
+const sortByOptions: SortOption[] = [
+	{ name: "All", include: [], content: [] },
 	{
-		name: "ML",
+		name: "Machine Learning",
 		include: ["Tensorflow", "tensorflow"],
+		content: [],
 	},
 	{
 		name: "Web Dev",
 		include: ["Javascript", "Typescript", "React", "Next.js"],
+		content: [],
 	},
 	{
 		name: "Python",
 		include: ["Python", "Tensorflow", "Pandas"],
+		content: [],
 	},
 	{
 		name: "Golang",
 		include: ["Go", "Golang", "go", "golang"],
+		content: [],
 	},
 ];
-
 function calculateType(tech: string[]): string {
 	const out: string[] = [];
 
@@ -43,8 +50,7 @@ function calculateType(tech: string[]): string {
 	return out.join("/");
 }
 
-// eslint-disable-next-line import/no-default-export
-export default function Card(props: { project: Project }): JSX.Element {
+function Card(props: { project: Project }): JSX.Element {
 	return (
 		<Link href={`/portfolio/${props.project.slug}`}>
 			<a className="text-center w-full max-w-sm px-4 py-3 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100">
@@ -100,3 +106,6 @@ export default function Card(props: { project: Project }): JSX.Element {
 		</Link>
 	);
 }
+
+export { Card, sortByOptions };
+export type { Project, SortOption };

@@ -75,7 +75,7 @@ export default function Main(): JSX.Element {
 				"border-b border-white border-opacity-20"
 			)}
 		>
-			<a className="max-w-[170px]" href="https://hackclub.com/">
+			<a className="max-w-[150px]" href="https://hackclub.com/">
 				<img
 					className="hackclub"
 					src="https://assets.hackclub.com/flag-orpheus-left.svg"

@@ -99,7 +99,7 @@ export default function Main(): JSX.Element {
 						</ul>
 					</li>
 				</ul>
-				<div className="flex items-center justify-between max-w-xs pt-8 mx-auto border-t border-gray-200">
+				<div className="flex items-center justify-between max-w-[300px] pt-8 mx-auto border-t border-gray-200">
 					<a href="#">
 						<svg
 							viewBox="0 0 512 512"
