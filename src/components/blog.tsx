@@ -18,7 +18,10 @@ function Article(props: { Blog: Blog }): JSX.Element {
 
 			<div className="mt-2">
 				<Link href={props.Blog.link}>
-					<a className="text-2xl font-bold slide">
+					<a
+						aria-label="Blog Link"
+						className="text-2xl font-bold slide"
+					>
 						{props.Blog.title}
 					</a>
 				</Link>
@@ -29,7 +32,10 @@ function Article(props: { Blog: Blog }): JSX.Element {
 
 			<div className="flex items-center justify-between mt-4">
 				<Link href={props.Blog.link}>
-					<a className="text-blue-600 dark:text-blue-400 hover:underline">
+					<a
+						aria-label="Blog Link"
+						className="text-blue-600 dark:text-blue-400 hover:underline"
+					>
 						Read more
 					</a>
 				</Link>
