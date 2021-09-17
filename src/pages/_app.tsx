@@ -21,9 +21,9 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	return (
 		<>
 			<DefaultSeo
-				title="Nik Schaefer Portfolio"
+				title="Portfolio"
 				description="I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development."
-				titleTemplate="Nik Schaefer | %s"
+				titleTemplate="%s | Nik Schaefer"
 				openGraph={{
 					type: "website",
 					locale: "en",
