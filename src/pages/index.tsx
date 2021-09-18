@@ -1,4 +1,4 @@
-import { Article } from "@components/blog";
+import { Post } from "@components/blog";
 import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
 import { Socials } from "@components/socials";
@@ -66,7 +66,7 @@ function Articles() {
 			<H2>Featured Articles</H2>
 			<ul>
 				{popularBlogs.slice(0, 3).map((data) => (
-					<Article key={data.title} Blog={data} />
+					<Post key={data.title} Blog={data} />
 				))}
 			</ul>
 			<div className="flex justify-center">

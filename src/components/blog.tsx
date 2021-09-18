@@ -4,16 +4,21 @@ import { Blog } from "../config";
 
 // https://merakiui.com/ under cards
 
-function Article(props: { Blog: Blog }): JSX.Element {
+function Post(props: { Blog: Blog }): JSX.Element {
 	return (
 		<div className="px-8 py-4 mx-auto my-10 bg-white rounded-lg shadow-md dark:bg-gray-800 ">
 			<div className="flex items-center justify-between">
 				<span className="text-sm font-light text-gray-600 dark:text-gray-400">
 					{props.Blog.date}
 				</span>
-				<a className="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500">
-					{props.Blog.type[0]}
-				</a>
+				<Link href={props.Blog.link}>
+					<a
+						aria-label="Blog Link"
+						className="px-3 py-1 text-sm font-bold text-gray-100 transition-colors duration-200 transform bg-gray-600 rounded cursor-pointer hover:bg-gray-500"
+					>
+						{props.Blog.type[0]}
+					</a>
+				</Link>
 			</div>
 
 			<div className="mt-2">
@@ -44,4 +49,4 @@ function Article(props: { Blog: Blog }): JSX.Element {
 	);
 }
 
-export { Article };
+export { Post };

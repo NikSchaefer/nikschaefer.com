@@ -1,4 +1,4 @@
-import { Article } from "@components/blog";
+import { Post } from "@components/blog";
 import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
 import { Popup } from "@components/popup";
@@ -72,7 +72,7 @@ export default function BlogIndex(): JSX.Element {
 				<H2>Most Popular</H2>
 				<ul className="m-auto my-10">
 					{popularBlogs.map((data) => (
-						<Article key={data.link} Blog={data} />
+						<Post key={data.link} Blog={data} />
 					))}
 				</ul>
 			</Section>
@@ -80,7 +80,7 @@ export default function BlogIndex(): JSX.Element {
 				<H2>All Posts</H2>
 				<ul>
 					{blogs.map((data) => (
-						<Article key={data.link} Blog={data} />
+						<Post key={data.link} Blog={data} />
 					))}
 				</ul>
 			</Section>
