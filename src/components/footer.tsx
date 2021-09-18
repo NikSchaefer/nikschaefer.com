@@ -1,58 +1,60 @@
+import { socials } from "config";
+
 import { Hr } from "./design";
 
 // www.tailwind-kit.com/components/footer component
 
-type FooterLinks = {
-	title: string;
+type ColumnType = {
+	name: string;
 	link: string;
 };
 
-const Col1: FooterLinks[] = [
+const Col1: ColumnType[] = [
 	{
-		title: "Home",
+		name: "Home",
 		link: "/",
 	},
 	{
-		title: "About",
+		name: "About",
 		link: "/about",
 	},
 	{
-		title: "Portfolio",
+		name: "Portfolio",
 		link: "/portfolio",
 	},
 ];
 
-const Col2: FooterLinks[] = [
+const Col2: ColumnType[] = [
 	{
-		title: "GitHub",
-		link: "https://github.com/NikSchaefer",
+		name: socials.github.name,
+		link: socials.github.link,
 	},
 	{
-		title: "LinkedIn",
-		link: "https://www.linkedin.com/in/nikschaefer/",
+		name: socials.linkedin.name,
+		link: socials.linkedin.link,
 	},
 	{
-		title: "Email",
-		link: "mailto:nikkschaefer@gmail.com",
+		name: socials.email.name,
+		link: socials.email.link,
 	},
 ];
 
-const Col3: FooterLinks[] = [
+const Col3: ColumnType[] = [
 	{
-		title: "Blog",
+		name: "Blog",
 		link: "/blog",
 	},
 	{
-		title: "Snippets",
+		name: "Snippets",
 		link: "/snippets",
 	},
 	{
-		title: "Sitemap",
+		name: "Sitemap",
 		link: "/sitemap",
 	},
 ];
 
-function Column({ col }: { col: FooterLinks[] }) {
+function Column({ col }: { col: ColumnType[] }) {
 	return (
 		<li className="w-1/2 md:w-1/3 lg:w-1/3">
 			<ul>
@@ -61,7 +63,7 @@ function Column({ col }: { col: FooterLinks[] }) {
 						key={data.link}
 						className="mb-4 transition-colors duration-200 hover:text-gray-800 dark:hover:text-white"
 					>
-						<a href={data.link}>{data.title}</a>
+						<a href={data.link}>{data.name}</a>
 					</li>
 				))}
 			</ul>
@@ -81,7 +83,10 @@ export default function Main(): JSX.Element {
 					<Column col={Col3} />
 				</ul>
 				<div className="flex items-center justify-between max-w-[300px] pt-8 mx-auto border-t border-gray-200">
-					<a href="mailto:nikkschaefer@gmail.com" aria-label="Email">
+					<a
+						href={socials.email.link}
+						aria-label={socials.email.name}
+					>
 						<svg
 							viewBox="0 0 512 512"
 							xmlns="http://www.w3.org/2000/svg"
@@ -92,8 +97,8 @@ export default function Main(): JSX.Element {
 						</svg>
 					</a>
 					<a
-						href="https://github.com/NikSchaefer"
-						aria-label="Github"
+						href={socials.github.link}
+						aria-label={socials.github.name}
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -105,8 +110,8 @@ export default function Main(): JSX.Element {
 						</svg>
 					</a>
 					<a
-						href="https://linkedin.com/in/nik-schaefer"
-						aria-label="LinkedIn"
+						href={socials.linkedin.link}
+						aria-label={socials.linkedin.name}
 					>
 						<svg
 							fill="currentColor"
