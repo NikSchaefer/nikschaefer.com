@@ -64,11 +64,11 @@ function Articles() {
 	return (
 		<Section>
 			<H2>Featured Articles</H2>
-			<ul>
+			<div>
 				{popularBlogs.slice(0, 3).map((data) => (
 					<Post key={data.title} Blog={data} />
 				))}
-			</ul>
+			</div>
 			<div className="flex justify-center">
 				<Link href="/blog" passHref>
 					<a className="slide">All Articles</a>
