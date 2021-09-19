@@ -21,7 +21,7 @@ export default function Snippets(): JSX.Element {
 							className={clsx(
 								"relative w-2/12 text-white rounded",
 								"py-4 px-2 text-lg flex flex-col m-5",
-								"bg-gray-800 font-sans min-w-[180px]"
+								"bg-gray-800 min-w-[180px]"
 							)}
 						>
 							<span
@@ -29,7 +29,7 @@ export default function Snippets(): JSX.Element {
 									"text-lg font-bold inline-block",
 									"w-auto capitalize bg-green-300",
 									"rounded-r py-1 px-2 transform -translate-x-2",
-									"text-gray-800 font-sans w-[fit-content]"
+									"text-gray-800 w-[fit-content]"
 								)}
 							>
 								{value.tag}

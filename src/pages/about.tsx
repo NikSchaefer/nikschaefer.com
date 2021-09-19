@@ -8,7 +8,7 @@ import studies from "../../content/studies.json";
 export default function About(): JSX.Element {
 	return (
 		<Layout>
-			<Section class="font-sans">
+			<Section>
 				<H1 class="mb-10 mt-10">About Me</H1>
 				<p>
 					👋, I'm Nik, self-taught full-stack developer and hobbyist
@@ -18,7 +18,7 @@ export default function About(): JSX.Element {
 					roles between design, research and development.
 				</p>
 			</Section>
-			<Section class="font-sans" id="studies">
+			<Section id="studies">
 				<H2>Studies</H2>
 				<div className="flex-col items-center justify-center">
 					{studies
@@ -30,7 +30,7 @@ export default function About(): JSX.Element {
 						))}
 				</div>
 			</Section>
-			<Section class="font-sans" id="work">
+			<Section id="work">
 				<H2>Work</H2>
 				<div className="flex-col items-center justify-center">
 					{jobs

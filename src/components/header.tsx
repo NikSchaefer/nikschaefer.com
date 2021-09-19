@@ -105,7 +105,7 @@ export default function Main(): JSX.Element {
 						<a
 							className={clsx(
 								router.pathname === value.link ? "active" : "",
-								"my-0 mx-5 text-lg font-sans",
+								"my-0 mx-5 text-lg",
 								"text-gray-400 hover:text-white"
 							)}
 						>
@@ -138,7 +138,7 @@ export default function Main(): JSX.Element {
 			</nav>
 			<nav className="flex p-5 justify-center m-auto sm:hidden">
 				<Link href="/">
-					<a className="text-lg text-gray-300 font-sans">Home</a>
+					<a className="text-lg text-gray-300">Home</a>
 				</Link>
 				<div className="relative">
 					<button
