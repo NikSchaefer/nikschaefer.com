@@ -41,7 +41,7 @@ function Projects() {
 				<br />
 				Here are some of my favorite personal projects I've worked on:
 			</p>
-			<ul className="text-lg list-disc sm:pl-5">
+			<ul className="text-lg list-disc sm:pl-5 pl-8">
 				{json.map((value) => (
 					<li key={value.date}>
 						<Link href={`/portfolio/${value.slug}`} passHref>

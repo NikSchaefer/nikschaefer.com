@@ -14,9 +14,10 @@ const menuClassName = clsx(
 	"absolute left-0 hidden transform",
 	"-translate-x-1/2 flex-col justify-center",
 	"border border-white border-opacity-20",
-	"rounded-lg max-w-[300px]",
+	"rounded-lg max-w-[600px]",
 	"mt-3 box-border py-5 px-5 text-left",
-	"z-50 bg-coal dark:bg-shark fadeIn"
+	"z-50 bg-coal dark:bg-shark fadeIn",
+	"text-gray-300 min-w-[230px]"
 );
 
 const menuAClassName = clsx(

@@ -124,7 +124,7 @@ ul {
 	width: 0;
 	left: 0;
 	height: 1.5px;
-	bottom: 0%;
+	bottom: 6%;
 	visibility: hidden;
 	transition: all 0.2s ease-in-out;
 	border-color: var(--accent);
