@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
 	--accent: #00a2ff;
 }
@@ -17,6 +21,7 @@
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
+
 
 .slide {
 	margin: 10px auto;
