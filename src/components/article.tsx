@@ -39,12 +39,12 @@ function Article({
 					)}
 				</p>
 			</div>
-			<section className="blog text-left text-black dark:text-gray-100">
+			<section className="prose-blue prose text-left text-black dark:text-gray-100">
 				<MDXRemote {...source} />
 			</section>
 			<div className="pt-12 border-t dark:border-gray-700">
 				<div className="flex flex-col space-y-4 md:space-y-0 md:space-x-6 md:flex-row">
-					<div className="flex flex-col">
+					<div className="flex flex-col text-center">
 						<h4 className="text-lg font-semibold">Nik Schaefer</h4>
 						<p className="dark:text-gray-400">
 							I'm a full stack developer, machine learning

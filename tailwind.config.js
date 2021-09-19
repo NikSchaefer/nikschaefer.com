@@ -7,6 +7,15 @@ module.exports = {
 			fontFamily: {
 				sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
 			},
+			animation: {
+				wave: "wave 1.25s linear infinite alternate",
+			},
+			keyframes: {
+				wave: {
+					"0%, 100%": { transform: "rotate(0deg)" },
+					"50%": { transform: "rotate(-5deg)" },
+				},
+			},
 			colors: {
 				coal: {
 					DEFAULT: "#24292D",
@@ -39,5 +48,5 @@ module.exports = {
 	variants: {
 		extend: {},
 	},
-	plugins: [],
+	plugins: [require("@tailwindcss/typography")],
 };

@@ -8,8 +8,8 @@ import json from "../../../content/snippets.json";
 export default function Snippets(): JSX.Element {
 	return (
 		<Layout>
-			<H1 class="my-10">Snippets</H1>
-			<p>Small bits of code that I use</p>
+			<H1 class="my-10 text-center">Snippets</H1>
+			<p className="text-center">Small bits of code that I use</p>
 			<div className="flex flex-row flex-wrap items-center justify-center text-left">
 				{json.map((value) => (
 					<Link

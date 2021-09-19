@@ -29,7 +29,7 @@ export default function Portfolio(): JSX.Element {
 					{sortByOptions.map((value) => (
 						<button
 							className={clsx(
-								value.name === sortBy ? "focused" : "",
+								value.name === sortBy ? "border-blue-500" : "",
 								"my-2 mx-1 border-2 py-1 px-2 text-base"
 							)}
 							key={value.name}

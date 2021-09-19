@@ -33,7 +33,7 @@ export default function Slug({
 		</Layout>
 	);
 }
-
+ 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const postFilePath = path.join(PORT_PATH, `${String(params?.slug)}.mdx`);
 	const source = fs.readFileSync(postFilePath);

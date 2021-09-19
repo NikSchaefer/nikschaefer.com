@@ -1,4 +1,11 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable sonarjs/no-duplicate-string */
+import { AiOutlineHome } from "react-icons/ai";
+import { BsPerson } from "react-icons/bs";
+import { HiOutlineDocumentText } from "react-icons/hi";
+import { RiScissorsLine } from "react-icons/ri";
+import { VscProject } from "react-icons/vsc";
+
 // google analytics measurement id
 const GA_TRACKING_ID = "U-XXXXXX";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
@@ -25,24 +32,48 @@ const socials = {
 type HeaderLink = {
 	link: string;
 	title: string;
+	// eslint-disable-next-line @typescript-eslint/ban-types
+	func: Function;
 };
 
 const HeaderLinks: HeaderLink[] = [
 	{
 		link: "/",
 		title: "Home",
+		func: () => {
+			return <AiOutlineHome className="m-2" size="20px" />;
+		},
 	},
 	{
 		link: "/about",
 		title: "About",
+		func: () => {
+			return <BsPerson className="m-2" size="20px" />;
+		},
 	},
 	{
 		link: "/blog",
 		title: "Blog",
+		func: () => {
+			return <HiOutlineDocumentText className="m-2" size="20px" />;
+		},
 	},
 	{
 		link: "/portfolio",
 		title: "Portfolio",
+		func: () => {
+			return <VscProject className="m-2" size="20px" />;
+		},
+	},
+];
+
+const SecondaryLinks: HeaderLink[] = [
+	{
+		link: "/snippets",
+		title: "Snippets",
+		func: () => {
+			return <RiScissorsLine className="m-2" size="20px" />;
+		},
 	},
 ];
 
@@ -225,5 +256,5 @@ const allBlogs: Blog[] = [
 	},
 ];
 
-export { HeaderLinks, allBlogs, popularBlogs, socials };
-export type { Blog };
+export { HeaderLinks, allBlogs, popularBlogs, socials, SecondaryLinks };
+export type { Blog, HeaderLink };

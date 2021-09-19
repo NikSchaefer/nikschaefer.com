@@ -23,9 +23,9 @@ export default function Slug({
 }: receivingData): JSX.Element {
 	return (
 		<Layout>
-			<Section class="blog">
+			<Section>
 				<H1 class="my-10">{frontMatter.title}</H1>
-				<article>
+				<article className="prose prose-blue">
 					<MDXRemote {...source} />
 				</article>
 			</Section>
