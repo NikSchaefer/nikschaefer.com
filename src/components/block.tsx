@@ -27,11 +27,11 @@ function Node(props: {
 					{data.company}
 				</a>
 			</div>
-			<h3 className="flex items-center">
+			<h3 className="flex items-center text-base">
 				<AiFillStar className="mr-2" size="20px" />{" "}
 				{data.content.length} Achievements
 			</h3>
-			<ul className="p-0 m-0 my-3 text-base">
+			<ul className="p-0 m-0 my-3 text-sm">
 				{data.content.map((value) => (
 					<li key={value}>- {value}</li>
 				))}
