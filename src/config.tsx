@@ -6,6 +6,22 @@ const IS_TEST = process.env.NODE_ENV === "test";
 const IS_BROWSER = typeof window !== "undefined";
 export { GA_TRACKING_ID, IS_PRODUCTION, IS_TEST, IS_BROWSER };
 
+const socials = {
+	github: {
+		link: "https://github.com/NikSchaefer",
+		name: "GitHub",
+	},
+	linkedin: {
+		link: "https://www.linkedin.com/in/nikschaefer/",
+		name: "LinkedIn",
+	},
+	email: {
+		link: "mailto:nikkschaefer@gmail.com",
+		email: "nikkschaefer@gmail.com",
+		name: "Email",
+	},
+};
+
 type HeaderLink = {
 	link: string;
 	title: string;
@@ -209,5 +225,5 @@ const allBlogs: Blog[] = [
 	},
 ];
 
-export { HeaderLinks, allBlogs, popularBlogs };
+export { HeaderLinks, allBlogs, popularBlogs, socials };
 export type { Blog };

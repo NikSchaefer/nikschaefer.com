@@ -1,20 +1,12 @@
+import { Article } from "@components/article";
 import Layout from "@components/layout";
 import { postFilePaths, POSTS_PATH } from "@lib/mdxUtils";
 import rehypePrism from "@mapbox/rehype-prism";
-import {
-	Container,
-	Content,
-	StyledTitle,
-	AuthorSection,
-} from "@styles/blog.theme";
 import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import Head from "next/head";
 import path from "path";
-import { BiTimeFive } from "react-icons/bi";
 
 type receivingData = {
 	source: never;
@@ -25,42 +17,20 @@ type receivingData = {
 		dateEdit: string;
 		description: string;
 	};
-	wordCount: number;
 };
 
 export default function Slug({
 	source,
 	frontMatter,
-	wordCount,
 }: receivingData): JSX.Element {
 	return (
 		<Layout>
-			<Container>
-				<Head>
-					<title>{frontMatter.title} | Blog</title>
-					<meta
-						name="description"
-						content={frontMatter.description}
-					/>
-				</Head>
-				<Content>
-					<StyledTitle>{frontMatter.title}</StyledTitle>
-					<AuthorSection>
-						<h2>{frontMatter.description}</h2>
-						<h4>
-							{frontMatter.datePub}
-							<BiTimeFive
-								style={{ margin: "0 10px" }}
-								size={20}
-							/>
-							{Math.ceil(wordCount / 275)} Min Read
-						</h4>
-					</AuthorSection>
-					<article>
-						<MDXRemote {...source} />
-					</article>
-				</Content>
-			</Container>
+			<Article
+				source={source}
+				title={frontMatter.title}
+				tags="#tailwindcss"
+				date={frontMatter.datePub}
+			/>
 		</Layout>
 	);
 }
@@ -80,7 +50,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		props: {
 			source: mdxSource,
 			frontMatter: data,
-			wordCount: content.split(" ").length,
 		},
 	};
 };

@@ -1,64 +1,44 @@
+import { H1 } from "@components/design";
 import Layout from "@components/layout";
+import clsx from "clsx";
 import Link from "next/link";
-import styled from "styled-components";
 
 import json from "../../../content/snippets.json";
 
-const StyledLink = styled.a`
-	text-align: left;
-	background-color: #2e3440;
-	position: relative;
-	max-width: 200px;
-	margin: auto;
-	border-radius: 0.25rem;
-	.tag {
-		color: #2e3440;
-		background-color: #a7f3cf;
-		width: fit-content;
-		padding: 0.25rem 0.5rem;
-		font-weight: 600;
-		font-size: 18px;
-		border-top-right-radius: 0.25rem;
-		border-bottom-right-radius: 0.25rem;
-		text-transform: capitalize;
-		transform: translateX(-10px);
-	}
-	color: white;
-	padding: 1rem 10px;
-	font-family: "Mukta", sans-serif;
-	font-size: 20px;
-	display: flex;
-	margin: 20px;
-	flex-direction: column;
-	:hover {
-		cursor: pointer;
-	}
-`;
-const Container = styled.div`
-	display: flex;
-	flex-flow: wrap row;
-	justify-content: center;
-	align-items: center;
-`;
 export default function Snippets(): JSX.Element {
 	return (
 		<Layout>
-			<h1>Snippets</h1>
+			<H1 class="my-10">Snippets</H1>
 			<p>Small bits of code that I use</p>
-			<Container>
+			<div className="flex flex-row flex-wrap items-center justify-center text-left">
 				{json.map((value) => (
 					<Link
 						href={`/snippets/${value.link}`}
 						key={value.link}
 						passHref
 					>
-						<StyledLink>
-							<span className="tag">{value.tag}</span>
+						<a
+							className={clsx(
+								"relative w-2/12 text-white rounded",
+								"py-4 px-2 text-lg flex flex-col m-5",
+								"bg-gray-800 font-sans min-w-[180px]"
+							)}
+						>
+							<span
+								className={clsx(
+									"text-lg font-bold inline-block",
+									"w-auto capitalize bg-green-300",
+									"rounded-r py-1 px-2 transform -translate-x-2",
+									"text-gray-800 font-sans w-[fit-content]"
+								)}
+							>
+								{value.tag}
+							</span>
 							<span>{value.title}</span>
-						</StyledLink>
+						</a>
 					</Link>
 				))}
-			</Container>
+			</div>
 		</Layout>
 	);
 }
