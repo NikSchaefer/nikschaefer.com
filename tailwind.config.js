@@ -9,11 +9,25 @@ module.exports = {
 			},
 			animation: {
 				wave: "wave 1.25s linear infinite alternate",
+				popinout: "popup 5s",
+				fadein: "fadein 0.2s ease",
 			},
 			keyframes: {
 				wave: {
 					"0%, 100%": { transform: "rotate(0deg)" },
 					"50%": { transform: "rotate(-5deg)" },
+				},
+				popup: {
+					"0%, 100%": {
+						transform: "translateY(0px) translateX(-50%)",
+					},
+					"10%, 90%": {
+						transform: "translateY(180px) translateX(-50%)",
+					},
+				},
+				fadein: {
+					"0%": { opacity: 0, "margin-top": "1rem" },
+					"100%": { opacity: 10, "margin-top": "0.75rem" },
 				},
 			},
 			colors: {

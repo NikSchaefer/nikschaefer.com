@@ -54,9 +54,9 @@ export default function BlogIndex(): JSX.Element {
 						onClick={() => {
 							if (blogs.length === 0) {
 								const popup = document.querySelector(".popup");
-								popup?.classList.add("popinout");
+								popup?.classList.add("animate-popinout");
 								setTimeout(() => {
-									popup?.classList.remove("popinout");
+									popup?.classList.remove("animate-popinout");
 								}, 5000);
 							}
 						}}

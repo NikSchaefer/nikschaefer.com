@@ -28,7 +28,7 @@ function StyledSocial(props: {
 	);
 }
 export const sizeOfSVG = "30px";
-export const colorOfSVG = "var(--accent)";
+export const colorOfSVG = "#00a2ff";
 
 function Socials(): JSX.Element {
 	return (

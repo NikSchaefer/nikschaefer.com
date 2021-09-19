@@ -18,44 +18,6 @@
 	background: #555;
 }
 
-
-ul {
-	list-style: none;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		margin-top: 1rem;
-	}
-	to {
-		opacity: 1;
-		margin-top: 0.75rem;
-	}
-}
-.fadeIn {
-	animation: fadeIn 0.2s ease;
-}
-
-@keyframes PopupAnimation {
-	0% {
-		transform: translateY(0px) translateX(-50%);
-	}
-	10% {
-		transform: translateY(180px) translateX(-50%);
-	}
-	90% {
-		transform: translateY(180px) translateX(-50%);
-	}
-	100% {
-		transform: translateY(0px) translateX(-50%);
-	}
-}
-
-.popinout {
-	animation: PopupAnimation 5s;
-}
-
 .slide {
 	margin: 10px auto;
 	position: relative;
