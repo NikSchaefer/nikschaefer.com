@@ -232,7 +232,7 @@ pre[class*="language-"] {
 
 /* Inline code */
 code:not([class*="language-"]) {
-	padding: 0.4em;
+	padding: 0.2em 0.4em;
 	border-radius: 0.2px;
 	background: #f8f8f8;
 	border: 1px solid #dddddd;
@@ -320,7 +320,7 @@ code:not([class*="language-"]) {
 	background-color: rgb(252, 254, 255);
 	border: 1px solid rgb(237, 242, 247);
 	color: #4a5568;
-	padding: 1rem;
+	padding: .5rem;
 	margin: 1.5rem 0px;
 	white-space: nowrap;
 	overflow-x: scroll;
