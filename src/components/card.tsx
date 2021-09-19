@@ -53,7 +53,7 @@ function calculateType(tech: string[]): string {
 function Card(props: { project: Project }): JSX.Element {
 	return (
 		<Link href={`/portfolio/${props.project.slug}`}>
-			<a className="text-center w-full max-w-sm px-4 py-3 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100">
+			<a className="text-left w-full max-w-sm px-4 py-3 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100">
 				<div className="flex items-center justify-between">
 					<span className="text-sm font-light text-gray-800 dark:text-gray-400">
 						{props.project.tech[0]}
