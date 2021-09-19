@@ -33,6 +33,7 @@
 		"**/*.tsx",
 		"src/pages/_document.tsx",
 		"src/pages/_error.js",
-		"src/lib/gtag.js"
-, "src/pages/_app.tsx"	]
+		"src/lib/gtag.js",
+		"src/pages/_app.tsx"
+	]
 }

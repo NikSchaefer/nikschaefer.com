@@ -53,8 +53,9 @@ html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: "Mukta", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: "Mukta", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+		Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+		sans-serif;
 	text-align: center;
 	min-height: 100vh;
 }
@@ -320,7 +321,7 @@ code:not([class*="language-"]) {
 	background-color: rgb(252, 254, 255);
 	border: 1px solid rgb(237, 242, 247);
 	color: #4a5568;
-	padding: .5rem;
+	padding: 0.5rem;
 	margin: 1.5rem 0px;
 	white-space: nowrap;
 	overflow-x: scroll;
