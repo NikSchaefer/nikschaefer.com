@@ -22,7 +22,7 @@
 	margin: 10px auto;
 	position: relative;
 	transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
-	color: var(--accent);
+	color: #00a2ff;
 	text-align: center;
 }
 
@@ -40,7 +40,7 @@
 	bottom: 6%;
 	visibility: hidden;
 	transition: all 0.2s ease-in-out;
-	border-color: var(--accent);
+	border-color: #00a2ff;
 }
 
 .slide:hover::before {
