@@ -1,7 +1,7 @@
 module.exports = {
 	purge: ["./src/**/*.{js,ts,jsx,tsx}"],
 	mode: "jit",
-	darkMode: "class", // or 'media' or 'class'
+	darkMode: "class",
 	theme: {
 		extend: {
 			fontFamily: {
@@ -29,6 +29,9 @@ module.exports = {
 					"0%": { opacity: 0, "margin-top": "1rem" },
 					"100%": { opacity: 10, "margin-top": "0.75rem" },
 				},
+			},
+			transitionTimingFunction: {
+				'expo': 'cubic-bezier(0.645, 0.045, 0.355, 1);'
 			},
 			colors: {
 				coal: {

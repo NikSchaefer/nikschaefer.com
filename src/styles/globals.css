@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--accent: #00a2ff;
-}
-
 ::-webkit-scrollbar {
 	width: 8px;
 }
@@ -21,7 +17,6 @@
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
 }
-
 
 .slide {
 	margin: 10px auto;
@@ -52,7 +47,6 @@
 	visibility: visible;
 	width: 100%;
 }
-
 .iframe {
 	height: calc(100vh - 180px);
 	width: calc(100vw - 10px);
