@@ -17,6 +17,7 @@ import {
 } from "@components/design";
 import Layout from "@components/layout";
 import clsx from "clsx";
+import { NextSeo } from "next-seo";
 
 type Link = {
 	name: string;
@@ -49,6 +50,7 @@ const Links: Link[] = [
 export default function DesignSystem(): JSX.Element {
 	return (
 		<Layout>
+			<NextSeo title="Design System" />
 			<div
 				className={clsx(
 					"py-20 text-left m-auto",

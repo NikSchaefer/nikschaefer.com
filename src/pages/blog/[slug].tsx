@@ -6,6 +6,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { serialize } from "next-mdx-remote/serialize";
+import { NextSeo } from "next-seo";
 import path from "path";
 
 type receivingData = {
@@ -25,6 +26,7 @@ export default function Slug({
 }: receivingData): JSX.Element {
 	return (
 		<Layout>
+			<NextSeo title={frontMatter.title} />
 			<Article
 				source={source}
 				title={frontMatter.title}

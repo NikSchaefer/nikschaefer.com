@@ -3,6 +3,7 @@ import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
 import { Socials } from "@components/socials";
 import { popularBlogs } from "config";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 import React from "react";
 
@@ -81,6 +82,7 @@ function Articles() {
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
+			<NextSeo title="Home"  />
 			<Intro />
 			<Projects />
 			<Articles />

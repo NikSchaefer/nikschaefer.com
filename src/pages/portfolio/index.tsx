@@ -2,6 +2,7 @@ import { Card, sortByOptions } from "@components/card";
 import { H1, Section } from "@components/design";
 import Layout from "@components/layout";
 import clsx from "clsx";
+import { NextSeo } from "next-seo";
 import { useState } from "react";
 
 import projects from "../../../content/projects.json";
@@ -22,6 +23,7 @@ export default function Portfolio(): JSX.Element {
 	const [sortBy, setSortBy] = useState("All");
 	return (
 		<Layout>
+			<NextSeo title="Portfolio" />
 			<Section class="text-center">
 				<H1>Portfolio</H1>
 				<p>Online collection of my major projects</p>

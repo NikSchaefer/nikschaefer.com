@@ -1,6 +1,7 @@
 /* eslint-disable sonarjs/no-identical-functions */
 import { Section } from "@components/design";
 import Layout from "@components/layout";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 
 type Link = {
@@ -44,6 +45,7 @@ const otherPages: Link[] = [
 export default function Sitemap(): JSX.Element {
 	return (
 		<Layout>
+			<NextSeo title="Sitemap" />
 			<Section class="blog">
 				<article>
 					<h1>Site Map</h1>

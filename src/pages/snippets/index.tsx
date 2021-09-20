@@ -1,6 +1,7 @@
 import { H1 } from "@components/design";
 import Layout from "@components/layout";
 import clsx from "clsx";
+import { NextSeo } from "next-seo";
 import Link from "next/link";
 
 import json from "../../../content/snippets.json";
@@ -8,6 +9,7 @@ import json from "../../../content/snippets.json";
 export default function Snippets(): JSX.Element {
 	return (
 		<Layout>
+			<NextSeo title="Snippets" />
 			<H1 class="my-10 text-center">Snippets</H1>
 			<p className="text-center">Small bits of code that I use</p>
 			<div className="flex flex-row flex-wrap items-center justify-center text-left">

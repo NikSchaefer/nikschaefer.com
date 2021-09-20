@@ -4,6 +4,7 @@ import Layout from "@components/layout";
 import { Popup } from "@components/popup";
 import clsx from "clsx";
 import { allBlogs, popularBlogs } from "config";
+import { NextSeo } from "next-seo";
 import { useState } from "react";
 
 export default function BlogIndex(): JSX.Element {
@@ -24,6 +25,7 @@ export default function BlogIndex(): JSX.Element {
 	}
 	return (
 		<Layout>
+			<NextSeo title="Blog" />
 			<Section class="my-16 max-w-2xl">
 				<H1 class="mb-4">Blog</H1>
 				<Popup />

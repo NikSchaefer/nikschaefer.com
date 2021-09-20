@@ -1,6 +1,7 @@
 import { Node } from "@components/block";
 import { H1, H2, Section } from "@components/design";
 import Layout from "@components/layout";
+import { NextSeo } from "next-seo";
 
 import jobs from "../../content/jobs.json";
 import studies from "../../content/studies.json";
@@ -8,6 +9,7 @@ import studies from "../../content/studies.json";
 export default function About(): JSX.Element {
 	return (
 		<Layout>
+			<NextSeo title="About" />
 			<Section>
 				<H1 class="mb-10 mt-10">About Me</H1>
 				<p>
