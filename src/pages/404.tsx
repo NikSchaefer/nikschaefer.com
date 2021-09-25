@@ -5,7 +5,7 @@ export default function FourOhFour(): JSX.Element {
 		<Layout>
 			<div className="bg-indigo-900 relative overflow-hidden h-screen">
 				<img
-					src="/images/landscape/8.svg"
+					src="/astro.svg"
 					className="absolute h-full w-full object-cover"
 					alt='404 astronaut'
 				/>
