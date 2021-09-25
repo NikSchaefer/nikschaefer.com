@@ -1,30 +1,26 @@
 import Layout from "@components/layout";
-import Link from "next/link";
 
 export default function FourOhFour(): JSX.Element {
 	return (
 		<Layout>
-			<section className="py-60 flex items-center h-full p-16 dark:text-white">
-				<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
-					<div className="max-w-md text-center">
-						<h2 className="mb-8 font-extrabold text-9xl dark:text-coolGray-600">
-							<span className="sr-only">Error</span>404
-						</h2>
-						<p className="text-2xl font-semibold md:text-3xl">
-							Sorry, we couldn't find this page.
+			<div className="bg-indigo-900 relative overflow-hidden h-screen">
+				<img
+					src="/images/landscape/8.svg"
+					className="absolute h-full w-full object-cover"
+					alt='404 astronaut'
+				/>
+				<div className="inset-0 bg-black opacity-25 absolute" />
+				<div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center py-32 xl:py-40">
+					<div className="w-full font-mono flex flex-col items-center relative z-10">
+						<h1 className="font-extrabold text-5xl text-center text-white leading-tight mt-4">
+							You&#x27;re alone here
+						</h1>
+						<p className="font-extrabold text-8xl my-44 text-white animate-bounce">
+							404
 						</p>
-						<p className="mt-4 mb-8 dark:text-coolGray-400">
-							But dont worry, you can find plenty of other things
-							on our homepage.
-						</p>
-						<Link href="/">
-							<a className="px-8 py-3 font-semibold rounded dark:bg-purple-400">
-								Back to homepage
-							</a>
-						</Link>
 					</div>
 				</div>
-			</section>
+			</div>
 		</Layout>
 	);
 }
