@@ -18,7 +18,7 @@
 		"clean": "npx prettier --write ."
 	},
 	"dependencies": {
-		"@babel/core": "^7.15.5",
+		"@babel/core": "^7.15.8",
 		"@headlessui/react": "^1.4.1",
 		"@mapbox/rehype-prism": "^0.8.0",
 		"@tailwindcss/typography": "^0.4.1",
