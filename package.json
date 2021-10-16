@@ -40,7 +40,7 @@
 		"@types/babel__core": "^7.1.16",
 		"@types/node": "^16.11.0",
 		"@types/react": "^17.0.30",
-		"autoprefixer": "^10.3.6",
+		"autoprefixer": "^10.3.7",
 		"eslint": "^8.0.1",
 		"eslint-config-galex": "^2.16.11",
 		"postcss": "^8.3.8",
