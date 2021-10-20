@@ -26,7 +26,7 @@
 		"clsx": "^1.1.1",
 		"gray-matter": "^4.0.3",
 		"next": "^11.1.1",
-		"next-mdx-remote": "^3.0.5",
+		"next-mdx-remote": "^3.0.6",
 		"next-seo": "^4.28.1",
 		"next-sitemap": "^1.6.192",
 		"react": "17.0.2",
