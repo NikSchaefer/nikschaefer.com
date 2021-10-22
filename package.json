@@ -43,7 +43,7 @@
 		"autoprefixer": "^10.3.7",
 		"eslint": "^8.0.1",
 		"eslint-config-galex": "^3.0.1",
-		"postcss": "^8.3.10",
+		"postcss": "^8.3.11",
 		"prettier": "^2.4.0",
 		"tailwindcss": "^2.2.17"
 	}
