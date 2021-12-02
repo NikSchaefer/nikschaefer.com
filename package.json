@@ -45,6 +45,6 @@
 		"eslint-config-galex": "^3.3.4",
 		"postcss": "^8.4.4",
 		"prettier": "^2.5.0",
-		"tailwindcss": "^2.2.18"
+		"tailwindcss": "^2.2.19"
 	}
 }
