@@ -21,7 +21,7 @@
 		"@babel/core": "^7.15.8",
 		"@headlessui/react": "^1.4.2",
 		"@mapbox/rehype-prism": "^0.8.0",
-		"@tailwindcss/typography": "^0.4.1",
+		"@tailwindcss/typography": "^0.5.0",
 		"axios": "^0.24.0",
 		"clsx": "^1.1.1",
 		"gray-matter": "^4.0.3",
