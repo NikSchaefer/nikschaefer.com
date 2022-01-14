@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-prop-types */
 import Link from "next/link";
 
 type Project = {
@@ -12,30 +13,25 @@ type Project = {
 type SortOption = {
 	name: string;
 	include: string[];
-	content: Project[];
 };
 
 const sortByOptions: SortOption[] = [
-	{ name: "All", include: [], content: [] },
+	{ name: "All", include: [] },
 	{
 		name: "Machine Learning",
 		include: ["Tensorflow", "tensorflow"],
-		content: [],
 	},
 	{
 		name: "Web Dev",
 		include: ["Javascript", "Typescript", "React", "Next.js"],
-		content: [],
 	},
 	{
 		name: "Python",
 		include: ["Python", "Tensorflow", "Pandas"],
-		content: [],
 	},
 	{
 		name: "Golang",
 		include: ["Go", "Golang", "go", "golang"],
-		content: [],
 	},
 ];
 function calculateType(tech: string[]): string {
@@ -50,31 +46,31 @@ function calculateType(tech: string[]): string {
 	return out.join("/");
 }
 
-function Card(props: { project: Project }): JSX.Element {
+function Card({ title, github, slug, tech, text }: Project): JSX.Element {
 	return (
-		<Link href={`/portfolio/${props.project.slug}`}>
+		<Link href={`/portfolio/${slug}`}>
 			<a className="text-left w-full max-w-sm px-4 py-3 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100">
 				<div className="flex items-center justify-between">
 					<span className="text-sm font-light text-gray-800 dark:text-gray-400">
-						{props.project.tech[0]}
+						{tech[0]}
 					</span>
 					<span className="px-3 py-1 text-xs text-indigo-800 uppercase bg-indigo-200 rounded-full dark:bg-indigo-300 dark:text-indigo-900">
-						{calculateType(props.project.tech)}
+						{calculateType(tech)}
 					</span>
 				</div>
 				<div>
 					<h1 className="mt-2 text-lg font-semibold text-gray-800 dark:text-white">
-						{props.project.title}
+						{title}
 					</h1>
 					<p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-						{props.project.text}
+						{text}
 					</p>
 				</div>
 
 				<div>
 					<div className="flex items-center justify-center mt-4">
 						<a
-							href={props.project.github}
+							href={github}
 							className="mr-2 text-gray-800 cursor-pointer dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
 						>
 							<svg
@@ -86,7 +82,7 @@ function Card(props: { project: Project }): JSX.Element {
 							</svg>
 						</a>
 
-						<Link href={`/portfolio/${props.project.slug}`}>
+						<Link href={`/portfolio/${slug}`}>
 							<a className="mr-2 text-gray-800 cursor-pointer dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300">
 								<svg
 									className="w-5 h-5 fill-current"
