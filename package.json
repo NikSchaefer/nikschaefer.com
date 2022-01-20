@@ -29,10 +29,12 @@
 		"next-mdx-remote": "^3.0.8",
 		"next-seo": "^4.28.1",
 		"next-sitemap": "^1.9.12",
-		"react": "17.0.2",
+		"react": "^17.0.2",
+		"react-animated-cursor": "^2.2.0",
 		"react-dom": "17.0.2",
 		"react-flip-move": "^3.0.4",
 		"react-icons": "^4.3.1",
+		"react-intersection-observer": "^8.33.1",
 		"rehype": "^12.0.0",
 		"typescript": "^4.5.4"
 	},
