@@ -85,6 +85,7 @@ type Blog = {
 	image: string;
 	min: number;
 	type: string[];
+	className?: string;
 };
 
 const popularBlogs: Blog[] = [
@@ -97,6 +98,7 @@ const popularBlogs: Blog[] = [
 		min: 3,
 		date: "May 2020",
 		type: ["Machine Learning"],
+		className: "from-[#D8B4FE] to-[#818CF8]",
 	},
 	{
 		title: "5 database paradigms and their use cases",
@@ -106,6 +108,7 @@ const popularBlogs: Blog[] = [
 		min: 3,
 		date: "May 2020",
 		type: ["Database"],
+		className: "from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]",
 	},
 	{
 		title: "Why I use NextJS over Gatsby for Personal Projects",
@@ -116,6 +119,7 @@ const popularBlogs: Blog[] = [
 			"Here is a quick breakdown of the differences between NextJS and Gatsby andwhy I chose NextJS",
 		date: "Jan 2020",
 		type: ["NextJS", "GatsbyJS"],
+		className: "from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]",
 	},
 ];
 

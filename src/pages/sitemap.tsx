@@ -1,6 +1,7 @@
 /* eslint-disable sonarjs/no-identical-functions */
 import { Section } from "@components/design";
 import Layout from "@components/layout";
+import { underlineCSS } from "@styles/style";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
 
@@ -54,7 +55,7 @@ export default function Sitemap(): JSX.Element {
 						{mainContent.map((value) => (
 							<li key={value.link}>
 								<Link href={value.link} passHref>
-									<a className="slide">{value.name}</a>
+									<a className={underlineCSS}>{value.name}</a>
 								</Link>
 							</li>
 						))}
@@ -67,7 +68,7 @@ export default function Sitemap(): JSX.Element {
 						{otherPages.map((value) => (
 							<li key={value.link}>
 								<Link href={value.link} passHref>
-									<a className="slide">{value.name}</a>
+									<a className={underlineCSS}>{value.name}</a>
 								</Link>
 							</li>
 						))}

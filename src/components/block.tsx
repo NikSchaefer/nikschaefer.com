@@ -1,3 +1,4 @@
+import { underlineCSS } from "@styles/style";
 import clsx from "clsx";
 import { AiFillStar } from "react-icons/ai";
 import { BsCode } from "react-icons/bs";
@@ -23,7 +24,7 @@ function Node(props: {
 				<span>{data.range}</span>
 			</div>
 			<div className="my-2">
-				<a className="slide" href={data.url}>
+				<a className={underlineCSS} href={data.url}>
 					{data.company}
 				</a>
 			</div>

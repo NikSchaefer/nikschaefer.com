@@ -67,11 +67,11 @@ function Portfolio(): JSX.Element {
 					))}
 				</ul>
 			</Section>
-			<section>
+			<section className="mb-10">
 				<div
 					className={clsx(
 						"flex flex-wrap justify-center",
-						"max-w-[1200px] m-auto w-[95%] gap-4"
+						"max-w-[1100px] m-auto w-[95%] gap-6"
 					)}
 				>
 					{projectData.map((data) => (

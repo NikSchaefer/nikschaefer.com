@@ -5,6 +5,8 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ["Roboto", "Helvetica", "Arial", "sans-serif"],
+				nunito: ["Nunito", "sans-serif"],
+				inter: ["Inter", "sans-serif"],
 			},
 			animation: {
 				wave: "wave 1.25s linear infinite alternate",
