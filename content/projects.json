@@ -37,7 +37,7 @@
 		"external": "",
 		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
 		"slug": "mnist-handwritten-digits-ml",
-		"text": "Machine Learning Model to classify handwritten digits based on the mnist dataset of handwritten digits"
+		"text": "Machine Learning Model to classify handwritten digits"
 	},
 	{
 		"title": "Go-Fiber Boilerplate",
@@ -45,7 +45,7 @@
 		"external": "",
 		"tech": ["Golang", "Fiber"],
 		"slug": "go-fiber",
-		"text": "Golang Rest API built with GORM, Go-Fiber, and a PostgresSQL database. Running in a docker container with Hot Reload."
+		"text": "Golang Rest API built with GORM, Go-Fiber, and a PostgresSQL database."
 	},
 	{
 		"text": "My Personal Golang CLI for productivity and networking",
@@ -80,7 +80,7 @@
 		"slug": "go-netsh"
 	},
 	{
-		"text": "MIT NextJS Typescript Template with Prettier + Jest + Eslint + Analytics for Vercel with 100% on Lighthouse",
+		"text": "MIT NextJS Typescript Template with Prettier",
 		"title": "NextJS Boilerplate",
 		"github": "https://github.com/NikSchaefer/nextjs-boilerplate",
 		"external": "https://boilerplate.nikschaefer.tech/",
@@ -119,7 +119,7 @@
 		"slug": "umbrella-app"
 	},
 	{
-		"text": "A site containing direct comparisions between Databases, Frameworks, Tools andmore",
+		"text": "A site containing direct comparisons between Databases, Frameworks, Tools and more",
 		"title": "Web Tools",
 		"github": "https://github.com/NikSchaefer/Web-Tools",
 		"external": "https://development-tools.vercel.app/",
@@ -131,7 +131,7 @@
 		"github": "https://github.com/NikSchaefer/dev-discords",
 		"external": "https://dev-discords.now.sh/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
-		"text": "Web App for Viewing a list of official developer related discord Communities",
+		"text": "Web app for viewing a list of official developer related discord communities",
 		"slug": "dev-discords"
 	},
 	{

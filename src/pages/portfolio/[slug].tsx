@@ -30,7 +30,9 @@ export default function Slug({
 			<Article
 				source={source}
 				title={frontMatter.title}
-				tags={`#${frontMatter.tags.split(",")[0]}`}
+				tags={`#${ frontMatter.tags.split(",")[0] }`}
+				github={frontMatter.github}
+				link={frontMatter.link}
 			/>
 		</Layout>
 	);

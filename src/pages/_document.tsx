@@ -9,16 +9,15 @@ export default class MyDocument extends Document {
 		return (
 			<Html lang="en-us">
 				<Head>
+					<link
+						rel="preconnect"
+						href="https://fonts.googleapis.com"
+					/>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
-						rel="preload"
-						href="https://fonts.googleapis.com/css2?family=Mukta&family=Nunito&display=swap"
-						as="style"
-					/>
-					<link
-						href="https://fonts.googleapis.com/css2?family=Mukta&family=Nunito&display=swap"
+						href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
 						rel="stylesheet"
-					/>{" "}
+					/>
 					<script
 						async
 						src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}

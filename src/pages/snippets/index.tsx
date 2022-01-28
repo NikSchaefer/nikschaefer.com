@@ -30,7 +30,7 @@ export default function Snippets(): JSX.Element {
 								className={clsx(
 									"text-lg font-bold inline-block",
 									"w-auto capitalize bg-green-300",
-									"rounded-r py-1 px-2 transform -translate-x-2",
+									"rounded-r mb-3 px-2 transform -translate-x-2",
 									"text-gray-800 w-[fit-content]"
 								)}
 							>
