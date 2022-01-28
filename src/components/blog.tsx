@@ -6,7 +6,7 @@ import { Blog } from "../config";
 
 function Post(props: { Blog: Blog }): JSX.Element {
 	return (
-		<div className="py-4 mx-auto bg-white rounded-lg dark:bg-gray-800 ">
+		<div className="py-4 mx-auto rounded-lg">
 			<Link href={props.Blog.link}>
 				<a
 					aria-label="Blog Link"

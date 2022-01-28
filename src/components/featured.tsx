@@ -14,11 +14,13 @@ function FeaturedArticle(props: {
 					props.className
 				)}
 			>
-				<div className="bg-white h-full rounded-xl p-3 pb-0 relative">
+				<div className="bg-white h-full rounded-xl p-3 pb-0 relative dark:bg-shark dark:text-white">
 					<h3 className="font-semibold mb-4 text-lg">
 						{props.Blog.title}
 					</h3>
-					<span className="mb-0 absolute bottom-2">{props.Blog.min} min</span>
+					<span className="mb-0 absolute bottom-2">
+						{props.Blog.min} min
+					</span>
 				</div>
 			</a>
 		</Link>

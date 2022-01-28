@@ -40,7 +40,8 @@ export default function BlogIndex(): JSX.Element {
 						className={clsx(
 							"w-full border-gray-500 border-opacity-20",
 							"h-12 text-lg outline-none",
-							"pl-4 border-2 rounded-lg border-solid"
+							"pl-4 border-2 rounded-lg border-solid",
+							"bg-transparent"
 						)}
 					/>
 				</div>

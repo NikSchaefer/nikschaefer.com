@@ -3,17 +3,17 @@
 @tailwind utilities;
 
 @layer utilities {
-  .bg-growing-underline {
-    background-size: 100% 0.2em;
-    background-position: 0 88%;
-    @apply bg-no-repeat transition-all duration-200;
-  }
-  .bg-growing-underline:hover {
-    background-size: 100% 100%;
-  }
-  .bg-growing-underline:focus {
-    background-size: 100% 100%;
-  }
+	.bg-growing-underline {
+		background-size: 100% 0.2em;
+		background-position: 0 88%;
+		@apply bg-no-repeat transition-all duration-200;
+	}
+	.bg-growing-underline:hover {
+		background-size: 100% 100%;
+	}
+	.bg-growing-underline:focus {
+		background-size: 100% 100%;
+	}
 }
 
 ::-webkit-scrollbar {
@@ -37,6 +37,15 @@
 	width: calc(100vw - 10px);
 	margin: auto;
 	box-sizing: border-box;
+}
+
+.dark .prose h1,
+.dark .prose h2,
+.dark .prose h3,
+.dark .prose h4,
+.dark .prose h5,
+.dark .prose h6 {
+	color: white;
 }
 
 /* CODE CSS */
