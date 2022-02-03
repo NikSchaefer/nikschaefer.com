@@ -39,7 +39,6 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 				title="Portfolio"
 				description="I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development."
 				titleTemplate="%s | Nik Schaefer"
-				noindex={false}
 				openGraph={{
 					type: "website",
 					locale: "en",
