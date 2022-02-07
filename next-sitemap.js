@@ -1,4 +1,4 @@
 module.exports = {
-	siteUrl: `https://nikschaefer.tech`,
+	siteUrl: `https://nikschaefer.vercel.app`,
 	generateRobotsTxt: true,
 };

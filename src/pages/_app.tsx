@@ -42,7 +42,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 				openGraph={{
 					type: "website",
 					locale: "en",
-					url: "https://nikschaefer.tech/",
+					url: "https://nikschaefer.vercel.app/",
 					site_name: "Nik Schaefer Portfolio",
 					profile: {
 						firstName: "Nik",
