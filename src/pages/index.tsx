@@ -15,9 +15,11 @@ function Intro() {
 	return (
 		<Section class="flex flex-col-reverse md:flex-row">
 			<div className="pr-10">
-				<H1 class="mb-2 mt-10 !text-5xl">Nik Schaefer</H1>
-				<p className="mb-4 capitalize">
-					full stack developer and machine learning student
+				<H1 class="mb-2 mt-10 !text-5xl text-transparent bg-clip-text from-blue-400 to-pink-500 bg-gradient-to-r">
+					Nik Schaefer
+				</H1>
+				<p className="mb-4">
+					Full stack developer and machine learning student
 				</p>
 				<p>
 					You've found my personal slice of the internet.{" "}
@@ -32,7 +34,11 @@ function Intro() {
 				</p>
 				<Socials />
 			</div>
-			<img className="max-w-[100px] md:max-w-[230px]" src="/developer.svg" />
+			<img
+				className="max-w-[100px] md:max-w-[230px]"
+				src="/developer.svg"
+				alt="developer looking at computer"
+			/>
 		</Section>
 	);
 }
