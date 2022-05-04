@@ -19,7 +19,7 @@
 	},
 	"dependencies": {
 		"@babel/core": "^7.17.9",
-		"@headlessui/react": "^1.5.0",
+		"@headlessui/react": "^1.6.1",
 		"@mapbox/rehype-prism": "^0.8.0",
 		"@tailwindcss/typography": "^0.5.2",
 		"axios": "^0.27.2",
