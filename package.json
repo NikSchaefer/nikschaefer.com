@@ -23,7 +23,7 @@
 		"@mapbox/rehype-prism": "^0.8.0",
 		"@tailwindcss/typography": "^0.5.4",
 		"axios": "^0.27.2",
-		"clsx": "^1.1.1",
+		"clsx": "^1.2.1",
 		"gray-matter": "^4.0.3",
 		"next": "^12.2.3",
 		"next-mdx-remote": "^4.0.3",
