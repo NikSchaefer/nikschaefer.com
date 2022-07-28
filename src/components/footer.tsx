@@ -119,7 +119,7 @@ export default function Main(): JSX.Element {
 				</ul>
 				<Socials />
 				<div className="flex items-center justify-center pt-10 font-light text-center sm:pt-12">
-					© 2021 Nik Schaefer
+					© {new Date().getFullYear()} Nik Schaefer
 				</div>
 			</div>
 		</footer>
