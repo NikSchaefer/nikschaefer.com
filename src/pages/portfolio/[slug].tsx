@@ -4,13 +4,14 @@ import { portfolioFilePaths, PORT_PATH } from "@lib/mdxUtils";
 import rehypePrism from "@mapbox/rehype-prism";
 import fs from "fs";
 import matter from "gray-matter";
-import { GetStaticProps, GetStaticPaths } from "next";
+import type { GetStaticProps, GetStaticPaths } from "next";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { NextSeo } from "next-seo";
 import path from "path";
 
 type receivingData = {
-	source: never;
+	source: MDXRemoteSerializeResult;
 	frontMatter: {
 		title: string;
 		description: string;
@@ -30,7 +31,7 @@ export default function Slug({
 			<Article
 				source={source}
 				title={frontMatter.title}
-				tags={`#${ frontMatter.tags.split(",")[0] }`}
+				tags={`#${frontMatter.tags.split(",")[0]}`}
 				github={frontMatter.github}
 				link={frontMatter.link}
 			/>
