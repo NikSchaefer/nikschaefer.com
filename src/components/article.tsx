@@ -1,5 +1,6 @@
 import { underlineCSS } from "@styles/style";
 import clsx from "clsx";
+import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { MDXRemote } from "next-mdx-remote";
 import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
 
@@ -12,7 +13,7 @@ function Article({
 }: {
 	tags: string;
 	title: string;
-	source: never;
+	source: MDXRemoteSerializeResult;
 	date?: string;
 	github?: string;
 	link?: string;
