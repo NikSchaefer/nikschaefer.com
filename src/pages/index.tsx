@@ -9,7 +9,7 @@ import { NextSeo } from "next-seo";
 import Link from "next/link";
 import React from "react";
 
-import json from "../../content/featured.json";
+import projects from "../../content/projects.json";
 
 function Intro() {
 	return (
@@ -55,12 +55,12 @@ function Projects() {
 				Here are some of my favorite personal projects I've worked on:
 			</p>
 			<ul className="list-disc sm:pl-5 pl-8">
-				{json.map((value) => (
-					<li key={value.date}>
+				{projects.slice(0, 4).map((value) => (
+					<li key={value.slug}>
 						<Link href={`/portfolio/${value.slug}`} passHref>
 							<a className={underlineCSS}>{value.title}</a>
 						</Link>{" "}
-						- {value.short}
+						- {value.text}
 					</li>
 				))}
 			</ul>
