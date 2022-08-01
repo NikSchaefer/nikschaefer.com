@@ -46,13 +46,15 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const source = fs.readFileSync(postFilePath);
 	const { content, data } = matter(source);
 
+	const repo = data.github.split("/")[4];
+
 	if (data.useReadme) {
-		const url = `https://raw.githubusercontent.com/NikSchaefer/${
-			data.github.split("/")[4]
-		}/main/README.md`;
+		const url = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/README.md`;
 		const readme = await axios.get(url);
 
-		const d = readme.data;
+		const imageUrl = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/`;
+
+		const d = readme.data.replaceAll('src="./', `src="${imageUrl}`);
 		const mdxSource = await serialize(d, {
 			scope: data,
 			mdxOptions: {
