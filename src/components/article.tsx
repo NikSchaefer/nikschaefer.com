@@ -1,8 +1,11 @@
 import { underlineCSS } from "@styles/style";
+import axios from "axios";
 import clsx from "clsx";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { MDXRemote } from "next-mdx-remote";
-import { AiOutlineGithub, AiOutlineLink } from "react-icons/ai";
+import { useEffect, useState } from "react";
+import { AiOutlineGithub, AiOutlineLink, AiOutlineStar } from "react-icons/ai";
+import { TbGitFork } from "react-icons/tb";
 
 function Article({
 	title,
@@ -18,6 +21,19 @@ function Article({
 	github?: string;
 	link?: string;
 }): JSX.Element {
+	const [githubData, setGithubData] = useState(null);
+	useEffect(() => {
+		if (!github) return;
+		console.log(github);
+		const url = `https://api.github.com/repos/${
+			github.split("/")[3] + "/" + github.split("/")[4]
+		}`;
+		console.log(url);
+		axios.get(url).then((res) => {
+			const { data } = res;
+			setGithubData(data);
+		});
+	}, [github]);
 	return (
 		<article className="dark:text-white max-w-2xl px-6 py-24 mx-auto space-y-12 text-black">
 			<div className="w-full mx-auto space-y-4 text-left">
@@ -42,6 +58,7 @@ function Article({
 						<time dateTime="2021-02-12 15:34:18-0200">{date}</time>
 					)}
 				</p>
+
 				<div className="flex gap-5">
 					{github && (
 						<a
@@ -61,6 +78,14 @@ function Article({
 					)}
 				</div>
 			</div>
+			{githubData && (
+				<div className="!mt-2 flex items-center gap-1">
+					<AiOutlineStar size={20} />
+					{githubData["stargazers_count"]}
+					<TbGitFork className="ml-4" size={20} />
+					{githubData["forks_count"]}
+				</div>
+			)}
 			<section className="prose-blue prose text-left text-black dark:text-gray-100">
 				<MDXRemote {...source} />
 			</section>
