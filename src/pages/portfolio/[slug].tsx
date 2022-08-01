@@ -52,9 +52,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 		const url = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/README.md`;
 		const readme = await axios.get(url);
 
-		// const imageUrl = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/`;
+		const imageUrl = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/`;
 
-		const d = readme.data // .replaceAll('src="./', `src="${imageUrl}`);
+		const d = readme.data.replaceAll('src="./', `src="${imageUrl}`);
 		const mdxSource = await serialize(d, {
 			scope: data,
 			mdxOptions: {
