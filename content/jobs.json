@@ -1,23 +1,25 @@
 [
 	{
-		"date": 3,
-		"title": "Web Developer",
-		"company": "Sparks VB Club",
+		"date": 6,
+		"title": "Lead Developer & Technical Co-Founder",
+		"company": "Noveltor",
 		"location": "Remote",
-		"range": "October  - December 2020",
-		"url": "https://sparksvolleyballclub.com/",
+		"range": "Jan 2021  - Present",
+		"url": "https://noveltor.com",
 		"content": [
-			"Worked directly with a partner and client to develop a reactive website",
-			"Used pair programming and code review processes"
+			"Used various frameworks and languages to build and test an end to end application",
+			"Reached 99% uptime using a serverless oriented architecture",
+			"Used AWS to deploy the application to a cloud environment"
 		],
 		"tools": [
+			"Golang",
+			"AWS",
 			"React",
 			"Typescript",
-			"Javascript(ES6+)",
+			"NextJS",
 			"Git(GitHub)",
 			"CI/CD(Vercel)",
-			"npm",
-			"Styled-Components"
+			"TailwindCSS"
 		]
 	},
 	{
@@ -45,7 +47,7 @@
 		"title": "Founder",
 		"company": "Webdefyer",
 		"location": "Remote",
-		"range": "December 2020 - Present",
+		"range": "December 2020 - Nov 2021",
 		"url": "https://webdefyer.com/",
 		"content": [
 			"Development based on company freelancing.",
