@@ -2,6 +2,7 @@ import { Article } from "@components/article";
 import Layout from "@components/layout";
 import { portfolioFilePaths, PORT_PATH } from "@lib/mdxUtils";
 import rehypePrism from "@mapbox/rehype-prism";
+import axios from "axios";
 import fs from "fs";
 import matter from "gray-matter";
 import type { GetStaticProps, GetStaticPaths } from "next";
@@ -18,6 +19,7 @@ type receivingData = {
 		link: string;
 		github: string;
 		tags: string;
+		useReadme?: boolean;
 	};
 };
 
@@ -42,8 +44,29 @@ export default function Slug({
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const postFilePath = path.join(PORT_PATH, `${String(params?.slug)}.mdx`);
 	const source = fs.readFileSync(postFilePath);
-
 	const { content, data } = matter(source);
+
+	if (data.useReadme) {
+		const url = `https://raw.githubusercontent.com/NikSchaefer/${
+			data.github.split("/")[4]
+		}/main/README.md`;
+		const readme = await axios.get(url);
+
+		const d = readme.data;
+		const mdxSource = await serialize(d, {
+			scope: data,
+			mdxOptions: {
+				rehypePlugins: [rehypePrism],
+			},
+		});
+		return {
+			props: {
+				source: mdxSource,
+				frontMatter: data,
+			},
+		};
+	}
+
 	const mdxSource = await serialize(content, {
 		scope: data,
 		mdxOptions: {

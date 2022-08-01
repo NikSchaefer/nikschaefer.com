@@ -1,5 +1,29 @@
 [
 	{
+		"title": "Spotify-Review-Prediction ",
+		"github": "https://github.com/NikSchaefer/https://github.com/NikSchaefer/Spotify-Review-Prediction",
+		"external": "",
+		"tech": ["Tensorflow", "Python", "Numpy"],
+		"slug": "spotify-review-prediction",
+		"text": "Review prediction and analysis using a bi-directional RNN"
+	},
+	{
+		"title": "University Ideal Life Analysis ",
+		"github": "https://github.com/NikSchaefer/university-ideal-life",
+		"external": "",
+		"tech": ["Tensorflow", "Python", "Numpy"],
+		"slug": "university-ideal-life",
+		"text": "Neural Network used to analyze and predict student satisfaction and stress levels"
+	},
+	{
+		"title": "Critical Role NLP ",
+		"github": "https://github.com/NikSchaefer/Critical-Role-NLP",
+		"external": "",
+		"tech": ["Tensorflow", "Python", "Numpy"],
+		"slug": "critical-role-nlp",
+		"text": "Text generation based on the D&D series Critical Role"
+	},
+	{
 		"title": "Neural Style Transfer",
 		"github": "https://github.com/NikSchaefer/neural-style-transfer",
 		"external": "",
@@ -141,14 +165,6 @@
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
 		"text": "Instagram clone but for Dogs!",
 		"slug": "instadog"
-	},
-	{
-		"title": "CS Resources",
-		"github": "https://github.com/NikSchaefer/csnotes",
-		"external": "https://csresources.herokuapp.com/",
-		"tech": ["PostgresSQL", "Django", "Python", "React", "Typescript"],
-		"text": "Web App filled with Computer Science Resources for Students",
-		"slug": "csresources"
 	},
 	{
 		"title": "Octo Stats",
