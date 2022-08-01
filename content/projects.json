@@ -26,7 +26,7 @@
 	{
 		"title": "Developer Discords",
 		"github": "https://github.com/NikSchaefer/dev-discords",
-		"external": "https://dev-discords.now.sh/",
+		"external": "https://dev-discords.vercel.app/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
 		"text": "Web app for viewing a list of official developer related discord communities",
 		"slug": "dev-discords"
