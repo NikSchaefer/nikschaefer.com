@@ -43,7 +43,7 @@
 		"@types/node": "^18.8.2",
 		"@types/react": "^18.0.21",
 		"autoprefixer": "^10.4.12",
-		"eslint": "^8.22.0",
+		"eslint": "^8.25.0",
 		"eslint-config-galex": "^4.2.2",
 		"postcss": "^8.4.17",
 		"prettier": "^2.7.1",
