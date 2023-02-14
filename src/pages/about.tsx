@@ -5,6 +5,7 @@ import { NextSeo } from "next-seo";
 
 import jobs from "../../content/jobs.json";
 import studies from "../../content/studies.json";
+import { paragraphAboutMe } from "config";
 
 export default function About(): JSX.Element {
 	return (
@@ -12,18 +13,12 @@ export default function About(): JSX.Element {
 			<NextSeo title="About" />
 			<Section>
 				<H1 class="mb-10 mt-10">About Me</H1>
-				<p>
-					👋, I'm Nik, self-taught full-stack developer and hobbyist
-					programmer student based in Minnesota, US I've been enjoying
-					programming since I first began. I love supporting open
-					source and making my own projects. I have taken on various
-					roles between design, research and development.
-				</p>
+				<p>👋, {paragraphAboutMe}</p>
 			</Section>
-			<Section id="studies">
-				<H2>Studies</H2>
+			<Section id="work">
+				<H2>Work</H2>
 				<div className="flex-col items-center justify-center">
-					{studies
+					{jobs
 						.sort((a, b) => {
 							return b.date - a.date;
 						})
@@ -32,10 +27,10 @@ export default function About(): JSX.Element {
 						))}
 				</div>
 			</Section>
-			<Section id="work">
-				<H2>Work</H2>
+			<Section id="studies">
+				<H2>Self Studies</H2>
 				<div className="flex-col items-center justify-center">
-					{jobs
+					{studies
 						.sort((a, b) => {
 							return b.date - a.date;
 						})

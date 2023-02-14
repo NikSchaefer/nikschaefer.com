@@ -15,20 +15,26 @@ function Intro() {
 	return (
 		<Section class="flex flex-col-reverse md:flex-row">
 			<div className="pr-10">
-				<H1 class="mb-2 mt-10 !text-5xl text-transparent bg-clip-text from-blue-400 to-pink-500 bg-gradient-to-r">
-					Nik Schaefer
+				<H1 class="mb-2 mt-10 !text-5xl ">
+					👋 I'm{" "}
+					<span className="text-transparent bg-clip-text from-blue-400 to-pink-500 bg-gradient-to-r">
+						Nik Schaefer
+					</span>
 				</H1>
 				<p className="mb-4">
-					Full stack developer and machine learning student
+					I'm a full stack engineer and data science student
 				</p>
 				<p>
 					You've found my personal slice of the internet.{" "}
-					<Link href="/about" passHref>
-						<a className={underlineCSS}>Learn more about me</a>
+					<Link href="/about" className={underlineCSS}>
+						Learn more about me
 					</Link>{" "}
 					or{" "}
-					<Link href="mailto:nikkschaefer@gmail.com" passHref>
-						<a className={underlineCSS}>get in touch</a>
+					<Link
+						href="mailto:nikkschaefer@gmail.com"
+						className={underlineCSS}
+					>
+						get in touch
 					</Link>{" "}
 					while your here.
 				</p>
@@ -57,16 +63,19 @@ function Projects() {
 			<ul className="list-disc sm:pl-5 pl-8">
 				{projects.slice(0, 4).map((value) => (
 					<li key={value.slug}>
-						<Link href={`/portfolio/${value.slug}`} passHref>
-							<a className={underlineCSS}>{value.title}</a>
+						<Link
+							href={`/portfolio/${value.slug}`}
+							className={underlineCSS}
+						>
+							{value.title}
 						</Link>{" "}
 						- {value.text}
 					</li>
 				))}
 			</ul>
 			<div className="mt-6">
-				<Link href="/portfolio" passHref>
-					<a className={underlineCSS}>All Projects</a>
+				<Link href="/portfolio" className={underlineCSS}>
+					All Projects
 				</Link>
 			</div>
 		</Section>
@@ -90,8 +99,8 @@ function Articles() {
 				))}
 			</div>
 			<div>
-				<Link href="/blog" passHref>
-					<a className={underlineCSS}>Read All Posts</a>
+				<Link href="/blog" className={underlineCSS}>
+					Read All Posts
 				</Link>
 			</div>
 		</Section>

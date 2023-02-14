@@ -39,21 +39,22 @@
 		"slug": "neural-style-transfer",
 		"text": "Implementation of Neural Style Transfer using a GAN"
 	},
+
 	{
-		"title": "CIFAR10 ML",
-		"github": "https://github.com/NikSchaefer/CIFAR10-ML",
-		"external": "",
-		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
-		"slug": "CIFAR10-ml",
-		"text": "ML Image Classification for the CIFAR10 dataset"
+		"title": "InstaDog",
+		"github": "https://github.com/NikSchaefer/InstaDog",
+		"external": "https://instadog.vercel.app/",
+		"tech": ["React", "Typescript", "HTML + CSS", "API"],
+		"text": "Instagram clone but for Dogs!",
+		"slug": "instadog"
 	},
 	{
-		"title": "Dogs and Cats ML",
-		"github": "https://github.com/NikSchaefer/Dogs-vs-Cats-ML",
-		"external": "",
-		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
-		"slug": "dogs-vs-cats-ml",
-		"text": "ML model to distinguish images as dogs or cats"
+		"title": "Octo Stats",
+		"github": "https://github.com/NikSchaefer/Octo-Stats",
+		"external": "https://octo-stats.vercel.app/",
+		"tech": ["React", "Typescript", "Rest API", "NextJS"],
+		"text": "Website to better visualize GitHub Stats",
+		"slug": "octo-stats"
 	},
 	{
 		"title": "Vehicle Detection ML",
@@ -158,21 +159,20 @@
 		"tech": ["Typescript", "React", "CRA"],
 		"slug": "web-tools"
 	},
-
 	{
-		"title": "InstaDog",
-		"github": "https://github.com/NikSchaefer/InstaDog",
-		"external": "https://instadog.vercel.app/",
-		"tech": ["React", "Typescript", "HTML + CSS", "API"],
-		"text": "Instagram clone but for Dogs!",
-		"slug": "instadog"
+		"title": "CIFAR10 ML",
+		"github": "https://github.com/NikSchaefer/CIFAR10-ML",
+		"external": "",
+		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
+		"slug": "CIFAR10-ml",
+		"text": "ML Image Classification for the CIFAR10 dataset"
 	},
 	{
-		"title": "Octo Stats",
-		"github": "https://github.com/NikSchaefer/Octo-Stats",
-		"external": "https://octo-stats.vercel.app/",
-		"tech": ["React", "Typescript", "Rest API", "NextJS"],
-		"text": "Website to better visualize GitHub Stats",
-		"slug": "octo-stats"
+		"title": "Dogs and Cats ML",
+		"github": "https://github.com/NikSchaefer/Dogs-vs-Cats-ML",
+		"external": "",
+		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
+		"slug": "dogs-vs-cats-ml",
+		"text": "ML model to distinguish images as dogs or cats"
 	}
 ]

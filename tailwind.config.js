@@ -35,6 +35,9 @@ module.exports = {
 				expo: "cubic-bezier(0.645, 0.045, 0.355, 1);",
 			},
 			colors: {
+				link: {
+					DEFAULT: "#0366D6",
+				},
 				coal: {
 					DEFAULT: "#24292D",
 					50: "#909CA6",

@@ -7,9 +7,10 @@
 		"range": "Jan 2021  - Present",
 		"url": "https://noveltor.com",
 		"content": [
-			"Used various frameworks and languages to build and test an end to end application",
-			"Reached 99% uptime using a serverless oriented architecture",
-			"Used AWS to deploy the application to a cloud environment"
+			"Led development of a full-stack app at Noveltor, using various frameworks and languages.",
+			"Achieved 99% uptime through Serverless-oriented architecture and performance optimization.",
+			"Tested application thoroughly to ensure optimal functionality and user experience.",
+			"Collaborated closely with designers and stakeholders to ensure seamless development and delivery."
 		],
 		"tools": [
 			"Golang",
@@ -30,8 +31,8 @@
 		"range": "September - December 2020",
 		"url": "https://www.theesportcompany.com/",
 		"content": [
-			"Optimized the design of a website using modern technologies",
-			"Redesigned and Developed a site alongside designers"
+			"Leveraged skills in WordPress, Python, and Django to create and implement custom features and functionality.",
+			"Collaborated with other developers, designers, and stakeholders to ensure timely and high-quality delivery of the website."
 		],
 		"tools": [
 			"Wordpress",
@@ -39,20 +40,23 @@
 			"SCSS",
 			"Javascript",
 			"Accessibility",
-			"HTML"
+			"HTML",
+			"Python",
+			"Django"
 		]
 	},
 	{
 		"date": 5,
-		"title": "Founder",
-		"company": "Webdefyer",
+		"title": "Full Stack Software Engineer",
+		"company": "Kumon North America Inc.",
 		"location": "Remote",
-		"range": "December 2020 - Nov 2021",
+		"range": "Nov 2022 - Present",
 		"url": "https://webdefyer.com/",
 		"content": [
-			"Built numerous websites and applications for clients",
-			"Lead a small team to develop numerous applications",
-			"Leveraged architectural expertise to build a scalable application"
+			"Collaborated with team members and stakeholders to develop and deploy scalable software solutions.",
+			"Designed and maintained user-friendly front-end interfaces using React.js.",
+			"Developed and integrated back-end components using Node.js and PostgreSQL for optimal performance.",
+			"Stayed current with industry trends and technologies, incorporating emerging best practices and tools."
 		],
 		"tools": [
 			"React",
@@ -61,8 +65,8 @@
 			"Golang",
 			"CI/CD(Vercel)",
 			"Git(GitHub)",
-			"Go-Fiber",
-			"Serverless/Lambda",
+			"Node.js",
+			"PostgreSQL",
 			"CSS-in-JS",
 			"Styled-Components",
 			"CSS",
@@ -70,7 +74,6 @@
 			"npm",
 			"Docker",
 			"Next.js",
-			"Jest",
 			"Webpack"
 		]
 	}

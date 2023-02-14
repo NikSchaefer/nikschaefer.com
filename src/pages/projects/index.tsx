@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 
 import projects from "../../../content/projects.json";
 
-function Portfolio(): JSX.Element {
+function Projects(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
 	const [sortType, setSortType] = useState("All");
 
@@ -35,7 +35,7 @@ function Portfolio(): JSX.Element {
 		<Layout>
 			<NextSeo title="Portfolio" />
 			<Section class="text-center">
-				<H1>Portfolio</H1>
+				<H1>My Projects</H1>
 				<p>Online collection of my major projects</p>
 				<ul className="flex justify-center items-center flex-wrap dark:text-white">
 					{sortByOptions.map((value) => (
@@ -83,4 +83,4 @@ function Portfolio(): JSX.Element {
 	);
 }
 
-export default Portfolio;
+export default Projects;

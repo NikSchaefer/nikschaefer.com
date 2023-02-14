@@ -1,17 +1,15 @@
 [
 	{
 		"date": 0,
-		"title": "Self-Study: Python and Data Science",
+		"title": "Self-Study: Data Science",
 		"company": "",
 		"location": "",
 		"range": "September 2020 - Present",
 		"url": "",
 		"content": [
-			"Attended Google I/O Tensorflow Keynote",
-			"Completed Tensorflow for Deep Learning Course on Udacity",
-			"Completed Machine Learning Crash Course by Google",
-			"Became Proficient with Tensorflow/Keras in using large datasets",
-			"Built numerous projects using datasets on kaggle"
+			"Utilized Tensorflow/Keras to become proficient in using large datasets and built numerous projects using datasets on Kaggle.",
+			"Attended Google I/O Tensorflow Keynote and completing Tensorflow for Deep Learning and Machine Learning Crash Course by Google.",
+			"Utilized a range of tools and technologies to maintain code quality, optimize data analysis, and build powerful machine learning models."
 		],
 		"tools": [
 			"Tensorflow",
@@ -38,10 +36,10 @@
 		"range": "April 2020 - Present",
 		"url": "",
 		"content": [
-			"Built and Maintained several open source projects to learn and demonstate skills",
-			"Contributed to open source Golang framework Go-Fiber",
-			"Contributed to awslabs golang-api-proxy",
-			"Built and deployed cloud compute projects on AWS"
+			"Demonstrated strong technical proficiency and collaborative skills by building and maintaining multiple open-source projects.",
+			"Contributed to the development of open source Golang framework Go-Fiber and awslabs golang-api-proxy, showcasing problem-solving, debugging, and optimization skills.",
+			"Successfully built and deployed cloud compute projects on AWS using modern browser APIs, REST API best practices, and tools such as Serverless/Lambda, Docker, Bash, and AWS EC2.",
+			"Utilized a range of tools and technologies to maintain code quality and optimize API usage and build processes."
 		],
 		"tools": [
 			"Golang",
@@ -78,10 +76,10 @@
 		"range": "December 2019 - Present",
 		"url": "",
 		"content": [
-			"Built and Maintained several open source projects to learn and demonstate skills",
-			"Built Web Apps connected to Complex backend APIs",
-			"Attended React Summit and DockerCon in 2021",
-			"Contributed directly to open source framework GatsbyJS"
+			"Built and maintained open-source projects using React, Typescript, and JavaScript to demonstrate strong technical proficiency and collaborative skills.",
+			"Developed and launched web apps connected to complex backend APIs, showcasing expertise in modern web development principles, accessibility, and code quality.",
+			"Participated in multiple developer events such as React Summit to stay up-to-date on industry trends and expand my network.",
+			"Contributed to GatsbyJS, demonstrating problem-solving, debugging, and optimization skills using tools such as CSS-in-JS, GraphQL, and webpack."
 		],
 		"tools": [
 			"React",

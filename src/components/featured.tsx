@@ -7,13 +7,13 @@ function FeaturedArticle(props: {
 	className: string;
 }): JSX.Element {
 	return (
-		<Link href={props.Blog.link}>
-			<a
-				className={clsx(
-					"transform hover:scale-[1.01] h-[110px] transition-all rounded-xl w-full md:w-1/3 p-1 md:h-[150px]",
-					props.className
-				)}
-			>
+		<Link
+			className={clsx(
+				"transform hover:scale-[1.01] h-[110px] transition-all rounded-xl w-full md:w-1/3 p-1 md:h-[150px]",
+				props.className
+			)}
+			href={props.Blog.link}
+		>
 				<div className="bg-white h-full rounded-xl p-3 pb-0 relative dark:bg-shark dark:text-white">
 					<h3 className="font-semibold mb-4 text-lg">
 						{props.Blog.title}
@@ -22,7 +22,6 @@ function FeaturedArticle(props: {
 						{props.Blog.min} min
 					</span>
 				</div>
-			</a>
 		</Link>
 	);
 }

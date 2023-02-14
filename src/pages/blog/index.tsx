@@ -53,7 +53,7 @@ export default function BlogIndex(): JSX.Element {
 				<H2>Most Popular</H2>
 				<ul>
 					{popularBlogs.map((data) => (
-						<Post key={data.link} Blog={data} />
+						<Post key={data.link} blog={data} />
 					))}
 				</ul>
 			</Section>
@@ -61,7 +61,7 @@ export default function BlogIndex(): JSX.Element {
 				<H2>All Posts</H2>
 				<ul>
 					{blogs.map((data) => (
-						<Post key={data.link} Blog={data} />
+						<Post key={data.link} blog={data} />
 					))}
 				</ul>
 				{blogs.length === 0 && <span>No posts found.</span>}

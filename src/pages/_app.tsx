@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import "../styles/globals.css";
+import { paragraphAboutMe } from "config";
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	const router = useRouter();
@@ -21,7 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 		<>
 			<DefaultSeo
 				title="Portfolio"
-				description="I'm Nik, self-taught full-stack developer and hobbyist programmer student based in Minnesota, US I've been enjoying programming since I first began. I love supporting open source and making my own projects. I have taken on various roles between design, research and development."
+				description={paragraphAboutMe}
 				titleTemplate="%s | Nik Schaefer"
 				openGraph={{
 					type: "website",

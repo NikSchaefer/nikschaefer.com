@@ -14,8 +14,8 @@ function StyledSocial(props: {
 	return (
 		<a
 			className={clsx(
-				"flex items-center px-2 py-1 rounded-md",
-				"bg-gray-50 hover:bg-gray-100",
+				"flex items-center p-3 rounded-md",
+				"bg-gray-100 hover:bg-gray-100",
 				"dark:bg-[#1f2535] dark:hover:bg-[#2b344b]"
 			)}
 			target={props.target}
@@ -27,7 +27,7 @@ function StyledSocial(props: {
 		</a>
 	);
 }
-export const sizeOfSVG = "30px";
+export const sizeOfSVG = "35px";
 export const colorOfSVG = "#00a2ff";
 
 function Socials(): JSX.Element {
@@ -40,11 +40,9 @@ function Socials(): JSX.Element {
 				rel="noreferrer"
 			>
 				<GoMarkGithub
-					className="pr-2"
 					size={sizeOfSVG}
 					color={colorOfSVG}
 				/>
-				Github
 			</StyledSocial>
 			<StyledSocial
 				target="_blank"
@@ -53,22 +51,18 @@ function Socials(): JSX.Element {
 				ariaLabel={socials.linkedin.name}
 			>
 				<RiLinkedinBoxFill
-					className="pr-2"
 					size={sizeOfSVG}
 					color={colorOfSVG}
 				/>
-				LinkedIn
 			</StyledSocial>
 			<StyledSocial
 				href={socials.email.link}
 				ariaLabel={socials.email.name}
 			>
 				<HiOutlineMail
-					className="pr-2"
 					size={sizeOfSVG}
 					color={colorOfSVG}
 				/>
-				Email
 			</StyledSocial>
 		</div>
 	);

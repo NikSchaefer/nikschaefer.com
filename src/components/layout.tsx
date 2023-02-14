@@ -11,7 +11,7 @@ export default function Layout({
 	return (
 		<>
 			<Header />
-			<main className="font-inter">{children}</main>
+			<main className="font-inter min-h-[50vh]">{children}</main>
 			<Footer />
 		</>
 	);

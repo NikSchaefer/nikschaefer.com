@@ -34,7 +34,7 @@ function Node(props: {
 			</h3>
 			<ul className="p-0 m-0 my-3 text-sm leading-6">
 				{data.content.map((value) => (
-					<li key={value}>- {value}</li>
+					<li key={value}>• {value}</li>
 				))}
 			</ul>
 			<h3>Tools used/learned:</h3>

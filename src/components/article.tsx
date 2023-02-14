@@ -3,6 +3,7 @@ import axios from "axios";
 import clsx from "clsx";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { MDXRemote } from "next-mdx-remote";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineGithub, AiOutlineLink, AiOutlineStar } from "react-icons/ai";
 import { TbGitFork } from "react-icons/tb";
@@ -43,14 +44,14 @@ function Article({
 
 				<p className="dark:text-gray-400">
 					by{" "}
-					<a
-						href="https://nikschaefer.tech"
+					<Link
+						href="/"
 						target="_blank"
 						rel="noopener noreferrer"
 						className={clsx("dark:text-blue-400", underlineCSS)}
 					>
 						<span itemProp="name">Nik Schaefer</span>
-					</a>
+					</Link>
 					{date === undefined ? "" : " in "}
 					{date === undefined ? (
 						""
@@ -59,7 +60,7 @@ function Article({
 					)}
 				</p>
 
-				<div className="flex gap-5">
+				<div className="flex gap-2 items-center">
 					{github && (
 						<a
 							href={github}
@@ -76,16 +77,17 @@ function Article({
 							<AiOutlineLink size={25} />
 						</a>
 					)}
+					{githubData && (
+						<>
+							<AiOutlineStar size={20} />
+							{githubData["stargazers_count"]}
+							<TbGitFork className="ml-4" size={20} />
+							{githubData["forks_count"]}
+						</>
+					)}
 				</div>
 			</div>
-			{githubData && (
-				<div className="!mt-2 flex items-center gap-1">
-					<AiOutlineStar size={20} />
-					{githubData["stargazers_count"]}
-					<TbGitFork className="ml-4" size={20} />
-					{githubData["forks_count"]}
-				</div>
-			)}
+
 			<section className="prose-blue prose text-left text-black dark:text-gray-100">
 				<MDXRemote {...source} />
 			</section>

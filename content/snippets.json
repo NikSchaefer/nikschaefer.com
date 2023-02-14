@@ -6,12 +6,12 @@
 	},
 	{
 		"title": "AWS Lambda build zip file",
-		"tag": "Lambda",
+		"tag": "lambda",
 		"link": "aws-lambda"
 	},
 	{
 		"title": "Matplotlib First 25 images",
-		"tag": "Matplotlib",
+		"tag": "matplotlib",
 		"link": "plt-show"
 	}
 ]

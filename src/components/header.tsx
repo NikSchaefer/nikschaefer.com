@@ -27,21 +27,20 @@ function MenuItem({ links }: { links: HeaderLink[] }) {
 			>
 				{links.map(({ link, title, func }) => (
 					<Menu.Item key={link}>
-						<Link href={link}>
-							<a
-								className={clsx(
-									"my-1 mx-2 flex rounded",
-									"items-center px-1",
-									"hover:bg-coal-400 px-5",
-									"dark:hover:bg-shark-400",
-									"text-lg"
-								)}
-								role="link"
-								aria-label="Nav Link"
-							>
-								{func()}
-								{title}
-							</a>
+						<Link
+							className={clsx(
+								"my-1 mx-2 flex rounded",
+								"items-center px-1",
+								"hover:bg-coal-400 px-5",
+								"dark:hover:bg-shark-400",
+								"text-lg"
+							)}
+							role="link"
+							aria-label="Nav Link"
+							href={link}
+						>
+							{func()}
+							{title}
 						</Link>
 					</Menu.Item>
 				))}
@@ -102,25 +101,25 @@ export default function Main(): JSX.Element {
 			</button>
 			<nav className="p-5 hidden justify-center m-auto sm:flex">
 				{HeaderLinks.map((value) => (
-					<Link key={value.link} href={value.link}>
-						<a
-							className={clsx(
-								router.pathname === value.link
-									? "text-white"
-									: "",
-								"my-0 mx-5 text-lg",
-								"text-gray-400 hover:text-white"
-							)}
-						>
-							{value.title}
-						</a>
+					<Link
+						className={clsx(
+							router.pathname === value.link ? "text-white" : "",
+							"my-0 mx-5 text-lg",
+							"text-gray-400 hover:text-white"
+						)}
+						key={value.link}
+						href={value.link}
+					>
+						{value.title}
 					</Link>
 				))}
-				<MenuItem links={SecondaryLinks} />
+				{SecondaryLinks.length > 0 && (
+					<MenuItem links={SecondaryLinks} />
+				)}
 			</nav>
 			<nav className="flex p-5 justify-center m-auto sm:hidden">
-				<Link href="/">
-					<a className="text-lg text-gray-300">Home</a>
+				<Link className="text-lg text-gray-300" href="/">
+					Home
 				</Link>
 				<MenuItem links={[...HeaderLinks, ...SecondaryLinks]} />
 			</nav>
