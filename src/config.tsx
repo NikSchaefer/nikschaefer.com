@@ -115,7 +115,7 @@ const popularBlogs: Blog[] = [
 		image: "/blog/nextjs.jpg",
 		min: 2,
 		description:
-			"Here is a quick breakdown of the differences between NextJS and Gatsby andwhy I chose NextJS",
+			"Here is a quick breakdown of the differences between NextJS and Gatsby and why I chose NextJS",
 		date: "Jan 2020",
 		type: ["NextJS", "GatsbyJS"],
 		className: "from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]",
