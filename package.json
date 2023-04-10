@@ -41,7 +41,7 @@
 		"@babel/preset-typescript": "^7.21.0",
 		"@types/babel__core": "^7.1.20",
 		"@types/node": "^18.15.7",
-		"@types/react": "^18.0.32",
+		"@types/react": "^18.0.34",
 		"autoprefixer": "^10.4.14",
 		"eslint": "^8.34.0",
 		"postcss": "^8.4.20",
