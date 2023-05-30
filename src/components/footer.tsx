@@ -113,7 +113,7 @@ export default function Main(): JSX.Element {
 		<footer className="py-5 pt-4 pb-8 mx-auto max-w-[900px] bg-white dark:bg-shark xl:pt-8">
 			<Hr aria-orientation="horizontal" />
 			<div className="max-w-screen-lg px-4 mx-auto text-gray-400 xl:max-w-screen-xl sm:px-6 md:px-8 dark:text-gray-300">
-				<ul className="flex flex-wrap md:flex-nowrap gap-2 justify-center pb-8 text-lg font-light text-center">
+				<ul className="grid grid-cols-1 sm:grid-cols-3 gap-2 justify-center pb-8 text-lg font-light text-center">
 					<Column col={Col1} />
 					<Column col={Col2} />
 					<Column col={Col3} />
