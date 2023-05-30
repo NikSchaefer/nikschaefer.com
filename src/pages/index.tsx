@@ -110,7 +110,7 @@ function Articles() {
 export default function Home(): JSX.Element {
 	return (
 		<Layout>
-			<NextSeo title="Home" />
+			<NextSeo title="Developer" />
 			<Intro />
 			<Projects />
 			<Articles />
