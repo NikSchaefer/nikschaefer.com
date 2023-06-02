@@ -37,7 +37,7 @@
 		"react-icons": "^4.8.0",
 		"react-intersection-observer": "^9.4.3",
 		"rehype": "^12.0.1",
-		"typescript": "^5.0.4"
+		"typescript": "^5.1.3"
 	},
 	"devDependencies": {
 		"@babel/preset-typescript": "^7.21.5",
