@@ -38,6 +38,21 @@ module.exports = {
 				link: {
 					DEFAULT: "#0366D6",
 				},
+				primary: {
+					100: "#f2e1fb",
+					200: "#e5c4f6",
+					300: "#d7a6f2",
+					400: "#ca89ed",
+					500: "#bd6be9",
+					600: "#9756ba",
+					700: "#71408c",
+					800: "#4c2b5d",
+					900: "#26152f",
+					DEFAULT: "#bd6be9",
+				},
+				secondary: {
+					DEFAULT: "#10101a",
+				},
 				coal: {
 					DEFAULT: "#24292D",
 					50: "#909CA6",

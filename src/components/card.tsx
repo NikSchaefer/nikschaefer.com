@@ -39,20 +39,20 @@ function Card({ title, slug, text }: Project): JSX.Element {
 	return (
 		<Link
 			className={clsx(
-				"text-left max-w-[300px] w-[90%] p-3 rounded-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100",
-				"border border-gray-200 dark:border-gray-600"
+				"text-left max-w-[300px] w-[90%] p-3 rounded-md bg-gray-800 hover:bg-gray-700",
+				"border border-gray-600"
 			)}
 			href={`/projects/${slug}`}
 		>
 			<h1
 				className={clsx(
-					"mt-2 text-lg font-semibold text-gray-800 dark:text-white",
+					"mt-2 text-lg font-semibold text-white",
 					"w-[fit-content] from-red-200 to-yellow-200"
 				)}
 			>
 				{title}
 			</h1>
-			<p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
+			<p className="mt-2 text-sm text-gray-300">
 				{text}
 			</p>
 		</Link>

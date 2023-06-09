@@ -43,8 +43,8 @@ function Node(props: {
 					<li
 						className={clsx(
 							"w-auto px-2 py-1 m-1 text-blue-500",
-							"bg-blue-200 bg-opacity-25 rounded-sm",
-							"dark:bg-opacity-10"
+							"bg-blue-200 rounded-sm",
+							"bg-opacity-10"
 						)}
 						key={value}
 					>

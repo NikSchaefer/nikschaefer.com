@@ -24,7 +24,7 @@ function Post(props: { blog: Blog }): JSX.Element {
 					<span className="mr-1">• {v}</span>
 				))}
 			</p>
-			<p className="mt-2 text-black dark:text-gray-300">
+			<p className="mt-2 text-gray-300">
 				{props.blog.description}
 			</p>
 		</div>

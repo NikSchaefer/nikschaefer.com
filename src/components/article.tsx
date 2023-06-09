@@ -36,19 +36,19 @@ function Article({
 		});
 	}, [github]);
 	return (
-		<article className="dark:text-white max-w-2xl px-6 py-24 mx-auto space-y-12 text-black">
+		<article className="text-white max-w-2xl px-6 py-24 mx-auto space-y-12">
 			<div className="w-full mx-auto space-y-4 text-left">
 				<h1 className="text-4xl font-bold leading-tight capitalize md:text-5xl">
 					{title}
 				</h1>
 
-				<p className="dark:text-gray-400">
+				<p className="text-gray-400">
 					by{" "}
 					<Link
 						href="/"
 						target="_blank"
 						rel="noopener noreferrer"
-						className={clsx("dark:text-blue-400", underlineCSS)}
+						className={clsx("text-blue-400", underlineCSS)}
 					>
 						<span itemProp="name">Nik Schaefer</span>
 					</Link>
@@ -64,7 +64,7 @@ function Article({
 					{github && (
 						<a
 							href={github}
-							className="rounded-full hover:bg-gray-200 p-2 dark:hover:bg-shark-400"
+							className="rounded-full p-2 hover:bg-shark-400"
 						>
 							<AiOutlineGithub size={25} />
 						</a>
@@ -72,7 +72,7 @@ function Article({
 					{link && (
 						<a
 							href={link}
-							className="rounded-full hover:bg-gray-200 p-2 dark:hover:bg-shark-400"
+							className="rounded-full p-2 hover:bg-shark-400"
 						>
 							<AiOutlineLink size={25} />
 						</a>
@@ -88,7 +88,7 @@ function Article({
 				</div>
 			</div>
 
-			<section className="prose-blue prose text-left text-black dark:text-gray-100">
+			<section className="prose-blue prose text-left text-gray-100">
 				<MDXRemote {...source} />
 			</section>
 		</article>

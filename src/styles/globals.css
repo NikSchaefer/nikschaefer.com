@@ -16,6 +16,18 @@
 	}
 }
 
+.underline-effect {
+	@apply bg-gradient-to-r from-blue-400 to-pink-500 bg-growing-underline text-primary-400 hover:text-white;
+}
+
+.text-effect {
+	@apply text-transparent bg-clip-text from-blue-400 to-pink-500 bg-gradient-to-r;
+}
+
+.filter-effect {
+	backdrop-filter: blur(20px) saturate(1.7);
+}
+
 ::-webkit-scrollbar {
 	width: 8px;
 }
@@ -46,6 +58,56 @@
 .dark .prose h5,
 .dark .prose h6 {
 	color: white;
+}
+
+.title {
+	@apply text-5xl sm:text-7xl md:text-8xl lg:text-9xl;
+}
+
+.h0 {
+	@apply text-3xl md:text-5xl;
+}
+
+.h1,
+h1 {
+	@apply text-2xl md:text-4xl;
+}
+
+.h2,
+h2 {
+	@apply text-xl md:text-3xl;
+}
+
+.h3,
+h3 {
+	@apply text-lg md:text-2xl;
+}
+
+.h4,
+h4 {
+	@apply text-base md:text-lg;
+}
+
+.h5,
+h5 {
+	@apply text-sm md:text-base;
+}
+
+.h6,
+h6 {
+	@apply text-xs md:text-sm;
+}
+
+.h7 {
+	@apply text-xs;
+}
+
+.card-bg {
+	background: linear-gradient(
+		180deg,
+		rgba(35, 37, 49, 0.5),
+		rgba(15, 15, 24, 0.5)
+	);
 }
 
 /* CODE CSS */

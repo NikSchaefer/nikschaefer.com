@@ -39,7 +39,7 @@ type HeaderLink = {
 const HeaderLinks: HeaderLink[] = [
 	{
 		link: "/",
-		title: "Home",
+		title: "Hub",
 		func: () => {
 			return <AiOutlineHome className="m-2" size="20px" />;
 		},

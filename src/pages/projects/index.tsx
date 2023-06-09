@@ -37,7 +37,7 @@ function Projects(): JSX.Element {
 			<Section class="text-center">
 				<H1>My Projects</H1>
 				<p>Online collection of my major projects</p>
-				<ul className="flex justify-center items-center flex-wrap dark:text-white">
+				<ul className="flex justify-center items-center flex-wrap text-white">
 					{sortByOptions.map((value) => (
 						<button
 							className={clsx(

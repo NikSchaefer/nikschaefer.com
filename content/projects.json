@@ -5,7 +5,8 @@
 		"external": "",
 		"tech": ["Tensorflow", "Python", "Numpy"],
 		"slug": "spotify-review-prediction",
-		"text": "Review prediction and analysis using a bi-directional RNN"
+		"text": "Review prediction and analysis using a bi-directional RNN",
+		"image": "https://images.unsplash.com/photo-1613329671121-5d1cf551cc3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
 	},
 	{
 		"title": "University Ideal Life Analysis ",
@@ -13,7 +14,8 @@
 		"external": "",
 		"tech": ["Tensorflow", "Python", "Numpy"],
 		"slug": "university-ideal-life",
-		"text": "Neural Network used to analyze and predict student satisfaction and stress levels"
+		"text": "Neural Network used to analyze and predict student satisfaction and stress levels",
+		"image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
 	},
 	{
 		"title": "Critical Role NLP ",
@@ -21,7 +23,8 @@
 		"external": "",
 		"tech": ["Tensorflow", "Python", "Numpy"],
 		"slug": "critical-role-nlp",
-		"text": "Text generation based on the D&D series Critical Role"
+		"text": "Text generation based on the D&D series Critical Role",
+		"image": "https://plus.unsplash.com/premium_photo-1682407404553-6df3d4140b97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
 	},
 	{
 		"title": "Developer Discords",
@@ -29,7 +32,8 @@
 		"external": "https://dev-discords.vercel.app/",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
 		"text": "Web app for viewing a list of official developer related discord communities",
-		"slug": "dev-discords"
+		"slug": "dev-discords",
+		"image": "https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"title": "Neural Style Transfer",
@@ -37,7 +41,8 @@
 		"external": "",
 		"tech": ["Tensorflow", "Python", "Numpy"],
 		"slug": "neural-style-transfer",
-		"text": "Implementation of Neural Style Transfer using a GAN"
+		"text": "Implementation of Neural Style Transfer using a GAN",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 
 	{
@@ -46,7 +51,8 @@
 		"external": "https://instadog.vercel.app/",
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
 		"text": "Instagram clone but for Dogs!",
-		"slug": "instadog"
+		"slug": "instadog",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"title": "Octo Stats",
@@ -54,7 +60,8 @@
 		"external": "https://octo-stats.vercel.app/",
 		"tech": ["React", "Typescript", "Rest API", "NextJS"],
 		"text": "Website to better visualize GitHub Stats",
-		"slug": "octo-stats"
+		"slug": "octo-stats",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"title": "Vehicle Detection ML",
@@ -62,7 +69,8 @@
 		"external": "",
 		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
 		"slug": "vehicle-detection-ml",
-		"text": "Machine Learning model built to detect if an image has a vehicle"
+		"text": "Machine Learning model built to detect if an image has a vehicle",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"title": "Mnist Handwritten digits ML",
@@ -70,7 +78,8 @@
 		"external": "",
 		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
 		"slug": "mnist-handwritten-digits-ml",
-		"text": "Machine Learning Model to classify handwritten digits"
+		"text": "Machine Learning Model to classify handwritten digits",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"title": "Go-Fiber Boilerplate",
@@ -78,7 +87,8 @@
 		"external": "",
 		"tech": ["Golang", "Fiber"],
 		"slug": "go-fiber",
-		"text": "Golang Rest API built with GORM, Go-Fiber, and a PostgresSQL database."
+		"text": "Golang Rest API built with GORM, Go-Fiber, and a PostgresSQL database.",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"text": "My Personal Golang CLI for productivity and networking",
@@ -86,7 +96,8 @@
 		"github": "https://github.com/NikSchaefer/My-CLI",
 		"external": "",
 		"tech": ["Golang", "netsh"],
-		"slug": "my-cli"
+		"slug": "my-cli",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"text": "Second Iteration of my Personal Portfolio",
@@ -102,7 +113,8 @@
 			"ESLint",
 			"Google Analytics"
 		],
-		"slug": "portfolio-v2"
+		"slug": "portfolio-v2",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"text": "Golang functions to connect and disconnect from networks",
@@ -110,7 +122,8 @@
 		"github": "https://github.com/NikSchaefer/netsh",
 		"external": "",
 		"tech": ["Golang", "OS"],
-		"slug": "go-netsh"
+		"slug": "go-netsh",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"text": "MIT NextJS Typescript Template with Prettier",
@@ -126,7 +139,8 @@
 			"Jest",
 			"React Icons"
 		],
-		"slug": "nextjs-boilerplate"
+		"slug": "nextjs-boilerplate",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"text": "Django Backend React Typescript frontend template configured to Easily Deploy on Heroku.",
@@ -134,14 +148,16 @@
 		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
 		"tech": ["Python", "Django", "React", "Typescript", "PostgresSQL"],
-		"slug": "django-backend"
+		"slug": "django-backend",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"text": "The First Iteration of my Personal Portfolio",
 		"title": "Portfolio V1",
 		"github": "https://github.com/NikSchaefer/portfolio",
 		"tech": ["React", "Typescript", "HTML + CSS"],
-		"slug": "portfolio-v1"
+		"slug": "portfolio-v1",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"text": "The umbrella project is an App that Accesses the Open Weather API.",
@@ -149,7 +165,8 @@
 		"github": "https://github.com/NikSchaefer/umbrella_website",
 		"external": "https://theumbrella.vercel.app/",
 		"tech": ["React Native", "ReactJS", "Javascript"],
-		"slug": "umbrella-app"
+		"slug": "umbrella-app",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"text": "A site containing direct comparisons between Databases, Frameworks, Tools and more",
@@ -157,7 +174,8 @@
 		"github": "https://github.com/NikSchaefer/Web-Tools",
 		"external": "https://development-tools.vercel.app/",
 		"tech": ["Typescript", "React", "CRA"],
-		"slug": "web-tools"
+		"slug": "web-tools",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"title": "CIFAR10 ML",
@@ -165,7 +183,8 @@
 		"external": "",
 		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
 		"slug": "CIFAR10-ml",
-		"text": "ML Image Classification for the CIFAR10 dataset"
+		"text": "ML Image Classification for the CIFAR10 dataset",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
 		"title": "Dogs and Cats ML",
@@ -173,6 +192,7 @@
 		"external": "",
 		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
 		"slug": "dogs-vs-cats-ml",
-		"text": "ML model to distinguish images as dogs or cats"
+		"text": "ML model to distinguish images as dogs or cats",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	}
 ]

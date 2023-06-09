@@ -3,42 +3,42 @@ import React from "react";
 
 function H1(props: { children: React.ReactNode; class?: string }): JSX.Element {
 	const className = clsx(
-		"text-6xl font-bold my-2 text-black dark:text-white",
+		"text-6xl font-bold my-2 text-white",
 		props.class
 	);
 	return <h1 className={className}>{props.children}</h1>;
 }
 function H2(props: { children: React.ReactNode; class?: string }): JSX.Element {
 	const className = clsx(
-		"text-4xl font-bold my-2 text-black dark:text-white",
+		"text-4xl font-bold my-2 text-white",
 		props.class
 	);
 	return <h2 className={className}>{props.children}</h2>;
 }
 function H3(props: { children: React.ReactNode; class?: string }): JSX.Element {
 	const className = clsx(
-		"text-2xl font-bold my-2 text-black dark:text-white",
+		"text-2xl font-bold my-2 text-white",
 		props.class
 	);
 	return <h3 className={className}>{props.children}</h3>;
 }
 function H4(props: { children: React.ReactNode; class?: string }): JSX.Element {
 	const className = clsx(
-		"text-xl font-bold my-2 text-black dark:text-white",
+		"text-xl font-bold my-2 text-white",
 		props.class
 	);
 	return <h4 className={className}>{props.children}</h4>;
 }
 function H5(props: { children: React.ReactNode; class?: string }): JSX.Element {
 	const className = clsx(
-		"text-lg font-bold my-2 text-black dark:text-white",
+		"text-lg font-bold my-2 text-white",
 		props.class
 	);
 	return <h5 className={className}>{props.children}</h5>;
 }
 function H6(props: { children: React.ReactNode; class?: string }): JSX.Element {
 	const className = clsx(
-		"text-base font-bold my-2 text-black dark:text-white",
+		"text-base font-bold my-2 text-white",
 		props.class
 	);
 	return <h6 className={className}>{props.children}</h6>;
