@@ -1,12 +1,12 @@
 <p align="center">
-<img width="150" src="https://nikschaefer.vercel.app/developer.svg" />
+<img width="150" src="https://nikschaefer.com/developer.svg" />
 </p>
 
-<h2 align="center"><a href="https://nikschaefer.vercel.app/">Nik Schaefer</a></h2>
+<h2 align="center"><a href="https://nikschaefer.com/">Nik Schaefer</a></h2>
 
 <p align="center">Full Stack Developer</p>
 
-<img src="https://nikschaefer.vercel.app/site.JPG" />
+<img src="https://nikschaefer.com/site.JPG" />
 
 _Strained eyes? There's DarkMode too :p_
 
