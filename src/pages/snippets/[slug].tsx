@@ -1,4 +1,4 @@
-import { H1, Section } from "@components/design";
+import { Article } from "@components/article";
 import Layout from "@components/layout";
 import { snippetsFilePaths, SNIP_PATH } from "@lib/mdxUtils";
 import rehypePrism from "@mapbox/rehype-prism";
@@ -6,7 +6,6 @@ import fs from "fs";
 import matter from "gray-matter";
 import type { GetStaticProps, GetStaticPaths } from "next";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
-import { MDXRemote } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { NextSeo } from "next-seo";
 import path from "path";
@@ -26,12 +25,13 @@ export default function Slug({
 	return (
 		<Layout>
 			<NextSeo title={frontMatter.title} />
-			<Section>
-				<H1 class="my-10">{frontMatter.title}</H1>
-				<article className="prose prose-blue">
-					<MDXRemote {...source} />
-				</article>
-			</Section>
+			<section>
+				<Article
+					source={source}
+					title={frontMatter.title}
+					tags="#tailwindcss"
+				/>
+			</section>
 		</Layout>
 	);
 }

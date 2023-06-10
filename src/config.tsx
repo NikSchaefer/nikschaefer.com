@@ -1,17 +1,13 @@
 import { AiOutlineHome } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { HiOutlineDocumentText } from "react-icons/hi";
-import { RiScissorsLine } from "react-icons/ri";
 import { VscProject } from "react-icons/vsc";
 
-// google analytics measurement id
 const GA_TRACKING_ID = "U-XXXXXX";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 const IS_TEST = process.env.NODE_ENV === "test";
 const IS_BROWSER = typeof window !== "undefined";
 export { GA_TRACKING_ID, IS_PRODUCTION, IS_TEST, IS_BROWSER };
-
-const paragraphAboutMe = `I'm a data science student with a passion for building scalable and maintainable software. I'm currently working as a software engineer at a startup in the mental health space. I'm also a big fan of open source and have contributed to many projects. I'm always looking for new opportunities to learn and grow.`;
 
 const socials = {
 	github: {
@@ -32,14 +28,13 @@ const socials = {
 type HeaderLink = {
 	link: string;
 	title: string;
-	// eslint-disable-next-line @typescript-eslint/ban-types
 	func: Function;
 };
 
 const HeaderLinks: HeaderLink[] = [
 	{
 		link: "/",
-		title: "Home",
+		title: "Hub",
 		func: () => {
 			return <AiOutlineHome className="m-2" size="20px" />;
 		},
@@ -52,13 +47,6 @@ const HeaderLinks: HeaderLink[] = [
 		},
 	},
 	{
-		link: "/blog",
-		title: "Blog",
-		func: () => {
-			return <HiOutlineDocumentText className="m-2" size="20px" />;
-		},
-	},
-	{
 		link: "/projects",
 		title: "Projects",
 		func: () => {
@@ -66,15 +54,13 @@ const HeaderLinks: HeaderLink[] = [
 		},
 	},
 	{
-		link: "/snippets",
-		title: "Snippets",
+		link: "/blog",
+		title: "Blog",
 		func: () => {
-			return <RiScissorsLine className="m-2" size="20px" />;
+			return <HiOutlineDocumentText className="m-2" size="20px" />;
 		},
 	},
 ];
-
-const SecondaryLinks: HeaderLink[] = [];
 
 type Blog = {
 	link: string;
@@ -259,12 +245,5 @@ const allBlogs: Blog[] = [
 	},
 ];
 
-export {
-	HeaderLinks,
-	allBlogs,
-	popularBlogs,
-	socials,
-	SecondaryLinks,
-	paragraphAboutMe,
-};
+export { HeaderLinks, allBlogs, popularBlogs, socials };
 export type { Blog, HeaderLink };

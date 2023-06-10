@@ -15,8 +15,7 @@ function StyledSocial(props: {
 		<a
 			className={clsx(
 				"flex items-center p-3 rounded-md",
-				"bg-gray-100 hover:bg-gray-100",
-				"dark:bg-[#1f2535] dark:hover:bg-[#2b344b]"
+				"bg-[#1f2535] hover:bg-[#2b344b]"
 			)}
 			target={props.target}
 			href={props.href}

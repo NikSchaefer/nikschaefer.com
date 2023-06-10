@@ -1,8 +1,9 @@
-import { H1 } from "@components/design";
 import Layout from "@components/layout";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
+import React from "react";
+import { motion } from "framer-motion";
 
 import json from "../../../content/snippets.json";
 
@@ -23,10 +24,29 @@ export default function Snippets(): JSX.Element {
 	return (
 		<Layout>
 			<NextSeo title="Snippets" />
-			<H1 class="mt-10 text-center">Snippets</H1>
-			<p className="text-center mb-4">
-				Small bits of code that I use that don't deserve a blog
-			</p>
+			<section className="pt-[5em] container mx-auto">
+				<motion.h1
+					initial={{ y: -10, opacity: 0 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.2, delay: 0.1 }}
+					viewport={{ once: true }}
+					className={clsx(
+						"title mx-auto text-effect font-semibold text-center"
+					)}
+				>
+					Snippets.
+				</motion.h1>
+				<motion.p
+					initial={{ y: -10, opacity: 0 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.2, delay: 0.3 }}
+					viewport={{ once: true }}
+					className="mt-[2em] h4 text-center mx-auto w-[90%] max-w-[750px]"
+				>
+					Here are some of my favorite code snippets that come in use
+					here and now.
+				</motion.p>
+			</section>
 			<div className="flex flex-col lg:flex-row flex-wrap items-center justify-center gap-x-4 gap-y-4 text-black">
 				{json.map((value) => (
 					<Link

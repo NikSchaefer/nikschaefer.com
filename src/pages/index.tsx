@@ -1,109 +1,63 @@
-import { H1, H2, Section } from "@components/design";
-import FeaturedArticle from "@components/featured";
 import Layout from "@components/layout";
-import { Socials } from "@components/socials";
-import { underlineCSS } from "@styles/style";
 import clsx from "clsx";
-import { popularBlogs } from "config";
 import { NextSeo } from "next-seo";
-import Link from "next/link";
 import React from "react";
 
 import projects from "../../content/projects.json";
+import Project from "@components/project";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 function Intro() {
 	return (
-		<Section class="flex flex-col-reverse md:flex-row">
-			<div className="pr-10">
-				<H1 class="mb-2 mt-10 !text-5xl ">
-					👋 I'm{" "}
-					<span className="text-transparent bg-clip-text from-blue-400 to-pink-500 bg-gradient-to-r">
-						Nik Schaefer
-					</span>
-				</H1>
-				<p className="mb-4">
-					I'm a full stack engineer and data science student
-				</p>
-				<p>
-					You've found my personal slice of the internet.{" "}
-					<Link href="/about" className={underlineCSS}>
-						Learn more about me
-					</Link>{" "}
-					or{" "}
-					<Link
-						href="mailto:nikkschaefer@gmail.com"
-						className={underlineCSS}
-					>
-						get in touch
-					</Link>{" "}
-					while your here.
-				</p>
-				<Socials />
-			</div>
-			<img
-				className="max-w-[100px] md:max-w-[230px]"
-				src="/developer.svg"
-				alt="developer looking at computer"
-			/>
-		</Section>
+		<section className="pt-[5em] container mx-auto">
+			<motion.h1
+				initial={{ y: -10, opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.2, delay: 0.1 }}
+				viewport={{ once: true }}
+				className={clsx("title mx-auto font-semibold text-center")}
+			>
+				Hi. I'm Nik.
+				<br />
+				<span className="text-effect">A Developer.</span>{" "}
+			</motion.h1>
+			<motion.p
+				initial={{ y: -10, opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.2, delay: 0.3 }}
+				viewport={{ once: true }}
+				className="mt-[2em] h4 text-center mx-auto w-[90%] max-w-[750px]"
+			>
+				As a driven lead software engineer and co-founder, I am
+				dedicated to leveraging technology and education to create
+				positive change and shape a more equitable future.
+			</motion.p>
+		</section>
 	);
 }
 
 function Projects() {
 	return (
-		<Section>
-			<H2>Projects</H2>
-			<p>
-				I usually work with the web platform but love to dabble in
-				machine learning and its wonders.
-				<br />
-				<br />
-				Here are some of my favorite personal projects I've worked on:
-			</p>
-			<ul className="list-disc sm:pl-5 pl-8">
-				{projects.slice(0, 4).map((value) => (
-					<li key={value.slug}>
-						<Link
-							href={`/portfolio/${value.slug}`}
-							className={underlineCSS}
-						>
-							{value.title}
-						</Link>{" "}
-						- {value.text}
-					</li>
+		<section>
+			<div className="pt-[8em] flex flex-col justify-center items-center gap-16 container mx-auto max-w-[1000px]">
+				{projects.slice(0, 4).map((project, i) => (
+					<Project {...project} key={project.slug} index={i} />
 				))}
-			</ul>
-			<div className="mt-6">
-				<Link href="/portfolio" className={underlineCSS}>
-					All Projects
-				</Link>
 			</div>
-		</Section>
-	);
-}
 
-function Articles() {
-	return (
-		<Section>
-			<H2>Featured Articles</H2>
-			<div className="flex flex-col justify-center my-10 md:flex-row gap-6">
-				{popularBlogs.slice(0, 3).map((data) => (
-					<FeaturedArticle
-						className={clsx(
-							"bg-gradient-to-r capitalize",
-							data.className
-						)}
-						key={data.title}
-						Blog={data}
-					/>
-				))}
-			</div>
-			<div>
-				<Link href="/blog" className={underlineCSS}>
-					Read All Posts
+			<div className="flex justify-center pt-12">
+				<Link
+					href="/projects"
+					className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
+				>
+					<span className="w-full h-full bg-gradient-to-br from-blue-400 via-[#ff5478] to-pink-500 group-hover:from-blue-400 group-hover:via-[#ff5478] group-hover:to-pink-500 absolute"></span>
+					<span className="relative px-6 py-3 transition-all ease-out bg-secondary rounded-md group-hover:bg-opacity-0 duration-400">
+						<span className="relative text-white">See More</span>
+					</span>
 				</Link>
 			</div>
-		</Section>
+		</section>
 	);
 }
 
@@ -113,7 +67,6 @@ export default function Home(): JSX.Element {
 			<NextSeo title="Developer" />
 			<Intro />
 			<Projects />
-			<Articles />
 		</Layout>
 	);
 }

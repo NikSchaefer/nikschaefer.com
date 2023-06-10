@@ -1,15 +1,9 @@
 import clsx from "clsx";
 import Link from "next/link";
+import { Project } from "types";
 
-type Project = {
-	title: string;
-	github: string;
-	external?: string;
-	content?: string;
-	tech: string[];
-	slug: string;
-	text?: string;
-};
+import { motion } from "framer-motion";
+
 type SortOption = {
 	name: string;
 	include: string[];
@@ -18,11 +12,11 @@ type SortOption = {
 const sortByOptions: SortOption[] = [
 	{ name: "All", include: [] },
 	{
-		name: "Machine Learning",
+		name: "ML",
 		include: ["Tensorflow", "tensorflow"],
 	},
 	{
-		name: "Web Dev",
+		name: "Web",
 		include: ["Javascript", "Typescript", "React", "Next.js"],
 	},
 	{
@@ -30,34 +24,39 @@ const sortByOptions: SortOption[] = [
 		include: ["Python", "Tensorflow", "Pandas"],
 	},
 	{
-		name: "Golang",
+		name: "Go",
 		include: ["Go", "Golang", "go", "golang"],
 	},
 ];
 
-function Card({ title, slug, text }: Project): JSX.Element {
+function Card({ title, slug, text, index }: Project): JSX.Element {
 	return (
-		<Link
+		<motion.div
+			initial={{ y: -10, opacity: 0 }}
+			animate={{ opacity: 1, y: 0 }}
+			viewport={{ once: true }}
+			transition={{
+				duration: 0.2,
+				delay: 0.5 + (index || 0) * 0.1,
+			}}
 			className={clsx(
-				"text-left max-w-[300px] w-[90%] p-3 rounded-md dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-100",
-				"border border-gray-200 dark:border-gray-600"
+				"text-left bg-secondary-600 rounded-xl hover:-translate-y-0.5",
+				"border border-primary/30 transition-transform duration-200",
+				"hover:border-primary/70 p-3"
 			)}
-			href={`/projects/${slug}`}
 		>
-			<h1
-				className={clsx(
-					"mt-2 text-lg font-semibold text-gray-800 dark:text-white",
-					"w-[fit-content] from-red-200 to-yellow-200"
-				)}
+			<Link
+				className="w-full h-full px-6 py-4"
+				href={`/projects/${slug}`}
 			>
-				{title}
-			</h1>
-			<p className="mt-2 text-sm text-gray-600 dark:text-gray-300">
-				{text}
-			</p>
-		</Link>
+				<h4 className={clsx("mt-2 font-semibold text-primary")}>
+					{title}
+				</h4>
+				<p className="mt-2 text-sm text-gray-300">{text}</p>
+			</Link>
+		</motion.div>
 	);
 }
 
 export { Card, sortByOptions };
-export type { Project, SortOption };
+export type { SortOption };
