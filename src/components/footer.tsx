@@ -23,20 +23,20 @@ const Col2: ColType[] = [
 
 const Col3: ColType[] = [
 	{
-		name: "About",
-		link: "/about",
+		name: "Snippets",
+		link: "/snippets",
 	},
 	{
 		name: "Blog",
 		link: "/blog",
 	},
 	{
-		name: "Projects",
-		link: "/projects",
+		name: "About",
+		link: "/about",
 	},
 	{
-		name: "Snippets",
-		link: "/snippets",
+		name: "Projects",
+		link: "/projects",
 	},
 ];
 

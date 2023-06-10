@@ -1,5 +1,4 @@
 import { Card, sortByOptions } from "@components/card";
-import { H1, Section } from "@components/design";
 import Layout from "@components/layout";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
@@ -7,7 +6,7 @@ import { useEffect, useState } from "react";
 
 import projects from "../../../content/projects.json";
 
-function Projects(): JSX.Element {
+export default function Projects(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
 	const [sortType, setSortType] = useState("All");
 
@@ -33,18 +32,30 @@ function Projects(): JSX.Element {
 
 	return (
 		<Layout>
-			<NextSeo title="Portfolio" />
-			<Section class="text-center">
-				<H1>My Projects</H1>
-				<p>Online collection of my major projects</p>
-				<ul className="flex justify-center items-center flex-wrap text-white">
-					{sortByOptions.map((value) => (
+			<NextSeo title="Projects" />
+			<section className="pt-[5em] container mx-auto">
+				<h1
+					className={clsx(
+						"title mx-auto font-semibold text-center text-effect"
+					)}
+				>
+					Projects.
+				</h1>
+				<p className="mt-[2em] h4 text-center mx-auto w-[90%] max-w-[750px]">
+					A selection of my original creations—tools and
+					websites—developed to be useful, entertaining, and sometimes
+					wonderfully odd.
+				</p>
+			</section>
+			<section className="pt-[3em] max-w-[1400px] m-auto w-[95%] ">
+				<ul className="flex items-center text-white my-5 relative">
+					{sortByOptions.map((value, i) => (
 						<button
 							className={clsx(
 								value.name === sortType
-									? "border-blue-500"
-									: "",
-								"my-2 mx-1 border-2 py-1 px-2 text-base"
+									? "text-primary"
+									: "text-gray-400",
+								"my-2 mx-1 py-1 px-2"
 							)}
 							key={value.name}
 							onClick={() => {
@@ -54,7 +65,7 @@ function Projects(): JSX.Element {
 							aria-label={`sort by ${value.name}`}
 						>
 							{value.name}{" "}
-							<span>
+							<span className="absolute h7">
 								{value.name === "All"
 									? projects.length
 									: projects.filter((project) =>
@@ -63,15 +74,16 @@ function Projects(): JSX.Element {
 											)
 									  ).length}
 							</span>
+							{i + 1 !== sortByOptions.length && (
+								<span className="ml-4 text-gray-400">/</span>
+							)}
 						</button>
 					))}
 				</ul>
-			</Section>
-			<section className="mb-10">
 				<div
 					className={clsx(
-						"flex flex-wrap justify-center",
-						"max-w-[1100px] m-auto w-[95%] gap-6"
+						"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3",
+						"gap-10"
 					)}
 				>
 					{projectData.map((data) => (
@@ -82,5 +94,3 @@ function Projects(): JSX.Element {
 		</Layout>
 	);
 }
-
-export default Projects;

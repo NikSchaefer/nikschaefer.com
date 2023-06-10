@@ -1,10 +1,8 @@
 import { AiOutlineHome } from "react-icons/ai";
 import { BsPerson } from "react-icons/bs";
 import { HiOutlineDocumentText } from "react-icons/hi";
-import { RiScissorsLine } from "react-icons/ri";
 import { VscProject } from "react-icons/vsc";
 
-// google analytics measurement id
 const GA_TRACKING_ID = "U-XXXXXX";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 const IS_TEST = process.env.NODE_ENV === "test";
@@ -32,7 +30,6 @@ const socials = {
 type HeaderLink = {
 	link: string;
 	title: string;
-	// eslint-disable-next-line @typescript-eslint/ban-types
 	func: Function;
 };
 
@@ -52,13 +49,6 @@ const HeaderLinks: HeaderLink[] = [
 		},
 	},
 	{
-		link: "/blog",
-		title: "Blog",
-		func: () => {
-			return <HiOutlineDocumentText className="m-2" size="20px" />;
-		},
-	},
-	{
 		link: "/projects",
 		title: "Projects",
 		func: () => {
@@ -66,15 +56,13 @@ const HeaderLinks: HeaderLink[] = [
 		},
 	},
 	{
-		link: "/snippets",
-		title: "Snippets",
+		link: "/blog",
+		title: "Blog",
 		func: () => {
-			return <RiScissorsLine className="m-2" size="20px" />;
+			return <HiOutlineDocumentText className="m-2" size="20px" />;
 		},
 	},
 ];
-
-const SecondaryLinks: HeaderLink[] = [];
 
 type Blog = {
 	link: string;
@@ -259,12 +247,5 @@ const allBlogs: Blog[] = [
 	},
 ];
 
-export {
-	HeaderLinks,
-	allBlogs,
-	popularBlogs,
-	socials,
-	SecondaryLinks,
-	paragraphAboutMe,
-};
+export { HeaderLinks, allBlogs, popularBlogs, socials, paragraphAboutMe };
 export type { Blog, HeaderLink };

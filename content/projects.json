@@ -73,15 +73,6 @@
 		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
-		"title": "Mnist Handwritten digits ML",
-		"github": "https://github.com/NikSchaefer/Mnist-Digits-ML",
-		"external": "",
-		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
-		"slug": "mnist-handwritten-digits-ml",
-		"text": "Machine Learning Model to classify handwritten digits",
-		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-	},
-	{
 		"title": "Go-Fiber Boilerplate",
 		"github": "https://github.com/NikSchaefer/go-fiber",
 		"external": "",
@@ -97,23 +88,6 @@
 		"external": "",
 		"tech": ["Golang", "netsh"],
 		"slug": "my-cli",
-		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-	},
-	{
-		"text": "Second Iteration of my Personal Portfolio",
-		"title": "Portfolio-V2",
-		"github": "https://github.com/NikSchaefer/Portfolio-V2",
-		"external": "https://nikschaefer.tech/",
-		"tech": [
-			"Typescript",
-			"NextJS",
-			"React",
-			"Styled Components",
-			"Jest",
-			"ESLint",
-			"Google Analytics"
-		],
-		"slug": "portfolio-v2",
 		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
@@ -143,23 +117,6 @@
 		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{
-		"text": "Django Backend React Typescript frontend template configured to Easily Deploy on Heroku.",
-		"title": "Django React Typescript",
-		"github": "https://github.com/NikSchaefer/Find-Discord-Friends",
-		"external": "https://github.com/NikSchaefer/Find-Discord-Friends",
-		"tech": ["Python", "Django", "React", "Typescript", "PostgresSQL"],
-		"slug": "django-backend",
-		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-	},
-	{
-		"text": "The First Iteration of my Personal Portfolio",
-		"title": "Portfolio V1",
-		"github": "https://github.com/NikSchaefer/portfolio",
-		"tech": ["React", "Typescript", "HTML + CSS"],
-		"slug": "portfolio-v1",
-		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-	},
-	{
 		"text": "The umbrella project is an App that Accesses the Open Weather API.",
 		"title": "Umbrella App",
 		"github": "https://github.com/NikSchaefer/umbrella_website",
@@ -175,15 +132,6 @@
 		"external": "https://development-tools.vercel.app/",
 		"tech": ["Typescript", "React", "CRA"],
 		"slug": "web-tools",
-		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-	},
-	{
-		"title": "CIFAR10 ML",
-		"github": "https://github.com/NikSchaefer/CIFAR10-ML",
-		"external": "",
-		"tech": ["Tensorflow", "Keras", "Python", "Numpy", "Matplotlib"],
-		"slug": "CIFAR10-ml",
-		"text": "ML Image Classification for the CIFAR10 dataset",
 		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
 	{

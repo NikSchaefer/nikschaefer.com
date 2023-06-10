@@ -34,7 +34,7 @@ export default function Main(): JSX.Element {
 					"items-center py-1 px-12 fixed top-0 w-full left-0"
 				)}
 			>
-				<nav className="hidden p-5 sm:flex justify-center w-full">
+				<nav className="p-5 flex justify-center w-full">
 					<ul
 						className={clsx(
 							"flex gap-1 px-5 py-2 rounded-full font-inter relative",
@@ -60,40 +60,6 @@ export default function Main(): JSX.Element {
 									{value.title}{" "}
 									{index === 0 && (
 										<motion.span className="text-xs font-semibold text-primary rounded italic py-[2px] border-primary/30 border-2 px-[7px] ml-1">
-											/
-										</motion.span>
-									)}
-								</Link>
-							</motion.li>
-						))}
-					</ul>
-				</nav>
-				<nav className="p-5 flex sm:hidden justify-center w-full">
-					<ul
-						className={clsx(
-							"flex gap-1 px-5 py-2 rounded-full font-inter relative",
-							hasScrolled
-								? "bg-[#10101a]/40 filter-effect shadow-md"
-								: ""
-						)}
-					>
-						{HeaderLinks.slice(0, 1).map((value, index) => (
-							<motion.li
-								className={clsx(
-									router.pathname === value.link
-										? "bg-primary/10 text-white"
-										: "",
-									"px-5 py-2 z-40 font-semibold rounded-full transition-all duration-200 hover:text-white"
-								)}
-								key={index}
-							>
-								<Link
-									href={value.link}
-									className="flex items-center z-40"
-								>
-									{value.title}{" "}
-									{index === 0 && (
-										<motion.span className="text-xs z-40 font-semibold text-primary rounded italic py-[2px] border-primary/30 border-2 px-[7px] ml-1">
 											/
 										</motion.span>
 									)}

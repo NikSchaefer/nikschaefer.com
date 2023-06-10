@@ -64,6 +64,11 @@
 	@apply text-5xl sm:text-7xl md:text-8xl lg:text-9xl;
 }
 
+.title2 {
+	@apply text-5xl sm:text-7xl md:text-8xl;
+}
+
+
 .h0 {
 	@apply text-3xl md:text-5xl;
 }

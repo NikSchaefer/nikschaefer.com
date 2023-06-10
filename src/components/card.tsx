@@ -1,15 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
+import { Project } from "types";
 
-type Project = {
-	title: string;
-	github: string;
-	external?: string;
-	content?: string;
-	tech: string[];
-	slug: string;
-	text?: string;
-};
 type SortOption = {
 	name: string;
 	include: string[];
@@ -18,11 +10,11 @@ type SortOption = {
 const sortByOptions: SortOption[] = [
 	{ name: "All", include: [] },
 	{
-		name: "Machine Learning",
+		name: "ML",
 		include: ["Tensorflow", "tensorflow"],
 	},
 	{
-		name: "Web Dev",
+		name: "Web",
 		include: ["Javascript", "Typescript", "React", "Next.js"],
 	},
 	{
@@ -30,7 +22,7 @@ const sortByOptions: SortOption[] = [
 		include: ["Python", "Tensorflow", "Pandas"],
 	},
 	{
-		name: "Golang",
+		name: "Go",
 		include: ["Go", "Golang", "go", "golang"],
 	},
 ];
@@ -39,25 +31,17 @@ function Card({ title, slug, text }: Project): JSX.Element {
 	return (
 		<Link
 			className={clsx(
-				"text-left max-w-[300px] w-[90%] p-3 rounded-md bg-gray-800 hover:bg-gray-700",
-				"border border-gray-600"
+				"text-left bg-secondary-600 p-3 rounded-xl hover:-translate-y-0.5",
+				"p-6 border border-primary/30 transition-transform duration-200",
+				"hover:border-primary/70"
 			)}
 			href={`/projects/${slug}`}
 		>
-			<h1
-				className={clsx(
-					"mt-2 text-lg font-semibold text-white",
-					"w-[fit-content] from-red-200 to-yellow-200"
-				)}
-			>
-				{title}
-			</h1>
-			<p className="mt-2 text-sm text-gray-300">
-				{text}
-			</p>
+			<h4 className={clsx("mt-2 font-semibold text-primary")}>{title}</h4>
+			<p className="mt-2 text-sm text-gray-300">{text}</p>
 		</Link>
 	);
 }
 
 export { Card, sortByOptions };
-export type { Project, SortOption };
+export type { SortOption };
