@@ -36,7 +36,7 @@ export default function Projects(): JSX.Element {
 			<section className="pt-[5em] container mx-auto">
 				<h1
 					className={clsx(
-						"title mx-auto font-semibold text-center text-effect"
+						"title mx-auto font-semibold text-center text-effect pb-3"
 					)}
 				>
 					Projects.

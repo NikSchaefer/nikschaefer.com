@@ -1,4 +1,3 @@
-import { underlineCSS } from "@styles/style";
 import clsx from "clsx";
 import Link from "next/link";
 
@@ -11,9 +10,7 @@ function Post(props: { blog: Blog }): JSX.Element {
 				href={props.blog.link}
 				aria-label="Blog Link"
 				className={clsx(
-					"text-2xl text-blue-500 capitalize",
-					underlineCSS,
-					"from-red-200 to-yellow-200"
+					"text-2xl text-blue-500 capitalize underline-effect"
 				)}
 			>
 				{props.blog.title}
@@ -24,9 +21,7 @@ function Post(props: { blog: Blog }): JSX.Element {
 					<span className="mr-1">• {v}</span>
 				))}
 			</p>
-			<p className="mt-2 text-gray-300">
-				{props.blog.description}
-			</p>
+			<p className="mt-2 text-gray-300">{props.blog.description}</p>
 		</div>
 	);
 }
