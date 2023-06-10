@@ -41,12 +41,14 @@ function Article({
 				</h1>
 
 				<div className="flex gap-5 justify-center items-center">
-					<a
-						href={github}
-						className="hover:text-primary hover:scale-105 transition-all duration-75"
-					>
-						<GithubIcon />
-					</a>
+					{github && (
+						<a
+							href={github}
+							className="hover:text-primary hover:scale-105 transition-all duration-75"
+						>
+							<GithubIcon />
+						</a>
+					)}
 					{link && (
 						<a
 							className="hover:text-primary hover:scale-105 transition-all duration-75"
