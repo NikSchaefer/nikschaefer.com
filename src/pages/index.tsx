@@ -49,6 +49,7 @@ function Projects() {
 			<div className="flex justify-center pt-12">
 				<Link
 					href="/projects"
+					aria-label="See more projects"
 					className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md"
 				>
 					<span className="w-full h-full bg-gradient-to-br from-blue-400 via-[#ff5478] to-pink-500 group-hover:from-blue-400 group-hover:via-[#ff5478] group-hover:to-pink-500 absolute"></span>

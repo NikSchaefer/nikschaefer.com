@@ -8,3 +8,14 @@ export type Project = {
 	image?: string;
 	index?: number;
 };
+
+export interface Job {
+	date: number;
+	title: string;
+	company: string;
+	location: string;
+	range: string;
+	url: string;
+	content: string[];
+	tools: string[];
+}

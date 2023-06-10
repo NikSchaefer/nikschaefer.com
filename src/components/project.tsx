@@ -29,14 +29,15 @@ export default function Project({
 				</div>
 			)} */}
 			<div className="hidden sm:flex w-[10%] pr-10 flex-col items-center justify-center">
-				<h5 className="uppercase -rotate-90 h7 tracking-[0.2em] whitespace-nowrap font-semibold">
+				<h4 className="uppercase -rotate-90 h7 tracking-[0.2em] whitespace-nowrap font-semibold">
 					{tech.slice(0, 3).join(", ")}
-				</h5>
+				</h4>
 			</div>
 			<div className="w-full sm:w-[50%]">
 				<img
 					className="max-h-[200px] sm:max-h-none h-full w-full object-cover rounded-[3em]"
 					src={image}
+					alt={title}
 				/>
 			</div>
 			<div className="gap-5 sm:gap-0 p-8 w-full sm:w-[50%] flex flex-col justify-between ">
@@ -44,7 +45,8 @@ export default function Project({
 
 				<Link
 					className="flex items-center gap-3 group text-effect"
-					href={`/projects/${slug}`}
+					href={`/projects/${ slug }`}
+					aria-label={`Learn more about ${title}`}
 				>
 					Learn more{" "}
 					<span className="transition-transform text-primary duration-100 group-hover:translate-x-2">
@@ -55,12 +57,14 @@ export default function Project({
 				<div className="flex gap-3 pb-8">
 					<a
 						href={github}
+						aria-label="Github"
 						className="hover:text-primary hover:rotate-6 hover:scale-105 transition-all duration-75"
 					>
 						<GithubIcon />
 					</a>
 					{external && (
 						<a
+							aria-label="External Link"
 							className="hover:text-primary hover:rotate-6 hover:scale-105 transition-all duration-75"
 							href={external}
 						>

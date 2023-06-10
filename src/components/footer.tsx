@@ -44,7 +44,9 @@ function Column({ col, title }: { col: ColType[]; title: string }) {
 	return (
 		<li className="w-full md:w-1/3 lg:w-1/3 font-inter">
 			<ul className="px-4 sm:w-[fit-content] text-left mx-auto">
-				<h5 className="mb-4 font-semibold text-primary">{title}</h5>
+				<li>
+					<h4 className="mb-4 font-semibold h5 text-primary">{title}</h4>
+				</li>
 				{col.map((data) => (
 					<li
 						key={data.link}
@@ -64,8 +66,8 @@ export default function Main(): JSX.Element {
 			<div className="text-gray-300">
 				<ul className="grid grid-cols-1 sm:grid-cols-4 gap-2">
 					<li className="sm:col-span-2 p-4">
-						<div className="bg-primary-500/10 gap-4 rounded-full w-full px-8 py-4 mb-8 flex">
-							<Hand />
+						<div className="bg-primary-500/10 gap-4 rounded-full w-full px-8 py-4 mb-8 flex group">
+							<Hand className="transition-all duration-100 group-hover:text-primary group-hover:scale-105 group-hover:rotate-12" />
 							<div>
 								Say Hello! {"=>"}{" "}
 								<a

@@ -2,9 +2,10 @@ import Layout from "@components/layout";
 import { NextSeo } from "next-seo";
 
 import { motion } from "framer-motion";
-// import jobs from "../../content/jobs.json";
-// import studies from "../../content/studies.json";
+import jobs from "../../content/jobs.json";
+import studies from "../../content/studies.json";
 import clsx from "clsx";
+import Node from "@components/node";
 
 export default function About(): JSX.Element {
 	return (
@@ -75,8 +76,7 @@ export default function About(): JSX.Element {
 					--- still buliding this part of the site ---
 				</p>
 			</motion.section>
-			{/* <Section id="work">
-				<H2>Work</H2>
+			<section id="work">
 				<div className="flex-col items-center justify-center">
 					{jobs
 						.sort((a, b) => {
@@ -86,9 +86,8 @@ export default function About(): JSX.Element {
 							<Node key={data.title} data={data} />
 						))}
 				</div>
-			</Section>
-			<Section id="studies">
-				<H2>Self Studies</H2>
+			</section>
+			<section id="studies">
 				<div className="flex-col items-center justify-center">
 					{studies
 						.sort((a, b) => {
@@ -98,7 +97,7 @@ export default function About(): JSX.Element {
 							<Node key={data.title} data={data} />
 						))}
 				</div>
-			</Section> */}
+			</section>
 		</Layout>
 	);
 }
