@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { ExternalLink, GithubIcon, MoveRight } from "lucide-react";
 import Link from "next/link";
 import { Project } from "types";
+import { motion } from "framer-motion";
 
 export default function Project({
 	title,
@@ -12,7 +13,11 @@ export default function Project({
 	external,
 }: Project) {
 	return (
-		<div
+		<motion.div
+			initial={{ y: -10, opacity: 0 }}
+			animate={{ opacity: 1, y: 0 }}
+			transition={{ duration: 0.2, delay: 0.5 }}
+			viewport={{ once: true }}
 			className={clsx(
 				"flex flex-col gap-5 sm:gap-0 sm:flex-row card-bg w-[80%] mx-auto rounded-[3rem] border border-primary/20",
 				"p-[1rem] sm:p-[3rem] h-[30rem] sm:pr-0 relative z-10"
@@ -64,6 +69,6 @@ export default function Project({
 					)}
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	);
 }

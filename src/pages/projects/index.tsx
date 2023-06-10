@@ -3,6 +3,7 @@ import Layout from "@components/layout";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 import projects from "../../../content/projects.json";
 
@@ -34,23 +35,34 @@ export default function Projects(): JSX.Element {
 		<Layout>
 			<NextSeo title="Projects" />
 			<section className="pt-[5em] container mx-auto">
-				<h1
+				<motion.h1
+					viewport={{ once: true }}
+					initial={{ y: -10, opacity: 0 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.2, delay: 0.1 }}
 					className={clsx(
 						"title mx-auto font-semibold text-center text-effect pb-3"
 					)}
 				>
 					Projects.
-				</h1>
-				<p className="mt-[2em] h4 text-center mx-auto w-[90%] max-w-[750px]">
+				</motion.h1>
+				<motion.p
+					viewport={{ once: true }}
+					initial={{ y: -10, opacity: 0 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ duration: 0.2, delay: 0.5 }}
+					className="mt-[2em] h4 text-center mx-auto w-[90%] max-w-[750px]"
+				>
 					A selection of my original creations—tools and
 					websites—developed to be useful, entertaining, and sometimes
 					wonderfully odd.
-				</p>
+				</motion.p>
 			</section>
 			<section className="pt-[3em] max-w-[1400px] m-auto w-[95%] ">
 				<ul className="flex items-center text-white my-5 relative">
 					{sortByOptions.map((value, i) => (
-						<button
+						<motion.button
+							viewport={{ once: true }}
 							className={clsx(
 								value.name === sortType
 									? "text-primary"
@@ -63,6 +75,9 @@ export default function Projects(): JSX.Element {
 							}}
 							type="button"
 							aria-label={`sort by ${value.name}`}
+							initial={{ y: -10, opacity: 0 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.2, delay: 0.5 + i * 0.1 }}
 						>
 							{value.name}{" "}
 							<span className="absolute h7">
@@ -77,7 +92,7 @@ export default function Projects(): JSX.Element {
 							{i + 1 !== sortByOptions.length && (
 								<span className="ml-4 text-gray-400">/</span>
 							)}
-						</button>
+						</motion.button>
 					))}
 				</ul>
 				<div
@@ -86,8 +101,8 @@ export default function Projects(): JSX.Element {
 						"gap-10"
 					)}
 				>
-					{projectData.map((data) => (
-						<Card key={data.github} {...data} />
+					{projectData.map((data, i) => (
+						<Card key={data.github} {...data} index={i} />
 					))}
 				</div>
 			</section>
