@@ -57,6 +57,24 @@ export default function About(): JSX.Element {
 					</p>
 				</motion.div>
 			</section>
+			<motion.section
+				viewport={{ once: true }}
+				initial={{ y: -10, opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.2, delay: 0.7 }}
+				className="pt-[5em] container mx-auto"
+			>
+				<h1
+					className={clsx(
+						"title mx-auto text-effect font-semibold text-center"
+					)}
+				>
+					{"</>"}
+				</h1>{" "}
+				<p className="text-center">
+					--- still buliding this part of the site ---
+				</p>
+			</motion.section>
 			{/* <Section id="work">
 				<H2>Work</H2>
 				<div className="flex-col items-center justify-center">
