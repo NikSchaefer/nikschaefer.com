@@ -9,8 +9,6 @@ const IS_TEST = process.env.NODE_ENV === "test";
 const IS_BROWSER = typeof window !== "undefined";
 export { GA_TRACKING_ID, IS_PRODUCTION, IS_TEST, IS_BROWSER };
 
-const paragraphAboutMe = `I'm a data science student with a passion for building scalable and maintainable software. I'm currently working as a software engineer at a startup in the mental health space. I'm also a big fan of open source and have contributed to many projects. I'm always looking for new opportunities to learn and grow.`;
-
 const socials = {
 	github: {
 		link: "https://github.com/NikSchaefer",
@@ -247,5 +245,5 @@ const allBlogs: Blog[] = [
 	},
 ];
 
-export { HeaderLinks, allBlogs, popularBlogs, socials, paragraphAboutMe };
+export { HeaderLinks, allBlogs, popularBlogs, socials };
 export type { Blog, HeaderLink };
