@@ -29,9 +29,9 @@ export default function Project({
 				</div>
 			)} */}
 			<div className="hidden sm:flex w-[10%] pr-10 flex-col items-center justify-center">
-				<h4 className="uppercase -rotate-90 h7 tracking-[0.2em] whitespace-nowrap font-semibold">
+				<h3 className="uppercase -rotate-90 h7 tracking-[0.2em] whitespace-nowrap font-semibold">
 					{tech.slice(0, 3).join(", ")}
-				</h4>
+				</h3>
 			</div>
 			<div className="w-full sm:w-[50%]">
 				<img

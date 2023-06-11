@@ -45,7 +45,7 @@ function Column({ col, title }: { col: ColType[]; title: string }) {
 		<li className="w-full md:w-1/3 lg:w-1/3 font-inter">
 			<ul className="px-4 sm:w-[fit-content] text-left mx-auto">
 				<li>
-					<h4 className="mb-4 font-semibold h5 text-primary">{title}</h4>
+					<h3 className="mb-4 font-semibold h5 text-primary">{title}</h3>
 				</li>
 				{col.map((data) => (
 					<li
