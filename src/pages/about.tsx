@@ -2,12 +2,11 @@ import Layout from "@components/layout";
 import { NextSeo } from "next-seo";
 
 import { motion } from "framer-motion";
-import jobs from "../../content/jobs.json";
-import studies from "../../content/studies.json";
+// import studies from "../../content/studies.json";
 import clsx from "clsx";
-import Node from "@components/node";
 import { socials } from "config";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
+import Jobs from "@components/jobs";
 
 export default function About(): JSX.Element {
 	return (
@@ -104,6 +103,17 @@ export default function About(): JSX.Element {
 					</div>
 				</motion.div>
 			</section>
+
+			<motion.section
+				viewport={{ once: true }}
+				initial={{ y: -10, opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.2, delay: 1 }}
+				className="pt-[10em] w-fit mx-auto max-w-[1000px]"
+				id="work"
+			>
+				<Jobs />
+			</motion.section>
 			<motion.section
 				viewport={{ once: true }}
 				initial={{ y: -10, opacity: 0 }}
@@ -122,26 +132,11 @@ export default function About(): JSX.Element {
 					--- still buliding this part of the site ---
 				</p>
 			</motion.section>
-			<section id="work">
-				<div className="flex-col items-center justify-center">
-					{jobs
-						.sort((a, b) => {
-							return b.date - a.date;
-						})
-						.map((data) => (
-							<Node key={data.title} data={data} />
-						))}
-				</div>
-			</section>
 			<section id="studies">
 				<div className="flex-col items-center justify-center">
-					{studies
-						.sort((a, b) => {
-							return b.date - a.date;
-						})
-						.map((data) => (
-							<Node key={data.title} data={data} />
-						))}
+					{/* {studies.map((data) => (
+						<Node key={data.title} data={data} />
+					))} */}
 				</div>
 			</section>
 		</Layout>

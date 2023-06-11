@@ -10,12 +10,12 @@ export type Project = {
 };
 
 export interface Job {
-	date: number;
 	title: string;
 	company: string;
 	location: string;
 	range: string;
 	url: string;
+	logo: string;
 	content: string[];
 	tools: string[];
 }
