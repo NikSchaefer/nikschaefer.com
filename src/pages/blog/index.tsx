@@ -25,7 +25,7 @@ export default function BlogIndex(): JSX.Element {
 	return (
 		<Layout>
 			<NextSeo title="Blog" />
-			<section className="pt-[5em] w-[90%] max-w-[800px] mx-auto">
+			<section className="pt-[3em] w-[90%] max-w-[800px] mx-auto">
 				<motion.h1
 					viewport={{ once: true }}
 					initial={{ y: -10, opacity: 0 }}

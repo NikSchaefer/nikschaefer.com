@@ -24,7 +24,7 @@ export default function Snippets(): JSX.Element {
 	return (
 		<Layout>
 			<NextSeo title="Snippets" />
-			<section className="pt-[5em] container mx-auto">
+			<section className="pt-[3em] container mx-auto">
 				<motion.h1
 					initial={{ y: -10, opacity: 0 }}
 					animate={{ opacity: 1, y: 0 }}

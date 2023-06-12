@@ -12,7 +12,7 @@ export default function About(): JSX.Element {
 	return (
 		<Layout>
 			<NextSeo title="About" />
-			<section className="pt-[5em] container mx-auto">
+			<section className="pt-[3em] container mx-auto">
 				<motion.h1
 					viewport={{ once: true }}
 					initial={{ y: -10, opacity: 0 }}
@@ -25,7 +25,7 @@ export default function About(): JSX.Element {
 					I'm Nik.
 				</motion.h1>
 			</section>
-			<section className="flex flex-col items-center lg:grid lg:grid-cols-10 pt-[5em] container mx-auto">
+			<section className="flex flex-col items-center lg:grid lg:grid-cols-10 pt-[3em] w-[90%] max-w-[1000px] container mx-auto">
 				<motion.img
 					viewport={{ once: true }}
 					initial={{ y: -10, opacity: 0 }}

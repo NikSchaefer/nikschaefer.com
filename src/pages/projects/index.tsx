@@ -34,7 +34,7 @@ export default function Projects(): JSX.Element {
 	return (
 		<Layout>
 			<NextSeo title="Projects" />
-			<section className="pt-[5em] container mx-auto">
+			<section className="pt-[3em] container mx-auto">
 				<motion.h1
 					viewport={{ once: true }}
 					initial={{ y: -10, opacity: 0 }}
