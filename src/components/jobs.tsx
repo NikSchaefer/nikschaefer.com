@@ -5,9 +5,9 @@ export default function Jobs(): JSX.Element {
 		<ol className="relative border-l border-gray-700">
 			{jobs.map((job) => (
 				<li className="mb-10 ml-10">
-					<span className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-5">
+					<span className="absolute bg-secondary flex items-center justify-center w-12 h-12 rounded-full -left-6">
 						<img
-							className="w-full h-full rounded-full bg-secondary-600"
+							className=" w-10 h-10 m-2 rounded-full bg-secondary-600"
 							src={job.logo}
 						/>
 					</span>
