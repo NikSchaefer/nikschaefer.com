@@ -59,7 +59,7 @@ export default function Projects(): JSX.Element {
 				</motion.p>
 			</section>
 			<section className="pt-[3em] max-w-[1400px] m-auto w-[95%] ">
-				<ul className="flex items-center text-white my-5 relative">
+				<ul className="flex items-center text-white my-5 relative overflow-x-scroll">
 					{sortByOptions.map((value, i) => (
 						<motion.button
 							viewport={{ once: true }}
@@ -67,7 +67,7 @@ export default function Projects(): JSX.Element {
 								value.name === sortType
 									? "text-primary"
 									: "text-gray-400",
-								"my-2 mx-1 py-1 px-2"
+								"my-2 mx-1 py-1 px-2 whitespace-nowrap"
 							)}
 							key={value.name}
 							onClick={() => {

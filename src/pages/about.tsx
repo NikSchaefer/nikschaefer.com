@@ -66,11 +66,11 @@ export default function About(): JSX.Element {
 							href={socials.github.link}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex gap-4 items-center rounded border px-3 py-4 w-fit border-secondary-400 hover:bg-secondary-600"
+							className="flex gap-4 items-center rounded border px-3 py-4 w-full sm:w-fit border-secondary-400 hover:bg-secondary-600"
 						>
 							<Github />
 							GitHub
-							<ArrowUpRight className="ml-1" />
+							<ArrowUpRight className="ml-auto sm:ml-1" />
 						</motion.a>
 						<motion.a
 							viewport={{ once: true }}
@@ -80,11 +80,11 @@ export default function About(): JSX.Element {
 							href={socials.linkedin.link}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex gap-4 items-center rounded border px-3 py-4 w-fit border-secondary-400 hover:bg-secondary-600"
+							className="flex gap-4 items-center rounded border px-3 py-4 w-full sm:w-fit border-secondary-400 hover:bg-secondary-600"
 						>
 							<Linkedin />
 							LinkedIn
-							<ArrowUpRight className="ml-1" />
+							<ArrowUpRight className="ml-auto sm:ml-1" />
 						</motion.a>
 						<motion.a
 							viewport={{ once: true }}
@@ -94,11 +94,11 @@ export default function About(): JSX.Element {
 							href={socials.email.link}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex gap-4 items-center rounded border px-3 py-4 w-fit border-secondary-400 hover:bg-secondary-600"
+							className="flex gap-4 items-center rounded border px-3 py-4 w-full sm:w-fit border-secondary-400 hover:bg-secondary-600"
 						>
 							<Mail />
 							Email
-							<ArrowUpRight className="ml-1" />
+							<ArrowUpRight className="ml-auto sm:ml-1" />
 						</motion.a>
 					</div>
 				</motion.div>
