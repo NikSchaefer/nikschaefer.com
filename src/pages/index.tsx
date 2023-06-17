@@ -41,7 +41,7 @@ function Projects() {
 	return (
 		<section>
 			<div className="pt-[8em] flex flex-col justify-center items-center gap-16 container mx-auto max-w-[1000px]">
-				{projects.slice(0, 4).map((project, i) => (
+				{projects.slice(0, 3).map((project, i) => (
 					<Project {...project} key={project.slug} index={i} />
 				))}
 			</div>

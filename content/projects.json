@@ -1,14 +1,5 @@
 [
 	{
-		"title": "Spotify Review Prediction ",
-		"github": "https://github.com/NikSchaefer/https://github.com/NikSchaefer/Spotify-Review-Prediction",
-		"external": "",
-		"tech": ["Tensorflow", "Python", "Numpy"],
-		"slug": "spotify-review-prediction",
-		"text": "Review prediction and analysis using a bi-directional RNN",
-		"image": "https://images.unsplash.com/photo-1613329671121-5d1cf551cc3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
-	},
-	{
 		"title": "University Ideal Life Analysis ",
 		"github": "https://github.com/NikSchaefer/university-ideal-life",
 		"external": "",
@@ -34,6 +25,15 @@
 		"text": "Web app for viewing a list of official developer related discord communities",
 		"slug": "dev-discords",
 		"image": "https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+	},
+	{
+		"title": "Spotify Review Prediction ",
+		"github": "https://github.com/NikSchaefer/https://github.com/NikSchaefer/Spotify-Review-Prediction",
+		"external": "",
+		"tech": ["Tensorflow", "Python", "Numpy"],
+		"slug": "spotify-review-prediction",
+		"text": "Review prediction and analysis using a bi-directional RNN",
+		"image": "https://images.unsplash.com/photo-1613329671121-5d1cf551cc3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80"
 	},
 	{
 		"title": "Neural Style Transfer",
