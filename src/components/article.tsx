@@ -34,7 +34,7 @@ function Article({
 			<div className="w-full mx-auto space-y-4 text-left">
 				<h1
 					className={clsx(
-						"title2 mx-auto font-semibold text-center text-effect"
+						"title2 mx-auto font-semibold text-center text-effect capitalize"
 					)}
 				>
 					{title}.

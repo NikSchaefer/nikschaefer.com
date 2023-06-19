@@ -73,9 +73,9 @@ type Blog = {
 	className?: string;
 };
 
-const popularBlogs: Blog[] = [
+const allBlogs: Blog[] = [
 	{
-		title: "What's new in Machine Learning",
+		title: "Unveiling Machine Learning's Latest Advances",
 		link: "/blog/whats-new-in-machine-learning",
 		image: "/blog/mlops.webp",
 		description:
@@ -83,20 +83,18 @@ const popularBlogs: Blog[] = [
 		min: 3,
 		date: "May 2020",
 		type: ["Machine Learning"],
-		className: "from-[#D8B4FE] to-[#818CF8]",
 	},
 	{
-		title: "5 database paradigms and their use cases",
+		title: "Exploring Database Paradigms and Their Use Cases",
 		link: "/blog/5-database-paradigms-and-their-use-cases",
 		image: "/blog/5-database-paradigms-and-their-use-cases.webp",
 		description: "5 database paradigms what they are used for",
 		min: 3,
 		date: "May 2020",
 		type: ["Database"],
-		className: "from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]",
 	},
 	{
-		title: "Why I use NextJS over Gatsby for Personal Projects",
+		title: "NextJS vs. Gatsby",
 		link: "/blog/why-I-choose-nextjs-over-gatsby",
 		image: "/blog/nextjs.jpg",
 		min: 2,
@@ -104,31 +102,7 @@ const popularBlogs: Blog[] = [
 			"Here is a quick breakdown of the differences between NextJS and Gatsby and why I chose NextJS",
 		date: "Jan 2020",
 		type: ["NextJS", "GatsbyJS"],
-		className: "from-[#FDE68A] via-[#FCA5A5] to-[#FECACA]",
 	},
-];
-
-const allBlogs: Blog[] = [
-	{
-		title: "What's new in Machine Learning",
-		link: "/blog/whats-new-in-machine-learning",
-		image: "/blog/mlops.webp",
-		description:
-			"attending Google's I/O Machine Learning talks and Keynotes",
-		min: 3,
-		date: "May 2020",
-		type: ["Machine Learning"],
-	},
-	{
-		title: "Dockerizing your Developer Workflow",
-		link: "/blog/dockerizing-your-developer-workflow",
-		image: "/blog/dockerizing-your-developer-workflow",
-		description: "How to Dockerize your workflow and why",
-		min: 3,
-		date: "May 2020",
-		type: ["Docker", "Tooling"],
-	},
-
 	{
 		title: "Concurrency in Golang",
 		link: "/blog/concurrency-in-golang",
@@ -139,7 +113,7 @@ const allBlogs: Blog[] = [
 		type: ["Concurrency", "Golang"],
 	},
 	{
-		title: "Golang Optimal File Structure",
+		title: "File Structure for Golang Projects",
 		link: "/blog/golang-optimal-file-structure",
 		image: "/blog/golang-optimal-file-structure",
 		description: "Breakdown of popular golang file structures",
@@ -147,17 +121,9 @@ const allBlogs: Blog[] = [
 		date: "May 2020",
 		type: ["Golang"],
 	},
+
 	{
-		title: "5 database paradigms and their use cases",
-		link: "/blog/5-database-paradigms-and-their-use-cases",
-		image: "/blog/5-database-paradigms-and-their-use-cases.webp",
-		description: "5 database paradigms what they are used for",
-		min: 3,
-		date: "May 2020",
-		type: ["Database"],
-	},
-	{
-		title: "Pros and Cons of Serverless",
+		title: "Pros and Cons of Serverless Architecture",
 		link: "/blog/pros-and-cons-of-serverless",
 		image: "/blog/pros-and-cons-of-serverless.webp",
 		description: "Rundown of Going Serverless",
@@ -167,7 +133,7 @@ const allBlogs: Blog[] = [
 	},
 
 	{
-		title: "Why Developers love Golang",
+		title: "The Allure of Golang",
 		link: "/blog/why-developers-love-golang",
 		image: "/blog/codeonlaptop.jpg",
 		description:
@@ -176,27 +142,9 @@ const allBlogs: Blog[] = [
 		date: "March 2020",
 		type: ["Golang"],
 	},
+
 	{
-		title: "Why I use Django, and you should too",
-		link: "/blog/why-django-is-great",
-		image: "/blog/setting-up-django.jpg",
-		description:
-			"A quick look at the benefits and reasons why so many developers use Django",
-		min: 2,
-		date: "Feb 2020",
-		type: ["Django", "Python"],
-	},
-	{
-		title: "How to Use a .Dockerfile",
-		link: "/blog/using-a-dockerfile",
-		image: "/blog/docker.png",
-		min: 2,
-		description: "Quickly learn the basics of using a dockerfile",
-		date: "Jan 2020",
-		type: ["Docker"],
-	},
-	{
-		title: "A Beginner's First Machine Learning Model",
+		title: "Hello World of Machine Learning",
 		link: "/blog/beginner-machine-learning-model",
 		image: "/blog/ml.webp",
 		min: 2,
@@ -205,36 +153,9 @@ const allBlogs: Blog[] = [
 		date: "Jan 2020",
 		type: ["Machine Learning"],
 	},
+
 	{
-		title: "Rest API Authentication in Django",
-		link: "/blog/rest-api-auth-django",
-		image: "/blog/django-rest-auth.jpg",
-		min: 2,
-		date: "Jan 2020",
-		description: "learn to set up a quick user auth server with django",
-		type: ["Django", "Python"],
-	},
-	{
-		title: "Why I use NextJS over Gatsby for Personal Projects",
-		link: "/blog/why-I-choose-nextjs-over-gatsby",
-		image: "/blog/nextjs.jpg",
-		min: 2,
-		description:
-			"Here is a quick breakdown of the differences between NextJS and Gatsby and why I chose NextJS",
-		date: "Jan 2020",
-		type: ["NextJS", "GatsbyJS"],
-	},
-	{
-		title: "The Basics of Webpack",
-		link: "/blog/webpack-basics",
-		image: "/blog/webpack.jpg",
-		min: 2,
-		description: "Quickly set up and use webpack for production in 2 min",
-		date: "Jan 2020",
-		type: ["Webpack"],
-	},
-	{
-		title: "Why you should migrate to Typescript",
+		title: "Why you might want to use Typescript",
 		link: "/blog/why-you-should-use-typescript",
 		image: "/blog/typescript.svg",
 		min: 2,
@@ -245,5 +166,5 @@ const allBlogs: Blog[] = [
 	},
 ];
 
-export { HeaderLinks, allBlogs, popularBlogs, socials };
+export { HeaderLinks, allBlogs, socials };
 export type { Blog, HeaderLink };
