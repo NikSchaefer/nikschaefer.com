@@ -1,26 +1,17 @@
 import { Article } from "@components/article";
 import Layout from "@components/layout";
-import { portfolioFilePaths, PORT_PATH } from "@lib/mdxUtils";
 import rehypePrism from "@mapbox/rehype-prism";
 import axios from "axios";
-import fs from "fs";
-import matter from "gray-matter";
 import type { GetStaticProps, GetStaticPaths } from "next";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { NextSeo } from "next-seo";
-import path from "path";
+import projects from "../../../content/projects.json";
+import { Project } from "types";
 
 type receivingData = {
 	source: MDXRemoteSerializeResult;
-	frontMatter: {
-		title: string;
-		description: string;
-		link: string;
-		github: string;
-		tags: string;
-		useReadme?: boolean;
-	};
+	frontMatter: Project;
 };
 
 export default function Slug({
@@ -33,44 +24,35 @@ export default function Slug({
 			<Article
 				source={source}
 				title={frontMatter.title}
-				tags={`#${frontMatter.tags.split(",")[0]}`}
+				tags={`#${frontMatter.tech[0]}`}
 				github={frontMatter.github}
-				link={frontMatter.link}
+				link={frontMatter.external}
 			/>
 		</Layout>
 	);
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-	const postFilePath = path.join(PORT_PATH, `${String(params?.slug)}.mdx`);
-	const source = fs.readFileSync(postFilePath);
-	const { content, data } = matter(source);
+	const slug = params?.slug;
 
-	const repo = data.github.split("/")[4];
+	const project = projects.find((project) => project.slug === slug);
 
-	if (data.useReadme) {
-		const url = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/README.md`;
-		const readme = await axios.get(url);
-
-		const imageUrl = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/`;
-
-		const d = readme.data.replaceAll('src="./', `src="${imageUrl}`);
-		const mdxSource = await serialize(d, {
-			scope: data,
-			mdxOptions: {
-				rehypePlugins: [rehypePrism],
-			},
-		});
+	if (!project) {
 		return {
-			props: {
-				source: mdxSource,
-				frontMatter: data,
-			},
+			notFound: true,
 		};
 	}
 
-	const mdxSource = await serialize(content, {
-		scope: data,
+	const repo = project.github.split("/")[4];
+
+	const url = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/README.md`;
+	const readme = await axios.get(url);
+
+	const imageUrl = `https://raw.githubusercontent.com/NikSchaefer/${repo}/main/`;
+
+	const d = readme.data.replaceAll('src="./', `src="${imageUrl}`);
+	const mdxSource = await serialize(d, {
+		scope: project,
 		mdxOptions: {
 			rehypePlugins: [rehypePrism],
 		},
@@ -78,19 +60,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 	return {
 		props: {
 			source: mdxSource,
-			frontMatter: data,
+			frontMatter: project,
 		},
 	};
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-	const paths = portfolioFilePaths
-		// eslint-disable-next-line require-unicode-regexp
-		.map((path) => path.replace(/\.mdx?$/, ""))
-		.map((slug) => ({ params: { slug } }));
+	const paths = projects.map((project) => {
+		return {
+			params: {
+				slug: project.slug,
+			},
+		};
+	});
 
 	return {
-		paths,
+		paths: paths,
 		fallback: false,
 	};
 };

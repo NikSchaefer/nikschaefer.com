@@ -47,12 +47,18 @@ export default function Main(): JSX.Element {
 							<motion.li
 								className={clsx(
 									router.pathname === value.link
-										? "bg-primary/10 text-white"
+										? "text-white"
 										: "",
-									"px-5 py-2 font-semibold rounded-full transition-all duration-200 hover:text-white"
+									"px-5 py-2 relative font-semibold rounded-full transition-all duration-100 hover:text-white"
 								)}
 								key={index}
 							>
+								{router.pathname === value.link && (
+									<motion.div
+										layoutId="underline"
+										className="absolute top-0 left-0 w-full h-full bg-primary/10 rounded-full"
+									/>
+								)}
 								<Link
 									href={value.link}
 									className="flex items-center"
