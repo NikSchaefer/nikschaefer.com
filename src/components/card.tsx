@@ -29,20 +29,30 @@ const sortByOptions: SortOption[] = [
 	},
 ];
 
-function Card({ title, slug, text, index }: Project): JSX.Element {
+function Card({
+	title,
+	slug,
+	text,
+	index,
+	disableRender,
+}: Project): JSX.Element {
 	return (
 		<motion.div
-			initial={{ y: -10, opacity: 0 }}
-			animate={{ opacity: 1, y: 0 }}
-			viewport={{ once: true }}
-			transition={{
-				duration: 0.2,
-				delay: 0.5 + (index || 0) * 0.1,
-			}}
+			initial={disableRender ? {} : { y: -10, opacity: 0 }}
+			animate={disableRender ? {} : { opacity: 1, y: 0 }}
+			viewport={disableRender ? {} : { once: true }}
+			transition={
+				disableRender
+					? {}
+					: {
+							duration: 0.2,
+							delay: 0.5 + (index || 0) * 0.1,
+					  }
+			}
 			className={clsx(
-				"text-left bg-secondary-600 rounded-xl hover:-translate-y-0.5",
+				"text-left bg-secondary-600 rounded-xl",
 				"border border-primary/30 transition-transform duration-200",
-				"hover:border-primary/70 p-3"
+				"hover:border-primary/70 p-3 h-full"
 			)}
 		>
 			<Link

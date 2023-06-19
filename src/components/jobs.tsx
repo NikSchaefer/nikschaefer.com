@@ -24,7 +24,7 @@ export default function Jobs(): JSX.Element {
 						</a>
 					</h3>
 					<time className="block mb-2 text-sm font-normal leading-none text-gray-500">
-						{job.range} • {job.location}
+						{job.range}
 					</time>
 					{/* <ul className="ml-6 list-disc">
 						{job.content.map((desc) => (

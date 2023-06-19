@@ -7,6 +7,7 @@ export type Project = {
 	text: string;
 	image?: string;
 	index?: number;
+	disableRender?: boolean;
 };
 
 export interface Job {

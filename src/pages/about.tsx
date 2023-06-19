@@ -114,6 +114,38 @@ export default function About(): JSX.Element {
 			>
 				<Jobs />
 			</motion.section>
+			{/* <motion.section
+				viewport={{ once: true }}
+				initial={{ y: -10, opacity: 0 }}
+				animate={{ opacity: 1, y: 0 }}
+				transition={{ duration: 0.2, delay: 1 }}
+				className="pt-[10em] h4 w-fit mx-auto max-w-[700px] text-gray-100"
+				id="work"
+			>
+				<h1 className="title1 font-semibold text-effect mb-10 ">
+					I'm a Software Engineer with a passion for building
+				</h1>
+				<p className="leading-[32px]">
+					I am a driven and dedicated professional with a passion for
+					technology and education. With a profound belief in their
+					transformative power, I am committed to leveraging
+					technology to create positive change and shape a more
+					equitable future. As a lead software engineer and
+					co-founder, I have successfully spearheaded strategic
+					initiatives and implemented comprehensive coding education
+					programs.
+					<br />
+					<br /> Fostering an inclusive and nurturing environment, I
+					provide students with the resources they need to thrive and
+					pursue their aspirations. I take immense pride in the impact
+					we have made and I am excited to continue creating positive
+					change in the lives of students. If you share my passion for
+					leveraging technology, advancing education, and making a
+					meaningful difference, I welcome the opportunity to connect
+					and explore how we can collaborate in building a brighter
+					future for all.
+				</p>
+			</motion.section> */}
 			<motion.section
 				viewport={{ once: true }}
 				initial={{ y: -10, opacity: 0 }}

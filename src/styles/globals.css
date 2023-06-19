@@ -33,15 +33,19 @@
 }
 
 ::-webkit-scrollbar-track {
-	background: var(--secondary);
+	@apply bg-secondary;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: var(--scrollbar);
+	@apply bg-primary/50 rounded;
 }
 
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
+}
+
+::selection {
+	@apply bg-primary text-white;
 }
 
 .iframe {
@@ -67,7 +71,6 @@
 .title2 {
 	@apply text-5xl sm:text-7xl md:text-8xl;
 }
-
 
 .h0 {
 	@apply text-3xl md:text-5xl;

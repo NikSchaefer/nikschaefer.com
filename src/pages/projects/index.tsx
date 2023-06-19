@@ -3,13 +3,14 @@ import Layout from "@components/layout";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { Reorder, motion } from "framer-motion";
 
 import projects from "../../../content/projects.json";
 
 export default function Projects(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
 	const [sortType, setSortType] = useState("All");
+	const [disableRender, setDisableRender] = useState(false);
 
 	const getSortedProjects = (type: string) => {
 		if (type === "All") {
@@ -72,6 +73,7 @@ export default function Projects(): JSX.Element {
 							key={value.name}
 							onClick={() => {
 								setSortType(value.name);
+								if (!disableRender) setDisableRender(true);
 							}}
 							type="button"
 							aria-label={`sort by ${value.name}`}
@@ -95,16 +97,24 @@ export default function Projects(): JSX.Element {
 						</motion.button>
 					))}
 				</ul>
-				<div
+				<Reorder.Group
+					values={projectData}
+					onReorder={setProjectData}
 					className={clsx(
 						"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3",
 						"gap-10"
 					)}
 				>
 					{projectData.map((data, i) => (
-						<Card key={data.github} {...data} index={i} />
+						<Reorder.Item key={data.github} value={data}>
+							<Card
+								{...data}
+								index={i}
+								disableRender={disableRender}
+							/>
+						</Reorder.Item>
 					))}
-				</div>
+				</Reorder.Group>
 			</section>
 		</Layout>
 	);
