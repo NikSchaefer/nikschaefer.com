@@ -21,13 +21,13 @@ export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 		<>
 			<DefaultSeo
 				title="Portfolio"
-				description="I'm a data science student who absolutely loves building scalable and maintainable software. Currently, I'm working as a software engineer at a cool startup in the mental health space. Being a big fan of open source, I've contributed to numerous projects along the way. I'm always on the lookout for exciting opportunities to learn and grow. Let's connect and make something awesome together!"
-				titleTemplate="%s • Nik Schaefer"
+				description="I'm Nik Schaefer,  a driven lead software engineer and co-founder, dedicated to leveraging technology and education to create positive change."
+				titleTemplate="Nik Schaefer • %s"
 				openGraph={{
 					type: "website",
 					locale: "en",
-					url: "https://nikschaefer.vercel.app/",
-					site_name: "Nik Schaefer Portfolio",
+					url: "https://nikschaefer.com/",
+					site_name: "Nik Schaefer's Portfolio",
 					profile: {
 						firstName: "Nik",
 						lastName: "Schaefer",
