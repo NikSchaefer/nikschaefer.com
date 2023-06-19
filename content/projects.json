@@ -28,7 +28,7 @@
 	},
 	{
 		"title": "Spotify Review Prediction ",
-		"github": "https://github.com/NikSchaefer/https://github.com/NikSchaefer/Spotify-Review-Prediction",
+		"github": "https://github.com/NikSchaefer/Spotify-Review-Prediction",
 		"external": "",
 		"tech": ["Tensorflow", "Python", "Numpy"],
 		"slug": "spotify-review-prediction",
