@@ -1,8 +1,8 @@
-import { GA_TRACKING_ID } from "@src/config.tsx";
+import { GA_TRACKING_ID } from "../config.tsx";
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url) => {
-	window.gtag("config", GA_TRACKING_ID, {
+	window.gtag("../config", GA_TRACKING_ID, {
 		page_location: url,
 	});
 };

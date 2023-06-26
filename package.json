@@ -11,7 +11,7 @@
 		"NextJS"
 	],
 	"scripts": {
-		"dev": "next dev",
+		"dev": "next dev --turbo",
 		"build": "next build",
 		"postbuild": "next-sitemap",
 		"start": "next start",
@@ -26,7 +26,7 @@
 		"clsx": "^1.2.1",
 		"framer-motion": "^10.12.16",
 		"gray-matter": "^4.0.3",
-		"lucide-react": "^0.244.0",
+		"lucide-react": "^0.252.0",
 		"next": "^13.4.5",
 		"next-mdx-remote": "^4.4.1",
 		"next-seo": "^6.0.0",

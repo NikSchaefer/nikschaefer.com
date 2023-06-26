@@ -83,7 +83,7 @@ function Article({
 			</section>
 
 			<div className="w-fit mx-auto text-center h5 underline-effect">
-				<a href="https://github.com/NikSchaefer/Portfolio-V3">
+				<a href="https://github.com/NikSchaefer/nikschaefer.com">
 					Edit this page on GitHub
 				</a>
 			</div>

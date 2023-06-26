@@ -11,14 +11,15 @@
 _Strained eyes? There's DarkMode too :p_
 
 ## 🚀 Quick start
-*Run the site locally
+
+\*Run the site locally
 
 ### Step 1: Clone The Repo
 
 Fork the repository. then clone the repo locally by doing -
 
 ```
-git clone https://github.com/NikSchaefer/Portfolio-V3
+git clone https://github.com/NikSchaefer/nikschaefer.com
 ```
 
 ### Step 2: Install Dependencies
@@ -26,7 +27,7 @@ git clone https://github.com/NikSchaefer/Portfolio-V3
 cd into the directory
 
 ```
-cd Portfolio-V3
+cd nikschaefer.com
 ```
 
 install all the dependencies
@@ -43,9 +44,11 @@ Then start the development Server
 npm run dev
 ```
 
-After running the development server the site should be running on https://localhost:3000
+After running the development server the site should be running on
+https://localhost:3000
 
 ## 📂 What's inside?
+
 A quick look at the folder structure of this project.
 
 ```
@@ -62,6 +65,7 @@ A quick look at the folder structure of this project.
 ```
 
 ## 🛠️ Tools Used
+
 1. NextJS
 1. Tailwind CSS for Styling
 1. Vercel to Deploy

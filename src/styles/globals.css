@@ -24,6 +24,10 @@
 	@apply text-transparent bg-clip-text from-blue-400 to-pink-500 bg-gradient-to-r;
 }
 
+.line-effect {
+	@apply bg-gradient-to-b from-primary via-primary/40 to-primary/0;
+}
+
 .filter-effect {
 	backdrop-filter: blur(20px) saturate(1.7);
 }
@@ -45,7 +49,7 @@
 }
 
 ::selection {
-	@apply bg-primary text-white;
+	@apply bg-primary/40 text-white;
 }
 
 .iframe {
@@ -113,15 +117,15 @@ h6 {
 .card-bg {
 	background: linear-gradient(
 		180deg,
-		rgba(35, 37, 49, 0.5),
-		rgba(15, 15, 24, 0.5)
+		rgba(35, 37, 49, 0.9),
+		rgba(25, 25, 34, 0.7)
 	);
 }
 
 /* CODE CSS */
 code[class*="language-"],
 pre[class*="language-"] {
-	color: #393a34;
+	color: #ffffff;
 	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier,
 		monospace;
 	direction: ltr;
@@ -150,14 +154,14 @@ pre[class*="language-"]::-moz-selection,
 pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection,
 code[class*="language-"] ::-moz-selection {
-	background: #b3d4fc;
+	@apply bg-secondary text-white;
 }
 
 pre[class*="language-"]::selection,
 pre[class*="language-"] ::selection,
 code[class*="language-"]::selection,
 code[class*="language-"] ::selection {
-	background: #b3d4fc;
+	@apply bg-secondary text-white;
 }
 
 /* Code blocks */
@@ -165,19 +169,16 @@ pre[class*="language-"] {
 	padding: 1em;
 	margin: 0.5em 0;
 	overflow: auto;
-	border: 1px solid #dddddd;
-	background-color: white;
-	background-color: rgb(252, 254, 255);
-	border: 1px solid rgb(237, 242, 247);
+	@apply rounded border border-primary/30;
 }
 
 /* Inline code */
 code:not([class*="language-"]) {
 	padding: 0.2em 0.4em;
 	border-radius: 0.2px;
-	background: #f8f8f8;
 	border: 1px solid #dddddd;
-	color: #393a34;
+	color: #ffffff;
+	@apply bg-secondary text-white;
 }
 
 .token.comment,
@@ -199,7 +200,7 @@ code:not([class*="language-"]) {
 
 .token.punctuation,
 .token.operator {
-	color: #393a34; /* no highlight */
+	color: #fff; /* no highlight */
 }
 
 .token.entity,

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { socials } from "config";
+import { socials } from "../config";
 import { GoMarkGithub } from "react-icons/go";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLinkedinBoxFill } from "react-icons/ri";
@@ -38,10 +38,7 @@ function Socials(): JSX.Element {
 				ariaLabel={socials.github.name}
 				rel="noreferrer"
 			>
-				<GoMarkGithub
-					size={sizeOfSVG}
-					color={colorOfSVG}
-				/>
+				<GoMarkGithub size={sizeOfSVG} color={colorOfSVG} />
 			</StyledSocial>
 			<StyledSocial
 				target="_blank"
@@ -49,19 +46,13 @@ function Socials(): JSX.Element {
 				href={socials.linkedin.link}
 				ariaLabel={socials.linkedin.name}
 			>
-				<RiLinkedinBoxFill
-					size={sizeOfSVG}
-					color={colorOfSVG}
-				/>
+				<RiLinkedinBoxFill size={sizeOfSVG} color={colorOfSVG} />
 			</StyledSocial>
 			<StyledSocial
 				href={socials.email.link}
 				ariaLabel={socials.email.name}
 			>
-				<HiOutlineMail
-					size={sizeOfSVG}
-					color={colorOfSVG}
-				/>
+				<HiOutlineMail size={sizeOfSVG} color={colorOfSVG} />
 			</StyledSocial>
 		</div>
 	);

@@ -2,11 +2,9 @@ import Layout from "@components/layout";
 import { NextSeo } from "next-seo";
 
 import { motion } from "framer-motion";
-// import studies from "../../content/studies.json";
 import clsx from "clsx";
-import { socials } from "config";
+import { socials } from "../config";
 import { ArrowUpRight, Github, Linkedin, Mail } from "lucide-react";
-import Jobs from "@components/jobs";
 
 export default function About(): JSX.Element {
 	return (
@@ -109,68 +107,51 @@ export default function About(): JSX.Element {
 				initial={{ y: -10, opacity: 0 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.2, delay: 1 }}
-				className="pt-[10em] w-fit mx-auto max-w-[1000px]"
+				className="pt-[10em] h4 mx-auto max-w-[700px] w-[90%]"
 				id="work"
 			>
-				<Jobs />
-			</motion.section>
-			{/* <motion.section
-				viewport={{ once: true }}
-				initial={{ y: -10, opacity: 0 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.2, delay: 1 }}
-				className="pt-[10em] h4 w-fit mx-auto max-w-[700px] text-gray-100"
-				id="work"
-			>
+				<h5 className="my-2">--- about me in O(n log (n)) ---</h5>
 				<h1 className="title1 font-semibold text-effect mb-10 ">
-					I'm a Software Engineer with a passion for building
+					Let's collaborate on something awesome.
 				</h1>
-				<p className="leading-[32px]">
-					I am a driven and dedicated professional with a passion for
-					technology and education. With a profound belief in their
-					transformative power, I am committed to leveraging
-					technology to create positive change and shape a more
-					equitable future. As a lead software engineer and
-					co-founder, I have successfully spearheaded strategic
-					initiatives and implemented comprehensive coding education
-					programs.
+				<p className="leading-[32px] text-gray-100">
+					I'm a coding enthusiast on a mission to shape the future
+					with technology. As a Software Engineer, I thrive on
+					building innovative solutions and driving positive change.
 					<br />
-					<br /> Fostering an inclusive and nurturing environment, I
-					provide students with the resources they need to thrive and
-					pursue their aspirations. I take immense pride in the impact
-					we have made and I am excited to continue creating positive
-					change in the lives of students. If you share my passion for
-					leveraging technology, advancing education, and making a
-					meaningful difference, I welcome the opportunity to connect
-					and explore how we can collaborate in building a brighter
-					future for all.
-				</p>
-			</motion.section> */}
-			<motion.section
-				viewport={{ once: true }}
-				initial={{ y: -10, opacity: 0 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{ duration: 0.2, delay: 0.7 }}
-				className="pt-[5em] container mx-auto"
-			>
-				<h1
-					className={clsx(
-						"title mx-auto text-effect font-semibold text-center"
-					)}
-				>
-					{"</>"}
-				</h1>{" "}
-				<p className="text-center">
-					--- still buliding this part of the site ---
+					<br />
+					With a diverse background in development, design, and
+					management, I'm a well-rounded problem solver ready to
+					tackle the challenges of today's digital landscape. My true
+					passion lies in data science, where I see immense potential
+					for transformative outcomes.
+					<br />
+					<br />
+					Currently, I'm juggling multiple roles: working at a
+					startup, managing a nonprofit, and pursuing studies as a
+					dual enrollment student. This fast-paced lifestyle keeps me
+					on my toes and fuels my hunger for knowledge and growth.
+					<br />
+					<br />
+					I began my coding journey at a 13, building small games
+					using p5.js. Since then, my passion for technology has only
+					intensified. I believe in its power to shape a brighter,
+					more equitable future. And I'm here to make that vision a
+					reality.
+					<br />
+					<br />
+					When I'm not immersed in code, you can find me at the gym,
+					reading a book, or scuba diving in the ocean.
+					<br />
+					<br />
+					If you share my drive to leverage technology, advance
+					education, and create positive change, I'd love to connect.
+					Together, we can build a better future through
+					collaboration, innovation, and a shared passion for making a
+					meaningful difference. Let's shape the world, one line of
+					code at a time.
 				</p>
 			</motion.section>
-			<section id="studies">
-				<div className="flex-col items-center justify-center">
-					{/* {studies.map((data) => (
-						<Node key={data.title} data={data} />
-					))} */}
-				</div>
-			</section>
 		</Layout>
 	);
 }

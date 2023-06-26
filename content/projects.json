@@ -1,5 +1,45 @@
 [
 	{
+		"title": "Quotes Generation",
+		"github": "https://github.com/NikSchaefer/Quotes-Generation",
+		"external": "",
+		"tech": ["Pytorch", "Python", "Numpy"],
+		"slug": "quotes-generation",
+		"text": "Creating captivating quotes from a single word input using the power of AI",
+		"image": "/project/qgt-1.png",
+		"short": "Meet QGT-2"
+	},
+	{
+		"title": "Developer Discords",
+		"github": "https://github.com/NikSchaefer/dev-discords",
+		"external": "https://discords.nikschaefer.com/",
+		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
+		"text": "Web app for viewing a list of official developer related discord communities",
+		"slug": "dev-discords",
+		"image": "/project/discords.png",
+		"short": "Discover Dev Discords"
+	},
+
+	{
+		"title": "Critical Role NLP",
+		"github": "https://github.com/NikSchaefer/Critical-Role-NLP",
+		"external": "",
+		"tech": ["Tensorflow", "Python", "Numpy"],
+		"slug": "critical-role-nlp",
+		"text": "Text generation based on the D&D series Critical Role",
+		"image": "https://plus.unsplash.com/premium_photo-1682407404553-6df3d4140b97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80",
+		"short": "See AI Function"
+	},
+	{
+		"title": "Go-Fiber Boilerplate",
+		"github": "https://github.com/NikSchaefer/go-fiber",
+		"external": "",
+		"tech": ["Golang", "Fiber"],
+		"slug": "go-fiber",
+		"text": "Golang Rest API built with GORM, Go-Fiber, and a PostgresSQL database.",
+		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+	},
+	{
 		"title": "University Ideal Life Analysis",
 		"github": "https://github.com/NikSchaefer/university-ideal-life",
 		"external": "",
@@ -8,24 +48,7 @@
 		"text": "Neural Network used to analyze and predict student satisfaction and stress levels",
 		"image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
 	},
-	{
-		"title": "Critical Role NLP",
-		"github": "https://github.com/NikSchaefer/Critical-Role-NLP",
-		"external": "",
-		"tech": ["Tensorflow", "Python", "Numpy"],
-		"slug": "critical-role-nlp",
-		"text": "Text generation based on the D&D series Critical Role",
-		"image": "https://plus.unsplash.com/premium_photo-1682407404553-6df3d4140b97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80"
-	},
-	{
-		"title": "Developer Discords",
-		"github": "https://github.com/NikSchaefer/dev-discords",
-		"external": "https://dev-discords.vercel.app/",
-		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
-		"text": "Web app for viewing a list of official developer related discord communities",
-		"slug": "dev-discords",
-		"image": "https://images.unsplash.com/photo-1614680376739-414d95ff43df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-	},
+
 	{
 		"title": "Spotify Review Prediction ",
 		"github": "https://github.com/NikSchaefer/Spotify-Review-Prediction",
@@ -72,15 +95,7 @@
 		"text": "Machine Learning model built to detect if an image has a vehicle",
 		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
-	{
-		"title": "Go-Fiber Boilerplate",
-		"github": "https://github.com/NikSchaefer/go-fiber",
-		"external": "",
-		"tech": ["Golang", "Fiber"],
-		"slug": "go-fiber",
-		"text": "Golang Rest API built with GORM, Go-Fiber, and a PostgresSQL database.",
-		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-	},
+
 	{
 		"text": "My Personal Golang CLI for productivity and networking",
 		"title": "My-CLI",

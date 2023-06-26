@@ -1,7 +1,7 @@
 import { Post } from "@components/blog";
 import Layout from "@components/layout";
 import clsx from "clsx";
-import { allBlogs } from "config";
+import { allBlogs } from "../../config";
 import { NextSeo } from "next-seo";
 import { useState } from "react";
 import { motion } from "framer-motion";

@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { Blog } from "config";
+import { Blog } from "../config";
 import Link from "next/link";
 
 function FeaturedArticle(props: {
