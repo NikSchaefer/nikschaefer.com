@@ -3,7 +3,7 @@ import { BsPerson } from "react-icons/bs";
 import { HiOutlineDocumentText } from "react-icons/hi";
 import { VscProject } from "react-icons/vsc";
 
-const GA_TRACKING_ID = "U-XXXXXX";
+const GA_TRACKING_ID = "G-Q0WYKN3RLJ";
 const IS_PRODUCTION = process.env.NODE_ENV === "production";
 const IS_TEST = process.env.NODE_ENV === "test";
 const IS_BROWSER = typeof window !== "undefined";
