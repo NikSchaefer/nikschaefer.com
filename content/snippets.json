@@ -13,5 +13,10 @@
 		"title": "Matplotlib First 25 images",
 		"tag": "matplotlib",
 		"link": "plt-show"
+	},
+	{
+		"title": "Deauthentication attack with a wordlist",
+		"tag": "wifi",
+		"link": "deauth"
 	}
 ]

