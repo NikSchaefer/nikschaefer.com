@@ -12,9 +12,9 @@
 	{
 		"title": "Developer Discords",
 		"github": "https://github.com/NikSchaefer/dev-discords",
-		"external": "https://discords.nikschaefer.com/",
+		"external": "https://dev-discords.nikschaefer.com",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
-		"text": "Web app for viewing a list of official developer related discord communities",
+		"text": "An online collection of developer related discord servers",
 		"slug": "dev-discords",
 		"image": "/project/discords.png",
 		"short": "Discover Dev Discords"
