@@ -71,7 +71,7 @@
 	{
 		"title": "InstaDog",
 		"github": "https://github.com/NikSchaefer/InstaDog",
-		"external": "doge.nikschaefer.com/",
+		"external": "https://doge.nikschaefer.com/",
 		"tech": ["React", "Typescript", "HTML + CSS", "API"],
 		"text": "A dog lover's Instagram clone powered by an API, showcasing adorable images — because who can resist cute dogs?",
 		"slug": "instadog",
