@@ -75,6 +75,16 @@ type Blog = {
 
 const allBlogs: Blog[] = [
 	{
+		title: "What makes a University Life Ideal? A Statistical Perspective",
+		link: "/project/university-ideal-life",
+		image: "/blog/mlops.webp",
+		description:
+			"",
+		min: 3,
+		date: "July 2023",
+		type: ["Machine Learning"],
+	},
+	{
 		title: "Unveiling Machine Learning's Latest Advances",
 		link: "/blog/whats-new-in-machine-learning",
 		image: "/blog/mlops.webp",
