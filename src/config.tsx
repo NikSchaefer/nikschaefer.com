@@ -76,7 +76,7 @@ type Blog = {
 const allBlogs: Blog[] = [
 	{
 		title: "What makes a University Life Ideal? A Statistical Perspective",
-		link: "/project/university-ideal-life",
+		link: "/projects/university-ideal-life",
 		image: "/blog/mlops.webp",
 		description:
 			"",
