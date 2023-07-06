@@ -6,7 +6,7 @@
 		"tech": ["Pytorch", "Python", "Numpy"],
 		"slug": "quotes-generation",
 		"text": "Creating captivating quotes from a single word input using the power of AI and Mathematics",
-		"image": "/project/qgt-1.png",
+		"image": "/projects/qgt-1.png",
 		"short": "Meet QGT-2"
 	},
 	{
