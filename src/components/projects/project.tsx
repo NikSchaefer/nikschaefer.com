@@ -16,7 +16,7 @@ export default function Project({ title, slug, image, text, short }: Project) {
 				"p-[1rem] sm:p-[1.5rem] sm:pr-0 relative z-10 col-span-2"
 			)}
 		>
-			<div className="gap-5 sm:gap-0 p-8 w-full sm:w-[40%] flex flex-col justify-between ">
+			<div className="gap-5 sm:gap-0 p-6 w-full sm:w-[40%] flex flex-col justify-between ">
 				<h2 className="font-semibold text-white">{title}</h2>
 				<p>{text}</p>
 				<Link
@@ -33,7 +33,7 @@ export default function Project({ title, slug, image, text, short }: Project) {
 			</div>
 			<div className="w-full sm:w-[60%] sm:pr-10 flex items-center pb-5 sm:py-5">
 				<img
-					className="rounded-lg overflow-none "
+					className="rounded-lg overflow-none"
 					src={image}
 					alt={title}
 				/>

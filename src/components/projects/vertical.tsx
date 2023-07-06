@@ -22,7 +22,7 @@ export default function VerticalProject({
 				"p-[1rem] relative w-full"
 			)}
 		>
-			<div className="gap-5 p-8 w-full flex flex-col justify-between ">
+			<div className="gap-5 p-6 w-full flex flex-col justify-between ">
 				<h2 className="font-semibold text-white">{title}</h2>
 				<p>{text}</p>
 				<Link
@@ -37,7 +37,7 @@ export default function VerticalProject({
 					</span>
 				</Link>
 			</div>
-			<div className="w-full flex items-center pb-5">
+			<div className="w-full flex items-center pb-5 my-auto">
 				<img
 					className="rounded-lg overflow-none w-[90%] mx-auto"
 					src={image}

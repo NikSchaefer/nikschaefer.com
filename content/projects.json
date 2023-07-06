@@ -5,7 +5,7 @@
 		"external": "",
 		"tech": ["Pytorch", "Python", "Numpy"],
 		"slug": "quotes-generation",
-		"text": "Creating captivating quotes from a single word input using the power of AI",
+		"text": "Creating captivating quotes from a single word input using the power of AI and Mathematics",
 		"image": "/project/qgt-1.png",
 		"short": "Meet QGT-2"
 	},
@@ -14,12 +14,21 @@
 		"github": "https://github.com/NikSchaefer/dev-discords",
 		"external": "https://dev-discords.nikschaefer.com",
 		"tech": ["React", "Typescript", "NextJS", "Styled Components"],
-		"text": "An online collection of developer related discord servers",
+		"text": "An online collection of developer related discord servers — find your next community!",
 		"slug": "dev-discords",
 		"image": "/project/discords.png",
 		"short": "Discover Dev Discords"
 	},
-
+	{
+		"title": "University Life Analysis",
+		"github": "https://github.com/NikSchaefer/university-ideal-life",
+		"external": "",
+		"tech": ["Tensorflow", "Python", "Numpy"],
+		"slug": "university-ideal-life",
+		"text": "A statistical analysis and neural network used to analyze and predict student satisfaction and stress levels",
+		"image": "/project/data.svg",
+		"short": "See the Data"
+	},
 	{
 		"title": "Critical Role NLP",
 		"github": "https://github.com/NikSchaefer/Critical-Role-NLP",
@@ -38,15 +47,6 @@
 		"slug": "go-fiber",
 		"text": "Golang Rest API built with GORM, Go-Fiber, and a PostgresSQL database.",
 		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
-	},
-	{
-		"title": "University Ideal Life Analysis",
-		"github": "https://github.com/NikSchaefer/university-ideal-life",
-		"external": "",
-		"tech": ["Tensorflow", "Python", "Numpy"],
-		"slug": "university-ideal-life",
-		"text": "Neural Network used to analyze and predict student satisfaction and stress levels",
-		"image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
 	},
 
 	{
