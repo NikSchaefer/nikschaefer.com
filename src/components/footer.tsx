@@ -68,7 +68,7 @@ export default function Main(): JSX.Element {
 			<div className="text-gray-300">
 				<ul className="grid grid-cols-1 sm:grid-cols-4 gap-2">
 					<li className="sm:col-span-2 p-4">
-						<div className="flex-col sm:flex-row bg-primary-500/10 gap-2 rounded-lg sm:rounded-full w-full px-8 py-4 mb-8 flex group">
+						<div className="flex-col sm:flex-row bg-primary-800/10 gap-2 rounded-lg sm:rounded-full w-full px-8 py-4 mb-8 flex group">
 							<div className="flex items-center">
 								<Hand className="transition-all mr-2 duration-100 group-hover:text-primary group-hover:scale-105 group-hover:rotate-12" />
 								<span> Say Hi! {"=>"} </span>

@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Projects from "@components/projects";
 import Timeline from "@components/work";
 import CTA from "@components/cta";
+import About from "@components/home-about";
 
 function Intro() {
 	return (
@@ -42,8 +43,9 @@ export default function Home(): JSX.Element {
 		<Layout>
 			<NextSeo title="Developer" />
 			<Intro />
-			<Projects />
+			<About />
 			<Timeline />
+			<Projects />
 			<CTA />
 		</Layout>
 	);

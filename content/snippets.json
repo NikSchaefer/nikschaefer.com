@@ -16,7 +16,7 @@
 	},
 	{
 		"title": "Deauthentication attack with a wordlist",
-		"tag": "wifi",
+		"tag": "kali",
 		"link": "deauth"
 	}
 ]

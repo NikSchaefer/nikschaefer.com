@@ -29,7 +29,7 @@ export default function Slug({
 				<Article
 					source={source}
 					title={frontMatter.title}
-					tags="#tailwindcss"
+					tags=""
 				/>
 			</section>
 		</Layout>

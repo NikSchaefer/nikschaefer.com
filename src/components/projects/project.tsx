@@ -12,7 +12,7 @@ export default function Project({ title, slug, image, text, short }: Project) {
 			transition={{ duration: 0.2, delay: 0.2 }}
 			viewport={{ once: true }}
 			className={clsx(
-				"flex flex-col gap-5 sm:gap-0 sm:flex-row card-bg mx-auto rounded-[2rem] border border-primary/20",
+				"flex flex-col gap-5 sm:gap-0 sm:flex-row card-bg mx-auto rounded-[2rem] border-2 border-primary/20",
 				"p-[1rem] sm:p-[1.5rem] sm:pr-0 relative z-10 col-span-2"
 			)}
 		>

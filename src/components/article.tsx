@@ -44,14 +44,14 @@ function Article({
 					{github && (
 						<a
 							href={github}
-							className="hover:text-primary hover:scale-105 transition-all duration-75"
+							className="rounded-md font-medium hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
 						>
 							<GithubIcon />
 						</a>
 					)}
 					{link && (
 						<a
-							className="hover:text-primary hover:scale-105 transition-all duration-75"
+							className="rounded-md font-medium hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
 							href={link}
 						>
 							<ExternalLink />
@@ -61,14 +61,14 @@ function Article({
 						<>
 							<a
 								href={`${github}/stargazers`}
-								className="hover:text-primary flex gap-2 items-center hover:scale-105 transition-all duration-75"
+								className="rounded-md font-medium gap-1 hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
 							>
 								<Star />
 								{githubData["stargazers_count"]}
 							</a>
 							<a
 								href={`${github}/forks`}
-								className="hover:text-primary flex gap-2 items-center hover:scale-105 transition-all duration-75"
+								className="rounded-md font-medium gap-1 hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
 							>
 								<GitFork />
 								{githubData["forks_count"]}
@@ -78,7 +78,7 @@ function Article({
 				</div>
 			</div>
 
-			<section className="prose-blue prose prose-invert text-left text-gray-100">
+			<section className="prose-blue prose prose-invert text-left text-gray-400">
 				<MDXRemote {...source} />
 			</section>
 

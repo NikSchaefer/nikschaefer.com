@@ -6,7 +6,7 @@ import VerticalProject from "./vertical";
 
 export default function Projects() {
 	return (
-		<section className="pt-[8rem] w-[90%] max-w-[900px] mx-auto relative">
+		<section className="w-[90%] max-w-[900px] mx-auto relative">
 			<Intro />
 
 			<div className="flex flex-col sm:grid sm:grid-cols-2 gap-12">

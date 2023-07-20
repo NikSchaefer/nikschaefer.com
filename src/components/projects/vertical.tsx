@@ -18,7 +18,7 @@ export default function VerticalProject({
 			transition={{ duration: 0.2, delay: 0.2 }}
 			viewport={{ once: true }}
 			className={clsx(
-				"flex flex-col gap-5 card-bg rounded-[2rem] border border-primary/20",
+				"flex flex-col gap-5 card-bg rounded-[2rem] border-2 border-primary/20",
 				"p-[1rem] relative w-full"
 			)}
 		>
