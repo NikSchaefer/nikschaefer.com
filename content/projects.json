@@ -120,6 +120,7 @@
 		"github": "https://github.com/NikSchaefer/nextjs-boilerplate",
 		"external": "https://boilerplate.nikschaefer.tech/",
 		"tech": [
+			"React",
 			"Typescript",
 			"NextJS",
 			"Styled Components",
@@ -136,7 +137,7 @@
 		"title": "Umbrella App",
 		"github": "https://github.com/NikSchaefer/umbrella_website",
 		"external": "https://theumbrella.vercel.app/",
-		"tech": ["React Native", "ReactJS", "Javascript"],
+		"tech": ["React", "React Native", "ReactJS", "Javascript"],
 		"slug": "umbrella-app",
 		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
@@ -145,7 +146,7 @@
 		"title": "Web Tools",
 		"github": "https://github.com/NikSchaefer/Web-Tools",
 		"external": "https://development-tools.vercel.app/",
-		"tech": ["Typescript", "React", "CRA"],
+		"tech": ["React", "Typescript", "CRA"],
 		"slug": "web-tools",
 		"image": "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
 	},
