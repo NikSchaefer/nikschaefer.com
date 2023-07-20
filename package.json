@@ -27,7 +27,7 @@
 		"framer-motion": "^10.12.16",
 		"gray-matter": "^4.0.3",
 		"lucide-react": "^0.262.0",
-		"next": "^13.4.9",
+		"next": "^13.4.10",
 		"next-mdx-remote": "^4.4.1",
 		"next-seo": "^6.0.0",
 		"next-sitemap": "^4.1.8",
