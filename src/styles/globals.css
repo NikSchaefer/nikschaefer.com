@@ -115,11 +115,14 @@ h6 {
 }
 
 .card-bg {
+	/*
 	background: linear-gradient(
 		180deg,
 		rgba(35, 37, 49, 0.9),
 		rgba(25, 25, 34, 0.7)
 	);
+	*/
+	@apply bg-secondary-400;
 }
 
 /* CODE CSS */
