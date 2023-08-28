@@ -22,7 +22,7 @@
 		"@headlessui/react": "^1.7.17",
 		"@mapbox/rehype-prism": "^0.8.0",
 		"@tailwindcss/typography": "^0.5.9",
-		"axios": "^1.4.0",
+		"axios": "^1.5.0",
 		"clsx": "^1.2.1",
 		"framer-motion": "^10.15.0",
 		"gray-matter": "^4.0.3",
