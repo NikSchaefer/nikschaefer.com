@@ -24,7 +24,7 @@
 		"@tailwindcss/typography": "^0.5.9",
 		"axios": "^1.4.0",
 		"clsx": "^1.2.1",
-		"framer-motion": "^10.15.0",
+		"framer-motion": "^10.16.10",
 		"gray-matter": "^4.0.3",
 		"lucide-react": "^0.272.0",
 		"next": "^13.4.18",
