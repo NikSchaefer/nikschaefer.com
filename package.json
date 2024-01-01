@@ -23,7 +23,7 @@
 		"@mapbox/rehype-prism": "^0.8.0",
 		"@tailwindcss/typography": "^0.5.9",
 		"axios": "^1.6.2",
-		"clsx": "^1.2.1",
+		"clsx": "^2.1.0",
 		"framer-motion": "^10.16.10",
 		"gray-matter": "^4.0.3",
 		"lucide-react": "^0.295.0",
