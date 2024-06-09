@@ -47,38 +47,6 @@
 		]
 	},
 	{
-		"title": "Full Stack Software Engineer",
-		"company": "Kumon North America Inc.",
-		"location": "Remote",
-		"range": "Nov 2022 • Present",
-		"url": "https://www.kumon.com/",
-		"logo": "/job/kumon.png",
-		"content": [
-			"Collaborated with team members and stakeholders to develop and deploy scalable software solutions.",
-			"Designed and maintained user-friendly front-end interfaces using React.js.",
-			"Developed and integrated back-end components using Node.js and PostgreSQL for optimal performance.",
-			"Stayed current with industry trends and technologies, incorporating emerging best practices and tools."
-		],
-		"tools": [
-			"React",
-			"Typescript",
-			"Javascript",
-			"Golang",
-			"CI/CD(Vercel)",
-			"Git(GitHub)",
-			"Node.js",
-			"PostgreSQL",
-			"CSS-in-JS",
-			"Styled-Components",
-			"CSS",
-			"HTML",
-			"npm",
-			"Docker",
-			"Next.js",
-			"Webpack"
-		]
-	},
-	{
 		"title": "Web Developer Intern",
 		"company": "The Esport Company",
 		"location": "Remote",
