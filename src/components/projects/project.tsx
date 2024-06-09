@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Project } from "types";
 import { motion } from "framer-motion";
 
-export default function Project({ title, slug, image, text, short }: Project) {
+export default function ProjectComponent({ title, slug, image, text, short }: Project) {
 	return (
 		<motion.div
 			initial={{ y: -10, opacity: 0 }}
