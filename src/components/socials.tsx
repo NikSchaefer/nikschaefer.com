@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { socials } from "../config";
-import { GoMarkGithub } from "react-icons/go";
 import { HiOutlineMail } from "react-icons/hi";
 import { RiLinkedinBoxFill } from "react-icons/ri";
+import { BsGithub } from "react-icons/bs";
 
 function StyledSocial(props: {
 	children: React.ReactNode;
@@ -38,7 +38,7 @@ function Socials(): JSX.Element {
 				ariaLabel={socials.github.name}
 				rel="noreferrer"
 			>
-				<GoMarkGithub size={sizeOfSVG} color={colorOfSVG} />
+				<BsGithub size={sizeOfSVG} color={colorOfSVG} />
 			</StyledSocial>
 			<StyledSocial
 				target="_blank"
