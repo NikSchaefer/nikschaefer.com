@@ -40,7 +40,7 @@
 		"typescript": "^5.4.4"
 	},
 	"devDependencies": {
-		"@babel/preset-typescript": "^7.21.5",
+		"@babel/preset-typescript": "^7.24.7",
 		"@types/babel__core": "^7.20.5",
 		"@types/node": "^20.11.0",
 		"@types/react": "^18.2.53",
