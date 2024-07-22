@@ -1,3 +1,5 @@
+"use client";
+
 import axios from "axios";
 import clsx from "clsx";
 import { ExternalLink, GitFork, GithubIcon, Star } from "lucide-react";
@@ -30,7 +32,7 @@ function Article({
 		});
 	}, [github]);
 	return (
-		<article className="text-white max-w-2xl px-6 py-24 mx-auto space-y-12">
+		<article className="text-foreground max-w-2xl p-6 mx-auto space-y-12">
 			<div className="w-full mx-auto space-y-4 text-left">
 				<h1
 					className={clsx(
@@ -44,14 +46,14 @@ function Article({
 					{github && (
 						<a
 							href={github}
-							className="rounded-md font-medium hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
+							className="rounded-md font-medium hover:bg-background-400 h-10 py-3 px-3 flex items-center justify-center"
 						>
 							<GithubIcon />
 						</a>
 					)}
 					{link && (
 						<a
-							className="rounded-md font-medium hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
+							className="rounded-md font-medium hover:bg-background-400 h-10 py-3 px-3 flex items-center justify-center"
 							href={link}
 						>
 							<ExternalLink />
@@ -61,14 +63,14 @@ function Article({
 						<>
 							<a
 								href={`${github}/stargazers`}
-								className="rounded-md font-medium gap-1 hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
+								className="rounded-md font-medium gap-1 hover:bg-background-400 h-10 py-3 px-3 flex items-center justify-center"
 							>
 								<Star />
 								{githubData["stargazers_count"]}
 							</a>
 							<a
 								href={`${github}/forks`}
-								className="rounded-md font-medium gap-1 hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
+								className="rounded-md font-medium gap-1 hover:bg-background-400 h-10 py-3 px-3 flex items-center justify-center"
 							>
 								<GitFork />
 								{githubData["forks_count"]}
@@ -78,7 +80,7 @@ function Article({
 				</div>
 			</div>
 
-			<section className="prose-blue prose prose-invert text-left text-gray-400">
+			<section className="prose-blue prose dark:prose-invert text-left text-foreground">
 				<MDXRemote {...source} />
 			</section>
 

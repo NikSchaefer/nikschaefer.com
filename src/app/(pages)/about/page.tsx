@@ -1,5 +1,4 @@
-import Layout from "@components/layout";
-import { NextSeo } from "next-seo";
+"use client";
 
 import { motion } from "framer-motion";
 import Callout from "@components/callout";
@@ -7,13 +6,18 @@ import Connect from "@components/connect";
 
 export default function About(): JSX.Element {
 	return (
-		<Layout className="h4 w-[90%] mx-auto">
-			<NextSeo title="About" />
+		<>
 			<motion.section
-				className="pt-[1em] h4 mx-auto prose max-w-[750px] text-gray-400"
+				className="pt-[1em] h4 mx-auto prose max-w-[750px]"
 				id="work"
 			>
-				<h5 className="my-2">README.md</h5>
+				<a
+					href="https://github.com/NikSchaefer/NikSchaefer"
+					target="_blank"
+					className="no-underline text-foreground"
+				>
+					<h5 className="my-2">README.md</h5>
+				</a>
 				<h1 className="title1 font-semibold text-effect mb-10 ">
 					hey, I'm Nik.
 				</h1>
@@ -23,7 +27,7 @@ export default function About(): JSX.Element {
 					<a
 						href="https://noveltor.com"
 						target="_blank"
-						className="text-gray-400 no-underline relative inline-flex items-center pl-8 pr-2 bg-secondary-400 rounded-md border border-primary/10"
+						className="bg-background-100 no-underline relative inline-flex items-center pl-8 pr-2 rounded-md border border-primary/20"
 					>
 						<img
 							className="h-4 w-4 absolute left-2"
@@ -44,7 +48,7 @@ export default function About(): JSX.Element {
 			</motion.section>
 			<Callout />
 			<motion.section
-				className="h4 mx-auto prose max-w-[750px] text-gray-400"
+				className="h4 mx-auto prose max-w-[750px]"
 				id="work"
 			>
 				<p className="leading-[32px]">
@@ -61,6 +65,6 @@ export default function About(): JSX.Element {
 			</motion.section>
 
 			<Connect />
-		</Layout>
+		</>
 	);
 }

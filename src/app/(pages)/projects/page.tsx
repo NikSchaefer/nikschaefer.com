@@ -1,11 +1,12 @@
+"use client";
+
 import { Card, sortByOptions } from "@components/card";
-import Layout from "@components/layout";
 import clsx from "clsx";
 import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 import { Reorder, motion } from "framer-motion";
 
-import projects from "../../../content/projects.json";
+import projects from "../../../../content/projects.json";
 
 export default function Projects(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
@@ -33,7 +34,7 @@ export default function Projects(): JSX.Element {
 	}, [sortType]);
 
 	return (
-		<Layout>
+		<>
 			<NextSeo title="Projects" />
 			<section className="pt-[3em] container mx-auto">
 				<motion.h1
@@ -60,14 +61,14 @@ export default function Projects(): JSX.Element {
 				</motion.p>
 			</section>
 			<section className="pt-[3em] max-w-[1400px] m-auto w-[95%] ">
-				<ul className="flex items-center text-white my-5 relative overflow-x-scroll">
+				<ul className="flex items-center my-5 relative">
 					{sortByOptions.map((value, i) => (
 						<motion.button
 							viewport={{ once: true }}
 							className={clsx(
 								value.name === sortType
 									? "text-primary"
-									: "text-gray-400",
+									: "text-foreground",
 								"my-2 mx-1 py-1 px-2 whitespace-nowrap"
 							)}
 							key={value.name}
@@ -89,10 +90,10 @@ export default function Projects(): JSX.Element {
 											project.tech.some((r) =>
 												value.include.includes(r)
 											)
-									  ).length}
+										).length}
 							</span>
 							{i + 1 !== sortByOptions.length && (
-								<span className="ml-4 text-gray-400">/</span>
+								<span className="ml-4 text-foreground">/</span>
 							)}
 						</motion.button>
 					))}
@@ -116,6 +117,6 @@ export default function Projects(): JSX.Element {
 					))}
 				</Reorder.Group>
 			</section>
-		</Layout>
+		</>
 	);
 }

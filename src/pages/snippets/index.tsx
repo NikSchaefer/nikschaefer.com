@@ -57,7 +57,7 @@ export default function Snippets(): JSX.Element {
 						className={clsx(
 							"relative w-full rounded",
 							"p-4 text-lg flex items-center justify-between",
-							"bg-secondary-400 border border-primary/10 min-w-[180px]",
+							"bg-background-400 border border-primary/10 min-w-[180px]",
 							"hover:bg-primary/10 transition-colors duration-200"
 						)}
 					>

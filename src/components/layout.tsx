@@ -13,7 +13,7 @@ export default function Layout({
 	return (
 		<>
 			<Header />
-			<main className={clsx("font-inter min-h-[50vh]", className)}>
+			<main className={clsx("min-h-[50vh]", className)}>
 				{children}
 			</main>
 			<Footer />

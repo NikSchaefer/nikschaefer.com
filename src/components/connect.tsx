@@ -4,8 +4,8 @@ import { Github, ArrowUpRight, Linkedin, Mail } from "lucide-react";
 
 export default function Connect() {
 	return (
-		<motion.section className="relative w-[90%] max-w-[1000px] bg-secondary-400 border border-primary/30 mx-auto py-[3em] my-[3em] rounded-md">
-			<div className="h4 mx-auto prose text-gray-400 my-[2em]">
+		<motion.section className="relative w-[90%] max-w-[1000px] bg-background-400 border border-primary/30 mx-auto py-[4em] my-[3em] rounded-md">
+			<div className="h4 mx-auto prose">
 				<h1 className="h3 font-semibold text-effect mb-4 ">
 					Let's collaborate on something awesome.
 				</h1>
@@ -27,7 +27,7 @@ export default function Connect() {
 					href={socials.github.link}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex gap-4 items-center rounded border px-3 py-4 w-full bg-secondary border-primary/20 hover:bg-primary-500/10"
+					className="flex gap-4 items-center rounded border px-3 py-4 w-full bg-background-200 border-primary/20 hover:bg-primary-500/10"
 				>
 					<Github />
 					GitHub
@@ -39,7 +39,7 @@ export default function Connect() {
 					href={socials.linkedin.link}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex gap-4 items-center rounded border px-3 py-4 w-full bg-secondary border-primary/20 hover:bg-primary-500/10"
+					className="flex gap-4 items-center rounded border px-3 py-4 w-full bg-background-200 border-primary/20 hover:bg-primary-500/10"
 				>
 					<Linkedin />
 					LinkedIn
@@ -51,7 +51,7 @@ export default function Connect() {
 					href={socials.email.link}
 					target="_blank"
 					rel="noopener noreferrer"
-					className="flex gap-4 items-center rounded border px-3 py-4 w-full bg-secondary border-primary/20 hover:bg-primary-500/10"
+					className="flex gap-4 items-center rounded border px-3 py-4 w-full bg-background-200 border-primary/20 hover:bg-primary-500/10"
 				>
 					<Mail />
 					Email

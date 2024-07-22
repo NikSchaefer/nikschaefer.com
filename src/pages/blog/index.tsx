@@ -75,7 +75,7 @@ export default function BlogIndex(): JSX.Element {
 					/>
 					<div className="hidden sm:flex absolute top-1/2 items-center -translate-y-1/2 right-6 border-primary-300/30 space-x-2 border-4 p-2 rounded-xl">
 						<Command />
-						<span className="font-inter">/</span>
+						<span className="">/</span>
 					</div>
 				</motion.div>
 			</section>

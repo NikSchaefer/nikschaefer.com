@@ -1,13 +1,15 @@
+"use client";
+
 import clsx from "clsx";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-import { HeaderLinks } from "../config";
+import { HeaderLinks } from "../../../config";
+import { usePathname } from "next/navigation";
 
 export default function Main(): JSX.Element {
-	const router = useRouter();
+	const pathname = usePathname();
 	const [hasScrolled, setHasScrolled] = useState(false);
 
 	useEffect(() => {
@@ -37,31 +39,28 @@ export default function Main(): JSX.Element {
 				<nav className="p-5 flex justify-center w-full">
 					<ul
 						className={clsx(
-							"flex gap-1 px-5 py-2 rounded-full font-inter relative",
+							"flex text-sm sm:text-base gap-1 px-5 py-2.5 rounded-full relative",
 							hasScrolled
-								? "bg-[#10101a]/40 filter-effect shadow-md"
+								? "bg-background-100/70 filter-effect"
 								: ""
 						)}
 					>
 						{HeaderLinks.map((value, index) => (
 							<motion.li
 								className={clsx(
-									router.pathname === value.link
-										? "text-white"
-										: "",
-									"px-5 py-2 relative font-semibold rounded-full transition-all duration-100 hover:text-white"
+									"px-5 py-2 relative font-medium rounded-full"
 								)}
 								key={index}
 							>
-								{router.pathname === value.link && (
+								{pathname === value.link && (
 									<motion.div
 										layoutId="underline"
-										className="absolute top-0 left-0 w-full h-full bg-primary/10 rounded-full"
+										className="absolute top-0 left-0 w-full h-full bg-primary-foreground -z-10 rounded-full"
 									/>
 								)}
 								<Link
 									href={value.link}
-									className="flex items-center"
+									className="flex items-center z-40"
 								>
 									{value.title}{" "}
 									{index === 0 && (
