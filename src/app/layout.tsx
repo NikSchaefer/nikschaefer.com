@@ -1,14 +1,8 @@
 import "./globals.css";
 import React from "react";
-import { Inter } from "next/font/google";
 import { Metadata } from "next";
 import { cn } from "@lib/utils";
-
-const inter = Inter({
-	subsets: ["latin"],
-	display: "swap",
-	variable: "--font-inter",
-});
+import { GeistSans } from "geist/font/sans";
 
 export const metadata: Metadata = {
 	title: {
@@ -80,7 +74,10 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={cn("bg-background text-foreground", inter.className)}
+			className={cn(
+				"bg-background dark text-foreground",
+				GeistSans.className
+			)}
 		>
 			<body>{children}</body>
 		</html>

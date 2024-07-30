@@ -4,17 +4,19 @@
 
 @layer base {
 	:root {
+		--background: 39 33% 90%;
+		--foreground: 171 15% 35%;
 		--card: 42, 32%, 92%;
 		--card-foreground: 222.2 84% 4.9%;
 		--popover: 42, 32%, 92%;
 		--popover-foreground: 222.2 84% 4.9%;
-		--primary: 222.2 47.4% 11.2%;
+		--primary: 171 93% 18%;
 		--primary-foreground: 210 40% 98%;
 		--secondary: 210 40% 96.1%;
 		--secondary-foreground: 222.2 47.4% 11.2%;
 		--muted: 210 40% 96.1%;
-		--muted-foreground: 215.4 16.3% 46.9%;
-		--accent: 210 40% 96.1%;
+		--muted-foreground: 171 15% 35%;
+		--accent: 43 33% 96%;
 		--accent-foreground: 222.2 47.4% 11.2%;
 		--destructive: 0 84.2% 60.2%;
 		--destructive-foreground: 210 40% 98%;
@@ -36,13 +38,13 @@
 		--card-foreground: 210 40% 98%;
 		--popover: 222.2 84% 4.9%;
 		--popover-foreground: 210 40% 98%;
-		--primary: 210 40% 98%;
+		--primary: 170 80% 60%;
 		--primary-foreground: 222.2 47.4% 11.2%;
 		--secondary: 217.2 32.6% 17.5%;
 		--secondary-foreground: 210 40% 98%;
 		--muted: 217.2 32.6% 17.5%;
 		--muted-foreground: 215 20.2% 65.1%;
-		--accent: 217.2 32.6% 17.5%;
+		--accent: 220.2 40.6% 10.5%;
 		--accent-foreground: 210 40% 98%;
 		--destructive: 0 62.8% 30.6%;
 		--destructive-foreground: 210 40% 98%;
@@ -54,6 +56,12 @@
 		--chart-3: 30 80% 55%;
 		--chart-4: 280 65% 60%;
 		--chart-5: 340 75% 55%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
 	}
 }
 
@@ -69,10 +77,6 @@
 	.bg-growing-underline:focus {
 		background-size: 100% 100%;
 	}
-}
-
-.underline-effect {
-	@apply bg-gradient-to-r from-blue-400 to-pink-500 bg-growing-underline text-primary-400 hover:text-white;
 }
 
 .text-effect {
@@ -93,7 +97,7 @@
 }
 
 ::-webkit-scrollbar-track {
-	@apply bg-background-500;
+	@apply bg-background;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -115,13 +119,8 @@
 	box-sizing: border-box;
 }
 
-.dark .prose h1,
-.dark .prose h2,
-.dark .prose h3,
-.dark .prose h4,
-.dark .prose h5,
-.dark .prose h6 {
-	color: white;
+.prose {
+	@apply text-foreground
 }
 
 .prose h1,
@@ -187,7 +186,7 @@ h6 {
 		rgba(25, 25, 34, 0.7)
 	);
 	*/
-	@apply bg-background-400;
+	@apply bg-accent text-accent-foreground
 }
 
 /* CODE CSS */

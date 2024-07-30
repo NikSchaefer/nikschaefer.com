@@ -7,6 +7,8 @@ import { useEffect, useState } from "react";
 import { Reorder, motion } from "framer-motion";
 
 import projects from "../../../../content/projects.json";
+import { cn } from "@lib/utils";
+import { titleStyle } from "@styles/common";
 
 export default function Projects(): JSX.Element {
 	const [projectData, setProjectData] = useState(projects);
@@ -42,9 +44,7 @@ export default function Projects(): JSX.Element {
 					initial={{ y: -10, opacity: 0 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.2, delay: 0.1 }}
-					className={clsx(
-						"title mx-auto font-semibold text-center text-effect pb-3"
-					)}
+					className={cn(titleStyle, "text-center")}
 				>
 					Projects.
 				</motion.h1>

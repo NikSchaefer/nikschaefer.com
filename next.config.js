@@ -13,4 +13,11 @@ module.exports = {
 		];
 	},
 	transpilePackages: ["next-mdx-remote"],
+	images: {
+		domains: [
+			"bluemangosoftware.com",
+			"noveltor.com",
+			"arafa-tech-git-main-arafa-tech-foundation.vercel.app",
+		],
+	},
 };

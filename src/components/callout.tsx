@@ -16,11 +16,11 @@ export default function Callout() {
 					<motion.button
 						onClick={() => setIsOpen(true)}
 						className={clsx(
-							"bg-background-300 rounded-lg",
+							"bg-accent rounded-lg",
 							"cursor-pointer w-full text-primary font-medium",
 							"flex gap-2 items-center justify-between",
 							"px-6 py-5 text-left text-base",
-							"hover:bg-background-200"
+							"hover:bg-accent/80"
 						)}
 					>
 						Which Tech Trend Keeps Me Up at Night?
@@ -29,12 +29,12 @@ export default function Callout() {
 				</div>
 			)}
 			{isOpen && (
-				<motion.section className="relative w-[90%] max-w-[1000px] bg-background-400 border border-primary/30 mx-auto py-[3em] my-[3em] rounded-md">
+				<motion.section className="relative w-[90%] max-w-[1000px] card-bg border border-primary/30 mx-auto py-[3em] my-[3em] rounded-md">
 					<button
 						onClick={() => setIsOpen(false)}
 						className={clsx(
 							"absolute right-3 top-3 rounded-xl p-2 transition-colors",
-							"hover:bg-background-300"
+							"hover:bg-accent"
 						)}
 					>
 						<X />
@@ -54,8 +54,11 @@ export default function Callout() {
 							ethical questions.
 							<br />
 							<br />
-							<span className="font-semibold text-primary">What defines a human?</span> Where do we draw the
-							line between human and machine? <br />
+							<span className="font-semibold text-primary">
+								What defines a human?
+							</span>{" "}
+							Where do we draw the line between human and machine?{" "}
+							<br />
 							<br />
 							While it may be far off in the future, I find myself
 							delving into the latest breakthroughs and pondering

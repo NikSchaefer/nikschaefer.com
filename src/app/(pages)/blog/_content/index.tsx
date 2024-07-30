@@ -1,11 +1,18 @@
+"use client";
+
 import { Post } from "@components/blog";
-import Layout from "@components/layout";
 import clsx from "clsx";
-import { allBlogs } from "../../config";
-import { NextSeo } from "next-seo";
+import { allBlogs } from "../../../../config";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Command, SearchCode } from "lucide-react";
+import { cn } from "@lib/utils";
+import { titleStyle } from "@styles/common";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Blog",
+};
 
 export default function BlogIndex(): JSX.Element {
 	const [search, setSearch] = useState("");
@@ -39,20 +46,14 @@ export default function BlogIndex(): JSX.Element {
 	}, []);
 
 	return (
-		<Layout>
-			<NextSeo
-				title="Blog"
-				description="Read my thoughts on software development, design, and more."
-			/>
+		<>
 			<section className="pt-[1em] mx-auto w-[90%] max-w-[800px] ">
 				<motion.h1
 					viewport={{ once: true }}
 					initial={{ y: -10, opacity: 0 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.2, delay: 0.1 }}
-					className={clsx(
-						"title text-effect mx-auto font-semibold text-center pb-8"
-					)}
+					className={cn(titleStyle, "text-center pb-8")}
 				>
 					Blog.
 				</motion.h1>
@@ -70,10 +71,10 @@ export default function BlogIndex(): JSX.Element {
 						placeholder="Search for a blog..."
 						className={clsx(
 							"bg-none bg-transparent outline-none w-full h-10 font-semibold placeholder-gray-400",
-							"border-8 border-primary-300/10 rounded-3xl px-12 py-8"
+							"border-8 border-primary/10 rounded-3xl px-12 py-8"
 						)}
 					/>
-					<div className="hidden sm:flex absolute top-1/2 items-center -translate-y-1/2 right-6 border-primary-300/30 space-x-2 border-4 p-2 rounded-xl">
+					<div className="hidden sm:flex absolute top-1/2 items-center -translate-y-1/2 right-6 border-primary/30 space-x-2 border-4 p-2 rounded-xl">
 						<Command />
 						<span className="">/</span>
 					</div>
@@ -88,7 +89,7 @@ export default function BlogIndex(): JSX.Element {
 					transition={{ duration: 0.2, delay: 0.5 }}
 					className="text-white font-semibold"
 				>
-					All Posts
+					Posts
 				</motion.h2>
 				<ul>
 					{blogs.map((data, i) => (
@@ -107,6 +108,6 @@ export default function BlogIndex(): JSX.Element {
 				</ul>
 				{blogs.length === 0 && <span>No posts found.</span>}
 			</section>
-		</Layout>
+		</>
 	);
 }

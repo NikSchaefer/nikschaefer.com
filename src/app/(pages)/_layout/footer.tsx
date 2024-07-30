@@ -52,7 +52,7 @@ function Column({ col, title }: { col: ColType[]; title: string }) {
 				{col.map((data) => (
 					<li
 						key={data.link}
-						className="mb-4 font-medium text-primary-gray hover:text-primary"
+						className="mb-4 text-muted-foreground hover:text-muted-foreground/95"
 					>
 						<a href={data.link}>{data.name}</a>
 					</li>
@@ -67,9 +67,9 @@ export default function Main(): JSX.Element {
 		<footer className="py-40 text-foreground w-[90%] max-w-[1200px] mx-auto">
 			<ul className="grid grid-cols-1 sm:grid-cols-4 gap-2">
 				<li className="sm:col-span-2 p-4">
-					<div className="flex items-center gap-1 text-primary-gray font-medium">
+					<div className="flex items-center gap-1 text-muted-foreground">
 						© {new Date().getFullYear()} Nik Schaefer{" "}
-						<span className="mx-1 text-primary-300">• </span>
+						<span className="mx-1 text-muted-foreground">• </span>
 						<ColophonPopover />	
 					</div>
 				</li>

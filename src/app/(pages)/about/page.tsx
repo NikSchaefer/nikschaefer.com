@@ -14,9 +14,9 @@ export default function About(): JSX.Element {
 				<a
 					href="https://github.com/NikSchaefer/NikSchaefer"
 					target="_blank"
-					className="no-underline text-foreground"
+					className="no-underline"
 				>
-					<h5 className="my-2">README.md</h5>
+					<h5 className="my-2 text-foreground">README.md</h5>
 				</a>
 				<h1 className="title1 font-semibold text-effect mb-10 ">
 					hey, I'm Nik.
@@ -27,7 +27,7 @@ export default function About(): JSX.Element {
 					<a
 						href="https://noveltor.com"
 						target="_blank"
-						className="bg-background-100 no-underline relative inline-flex items-center pl-8 pr-2 rounded-md border border-primary/20"
+						className="bg-accent text-accent-foreground no-underline relative inline-flex items-center pl-8 pr-2 rounded-md border border-primary/20"
 					>
 						<img
 							className="h-4 w-4 absolute left-2"

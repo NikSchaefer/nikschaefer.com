@@ -1,12 +1,14 @@
-import Layout from "@components/layout";
+"use client";
+
 import clsx from "clsx";
-import { NextSeo } from "next-seo";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
 
-import json from "../../../content/snippets.json";
+import json from "../../../../content/snippets.json";
 import { Container } from "lucide-react";
+import { cn } from "@lib/utils";
+import { titleStyle } from "@styles/common";
 
 const colorMap = {
 	react: "bg-blue-500",
@@ -24,17 +26,14 @@ const colorMap = {
 
 export default function Snippets(): JSX.Element {
 	return (
-		<Layout>
-			<NextSeo title="Snippets" />
+		<>
 			<section className="pt-[3em] container mx-auto">
 				<motion.h1
 					initial={{ y: -10, opacity: 0 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.2, delay: 0.1 }}
 					viewport={{ once: true }}
-					className={clsx(
-						"title mx-auto text-effect font-semibold text-center"
-					)}
+					className={cn(titleStyle, "text-center")}
 				>
 					Snippets.
 				</motion.h1>
@@ -57,7 +56,7 @@ export default function Snippets(): JSX.Element {
 						className={clsx(
 							"relative w-full rounded",
 							"p-4 text-lg flex items-center justify-between",
-							"bg-background-400 border border-primary/10 min-w-[180px]",
+							"bg-card border border-primary/10 min-w-[180px]",
 							"hover:bg-primary/10 transition-colors duration-200"
 						)}
 					>
@@ -90,6 +89,6 @@ export default function Snippets(): JSX.Element {
 					</Link>
 				))}
 			</div>
-		</Layout>
+		</>
 	);
 }

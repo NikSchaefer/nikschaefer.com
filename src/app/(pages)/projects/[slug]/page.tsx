@@ -45,14 +45,12 @@ export default async function ProjectPage({
 	const { source, frontMatter } = await getProjectData(params.slug);
 
 	return (
-		<>
-			<Article
-				source={source}
-				title={frontMatter.title}
-				tags={`#${frontMatter.tech[0]}`}
-				github={frontMatter.github}
-				link={frontMatter.external}
-			/>
-		</>
+		<Article
+			source={source}
+			title={frontMatter.title}
+			tags={`#${frontMatter.tech[0]}`}
+			github={frontMatter.github}
+			link={frontMatter.external}
+		/>
 	);
 }

@@ -1,71 +1,26 @@
 [
 	{
-		"title": "Lead Developer",
-		"company": "Noveltor",
-		"location": "Remote",
-		"range": "Jan 2021 • Present",
-		"url": "https://noveltor.com",
-		"logo": "https://noveltor.com/icons/apple-touch-icon.png",
-		"content": [
-			"Led development of a full-stack app at Noveltor, using various frameworks and languages.",
-			"Achieved 99% uptime through Serverless-oriented architecture and performance optimization.",
-			"Tested application thoroughly to ensure optimal functionality and user experience.",
-			"Collaborated closely with designers and stakeholders to ensure seamless development and delivery."
-		],
-		"tools": [
-			"Golang",
-			"AWS",
-			"React",
-			"Typescript",
-			"NextJS",
-			"Git(GitHub)",
-			"CI/CD(Vercel)",
-			"TailwindCSS"
-		]
+		"title": "Consultant",
+		"company": "Blue Mango Software",
+		"range": "Nov 2023 — Present",
+		"logo": "https://bluemangosoftware.com/logo.png"
 	},
 	{
-		"title": "Chief Financial Officer / Co-Founder",
+		"title": "Founder",
+		"company": "Noveltor",
+		"range": "Jan 2021 — Present",
+		"logo": "/job/noveltor.png"
+	},
+	{
+		"title": "Co-Founder",
 		"company": "Arafa Tech Foundation",
-		"location": "Remote",
-		"range": "Feb 2023 • Present",
-		"url": "https://arafa.tech",
-		"logo": "https://arafa.tech/logos/main.png",
-		"content": [
-			"Implemented coding education and mentorship programs at Arafa Tech, driving successful outcomes.",
-			"Led a team to develop and execute programs, resulting in significant positive outcomes for students.",
-			"Oversaw operations, ensuring seamless coordination between stakeholders for program execution.",
-			"Mentored and supported students with personalized learning plans to overcome tech challenges."
-		],
-		"tools": [
-			"Javascript",
-			"React",
-			"DevOps",
-			"NextJS",
-			"Git(GitHub)",
-			"CI/CD(Vercel)",
-			"TailwindCSS"
-		]
+		"range": "Feb 2023 — Nov 2023",
+		"logo": "https://arafa-tech-git-main-arafa-tech-foundation.vercel.app/logos/transparent/main.png"
 	},
 	{
 		"title": "Web Developer Intern",
 		"company": "The Esport Company",
-		"location": "Remote",
-		"range": "September • December 2020",
-		"url": "https://www.theesportcompany.com/",
-		"logo": "/job/tec.png",
-		"content": [
-			"Leveraged skills in WordPress, Python, and Django to create and implement custom features and functionality.",
-			"Collaborated with other developers, designers, and stakeholders to ensure timely and high-quality delivery of the website."
-		],
-		"tools": [
-			"Wordpress",
-			"CSS",
-			"SCSS",
-			"Javascript",
-			"Accessibility",
-			"HTML",
-			"Python",
-			"Django"
-		]
+		"range": "September — December 2020",
+		"logo": "/job/tec.png"
 	}
 ]

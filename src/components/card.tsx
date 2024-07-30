@@ -1,7 +1,7 @@
+"use client";
 import clsx from "clsx";
 import Link from "next/link";
 import { Project } from "types";
-
 import { motion } from "framer-motion";
 import { BrainCircuit, BrainCog, Layout, TerminalSquare } from "lucide-react";
 import { cn } from "@lib/utils";
@@ -59,25 +59,23 @@ function Card({
 	tech,
 }: Project): JSX.Element {
 	return (
-		<Link
-			className="w-full h-full transition-transform transform hover:translate-y-4"
-			href={`/projects/${slug}`}
-		>
+		<Link href={`/projects/${slug}`}>
 			<motion.div
 				initial={disableRender ? {} : { y: -10, opacity: 0 }}
 				animate={disableRender ? {} : { opacity: 1, y: 0 }}
+				whileHover={{ y: -5 }}
+				transition={{
+					duration: 0.2,
+					delay: disableRender ? 0 : 0.5 + (index || 0) * 0.1,
+					y: {
+						duration: 0.2,
+						ease: "linear",
+					},
+				}}
 				viewport={disableRender ? {} : { once: true }}
-				transition={
-					disableRender
-						? {}
-						: {
-								duration: 0.2,
-								delay: 0.5 + (index || 0) * 0.1,
-							}
-				}
 				className={cn(
-					"text-left bg-background-300 rounded-2xl",
-					"border transition-all ",
+					"text-left bg-accent rounded-2xl",
+					"transition-all ",
 					"py-12 px-8 h-full"
 				)}
 			>

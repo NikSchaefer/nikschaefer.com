@@ -41,7 +41,7 @@ export default function Main(): JSX.Element {
 						className={clsx(
 							"flex text-sm sm:text-base gap-1 px-5 py-2.5 rounded-full relative",
 							hasScrolled
-								? "bg-background-100/70 filter-effect"
+								? "bg-accent/70 filter-effect"
 								: ""
 						)}
 					>
