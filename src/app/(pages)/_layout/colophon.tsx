@@ -11,7 +11,7 @@ const TechLink = ({ href, children }: any) => (
 		href={href}
 		target="_blank"
 		rel="noopener noreferrer"
-		className="text-white hover:text-primary transition-colors"
+		className="text-foreground hover:text-primary transition-colors"
 	>
 		{children}
 	</a>

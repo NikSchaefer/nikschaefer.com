@@ -14,14 +14,19 @@ export default function Content() {
 			viewport={{ once: true }}
 			className={clsx(
 				"card-bg mx-auto rounded-[2rem] border border-primary/20",
-				"pt-[2rem] px-[3em]  relative w-full"
+				"py-[2rem] px-[3em]  relative w-full"
 			)}
 		>
-			<ol className="relative">
-				<div className="absolute left-0 h-[90%] w-[2px] bg-primary/60" />
+			<h2 className="text-primary font-semibold mb-4">My Work</h2>
+			<p className="leading-[32px] text-muted-foreground">
+				From founding startups to collaborating with innovative
+				companies, I've been fortunate to have a career that has reached
+				thousands. Take a look at my work journey so far:
+			</p>
+			<ol className="relative grid grid-cols-2 mt-4 gap-8">
 				{jobs.map((job) => (
-					<li className="mb-10 ml-10">
-						<span className="absolute bg-gray-800 flex items-center justify-center w-12 h-12 rounded-full -left-6">
+					<li>
+						<span className="bg-gray-800 flex items-center justify-center w-12 h-12 rounded-full">
 							<Image
 								width={30}
 								height={30}
@@ -30,12 +35,15 @@ export default function Content() {
 							/>
 						</span>
 						<div>
-							<h3 className="flex flex-col items-start sm:flex-row h4 mb-1 font-semibold">
+							<h3 className="font-semibold text-foreground my-2">
 								{job.company}
 							</h3>
-							<h2 className="text-sm text-foreground/70">
-								{job.title}, {job.range}
-							</h2>
+							<p className="mb-1 text-muted-foreground">
+								{job.title}
+							</p>
+							<p className="text-sm text-muted-foreground">
+								{job.range}
+							</p>
 						</div>
 					</li>
 				))}

@@ -1,10 +1,9 @@
 "use client";
 
 import clsx from "clsx";
-import { ArrowRight, ChevronRight } from "lucide-react";
-import Link from "next/link";
 import { Project } from "types";
 import { motion } from "framer-motion";
+import ArrowLink from "@components/ui/link";
 
 export default function ProjectComponent({
 	title,
@@ -20,26 +19,21 @@ export default function ProjectComponent({
 			transition={{ duration: 0.2, delay: 0.2 }}
 			viewport={{ once: true }}
 			className={clsx(
-				"flex flex-col gap-5 sm:gap-0 sm:flex-row card-bg mx-auto rounded-[2rem] border border-primary/20",
-				"p-[1rem] sm:p-[1.5rem] sm:pr-0 relative z-10 col-span-2"
+				"flex flex-col justify-between gap-5 sm:gap-0 sm:flex-row card-bg mx-auto rounded-[2rem] border border-primary/20",
+				"p-[1rem] sm:p-[1.5rem] relative z-10 col-span-2"
 			)}
 		>
-			<div className="gap-5 sm:gap-0 p-6 w-full sm:w-[40%] flex flex-col justify-between ">
+			<div className="space-y-5 sm:gap-0 p-6 w-full sm:w-[40%] flex flex-col justify-">
 				<h2 className="font-semibold text-primary">{title}</h2>
-				<p>{text}</p>
-				<Link
-					className="flex items-center gap-3 group text-primary"
+				<p className="text-muted-foreground">{text}</p>
+				<ArrowLink
 					href={`/projects/${slug}`}
 					aria-label={`Learn more about ${title}`}
 				>
-					{short}{" "}
-					<span className="transition-transform text-primary duration-100 group-hover:translate-x-1">
-						<ChevronRight className="group-hover:hidden" />
-						<ArrowRight className="hidden group-hover:block" />
-					</span>
-				</Link>
+					{short}
+				</ArrowLink>
 			</div>
-			<div className="w-full sm:w-[60%] sm:pr-10 flex items-center pb-5 sm:py-5">
+			<div className="w-full sm:w-[40%] mx-auto flex items-center pb-5 sm:py-5">
 				<img
 					className="rounded-lg overflow-none"
 					src={image}

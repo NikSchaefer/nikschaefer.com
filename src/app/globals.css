@@ -120,7 +120,7 @@
 }
 
 .prose {
-	@apply text-foreground
+	@apply text-muted-foreground
 }
 
 .prose h1,

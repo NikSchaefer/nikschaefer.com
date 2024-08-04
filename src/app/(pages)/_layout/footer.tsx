@@ -64,13 +64,14 @@ function Column({ col, title }: { col: ColType[]; title: string }) {
 
 export default function Main(): JSX.Element {
 	return (
-		<footer className="py-40 text-foreground w-[90%] max-w-[1200px] mx-auto">
+		<footer className="my-40 text-foreground w-[90%] max-w-[1200px] relative mx-auto">
+			<div className="text-background absolute bottom-0 left-0">I love my girlfriend.</div>
 			<ul className="grid grid-cols-1 sm:grid-cols-4 gap-2">
 				<li className="sm:col-span-2 p-4">
 					<div className="flex items-center gap-1 text-muted-foreground">
 						© {new Date().getFullYear()} Nik Schaefer{" "}
 						<span className="mx-1 text-muted-foreground">• </span>
-						<ColophonPopover />	
+						<ColophonPopover />
 					</div>
 				</li>
 				<Column title="Here" col={Col3} />

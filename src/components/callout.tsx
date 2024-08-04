@@ -1,10 +1,9 @@
 "use client";
 
 import clsx from "clsx";
-import { motion } from "framer-motion";
 import { BrainCircuit, X } from "lucide-react";
 import { useState } from "react";
-import ArrowLink from "./ui/link";
+import { IconLink } from "./ui/icon-link";
 
 export default function Callout() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +12,7 @@ export default function Callout() {
 		<>
 			{!isOpen && (
 				<div className="h4 mx-auto max-w-[750px] text-gray-400 my-[2em]">
-					<motion.button
+					<button
 						onClick={() => setIsOpen(true)}
 						className={clsx(
 							"bg-accent rounded-lg",
@@ -25,11 +24,11 @@ export default function Callout() {
 					>
 						Which Tech Trend Keeps Me Up at Night?
 						<BrainCircuit className="h-12 w-12 rounded-xl shadow-xl shadow-primary/10 p-2 border border-primary/10" />
-					</motion.button>
+					</button>
 				</div>
 			)}
 			{isOpen && (
-				<motion.section className="relative w-[90%] max-w-[1000px] card-bg border border-primary/30 mx-auto py-[3em] my-[3em] rounded-md">
+				<section className="relative w-[90%] max-w-[1000px] card-bg border border-primary/30 mx-auto py-[3em] my-[3em] rounded-md">
 					<button
 						onClick={() => setIsOpen(false)}
 						className={clsx(
@@ -54,7 +53,7 @@ export default function Callout() {
 							ethical questions.
 							<br />
 							<br />
-							<span className="font-semibold text-primary">
+							<span className="text-primary">
 								What defines a human?
 							</span>{" "}
 							Where do we draw the line between human and machine?{" "}
@@ -63,16 +62,15 @@ export default function Callout() {
 							While it may be far off in the future, I find myself
 							delving into the latest breakthroughs and pondering
 							the ethical and societal implications of this{" "}
-							<ArrowLink
-								href="https://www.amazon.com/Brave-New-World-Aldous-Huxley/dp/0060850523/"
-								className=""
-							>
-								Brave New World
-							</ArrowLink>
+							<IconLink
+								link="https://www.amazon.com/Brave-New-World-Aldous-Huxley/dp/0060850523/"
+								title="Brave New World"
+								img="/dna.png"
+							/>
 							.
 						</p>
 					</div>
-				</motion.section>
+				</section>
 			)}
 		</>
 	);

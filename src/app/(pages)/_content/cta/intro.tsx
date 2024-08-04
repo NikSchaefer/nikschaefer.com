@@ -1,7 +1,6 @@
 "use client";
 
 import { LineSplitSVG } from "@components/line-split";
-import ArrowLink from "@components/ui/link";
 import { motion } from "framer-motion";
 import { Code2 } from "lucide-react";
 
@@ -45,7 +44,7 @@ export default function Intro() {
 					viewport={{ once: true }}
 				>
 					<span className="text-primary font-semibold">
-						Get In Touch
+						Let's Connect
 					</span>
 				</motion.h1>
 				<motion.p
@@ -53,17 +52,17 @@ export default function Intro() {
 					whileInView={{ opacity: 1, x: 0 }}
 					transition={{ duration: 0.2, delay: 0.8 }}
 					viewport={{ once: true }}
-					className="mt-4 text-foreground"
+					className="mt-4 text-muted-foreground"
 				>
-					Want to say hi? Feel free to drop me a line. I'm always open
-					to discussing new opportunities, creative ideas, or just
-					connecting. Or{" "}
-					<ArrowLink href="/about">learn more about me</ArrowLink>.
+					I'd love to hear from you! Whether you're looking to
+					collaborate, chat about a project, or just say hello, I'm
+					always here to listen. Drop me a line and let's start a
+					conversation.{" "}
 				</motion.p>
 				<a
 					href="mailto:nikkschaefer@gmail.com"
 					aria-label="Get in touch"
-					className="border text-primary hover:bg-card border-primary px-5 py-2.5 w-fit bg-background my-5 p-0.5 flex items-center justify-center font-bold overflow-hidden group rounded-md"
+					className="border text-primary border-primary px-5 py-2.5 w-fit bg-background my-5 p-0.5 flex items-center justify-center font-bold overflow-hidden group rounded-md hover:bg-primary hover:text-primary-foreground transition-all"
 				>
 					Say Hello
 				</a>

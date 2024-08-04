@@ -1,8 +1,8 @@
-import Link from "next/link";
 import projects from "../../../../../content/projects.json";
 import Intro from "./intro";
 import VerticalProject from "./vertical";
 import Project from "./project";
+import ArrowLink from "@components/ui/link";
 
 export default function Projects() {
 	return (
@@ -21,13 +21,13 @@ export default function Projects() {
 					)}
 			</div>
 
-			<Link
+			<ArrowLink
 				href="/projects"
 				aria-label="See more projects"
 				className="flex justify-center gap-2 hover:text-primary/80 group absolute -bottom-10 right-0 transition-colors duration-200"
 			>
 				See More
-			</Link>
+			</ArrowLink>
 		</section>
 	);
 }

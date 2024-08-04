@@ -18,7 +18,7 @@ const ArrowLink: React.FC<ArrowLinkProps> = ({
 		<Link href={href} passHref legacyBehavior>
 			<a
 				className={cn(
-					"group inline-flex items-center border-primary underline gap-2 font-medium text-primary",
+					"group inline-flex items-center border-primary  gap-2 font-medium text-primary",
 					className
 				)}
 				{...props}

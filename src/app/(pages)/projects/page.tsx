@@ -53,7 +53,7 @@ export default function Projects(): JSX.Element {
 					initial={{ y: -10, opacity: 0 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.2, delay: 0.5 }}
-					className="mt-[2em] h4 text-center mx-auto w-[90%] max-w-[750px]"
+					className="mt-[2em] text-muted-foreground h4 text-center mx-auto w-[90%] max-w-[750px]"
 				>
 					A selection of my original creations—tools and
 					websites—developed to be useful, entertaining, and sometimes

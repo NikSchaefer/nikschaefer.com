@@ -43,11 +43,9 @@ export default function Intro() {
 					transition={{ duration: 0.2, delay: 0.9 }}
 					viewport={{ once: true }}
 				>
-					<span className="text-primary">
-						Passionate Software Engineer
-					</span>{" "}
-					driven by curiosity and a deep commitment to pushing the
-					boundaries of technology.
+					<span className="text-primary">Curious developer</span>,
+					fascinated by the sweet spot where technology, business, and
+					philosophy intersect.
 				</motion.h1>
 			</div>
 		</div>

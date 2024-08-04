@@ -33,11 +33,10 @@ export default function Intro() {
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.2, delay: 0.3 }}
 				viewport={{ once: true }}
-				className="mt-[2em] h4 text-center mx-auto w-[90%] max-w-[750px]"
+				className="mt-[2em] text-xl text-center mx-auto w-[90%] text-muted-foreground"
 			>
-				As a driven lead software engineer and co-founder, I am
-				dedicated to leveraging technology and education to create
-				positive change and shape a more equitable future.
+				I engineer solutions that are robust, scalable, and
+				people-centric.
 			</motion.p>
 		</section>
 	);

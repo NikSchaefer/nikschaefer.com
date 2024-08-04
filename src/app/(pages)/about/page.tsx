@@ -1,13 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Callout from "@components/callout";
 import Connect from "@components/connect";
+import { IconLink } from "@components/ui/icon-link";
 
 export default function About(): JSX.Element {
 	return (
 		<>
-			<motion.section
+			<section
 				className="pt-[1em] h4 mx-auto prose max-w-[750px]"
 				id="work"
 			>
@@ -16,53 +14,81 @@ export default function About(): JSX.Element {
 					target="_blank"
 					className="no-underline"
 				>
-					<h5 className="my-2 text-foreground">README.md</h5>
+					<h5 className="my-2 !text-muted-foreground">README.md</h5>
 				</a>
 				<h1 className="title1 font-semibold text-effect mb-10 ">
 					hey, I'm Nik.
 				</h1>
 				<p className="leading-[32px]">
-					I'm a full-stack developer, aspring data scientist, and
-					student. I currently work as the lead developer at{" "}
-					<a
-						href="https://noveltor.com"
-						target="_blank"
-						className="bg-accent text-accent-foreground no-underline relative inline-flex items-center pl-8 pr-2 rounded-md border border-primary/20"
-					>
-						<img
-							className="h-4 w-4 absolute left-2"
-							src="https://noveltor.com/logo.svg"
-						/>
-						Noveltor
-					</a>
-					. I love to talk about anything tech, business, and
-					philosophy.
-					<br />
-					<br />
-					My true passion lies in data science, where I see immense
-					potential for transformative outcomes. My side projects are
-					really just a way for me to explore new technologies and
-					gain new experiences. If you have a cool idea, I'd love to
-					hear about it.
+					Hey, I'm Nik. I'm a software developer, entrepreneur, and
+					student based in Madison, Wisconsin. Currently, my main
+					focus is{" "}
+					<IconLink
+						title="Noveltor"
+						link="https://noveltor.com"
+						img="https://noveltor.com/logo.png"
+					/>
+					, a mental health startup. On the side I run an{" "}
+					<IconLink
+						title="Advertising Agency"
+						img="/calendar.png"
+						disabled
+					/>{" "}
+					focused on helping schools reach their audience, as well as{" "}
+					<IconLink
+						title="Blue Mango Software"
+						link="https://bluemangosoftware.com"
+						img="https://bluemangosoftware.com/logo.png"
+					/>
+					, my own consulting venture.
 				</p>
-			</motion.section>
-			<Callout />
-			<motion.section
-				className="h4 mx-auto prose max-w-[750px]"
-				id="work"
-			>
 				<p className="leading-[32px]">
-					I began my coding journey at a 13, building small games
-					using p5.js. Since then, my passion for technology has only
-					intensified. I believe in its potential to shape a more
-					equitable world. And I'm here to make that vision a reality.
-					<br />
-					<br />
-					When I'm not immersed in code, you can often find me at the
-					gym, reading a book, or exploring the depths of the ocean
-					through scuba diving.
+					My coding journey began in 2012 when I built a simple game
+					using p5.js. What started as a hobby quickly turned into a
+					passion, leading me to where I am today. Along the way, I've
+					also become a Computer Engineering student at UW-Madison,
+					balancing my studies with my professional projects.
 				</p>
-			</motion.section>
+			</section>
+			<Callout />
+			<section className="pt-[1em] h4 mx-auto prose max-w-[750px]">
+				<p className="leading-[32px]">
+					When I'm not coding, I enjoy scuba diving, going to the gym,
+					and reading.{" "}
+					<IconLink
+						title="The Fifth Science"
+						link="https://www.amazon.com/-/en/Exurb1a/dp/1796356301"
+						img="/planet.png"
+					/>{" "}
+					is one of my favorite books - it's got a way of challenging
+					how I think about the nature of life.
+				</p>
+				<p className="leading-[32px]">
+					I'm particularly interested in how technology, business, and
+					philosophy intersect. There's something fascinating about
+					using tech to make a real difference in people's lives.
+				</p>
+			</section>
+			<section className="grid grid-cols-5 gap-4 w-[90%] mx-auto py-6">
+				<div className="w-full h-full relative group col-span-3">
+					<img
+						src="/two.jpg"
+						className="rounded-2xl object-contain"
+					/>
+					<div className="absolute left-2 bg-background text-foreground px-2 text-sm py-1 rounded-lg bottom-0 opacity-0 group-hover:opacity-100 group-hover:bottom-4 transition-all duration-200">
+						Roatan, Honduras
+					</div>
+				</div>
+				<div className="w-full h-full relative group col-span-2">
+					<img
+						src="/one.jpg"
+						className="rounded-2xl object-cover h-full"
+					/>
+					<div className="absolute left-2 bg-background text-foreground px-2 text-sm py-1 rounded-lg bottom-0 opacity-0 group-hover:opacity-100 group-hover:bottom-4 transition-all duration-200">
+						Cozumel, Mexico
+					</div>
+				</div>
+			</section>
 
 			<Connect />
 		</>

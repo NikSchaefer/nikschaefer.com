@@ -42,7 +42,7 @@ export default function Snippets(): JSX.Element {
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.2, delay: 0.3 }}
 					viewport={{ once: true }}
-					className="mt-[2em] h4 text-center mx-auto w-[90%] max-w-[750px]"
+					className="mt-[2em] text-muted-foreground h4 text-center mx-auto w-[90%] max-w-[750px]"
 				>
 					Here are some of my favorite code snippets that come in use
 					here and there.
@@ -79,7 +79,7 @@ export default function Snippets(): JSX.Element {
 						<div
 							className={clsx(
 								"p-5",
-								"rounded-full text-white",
+								"rounded-full text-foreground",
 								// @ts-ignore
 								colorMap[value.tag] || ""
 							)}

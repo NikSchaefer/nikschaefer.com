@@ -88,7 +88,7 @@ function Card({
 					</div>
 					<div
 						className={clsx(
-							"h-fit text-white mt-2",
+							"h-fit text-foreground mt-2",
 							"rounded-full p-3",
 							// @ts-ignore
 							iconAndColorMap[tech[0]]?.color
