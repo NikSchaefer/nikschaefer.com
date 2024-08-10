@@ -1,0 +1,315 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 39 33% 90%;
+		--foreground: 171 15% 35%;
+		--card: 42, 32%, 92%;
+		--card-foreground: 222.2 84% 4.9%;
+		--popover: 42, 32%, 92%;
+		--popover-foreground: 222.2 84% 4.9%;
+		--primary: 171 93% 18%;
+		--primary-foreground: 210 40% 98%;
+		--secondary: 210 40% 96.1%;
+		--secondary-foreground: 222.2 47.4% 11.2%;
+		--muted: 210 40% 96.1%;
+		--muted-foreground: 171 15% 35%;
+		--accent: 43 33% 96%;
+		--accent-foreground: 222.2 47.4% 11.2%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 214.3 31.8% 91.4%;
+		--input: 214.3 31.8% 91.4%;
+		--ring: 222.2 84% 4.9%;
+		--radius: 0.5rem;
+		--chart-1: 12 76% 61%;
+		--chart-2: 173 58% 39%;
+		--chart-3: 197 37% 24%;
+		--chart-4: 43 74% 66%;
+		--chart-5: 27 87% 67%;
+	}
+
+	.dark {
+		--background: 222.2 84% 4.9%;
+		--foreground: 210 40% 98%;
+		--card: 222.2 84% 4.9%;
+		--card-foreground: 210 40% 98%;
+		--popover: 222.2 84% 4.9%;
+		--popover-foreground: 210 40% 98%;
+		--primary: 170 80% 60%;
+		--primary-foreground: 222.2 47.4% 11.2%;
+		--secondary: 217.2 32.6% 17.5%;
+		--secondary-foreground: 210 40% 98%;
+		--muted: 217.2 32.6% 17.5%;
+		--muted-foreground: 215 20.2% 65.1%;
+		--accent: 220.2 40.6% 10.5%;
+		--accent-foreground: 210 40% 98%;
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 210 40% 98%;
+		--border: 217.2 32.6% 17.5%;
+		--input: 217.2 32.6% 17.5%;
+		--ring: 212.7 26.8% 83.9%;
+		--chart-1: 220 70% 50%;
+		--chart-2: 160 60% 45%;
+		--chart-3: 30 80% 55%;
+		--chart-4: 280 65% 60%;
+		--chart-5: 340 75% 55%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+}
+
+@layer utilities {
+	.bg-growing-underline {
+		background-size: 100% 0.2em;
+		background-position: 0 88%;
+		@apply bg-no-repeat transition-all duration-200;
+	}
+	.bg-growing-underline:hover {
+		background-size: 100% 100%;
+	}
+	.bg-growing-underline:focus {
+		background-size: 100% 100%;
+	}
+}
+
+.text-effect {
+	/* @apply text-transparent bg-clip-text from-blue-400 to-pink-500 bg-gradient-to-r; */
+	@apply text-primary;
+}
+
+.line-effect {
+	@apply bg-gradient-to-b from-primary via-primary/40 to-primary/0;
+}
+
+.filter-effect {
+	backdrop-filter: blur(20px) saturate(1.7);
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	@apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-primary/50 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
+
+::selection {
+	@apply bg-primary text-primary-foreground;
+}
+
+.iframe {
+	height: calc(100vh - 180px);
+	width: calc(100vw - 10px);
+	margin: auto;
+	box-sizing: border-box;
+}
+
+.prose {
+	@apply text-muted-foreground
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+	@apply text-primary;
+}
+
+.title {
+	@apply text-5xl sm:text-7xl md:text-8xl lg:text-9xl;
+}
+
+.title2 {
+	@apply text-5xl sm:text-7xl md:text-8xl;
+}
+
+.h0 {
+	@apply text-3xl md:text-5xl;
+}
+
+.h1,
+h1 {
+	@apply text-2xl md:text-4xl;
+}
+
+.h2,
+h2 {
+	@apply text-xl md:text-3xl;
+}
+
+.h3,
+h3 {
+	@apply text-lg md:text-2xl;
+}
+
+.h4,
+h4 {
+	@apply text-base md:text-lg;
+}
+
+.h5,
+h5 {
+	@apply text-sm md:text-base;
+}
+
+.h6,
+h6 {
+	@apply text-xs md:text-sm;
+}
+
+.h7 {
+	@apply text-xs;
+}
+
+.card-bg {
+	/*
+	background: linear-gradient(
+		180deg,
+		rgba(35, 37, 49, 0.9),
+		rgba(25, 25, 34, 0.7)
+	);
+	*/
+	@apply bg-accent text-accent-foreground
+}
+
+/* CODE CSS */
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #ffffff;
+	font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier,
+		monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	font-size: 0.95em;
+	line-height: 1.6em;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre > code[class*="language-"] {
+	font-size: 1em;
+}
+
+pre[class*="language-"]::-moz-selection,
+pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection,
+code[class*="language-"] ::-moz-selection {
+	@apply bg-background text-foreground;
+}
+
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+	@apply bg-background text-foreground;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: 0.5em 0;
+	overflow: auto;
+	@apply rounded border border-primary/30;
+}
+
+/* Inline code */
+code:not([class*="language-"]) {
+	padding: 0.2em 0.4em;
+	border-radius: 0.2px;
+	border: 1px solid #dddddd;
+	color: #ffffff;
+	@apply bg-background text-foreground;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #999988;
+	font-style: italic;
+}
+
+.token.namespace {
+	opacity: 0.7;
+}
+
+.token.string,
+.token.attr-value {
+	color: #e3116c;
+}
+
+.token.punctuation,
+.token.operator {
+	color: #fff; /* no highlight */
+}
+
+.token.entity,
+.token.url,
+.token.symbol,
+.token.number,
+.token.boolean,
+.token.variable,
+.token.constant,
+.token.property,
+.token.regex,
+.token.inserted {
+	color: #36acaa;
+}
+
+.token.atrule,
+.token.keyword,
+.token.attr-name,
+.language-autohotkey .token.selector {
+	color: #00a4db;
+}
+
+.token.function,
+.token.deleted,
+.language-autohotkey .token.tag {
+	color: #9a050f;
+}
+
+.token.tag,
+.token.selector,
+.language-autohotkey .token.keyword {
+	color: #00009f;
+}
+
+.token.important,
+.token.function,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+/* END CODE CSS */

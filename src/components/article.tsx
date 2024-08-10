@@ -1,9 +1,13 @@
+"use client";
+
 import axios from "axios";
-import clsx from "clsx";
 import { ExternalLink, GitFork, GithubIcon, Star } from "lucide-react";
 import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { MDXRemote } from "next-mdx-remote";
 import { useEffect, useState } from "react";
+import ArrowLink from "./ui/link";
+import { titleStyle } from "@styles/common";
+import { cn } from "@lib/utils";
 
 function Article({
 	title,
@@ -30,28 +34,22 @@ function Article({
 		});
 	}, [github]);
 	return (
-		<article className="text-white max-w-2xl px-6 py-24 mx-auto space-y-12">
+		<article className="text-foreground max-w-2xl p-6 mx-auto space-y-12">
 			<div className="w-full mx-auto space-y-4 text-left">
-				<h1
-					className={clsx(
-						"title2 mx-auto font-semibold text-center text-effect capitalize"
-					)}
-				>
-					{title}.
-				</h1>
+				<h1 className={cn(titleStyle, "text-center")}>{title}.</h1>
 
 				<div className="flex gap-5 justify-center items-center">
 					{github && (
 						<a
 							href={github}
-							className="rounded-md font-medium hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
+							className="rounded-md font-medium hover:bg-accent h-10 py-3 px-3 flex items-center justify-center"
 						>
 							<GithubIcon />
 						</a>
 					)}
 					{link && (
 						<a
-							className="rounded-md font-medium hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
+							className="rounded-md font-medium hover:bg-accent h-10 py-3 px-3 flex items-center justify-center"
 							href={link}
 						>
 							<ExternalLink />
@@ -61,14 +59,14 @@ function Article({
 						<>
 							<a
 								href={`${github}/stargazers`}
-								className="rounded-md font-medium gap-1 hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
+								className="rounded-md font-medium gap-1 hover:bg-accent h-10 py-3 px-3 flex items-center justify-center"
 							>
 								<Star />
 								{githubData["stargazers_count"]}
 							</a>
 							<a
 								href={`${github}/forks`}
-								className="rounded-md font-medium gap-1 hover:bg-secondary-600 h-10 py-3 px-3 flex items-center justify-center"
+								className="rounded-md font-medium gap-1 hover:bg-accent h-10 py-3 px-3 flex items-center justify-center"
 							>
 								<GitFork />
 								{githubData["forks_count"]}
@@ -78,14 +76,14 @@ function Article({
 				</div>
 			</div>
 
-			<section className="prose-blue prose prose-invert text-left text-gray-400">
+			<section className="prose-blue prose dark:prose-invert text-left text-foreground">
 				<MDXRemote {...source} />
 			</section>
 
-			<div className="w-fit mx-auto text-center h5 underline-effect">
-				<a href="https://github.com/NikSchaefer/nikschaefer.com">
+			<div className="w-fit mx-auto text-center">
+				<ArrowLink href="https://github.com/NikSchaefer/nikschaefer.com">
 					Edit this page on GitHub
-				</a>
+				</ArrowLink>
 			</div>
 		</article>
 	);

@@ -1,9 +1,10 @@
+"use client";
 import clsx from "clsx";
 import Link from "next/link";
 import { Project } from "types";
-
 import { motion } from "framer-motion";
 import { BrainCircuit, BrainCog, Layout, TerminalSquare } from "lucide-react";
+import { cn } from "@lib/utils";
 
 type SortOption = {
 	name: string;
@@ -58,32 +59,36 @@ function Card({
 	tech,
 }: Project): JSX.Element {
 	return (
-		<motion.div
-			initial={disableRender ? {} : { y: -10, opacity: 0 }}
-			animate={disableRender ? {} : { opacity: 1, y: 0 }}
-			viewport={disableRender ? {} : { once: true }}
-			transition={
-				disableRender
-					? {}
-					: {
-							duration: 0.2,
-							delay: 0.5 + (index || 0) * 0.1,
-					  }
-			}
-			className={clsx(
-				"text-left bg-secondary-400 rounded-md",
-				"border border-primary/10 transition-colors",
-				"hover:bg-primary/10 p-3 h-full"
-			)}
-		>
-			<Link
-				className="w-full h-full px-6 py-4"
-				href={`/projects/${slug}`}
+		<Link href={`/projects/${slug}`}>
+			<motion.div
+				initial={disableRender ? {} : { y: -10, opacity: 0 }}
+				animate={disableRender ? {} : { opacity: 1, y: 0 }}
+				whileHover={{ y: -5 }}
+				transition={{
+					duration: 0.2,
+					delay: disableRender ? 0 : 0.5 + (index || 0) * 0.1,
+					y: {
+						duration: 0.2,
+						ease: "linear",
+					},
+				}}
+				viewport={disableRender ? {} : { once: true }}
+				className={cn(
+					"text-left bg-accent rounded-2xl",
+					"transition-all ",
+					"py-12 px-8 h-full"
+				)}
 			>
-				<div className="flex  justify-start">
+				<div className="flex justify-between items-center">
+					<div>
+						<h4 className={clsx("mt-2 font-semibold text-primary")}>
+							{title}
+						</h4>
+						<p className="mt-2 text-sm">{text}</p>
+					</div>
 					<div
 						className={clsx(
-							"h-fit ml-1 text-white mr-4 mt-2",
+							"h-fit text-foreground mt-2",
 							"rounded-full p-3",
 							// @ts-ignore
 							iconAndColorMap[tech[0]]?.color
@@ -92,15 +97,9 @@ function Card({
 						{/* @ts-ignore */}
 						{iconAndColorMap[tech[0]]?.icon}
 					</div>
-					<div>
-						<h4 className={clsx("mt-2 font-semibold text-primary")}>
-							{title}
-						</h4>
-						<p className="mt-2 text-sm text-gray-300">{text}</p>
-					</div>
 				</div>
-			</Link>
-		</motion.div>
+			</motion.div>
+		</Link>
 	);
 }
 

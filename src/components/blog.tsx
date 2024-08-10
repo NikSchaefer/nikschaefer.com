@@ -5,12 +5,12 @@ import { Blog } from "../config";
 
 function Post(props: { blog: Blog }): JSX.Element {
 	return (
-		<div className="py-4 mx-auto rounded-lg">
+		<div className="py-2 mx-auto rounded-lg">
 			<Link
 				href={props.blog.link}
 				aria-label="Blog Link"
 				className={clsx(
-					"text-2xl capitalize text-effect"
+					"text-xl capitalize "
 				)}
 			>
 				{props.blog.title}

@@ -14,7 +14,7 @@ function FeaturedArticle(props: {
 			)}
 			href={props.Blog.link}
 		>
-				<div className="h-full rounded-xl p-3 pb-0 relative bg-shark text-white">
+				<div className="h-full rounded-xl p-3 pb-0 relative bg-shark text-foreground">
 					<h3 className="font-semibold mb-4 text-lg">
 						{props.Blog.title}
 					</h3>

@@ -41,7 +41,12 @@
         "pages/*"
       ]
     },
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "exclude": [
     "node_modules"
@@ -52,6 +57,7 @@
     "src/pages/_document.tsx",
     "src/pages/_error.js",
     "src/lib/gtag.js",
-    "src/pages/_app.tsx"
+    "src/pages/_app.tsx",
+    ".next/types/**/*.ts"
   ]
 }
