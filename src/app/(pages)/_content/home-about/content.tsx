@@ -23,7 +23,7 @@ export default function Content() {
 					hey, I'm Nik
 				</h2>
 				<p className="leading-[32px] text-balance">
-					I'm a software developer and entrepreneur balancing my
+					I'm a software developer and business owner balancing my
 					studies in Computer Engineering at UW-Madison with exciting
 					ventures in the tech world. My main focus is{" "}
 					<IconLink

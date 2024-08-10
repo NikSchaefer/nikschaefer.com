@@ -20,7 +20,7 @@ export default function About(): JSX.Element {
 					hey, I'm Nik.
 				</h1>
 				<p className="leading-[32px]">
-					Hey, I'm Nik. I'm a software developer, entrepreneur, and
+					Hey, I'm Nik. I'm a software developer, business owner, and
 					student based in Madison, Wisconsin. Currently, my main
 					focus is{" "}
 					<IconLink
