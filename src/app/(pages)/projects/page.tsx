@@ -2,7 +2,6 @@
 
 import { Card, sortByOptions } from "@components/card";
 import clsx from "clsx";
-import { NextSeo } from "next-seo";
 import { useEffect, useState } from "react";
 import { Reorder, motion } from "framer-motion";
 
@@ -37,7 +36,6 @@ export default function Projects(): JSX.Element {
 
 	return (
 		<>
-			<NextSeo title="Projects" />
 			<section className="pt-[3em] container mx-auto">
 				<motion.h1
 					viewport={{ once: true }}

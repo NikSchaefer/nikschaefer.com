@@ -4,7 +4,6 @@ import rehypePrism from "@mapbox/rehype-prism";
 import fs from "fs";
 import matter from "gray-matter";
 import { serialize } from "next-mdx-remote/serialize";
-import { NextSeo } from "next-seo";
 import path from "path";
 
 type PageProps = {
@@ -34,7 +33,6 @@ export default async function Page({ params }: PageProps) {
 
 	return (
 		<>
-			<NextSeo title={frontMatter.title} />
 			<Article
 				source={mdxSource}
 				title={frontMatter.title}
